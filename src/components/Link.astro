@@ -1,0 +1,21 @@
+---
+// Henter parametrene fra Astro.props
+const { href = "#", target = "_self", variant = "textlink", size = "standard" } = Astro.props;
+
+const linkStyling = "transition transform hover:-translate-y-1";
+
+const variantClasses = {
+  textlink: "text-black underline",
+  primary: "bg-red-600 hover:bg-red-700 text-white rounded-full px-6 p-2 font-semibold uppercase",
+  secondary: "border-2 border-red-600 hover:border-red-700 text-red-600 hover:text-red-700 rounded-full px-6 p-2 font-semibold uppercase",
+};
+
+const sizeClasses = {
+  standard: "text-base",
+  large: "text-3xl",
+  medium: "text-2xl",
+  small: "text-lg",
+};
+---
+
+<a href={href} target={target} class:list={[linkStyling, variantClasses[variant], sizeClasses[size]]}><slot a /></a>

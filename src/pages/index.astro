@@ -1,0 +1,86 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+---
+
+<MainLayout title="Forside">
+  <article class="pb-16">
+    <h1 class="pb-6 pt-6 max-w-xl mx-auto text-4xl font-semibold uppercase">Eksempler på knapper</h1>
+    <div class="pb-6 max-w-xl mx-auto"><Button variant="primary" size="large">Knap</Button></div>
+    <div class="pb-6 max-w-xl mx-auto"><Button variant="primary" size="medium">Knap</Button></div>
+    <div class="pb-6 max-w-xl mx-auto"><Button variant="primary" size="small">Knap</Button></div>
+    <div class="pb-6 max-w-xl mx-auto"><Button variant="secondary" size="large">Knap</Button></div>
+    <div class="pb-6 max-w-xl mx-auto"><Button variant="secondary" size="medium">Knap</Button></div>
+    <div class="pb-6 max-w-xl mx-auto"><Button variant="secondary" size="small">Knap</Button></div>
+  </article>
+
+  <form class="pb-16">
+    <h1 class="pb-6 pt-6 max-w-xl mx-auto text-4xl font-semibold uppercase">Eksemple på forms</h1>
+    <div class="pb-6 max-w-xl mx-auto">
+      <label for="antal">Antal:</label>
+      <input class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" type="number" id="antal" placeholder="1" />
+    </div>
+    <div class="pb-6 max-w-xl mx-auto">
+      <label for="levering">Levering:</label>
+      <input class="rounded bg-gray-200 border-transparent focus:border-transparent focus:bg-gray-200 text-gray-700 focus:ring-1 focus:ring-offset-2 focus:ring-gray-500" type="radio" id="postnord" name="levering" />
+      <label for="postnord" checked="checked">PostNord</label>
+      <input class="rounded bg-gray-200 border-transparent focus:border-transparent focus:bg-gray-200 text-gray-700 focus:ring-1 focus:ring-offset-2 focus:ring-gray-500" type="radio" id="afhent" name="levering" />
+      <label for="afhent">Afhent</label>
+    </div>
+    <div class="pb-6 max-w-xl mx-auto">
+      <label for="name">Name:</label>
+      <input class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" type="text" id="name" placeholder="Name" />
+    </div>
+    <div class="pb-6 max-w-xl mx-auto">
+      <label for="adresse">Adresse:</label>
+      <input class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" type="text" id="name" placeholder="Adresse" />
+    </div>
+    <div class="pb-6 max-w-xl mx-auto">
+      <label for="email">e-mail:</label>
+      <input class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" type="email" id="e-mail" placeholder="e-mail" />
+    </div>
+    <div class="pb-6 max-w-xl mx-auto">
+      <label for="postnummer">Postnummer:</label>
+      <input class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" type="text" id="postnummer" placeholder="Postnummer" />
+    </div>
+    <div class="pb-6 max-w-xl mx-auto">
+      <label for="bynavn">Bynavn:</label>
+      <input class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" type="text" id="bynavn" placeholder="Bynavn" />
+    </div>
+    <div class="pb-6 max-w-xl mx-auto">
+      <label for="telefon">Telefon nr:</label>
+      <input class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" type="tel" id="telefon" placeholder="Telefon nr" />
+    </div>
+    <div class="pb-6 max-w-xl mx-auto">
+      <label for="nyhedsbrev">Nyhedsbrev:</label>
+      <input class="rounded bg-gray-200 border-transparent focus:border-transparent focus:bg-gray-200 text-gray-700 focus:ring-1 focus:ring-offset-2 focus:ring-gray-500" type="checkbox" id="nyhedsbrev" />
+    </div>
+    <div class="pb-6 max-w-xl mx-auto"><Button variant="primary" size="small">Køb</Button></div>
+  </form>
+
+  <article class="pb-16">
+    <h1 class="pb-6 pt-6 max-w-xl mx-auto text-4xl font-semibold uppercase">Eksempler på links</h1>
+    <h3 class="pb-6 max-w-xl mx-auto text-xl font-semibold uppercase">Tekst link</h3>
+    <div class="pb-6 max-w-xl mx-auto"><p>Link til <Link href="https://kea.dk/" target="_blank" variant="textlink" size="standard"> En anden side</Link></p></div>
+    <h3 class="pb-6 max-w-xl mx-auto text-xl font-semibold uppercase">Knap link</h3>
+    <div class="pb-6 max-w-xl mx-auto">
+      <p>Link til <Link href="https://kea.dk/" target="_blank" variant="primary" size="large">En anden side</Link></p>
+    </div>
+    <div class="pb-6 max-w-xl mx-auto">
+      <p>Link til <Link href="https://kea.dk/" target="_blank" variant="primary" size="medium">En anden side</Link></p>
+    </div>
+    <div class="pb-6 max-w-xl mx-auto">
+      <p>Link til <Link href="https://kea.dk/" target="_blank" variant="primary" size="small">En anden side</Link></p>
+    </div>
+    <div class="pb-6 max-w-xl mx-auto">
+      <p>Link til <Link href="https://kea.dk/" target="_blank" variant="secondary" size="large">En anden side</Link></p>
+    </div>
+    <div class="pb-6 max-w-xl mx-auto">
+      <p>Link til <Link href="https://kea.dk/" target="_blank" variant="secondary" size="medium">En anden side</Link></p>
+    </div>
+    <div class="pb-6 max-w-xl mx-auto">
+      <p>Link til <Link href="https://kea.dk/" target="_blank" variant="secondary" size="small">En anden side</Link></p>
+    </div>
+  </article>
+</MainLayout>
