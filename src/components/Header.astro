@@ -1,33 +1,141 @@
 ---
-import Link from "../components/Link.astro";
+import Button from "../components/Button.astro";
 ---
 
-<div x-data="{ showmenu: false }" class="p-4 z-10 w-full bg-gray-100">
+<div x-data="{ showmenu: false }" class="p-4 z-10 w-full bg-gray-50 shadow-drop25">
   <!-- brug "fixed" for at have den på siden hele vejen ned -->
-  <div id="navbar" class="flex flex-row justify-between max-w-7xl mx-auto pr-4 pl-4 pt-2 pb-2">
+  <div id="navbar" class="flex flex-row justify-between gap-8 max-w-7xl mx-auto pr-4 pl-4 pt-4 pb-4">
     <div class="">
-      <a class="uppercase font-bold text-red-700" href="#logo">Logo</a>
+      <a href="/"><img src="/images/logo_blaa.webp" alt="Logo for CP Danmark" class="h-12 hover:opacity-50 transition duration-300 ease-in-out" /></a>
     </div>
-    <nav id="desktopmenu" class="hidden lg:block">
-      <ul class="flex flex-row gap-4">
-        <li class=""><a href="#">Link 1</a></li>
-        <li class=""><a href="#">Link 2</a></li>
-        <li class=""><a href="#">Link 3</a></li>
-        <li class=""><a href="#">Link 4</a></li>
+    <nav id="desktopmenu" class="hidden lg:block content-center">
+      <ul class="flex flex-row content-center gap-4">
+        <!-- CP & os Dropdown -->
+        <li class="relative" x-data="{ showDropdown1: false }" x-cloak @mouseenter="showDropdown1 = true" @mouseleave="showDropdown1 = false">
+          <a href="/cp_os" class="hover:text-blue-700 py-1 flex items-center">
+            CP & os
+            <svg
+              class="w-4 h-4 ml-2 transition-transform duration-300 transform"
+              :class="{ 'rotate-180': showDropdown1 }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <div x-show="showDropdown1" x-transition class="absolute left-0 mt-2 w-[165px] bg-gray-50 shadow-drop25 border border-gray-400 z-10">
+            <ul>
+              <li class="py-1 px-4"><a href="/hvad_er_cp" class="hover:text-blue-700">Hvad er CP?</a></li>
+              <li class="py-1 px-4"><a href="/cp_ung" class="hover:text-blue-700">CP Ung</a></li>
+              <li class="py-1 px-4"><a href="/nyheder" class="hover:text-blue-700">Nyheder</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- Bliv klogere Dropdown -->
+        <li class="relative" x-data="{ showDropdown2: false }" x-cloak @mouseenter="showDropdown2 = true" @mouseleave="showDropdown2 = false">
+          <a href="#" class="hover:text-blue-700 py-1 flex items-center">
+            Bliv klogere
+            <svg
+              class="w-4 h-4 ml-2 transition-transform duration-300 transform"
+              :class="{ 'rotate-180': showDropdown2 }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <div x-show="showDropdown2" x-transition class="absolute left-0 mt-2 w-[220px] bg-gray-50 shadow-drop25 border border-gray-400 z-10">
+            <ul>
+              <li class="py-1 px-4"><a href="/raadgivning" class="hover:text-blue-700">Rådgivning</a></li>
+              <li class="py-1 px-4"><a href="/materialer" class="hover:text-blue-700">Materialer</a></li>
+              <li class="py-1 px-4"><a href="/kurser_arrangementer" class="hover:text-blue-700">Kurser & arrangementer</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="relative flex items-center">
+          <a href="/tilmeld" class="hover:text-blue-700">Bliv medlem</a>
+        </li>
+        <li class="relative flex items-center">
+          <a href="/gode_raad" class="hover:text-blue-700">Gode råd</a>
+        </li>
       </ul>
     </nav>
-    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"
-      ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-      </svg>
+    <div class="ml-auto md:block hidden">
+      <a href="/stoet">
+        <Button variant="primary" size="small">Støt os</Button>
+      </a>
+    </div>
+    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = !showmenu">
+      <template x-if="showmenu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-9 hover:text-blue-700 transition duration-300"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </template>
+      <template x-if="!showmenu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-9 hover:text-blue-700 transition duration-300"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5"></path>
+        </svg>
+      </template>
     </button>
   </div>
-  <nav id="mobilmenu" class="flex flex-col content-center pt-4" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-    <ul>
-      <li class="text-center py-2 border-y-2"><a href="#">Link 1</a></li>
-      <li class="text-center py-2 border-b-2"><a href="#">Link 2</a></li>
-      <li class="text-center py-2 border-b-2"><a href="#">Link 3</a></li>
-      <li class="text-center py-2 border-b-2"><a href="#">Link 4</a></li>
+  <nav
+    id="mobilmenu"
+    class="flex flex-col content-center pt-4"
+    x-show="showmenu"
+    x-transition
+    x-cloak
+    x-on:click="showmenu = false"
+    x-on:click.outside="showmenu = false"
+  >
+    <ul class="mx-auto py-4 text-gray-950">
+      <h4 class="text-center font-bold">Viden & information</h4>
+      <li class="text-center py-2 border-b"><a href="/cp_os">CP & os</a></li>
+      <li class="text-center py-2 border-b"><a href="/hvad_er_cp">Hvad er CP?</a></li>
+      <li class="text-center py-2 border-b"><a href="/cp_ung">CP Ung</a></li>
+      <li class="text-center py-2 border-b"><a href="/nyheder">Nyheder</a></li>
+    </ul>
+    <ul class="mx-auto py-4 text-gray-950">
+      <h4 class="text-center font-bold">Medlemskab</h4>
+      <li class="text-center py-2 border-b"><a href="/tilmeld">Bliv medlem</a></li>
+      <li class="text-center py-2"><a href="/stoet">Støt os</a></li>
+    </ul>
+    <ul class="mx-auto py-4 text-gray-950">
+      <h4 class="text-center font-bold">Bliv klogere</h4>
+      <li class="text-center py-2 border-b"><a href="/raadgivning">Rådgivning</a></li>
+      <li class="text-center py-2 border-b"><a href="/materialer">Materialer</a></li>
+      <li class="text-center py-2 border-b"><a href="/kurser_arrangementer">Kurser & arrangementer</a></li>
+    </ul>
+    <ul class="mx-auto py-4 text-gray-950">
+      <h4 class="text-center font-bold">Andet</h4>
+      <li class="text-center py-2"><a href="/gode_raad">Gode råd</a></li>
     </ul>
   </nav>
 </div>
+
+<style>
+  [x-cloak] {
+    display: none !important;
+  }
+</style>
