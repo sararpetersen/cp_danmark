@@ -30,7 +30,7 @@ import Button from "../components/Button.astro";
 </div>
 
 <div id="header" x-data="{ showmenu: false }" class="fixed p-4 z-20 w-full bg-gray-50 shadow-drop25 pt-12">
-  <div id="navbar" class="flex flex-row justify-between gap-8 max-w-7xl mx-auto pr-4 pl-4 pt-6 pb-4">
+  <div id="navbar" class="flex flex-row justify-between gap-8 max-w-7xl mx-auto md:pr-6 md:pl-6 pr-8 pl-8 pt-6 pb-4">
     <div class="">
       <a href="/">
         <img src="/images/logo_blaa.webp" alt="Logo for CP Danmark" class="h-12 hover:opacity-50 transition duration-300 ease-in-out logo-light" />
@@ -233,15 +233,6 @@ import Button from "../components/Button.astro";
   /* Text Size Mode */
   body.text-large {
     font-size: 1.125rem;
-  }
-
-  /* High contrast mode */
-  body.high-contrast {
-    background-color: #1d1d1d;
-    color: #f6f6f6;
-  }
-  body.high-contrast #header {
-    background-color: #1d1d1d;
   }
 
   /* Reduce Motion Mode */

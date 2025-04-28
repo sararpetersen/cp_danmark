@@ -5,63 +5,73 @@
 <!-- Footer til mobil format -->
 <footer class="bg-gray-950 text-gray-50">
   <section class="max-w-7xl mx-auto md:p-0 md:py-8 p-8">
-    <section class="grid md:grid-cols-3 md:gap-16 gap-12">
-      <div class="md:pb-o">
-        <a href="/"
+    <section class="grid md:grid-cols-12 grid-cols-1 md:gap-20">
+      <div class="info1 md:col-span-3 col-span-12 pt-2 md:pb-o pb-8 w-[fit-content]">
+        <a href="/" class=""
           ><img
-            class="h-24 w-auto pb-6 transform hover:-translate-y-1 transition duration-300 ease-in-out hover:opacity-70"
+            class="object-contain h-24 pb-6 transform hover:-translate-y-1 transition duration-300 ease-in-out hover:opacity-70"
             src="/images/logo_hvid.webp"
             alt="logo"
           /></a
         >
         <p class="pb-4">CP Danmark - Landsforeningen <br /> for cerebral parese</p>
-        <p class="pb-2">Blekinge Boulevard 2</p>
-        <p class="pb-2">2630 Taastrup</p>
-        <p class="pb-2">CVR: 20 24 88 15</p>
+        <p>Blekinge Boulevard 2</p>
+        <p class="pb-4">2630 Taastrup</p>
+        <p>CVR: 20 24 88 15</p>
       </div>
-      <div class="md:pb-12 pb-8 pt-2">
+      <div class="socials_newsletter md:col-span-4 col-span-12 pt-2">
+        <!-- Sociale medier -->
         <div class="md:pb-12 pb-8 pt-2">
           <div>
             <div class="flex justify-start gap-7 content-center items-center">
               <div class="w-12 flex-shrink-0">
-                <img
-                  class="w-full transform hover:-translate-y-1 transition duration-300 ease-in-out hover:opacity-70 hover:cursor-pointer"
-                  src="/images/facebook.svg"
-                  alt="Facebook ikon"
-                />
+                <a href="http://www.facebook.dk/cpdanmark.dk" target="_blank">
+                  <img
+                    class="w-full transform hover:-translate-y-[2px] transition duration-300 ease-in-out hover:opacity-70 hover:cursor-pointer"
+                    src="/images/facebook.svg"
+                    alt="Facebook ikon"
+                  />
+                </a>
               </div>
               <div class="w-12 flex-shrink-0">
-                <img
-                  class="w-full transform hover:-translate-y-1 transition duration-300 ease-in-out hover:opacity-70 hover:cursor-pointer"
-                  src="/images/instagram.svg"
-                  alt="Instagram ikon"
-                />
+                <a href="https://www.instagram.com/cpdanmark" target="_blank">
+                  <img
+                    class="w-full transform hover:-translate-y-[2px] transition duration-300 ease-in-out hover:opacity-70 hover:cursor-pointer"
+                    src="/images/instagram.svg"
+                    alt="Instagram ikon"
+                  />
+                </a>
               </div>
               <div class="w-12 flex-shrink-0">
-                <img
-                  class="w-full transform hover:-translate-y-1 transition duration-300 ease-in-out hover:opacity-70 hover:cursor-pointer"
-                  src="/images/linkedin.svg"
-                  alt="Linkedin ikon"
-                />
+                <a href="https://www.linkedin.com/company/cp-danmark-landsforeningen-for-cerebral-parese/" target="_blank">
+                  <img
+                    class="w-full transform hover:-translate-y-[2px] transition duration-300 ease-in-out hover:opacity-70 hover:cursor-pointer"
+                    src="/images/linkedin.svg"
+                    alt="Linkedin ikon"
+                  />
+                </a>
               </div>
               <div class="w-12 flex-shrink-0">
-                <img
-                  class="w-full transform hover:-translate-y-1 transition duration-300 ease-in-out hover:opacity-70 hover:cursor-pointer"
-                  src="/images/youtube.svg"
-                  alt="Youtube ikon"
-                />
+                <a href="https://www.youtube.com/channel/UCN2nN9axOe-Z_RiMT_H4_yg/" target="_blank">
+                  <img
+                    class="w-full transform hover:-translate-y-[2px] transition duration-300 ease-in-out hover:opacity-70 hover:cursor-pointer"
+                    src="/images/youtube.svg"
+                    alt="Youtube ikon"
+                  />
+                </a>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- Nyhedsbrev -->
         <h1 class="md:text-h4-desktop text-h4-mobile font-display font-bold">Tilmeld dig vores nyhedsbrev</h1>
         <p class="pb-4">Hold dig opdateret og få seneste nyt om livet med CP, info om vores aktiviteter og kurser, og meget andet.</p>
-        <form action="#">
+        <form action="#" class="md:pb-0 pb-8">
           <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
             <div class="relative w-full">
               <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                <svg class="w-5 h-5 text-neutral-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
                   ><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path
                     d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg
                 >
@@ -76,7 +86,7 @@
               <div class="absolute inset-y-0 left-0 flex items-center justify-start">
                 <button
                   type="submit"
-                  class="py-3 px-5 text-center cursor-pointer -ml-px font-semibold bg-blue-600 hover:bg-blue-500 transition duration-300 ease-in-out text-gray-50 text-[1rem]"
+                  class="py-3 px-5 text-center cursor-pointer -ml-px font-semibold border border-blue-600 bg-blue-600 hover:bg-blue-500 hover:border-blue-500 transition duration-300 ease-in-out text-gray-50 text-[1rem]"
                   >SEND</button
                 >
               </div>
@@ -84,28 +94,51 @@
           </div>
         </form>
       </div>
-      <div class="md:pb-o pb-12 pt-2">
-        <div class="flex flex-col pb-4">
-          <p><span class="font-semibold">Telefon: </span>38 88 45 75</p>
-          <p><span class="font-semibold">Mail: </span>cpdanmark@cpdanmark.dk</p>
+      <div class="info2 md:col-span-5 col-span-12 md:pl-8 pl-0">
+        <div class="flex flex-col md:pb-4 pb-8">
+          <span class="font-semibold">Telefon: </span>
+          <a href="tel:38 88 45 75" class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out pb-2">38 88 45 75</a>
+          <p class="font-semibold">Mail:</p><a
+            href="mailto:cpdanmark@cpdanmark.dk"
+            class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out">cpdanmark@cpdanmark.dk</a
+          >
         </div>
-        <div class="flex flex-col pb-4">
+        <div class="flex flex-col md:pb-4 pb-8">
           <p>
             <span class="font-semibold">Åbningstider:</span>
             <ul>
-              <li>Mandag: 10:30-12:00 & 13:00 - 14:00</li>
-              <li>Tirsdag-fredag: 10:30-12:00 & 13:00 - 14:00</li>
+              <li>Mandag: 10:30-12:00 & 13:00-14:00</li>
+              <li>Tirsdag-fredag: 10:30-12:00 & 13:00-14:00</li>
             </ul>
           </p>
         </div>
-        <div class="flex flex-col">
-          <p><span class="font-semibold">Bank: </span>Nordea – reg. nr. 2191, kontonr. 0128390022</p>
+        <div class="flex flex-col md:pb-0 pb-8">
+          <p><span class="font-semibold pb-2">Bank: </span>Nordea – reg. nr. 2191, kontonr. 0128390022</p>
           <p><span class="font-semibold">MobilePay: </span>90866</p>
         </div>
       </div>
-
-      <section class="flex md:justify-start flex-wrap">
-        <p class="opacity-50">2025 © CP Danmark – Landsforeningen for cerebral parese</p>
+      <section class="copyright_protector col-span-12 gap-4 flex flex-col">
+        <div>
+          <hr class="w-[20%] pb-4 border-gray-50 opacity-50" />
+          <p class="pb-4"><span class="font-semibold">Protektor: </span> H.K.H. Prinsesse Benedikte</p>
+        </div>
+        <div class="flex-col">
+          <p class="opacity-50 text-[12px]">2025 © CP Danmark – Landsforeningen for cerebral parese</p>
+          <p class="text-[12px]">
+            <a
+              href="https://www.cpdanmark.dk/om-os/privatlivspolitik/"
+              target="_blank"
+              class="underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out"
+              >Privatlivspolitik
+            </a><span class="opacity-50">|</span><a
+              href="https://www.cpdanmark.dk/om-os/cookiepolitik/"
+              target="_blank"
+              class="underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out"
+            >
+              Cookiepolitik</a
+            >
+          </p>
+        </div>
       </section>
     </section>
   </section>
