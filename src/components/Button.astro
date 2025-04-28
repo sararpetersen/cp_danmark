@@ -17,3 +17,43 @@ const sizeClasses = {
 ---
 
 <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot button /></button>
+
+<style>
+  button {
+    border: #1d1d1d 2px solid;
+    background-color: transparent;
+    font-size: 15px;
+    color: #1d1d1d;
+    transition: 0.6s;
+  }
+
+  button:hover {
+    border: #034f9a 2px solid;
+    background-color: #034f9a;
+    cursor: pointer;
+    color: #f6f6f6;
+  }
+
+  .active {
+    background-color: #034f9a;
+    color: #f6f6f6;
+  }
+
+  /*DARK MODE*/
+
+  body.dark button {
+    border: #f6f6f6 2px solid;
+    background-color: transparent;
+    color: #f6f6f6;
+  }
+
+  body.dark button:hover {
+    background-color: #0e86e9;
+    border: #0e86e9 2px solid;
+    color: #f6f6f6;
+  }
+
+  body.dark .active {
+    background-color: #0e86e9;
+  }
+</style>

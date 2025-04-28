@@ -83,7 +83,7 @@ export default {
       "h2-mobile": ["2.5rem", { lineHeight: "2.5rem" }],
       "h3-desktop": ["2.3rem", { lineHeight: "2.5rem" }],
       "h3-mobile": ["2rem", { lineHeight: "2.25rem" }],
-      "h4-desktop": ["1.8rem", { lineHeight: "2.25rem" }],
+      "h4-desktop": ["1.6rem", { lineHeight: "2.25rem" }],
       "h4-mobile": ["1.4rem", { lineHeight: "1.875rem" }],
       "p-desktop": ["1.1rem", { lineHeight: "1.875rem" }],
       "p-mobile": ["1.02rem", { lineHeight: "1.5rem" }],

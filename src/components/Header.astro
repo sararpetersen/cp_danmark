@@ -2,11 +2,40 @@
 import Button from "../components/Button.astro";
 ---
 
-<div x-data="{ showmenu: false }" class="p-4 z-10 w-full bg-gray-50 shadow-drop25">
-  <!-- brug "fixed" for at have den på siden hele vejen ned -->
-  <div id="navbar" class="flex flex-row justify-between gap-8 max-w-7xl mx-auto pr-4 pl-4 pt-4 pb-4">
+<!-- Accessibility settings bar -->
+<div id="accessibility-bar" class="fixed w-full bg-gray-950 text-gray-50 flex justify-start gap-6 items-center h-10 px-4 z-50">
+  <!-- Text Size Toggle -->
+  <div class="flex items-center gap-2">
+    <label for="textSizeToggle" class="cursor-pointer md:text-[15px] text-[13px]">Stor tekst</label>
+    <button id="textSizeToggle" aria-pressed="false" class="toggle-switch">
+      <span class="toggle-circle"></span>
+    </button>
+  </div>
+
+  <!-- Dark Mode Toggle -->
+  <div class="flex items-center gap-2">
+    <label for="darkModeToggle" class="cursor-pointer md:text-[15px] text-[13px]">Mørk tilstand</label>
+    <button id="darkModeToggle" aria-pressed="false" class="toggle-switch">
+      <span class="toggle-circle"></span>
+    </button>
+  </div>
+
+  <!-- Reduce Motion Toggle -->
+  <div class="flex items-center gap-2">
+    <label for="motionToggle" class="cursor-pointer md:text-[15px] text-[13px]">Fjern animationer</label>
+    <button id="motionToggle" aria-pressed="false" class="toggle-switch">
+      <span class="toggle-circle"></span>
+    </button>
+  </div>
+</div>
+
+<div id="header" x-data="{ showmenu: false }" class="fixed p-4 z-20 w-full bg-gray-50 shadow-drop25 pt-12">
+  <div id="navbar" class="flex flex-row justify-between gap-8 max-w-7xl mx-auto pr-4 pl-4 pt-6 pb-4">
     <div class="">
-      <a href="/"><img src="/images/logo_blaa.webp" alt="Logo for CP Danmark" class="h-12 hover:opacity-50 transition duration-300 ease-in-out" /></a>
+      <a href="/">
+        <img src="/images/logo_blaa.webp" alt="Logo for CP Danmark" class="h-12 hover:opacity-50 transition duration-300 ease-in-out logo-light" />
+        <img src="/images/logo_hvid.webp" alt="Logo for CP Danmark" class="h-12 hover:opacity-50 transition duration-300 ease-in-out logo-dark" />
+      </a>
     </div>
     <nav id="desktopmenu" class="hidden lg:block content-center">
       <ul class="flex flex-row content-center gap-4">
@@ -26,7 +55,11 @@ import Button from "../components/Button.astro";
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
             </svg>
           </a>
-          <div x-show="showDropdown1" x-transition class="absolute left-0 mt-2 w-[165px] bg-gray-50 shadow-drop25 border border-gray-400 z-10">
+          <div
+            x-show="showDropdown1"
+            x-transition
+            class="dropdown1 absolute left-0 mt-2 w-[165px] bg-gray-50 shadow-drop25 border border-gray-400 z-10"
+          >
             <ul>
               <li class="py-1 px-4"><a href="/hvad_er_cp" class="hover:text-blue-700">Hvad er CP?</a></li>
               <li class="py-1 px-4"><a href="/cp_ung" class="hover:text-blue-700">CP Ung</a></li>
@@ -34,8 +67,6 @@ import Button from "../components/Button.astro";
             </ul>
           </div>
         </li>
-
-        <!-- Bliv klogere Dropdown -->
         <li class="relative" x-data="{ showDropdown2: false }" x-cloak @mouseenter="showDropdown2 = true" @mouseleave="showDropdown2 = false">
           <a href="#" class="hover:text-blue-700 py-1 flex items-center">
             Bliv klogere
@@ -51,7 +82,11 @@ import Button from "../components/Button.astro";
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
             </svg>
           </a>
-          <div x-show="showDropdown2" x-transition class="absolute left-0 mt-2 w-[220px] bg-gray-50 shadow-drop25 border border-gray-400 z-10">
+          <div
+            x-show="showDropdown2"
+            x-transition
+            class="dropdown2 absolute left-0 mt-2 w-[165px] bg-gray-50 shadow-drop25 border border-gray-400 z-10"
+          >
             <ul>
               <li class="py-1 px-4"><a href="/raadgivning" class="hover:text-blue-700">Rådgivning</a></li>
               <li class="py-1 px-4"><a href="/materialer" class="hover:text-blue-700">Materialer</a></li>
@@ -59,13 +94,8 @@ import Button from "../components/Button.astro";
             </ul>
           </div>
         </li>
-
-        <li class="relative flex items-center">
-          <a href="/tilmeld" class="hover:text-blue-700">Bliv medlem</a>
-        </li>
-        <li class="relative flex items-center">
-          <a href="/gode_raad" class="hover:text-blue-700">Gode råd</a>
-        </li>
+        <li><a href="/tilmeld" class="relative flex items-center hover:text-blue-700 py-1">Bliv medlem</a></li>
+        <li><a href="/goode_raad" class="relative flex items-center hover:text-blue-700 py-1">Gode råd</a></li>
       </ul>
     </nav>
     <div class="ml-auto md:block hidden">
@@ -73,7 +103,7 @@ import Button from "../components/Button.astro";
         <Button variant="primary" size="small">Støt os</Button>
       </a>
     </div>
-    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = !showmenu">
+    <button id="burgermenu" class="lg:hidden z-50" x-on:click="showmenu = !showmenu">
       <template x-if="showmenu">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -111,25 +141,43 @@ import Button from "../components/Button.astro";
   >
     <ul class="mx-auto py-4 text-gray-950">
       <h4 class="text-center font-bold">Viden & information</h4>
-      <li class="text-center py-2 border-b"><a href="/cp_os">CP & os</a></li>
-      <li class="text-center py-2 border-b"><a href="/hvad_er_cp">Hvad er CP?</a></li>
-      <li class="text-center py-2 border-b"><a href="/cp_ung">CP Ung</a></li>
-      <li class="text-center py-2 border-b"><a href="/nyheder">Nyheder</a></li>
+      <li class="text-center py-2 border-b">
+        <a href="/cp_os" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">CP & os</a>
+      </li>
+      <li class="text-center py-2 border-b">
+        <a href="/hvad_er_cp" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Hvad er CP?</a>
+      </li>
+      <li class="text-center py-2 border-b">
+        <a href="/cp_ung" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">CP Ung</a>
+      </li>
+      <li class="text-center py-2 border-b">
+        <a href="/nyheder" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Nyheder</a>
+      </li>
     </ul>
     <ul class="mx-auto py-4 text-gray-950">
       <h4 class="text-center font-bold">Medlemskab</h4>
-      <li class="text-center py-2 border-b"><a href="/tilmeld">Bliv medlem</a></li>
-      <li class="text-center py-2"><a href="/stoet">Støt os</a></li>
+      <li class="text-center py-2 border-b">
+        <a href="/tilmeld" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Bliv medlem</a>
+      </li>
+      <li class="text-center py-2"><a href="/stoet" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Støt os</a></li>
     </ul>
     <ul class="mx-auto py-4 text-gray-950">
       <h4 class="text-center font-bold">Bliv klogere</h4>
-      <li class="text-center py-2 border-b"><a href="/raadgivning">Rådgivning</a></li>
-      <li class="text-center py-2 border-b"><a href="/materialer">Materialer</a></li>
-      <li class="text-center py-2 border-b"><a href="/kurser_arrangementer">Kurser & arrangementer</a></li>
+      <li class="text-center py-2 border-b">
+        <a href="/raadgivning" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Rådgivning</a>
+      </li>
+      <li class="text-center py-2 border-b">
+        <a href="/materialer" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Materialer</a>
+      </li>
+      <li class="text-center py-2 border-b">
+        <a href="/kurser_arrangementer" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Kurser & arrangementer</a>
+      </li>
     </ul>
     <ul class="mx-auto py-4 text-gray-950">
       <h4 class="text-center font-bold">Andet</h4>
-      <li class="text-center py-2"><a href="/gode_raad">Gode råd</a></li>
+      <li class="text-center py-2">
+        <a href="/gode_raad" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Gode råd</a>
+      </li>
     </ul>
   </nav>
 </div>
@@ -138,4 +186,116 @@ import Button from "../components/Button.astro";
   [x-cloak] {
     display: none !important;
   }
+
+  /* Dark Mode */
+  body.dark {
+    background-color: #1d1d1d;
+    color: #e0e0e0;
+  }
+  body.dark #header {
+    background-color: #333333;
+  }
+  body.dark #accessibility-bar {
+    background-color: #222222;
+    color: #e0e0e0;
+  }
+  body.dark #header .dropdown1,
+  body.dark #header .dropdown2 {
+    background-color: #454545;
+    color: #e0e0e0;
+    border-color: #5d5d5d;
+  }
+
+  /* Button styles for dark mode */
+  body.dark .toggle-switch {
+    background-color: #666;
+  }
+  body.dark .toggle-circle {
+    background-color: #fff;
+  }
+
+  body.dark #header a:hover {
+    color: #0e86e9;
+    animation-duration: 0.6s;
+    text-decoration: underline;
+    animation: ease-in-out;
+  }
+
+  body.dark #mobilmenu a,
+  body.dark #mobilmenu h4 {
+    color: #f6f6f6;
+  }
+
+  body.dark #mobilmenu a:hover {
+    color: #0e86e9;
+  }
+
+  /* Text Size Mode */
+  body.text-large {
+    font-size: 1.125rem;
+  }
+
+  /* High contrast mode */
+  body.high-contrast {
+    background-color: #1d1d1d;
+    color: #f6f6f6;
+  }
+  body.high-contrast #header {
+    background-color: #1d1d1d;
+  }
+
+  /* Reduce Motion Mode */
+  body.reduce-motion * {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  body {
+    transition:
+      font-size 0.3s ease,
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  /* Logo */
+  /* Light mode logo */
+  .logo-dark {
+    display: none;
+  }
+
+  /* Dark mode logo */
+  body.dark .logo-light {
+    display: none;
+  }
+
+  body.dark .logo-dark {
+    display: block;
+  }
 </style>
+
+<script>
+  // Text size toggle
+  const textSizeToggle = document.getElementById("textSizeToggle");
+  textSizeToggle.addEventListener("click", () => {
+    const pressed = textSizeToggle.getAttribute("aria-pressed") === "true";
+    textSizeToggle.setAttribute("aria-pressed", String(!pressed));
+    document.body.classList.toggle("text-large", !pressed);
+  });
+
+  // Reduce motion toggle
+  const motionToggle = document.getElementById("motionToggle");
+  motionToggle.addEventListener("click", () => {
+    const pressed = motionToggle.getAttribute("aria-pressed") === "true";
+    motionToggle.setAttribute("aria-pressed", String(!pressed));
+    document.body.classList.toggle("reduce-motion", !pressed);
+  });
+
+  // Dark mode toggle
+  const darkModeToggle = document.getElementById("darkModeToggle");
+  darkModeToggle.addEventListener("click", () => {
+    const pressed = darkModeToggle.getAttribute("aria-pressed") === "true";
+    darkModeToggle.setAttribute("aria-pressed", String(!pressed));
+    document.body.classList.toggle("dark", !pressed);
+  });
+</script>

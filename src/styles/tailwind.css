@@ -64,4 +64,29 @@
       @apply text-a-desktop underline text-blue-700;
     }
   }
+
+  /* Base style for toggle switch */
+  .toggle-switch {
+    @apply relative inline-flex h-6 w-11 items-center rounded-full bg-gray-300 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+
+  /* When pressed (active) */
+  .toggle-switch[aria-pressed="true"] {
+    @apply bg-blue-600;
+  }
+
+  /* The white circle inside the switch */
+  .toggle-circle {
+    @apply inline-block h-5 w-5 transform rounded-full bg-gray-50 shadow-drop25 transition-transform duration-300 translate-x-1;
+  }
+
+  /* Move the circle to the right when active */
+  .toggle-switch[aria-pressed="true"] .toggle-circle {
+    @apply translate-x-5;
+  }
+
+  /* Extra hover effect for fun */
+  .toggle-switch:hover {
+    @apply bg-blue-700;
+  }
 }
