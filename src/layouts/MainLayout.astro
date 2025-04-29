@@ -30,7 +30,7 @@ const { title } = Astro.props;
       <Header />
     </header>
 
-    <main class="bg-gray-50 overflow-hidden">
+    <main class="overflow-hidden">
       <slot />
     </main>
 
@@ -39,3 +39,15 @@ const { title } = Astro.props;
     </footer>
   </body>
 </html>
+
+<style>
+  body.dark {
+    background-color: #333333;
+    color: #f6f6f6;
+  }
+
+  body {
+    background-color: #f6f6f6;
+    color: #1d1d1d;
+  }
+</style>

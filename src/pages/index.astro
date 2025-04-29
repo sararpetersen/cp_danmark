@@ -22,12 +22,112 @@ import Button from "../components/Button.astro";
       </p>
     </div>
 
-    <div class="hero_image w-full h-full absolute top-0 left-0 mt-24">
-      <img src="/images/hero_image.webp" alt="Hero image" class="w-full h-full object-cover scale-x-[-1]" />
+    <div class="hero_image w-full h-full absolute inset-0 z-0">
+      <img src="/images/hero_image.webp" alt="Hero-billede til CP Danmark's forside" class="w-full h-full object-cover scale-x-[-1]" />
     </div>
 
     <div class="absolute top-0 left-0 w-full h-full bg-gray-950 bg-opacity-[50%] z-0"></div>
-    <div class="absolute top-0 left-0 md:w-[50%] w-full h-[60rem] md:backdrop-blur-sm bg-opacity-75 bg-blue-950 z-0 md:rounded-r-full shadow-drop25">
+    <div
+      class="absolute top-0 left-0 md:w-[50%] w-full h-full md:backdrop-blur-sm bg-opacity-75 bg-blue-950 z-0 md:rounded-r-full shadow-drop25 hidden md:block"
+    >
+    </div>
+
+    <div class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
+      <a href="#get-started">
+        <div class="float flex flex-col items-center hover:opacity-80 transition duration-300 ease-in-out">
+          <p class="text-[18px] text-gray-50 font-semibold">Gå videre ned på siden</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8 sm:w-12 sm:h-12 text-gray-50 hover:text-blue-700 transition duration-300 ease-in-out"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="get-started" class="grid grid-cols-12 md:pt-20 pt-16 md:pb-desktop-bottom pb-mobil-bottom">
+    <h1 class="md:text-h2-desktop text-h2-mobile font-display font-bold col-start-2 col-span-10 md:pb-8 pb-4">Kom godt i gang</h1>
+    <p class="pb-4 col-start-2 col-span-10 max-w-2xl">
+      Uanset om du er ny, søger viden om CP, har brug for støtte eller bare vil bidrage til et godt formål— her finder du de vigtigste veje videre.
+    </p>
+    <div class="grid grid-cols-4 gap-4 items-center relative z-10 col-start-2 col-span-10 md:pt-8 pt-4">
+      <div class="col-span-4 md:col-span-1 hover:opacity-80 transition duration-300 ease-in-out relative">
+        <a href="/hvad_er_cp" class="block">
+          <img
+            src="/images/submenu1.webp"
+            alt="Billede til den første undermenu på CP Danmark's forside"
+            class="md:w-[400px] md:h-[300px] w-full h-full object-cover brightness-75"
+          />
+          <div class="absolute inset-0 flex items-center justify-center px-4">
+            <p class="text-gray-50 text-center font-semibold bg-[#AE5D37]/85 p-4">Bliv klogere på CP— og få indblik i livet med diagnosen</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-span-4 md:col-span-1 hover:opacity-80 transition duration-300 ease-in-out relative">
+        <a href="/tilmeld" class="block">
+          <img
+            src="/images/submenu2.webp"
+            alt="Billede til den første undermenu på CP Danmark's forside"
+            class="md:w-[400px] md:h-[300px] w-full h-full object-cover brightness-75"
+          />
+          <div class="absolute inset-0 flex items-center justify-start md:justify-center px-4">
+            <p class="text-gray-50 text-center font-semibold bg-[#BBA572]/85 p-4">Vær en del af fællesskabet og støt vores arbejde</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-span-4 md:col-span-1 hover:opacity-80 transition duration-300 ease-in-out relative">
+        <a href="/stoet" class="block">
+          <img
+            src="/images/submenu3.webp"
+            alt="Billede til den første undermenu på CP Danmark's forside"
+            class="md:w-[400px] md:h-[300px] w-full h-full object-cover brightness-75"
+          />
+          <div class="absolute inset-0 flex items-center justify-center px-4">
+            <p class="text-gray-50 text-center font-semibold bg-[#89A685]/85 p-4">Giv et bidrag og hjælp mennesker med CP</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-span-4 md:col-span-1 hover:opacity-80 transition duration-300 ease-in-out relative">
+        <a href="/gode_raad" class="block">
+          <img
+            src="/images/submenu4.webp"
+            alt="Billede til den første undermenu på CP Danmark's forside"
+            class="md:w-[400px] md:h-[300px] w-full h-full object-cover brightness-75"
+          />
+          <div class="absolute inset-0 flex items-center justify-center px-4">
+            <p class="text-gray-50 text-center font-semibold bg-[#7396B6]/85 p-4">Find hjælp og vejledning til det, der fylder lige nu</p>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 </MainLayout>
+
+<style>
+  /* Floating Animation */
+  @keyframes float {
+    0% {
+      transform: translatey(0);
+    }
+    50% {
+      transform: translatey(-10px);
+    }
+    100% {
+      transform: translatey(0);
+    }
+  }
+
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
