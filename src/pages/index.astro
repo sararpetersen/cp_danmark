@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Link from "../components/Link.astro";
+import NewsCard from "../components/NewsCard.astro";
 import Button from "../components/Button.astro";
 ---
 
@@ -27,9 +27,7 @@ import Button from "../components/Button.astro";
     </div>
 
     <div class="absolute top-0 left-0 w-full h-full bg-gray-950 bg-opacity-[50%] z-0"></div>
-    <div
-      class="absolute top-0 left-0 md:w-[50%] w-full h-full md:backdrop-blur-sm bg-opacity-75 bg-blue-950 z-0 md:rounded-r-full shadow-drop25 hidden md:block"
-    >
+    <div class="absolute top-0 left-0 md:w-[50%] w-full h-full md:backdrop-blur-sm bg-opacity-75 bg-blue-950 z-0 md:rounded-r-full hidden md:block">
     </div>
 
     <div class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
@@ -52,7 +50,7 @@ import Button from "../components/Button.astro";
   </section>
 
   <section id="get-started" class="grid grid-cols-12 md:pt-20 pt-16 md:pb-desktop-bottom pb-mobil-bottom">
-    <h1 class="md:text-h2-desktop text-h2-mobile font-display font-bold col-start-2 col-span-10 md:pb-8 pb-4">Kom godt i gang</h1>
+    <h1 class="md:text-h2-desktop text-h2-mobile font-bold col-start-2 col-span-10 md:pb-8 pb-4">Kom godt i gang</h1>
     <p class="pb-4 col-start-2 col-span-10 max-w-2xl">
       Uanset om du er ny, søger viden om CP, har brug for støtte eller bare vil bidrage til et godt formål— her finder du de vigtigste veje videre.
     </p>
@@ -62,10 +60,12 @@ import Button from "../components/Button.astro";
           <img
             src="/images/submenu1.webp"
             alt="Billede til den første undermenu på CP Danmark's forside"
-            class="md:w-[400px] md:h-[300px] w-full h-full object-cover brightness-75"
+            class="md:w-[310px] md:h-[310px] w-full h-full object-cover brightness-75"
           />
-          <div class="absolute inset-0 flex items-center justify-center px-4">
-            <p class="text-gray-50 text-center font-semibold bg-[#AE5D37]/85 p-4">Bliv klogere på CP— og få indblik i livet med diagnosen</p>
+          <div class="absolute inset-0 flex items-end pb-12 justify-center px-4">
+            <p class="text-gray-50 text-center font-semibold bg-[#AE5D37]/85 p-4 hover:underline">
+              Bliv klogere på CP— og få indblik i livet med diagnosen
+            </p>
           </div>
         </a>
       </div>
@@ -74,10 +74,10 @@ import Button from "../components/Button.astro";
           <img
             src="/images/submenu2.webp"
             alt="Billede til den første undermenu på CP Danmark's forside"
-            class="md:w-[400px] md:h-[300px] w-full h-full object-cover brightness-75"
+            class="md:w-[310px] md:h-[310px] w-full h-full object-cover brightness-75"
           />
-          <div class="absolute inset-0 flex items-center justify-start md:justify-center px-4">
-            <p class="text-gray-50 text-center font-semibold bg-[#BBA572]/85 p-4">Vær en del af fællesskabet og støt vores arbejde</p>
+          <div class="absolute inset-0 flex items-end pb-12 justify-start md:justify-center px-4">
+            <p class="text-gray-50 text-center font-semibold bg-[#BBA572]/85 p-4 hover:underline">Vær en del af fællesskabet og støt vores arbejde</p>
           </div>
         </a>
       </div>
@@ -86,10 +86,10 @@ import Button from "../components/Button.astro";
           <img
             src="/images/submenu3.webp"
             alt="Billede til den første undermenu på CP Danmark's forside"
-            class="md:w-[400px] md:h-[300px] w-full h-full object-cover brightness-75"
+            class="md:w-[310px] md:h-[310px] w-full h-full object-cover brightness-75"
           />
-          <div class="absolute inset-0 flex items-center justify-center px-4">
-            <p class="text-gray-50 text-center font-semibold bg-[#89A685]/85 p-4">Giv et bidrag og hjælp mennesker med CP</p>
+          <div class="absolute inset-0 flex items-end pb-12 justify-center px-4">
+            <p class="text-gray-50 text-center font-semibold bg-[#89A685]/85 p-4 hover:underline">Giv et bidrag og hjælp mennesker med CP</p>
           </div>
         </a>
       </div>
@@ -98,36 +98,154 @@ import Button from "../components/Button.astro";
           <img
             src="/images/submenu4.webp"
             alt="Billede til den første undermenu på CP Danmark's forside"
-            class="md:w-[400px] md:h-[300px] w-full h-full object-cover brightness-75"
+            class="md:w-[310px] md:h-[310px] w-full h-full object-cover brightness-75"
           />
-          <div class="absolute inset-0 flex items-center justify-center px-4">
-            <p class="text-gray-50 text-center font-semibold bg-[#7396B6]/85 p-4">Find hjælp og vejledning til det, der fylder lige nu</p>
+          <div class="absolute inset-0 flex items-end pb-12 justify-center px-4">
+            <p class="text-gray-50 text-center font-semibold bg-[#7396B6]/85 p-4 hover:underline">
+              Find hjælp og vejledning til det, der fylder lige nu
+            </p>
           </div>
         </a>
       </div>
     </div>
   </section>
+  <section class="experiences grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom">
+    <h2 class="md:text-h3-desktop text-h3-mobile font-bold md:pb-8 pb-4 col-start-2 col-span-10">Personlige oplevelser fra fællesskabet</h2>
+    <div class="col-start-2 col-span-10 grid md:grid-cols-4 gap-4 grid-cols-1 items-center justify-center">
+      <div class="quote1 bg-gray-100 p-5">
+        <blockquote class="italic pb-4">"Jeg plejede at føle mig alene. Men her fandt jeg både svar, og nogen der forstår mig."</blockquote>
+        <p class="text-gray-800 text-[14px]">↳ Sofie, 17 år – lever med spastisk CP</p>
+      </div>
+      <div class="quote2 bg-gray-100 p-5">
+        <blockquote class="italic pb-4">"Det var en jungle at finde hjælp&mdash; indtil jeg landede her. Nu føler vi os trygge."</blockquote>
+        <p class="text-gray-800 text-[14px]">↳ Jonas, far til barn med CP</p>
+      </div>
+      <div class="quote3 bg-gray-100 p-5">
+        <blockquote class="italic pb-4">"Som fagperson bruger jeg siden, når jeg skal guide forældre og unge videre."</blockquote>
+        <p class="text-gray-800 text-[14px]">↳ Maria, ergoterapeut</p>
+      </div>
+      <div class="quote4 bg-gray-100 p-5">
+        <blockquote class="italic pb-4">"Jeg anede ikke hvor jeg skulle starte. Det her sted blev mit første skridt."</blockquote>
+        <p class="text-gray-800 text-[14px]">↳ Camilla, 32 år – nydiagnosticeret</p>
+      </div>
+    </div>
+  </section>
+  <section class="news grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom">
+    <h2 class="md:text-h3-desktop text-h3-mobile md:pb-8 pb-4 col-start-2 col-span-10">Seneste nyheder</h2>
+    <div class="col-start-2 col-span-10 grid md:grid-cols-3 gap-4 grid-cols-1 items-center justify-center">
+      <NewsCard />
+      <NewsCard />
+      <NewsCard />
+    </div>
+  </section>
+  <section class="info-section grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom">
+    <div class="grid md:grid-cols-2 col-start-2 col-span-10 items-center">
+      <!-- Text and button section -->
+      <div>
+        <h3 class="md:pb-6 pb-4">Støt fællesskabet og få adgang til vigtige ressourcer</h3>
+        <p class="pb-8">
+          Som medlem af CP Danmark er du en vigtig del af et stærkt netværk. Du får ikke kun adgang til rådgivning, materialer og arrangementer, men
+          du er også med til at gøre en forskel for alle, der lever med cerebral parese. Deltag i vores aktiviteter, støt vores arbejde, og vær med
+          til at skabe forandring.
+          <br /><br />
+          Tilmeld dig i dag og vær med til at styrke fællesskabet.
+        </p>
+        <a href="/tilmeld">
+          <Button variant="tertiary" size="small">Gå til 'Tilmeld'</Button>
+        </a>
+      </div>
+
+      <!-- Image section -->
+      <div class="flex justify-end md:pt-0 pt-8">
+        <img src="/images/info_section1.webp" alt="Første billede til info-sektion" class="w-[500px] h-[400px] object-cover brightness-75" />
+      </div>
+    </div>
+    <div class="grid md:grid-cols-2 col-start-2 col-span-10 items-center md:pt-24 pt-20">
+      <!-- Image section -->
+      <div class="flex justify-start">
+        <img src="/images/info_section2.webp" alt="Andet billede til info-sektion" class="w-[500px] h-[400px] object-cover brightness-75" />
+      </div>
+      <!-- Text and button section -->
+      <div>
+        <h3 class="md:pb-6 pb-4 md:pt-0 pt-8">Har du spørgsmål eller brug for støtte?</h3>
+        <p class="pb-8">
+          Uanset om du lever med CP, er pårørende eller står midt i en konkret udfordring, er du ikke alene. Vi tilbyder gratis og fortrolig
+          rådgivning om alt fra rettigheder og hjælpemidler til skole, arbejde og hverdagsliv.
+          <br /><br />
+          Skriv, ring— eller find den hjælp, du har brug for her.
+        </p>
+        <a href="/raadgivning">
+          <Button variant="tertiary" size="small">Gå til 'Rådgivning'</Button>
+        </a>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-2 col-start-2 col-span-10 items-center md:pt-24 pt-20">
+      <!-- Text and button section -->
+      <div>
+        <h3 class="md:pb-6 pb-4">Er du i tvivl om noget?</h3>
+        <p class="pb-8">
+          Vi forstår at det kan være overvældende at finde den rette vej videre. Uanset hvad du søger, så står vi klar til at hjælpe dig med at finde
+          den rigtige støtte og information.
+          <br /><br />
+          Har du spørgsmål eller er du usikker på hvorhenne du skal starte? Vi er klar til at hjælpe dig med at finde vejen frem.
+        </p>
+        <a href="/gode_raad">
+          <Button variant="tertiary" size="small">Gå til 'Gode råd'</Button>
+        </a>
+      </div>
+
+      <!-- Image section -->
+      <div class="flex justify-end md:pt-0 pt-8">
+        <img src="/images/info_section3.webp" alt="Tredje billede til info-sektion" class="w-[500px] h-[400px] object-cover brightness-75" />
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Floating Animation */
+    @keyframes float {
+      0% {
+        transform: translatey(0);
+      }
+      50% {
+        transform: translatey(-10px);
+      }
+      100% {
+        transform: translatey(0);
+      }
+    }
+
+    .float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Dark Mode */
+    body.dark .quote1,
+    body.dark .quote2,
+    body.dark .quote3,
+    body.dark .quote4 {
+      background-color: #4f4f4f;
+      color: #f6f6f6;
+    }
+
+    body.dark .quote1 p,
+    body.dark .quote2 p,
+    body.dark .quote3 p,
+    body.dark .quote4 p {
+      color: #f6f6f6;
+    }
+
+    body.dark h1,
+    body.dark h2,
+    body.dark h3,
+    body.dark h4,
+    body.dark p,
+    body.dark a {
+      color: #f6f6f6;
+    }
+  </style>
 </MainLayout>
-
-<style>
-  /* Floating Animation */
-  @keyframes float {
-    0% {
-      transform: translatey(0);
-    }
-    50% {
-      transform: translatey(-10px);
-    }
-    100% {
-      transform: translatey(0);
-    }
-  }
-
-  .float {
-    animation: float 3s ease-in-out infinite;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-</style>

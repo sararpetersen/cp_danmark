@@ -30,7 +30,7 @@ import Button from "../components/Button.astro";
 </div>
 
 <div id="header" x-data="{ showmenu: false }" class="fixed p-4 z-20 w-full bg-gray-50 shadow-drop25 pt-12">
-  <div id="navbar" class="flex flex-row justify-between gap-8 max-w-7xl mx-auto md:pr-6 md:pl-6 pr-8 pl-8 pt-6 pb-4">
+  <div id="navbar" class="flex flex-row justify-between gap-8 max-w-7xl mx-auto md:pr-6 md:pl-6 pr-8 pl-8 pt-4 pb-3">
     <div class="">
       <a href="/">
         <img src="/images/logo_blaa.webp" alt="Logo for CP Danmark" class="h-12 hover:opacity-50 transition duration-300 ease-in-out logo-light" />
@@ -85,7 +85,7 @@ import Button from "../components/Button.astro";
           <div
             x-show="showDropdown2"
             x-transition
-            class="dropdown2 absolute left-0 mt-2 w-[165px] bg-gray-50 shadow-drop25 border border-gray-400 z-10"
+            class="dropdown2 absolute left-0 mt-2 w-[220px] bg-gray-50 shadow-drop25 border border-gray-400 z-10"
           >
             <ul>
               <li class="py-1 px-4"><a href="/raadgivning" class="hover:text-blue-700">Rådgivning</a></li>
@@ -98,7 +98,7 @@ import Button from "../components/Button.astro";
         <li><a href="/goode_raad" class="relative flex items-center hover:text-blue-700 py-1">Gode råd</a></li>
       </ul>
     </nav>
-    <div class="ml-auto md:block hidden">
+    <div class="ml-auto hidden md:block">
       <a href="/stoet">
         <Button variant="primary" size="small">Støt os</Button>
       </a>
@@ -228,7 +228,8 @@ import Button from "../components/Button.astro";
 
   /* Text Size Mode */
   body.text-large {
-    font-size: 1.125rem;
+    font-size: 1.12rem;
+    font-family: "Open Sans", sans-serif;
   }
 
   /* Reduce Motion Mode */

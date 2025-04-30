@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+@layer components {
   * {
     @apply font-opensans;
   }
@@ -11,28 +11,24 @@
     @apply text-display-mobile font-bold text-gray-50;
   }
 
-  .h1 {
+  h1 {
     @apply text-h1-mobile font-bold text-gray-950;
   }
 
-  .h2 {
+  h2 {
     @apply text-h2-mobile font-bold text-gray-950;
   }
 
-  .h3 {
+  h3 {
     @apply text-h3-mobile font-bold text-gray-950;
   }
 
-  .h4 {
+  h4 {
     @apply text-h4-mobile font-bold text-gray-950;
   }
 
-  .p {
-    @apply text-p-mobile text-gray-950;
-  }
-
-  .a {
-    @apply text-a-mobile underline text-blue-700;
+  p {
+    @apply text-gray-950;
   }
 
   @screen md {
@@ -40,28 +36,24 @@
       @apply text-display-desktop font-bold text-gray-50;
     }
 
-    .h1 {
+    h1 {
       @apply text-h1-desktop font-bold text-gray-950;
     }
 
-    .h2 {
+    h2 {
       @apply text-h2-desktop font-bold text-gray-950;
     }
 
-    .h3 {
+    h3 {
       @apply text-h3-desktop font-bold text-gray-950;
     }
 
-    .h4 {
+    h4 {
       @apply text-h4-desktop font-bold text-gray-950;
     }
 
-    .p {
-      @apply text-p-desktop text-gray-950;
-    }
-
-    .a {
-      @apply text-a-desktop underline text-blue-700;
+    p {
+      @apply text-gray-950;
     }
   }
 

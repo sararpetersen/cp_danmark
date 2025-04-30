@@ -84,7 +84,7 @@ export default {
       "h3-desktop": ["2.3rem", { lineHeight: "2.5rem" }],
       "h3-mobile": ["2rem", { lineHeight: "2.25rem" }],
       "h4-desktop": ["1.5rem", { lineHeight: "2.25rem" }],
-      "h4-mobile": ["1.3rem", { lineHeight: "1.875rem" }],
+      "h4-mobile": ["1.2rem", { lineHeight: "1.875rem" }],
       "p-desktop": ["1.1rem", { lineHeight: "1.875rem" }],
       "p-mobile": ["1.02rem", { lineHeight: "1.5rem" }],
       "a-desktop": ["1.1rem", { lineHeight: "1.875rem" }],
@@ -128,6 +128,9 @@ export default {
         "desktop-bottom": "120px", // Reduced bottom spacing for desktop
         "mobil-top": "100px", // Reduced top spacing for mobile
         "desktop-top": "120px", // Reduced top spacing for desktop
+      },
+      fontSize: {
+        large: "1.25rem", // eller vælg en anden størrelse som passer dig
       },
     },
   },
