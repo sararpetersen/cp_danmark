@@ -130,14 +130,38 @@ import Button from "../components/Button.astro";
       </div>
     </div>
   </section>
-  <section class="news grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom">
-    <h2 class="md:text-h3-desktop text-h3-mobile md:pb-8 pb-4 col-start-2 col-span-10">Seneste nyheder</h2>
-    <div class="col-start-2 col-span-10 grid md:grid-cols-3 gap-4 grid-cols-1 items-center justify-center">
-      <NewsCard />
-      <NewsCard />
-      <NewsCard />
+  <section class="news grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom relative">
+    <h2 class="md:text-h3-desktop text-h3-mobile col-start-2 col-span-10 md:pb-8 pb-4">Seneste nyheder</h2>
+    <!-- Horizontal scroll container -->
+    <div class="col-start-2 col-span-10 relative">
+      <div id="carousel" class="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide md:h-[35rem] h-[32rem]">
+        <!-- More cards -->
+        <div class="flex-none snap-start w-[80%] md:w-[30%]">
+          <NewsCard />
+        </div>
+        <div class="flex-none snap-start w-[80%] md:w-[30%]">
+          <NewsCard />
+        </div>
+        <div class="flex-none snap-start w-[80%] md:w-[30%]">
+          <NewsCard />
+        </div>
+        <!-- Additional cards to enable scrolling -->
+        <div class="flex-none snap-start w-[80%] md:w-[30%]">
+          <NewsCard />
+        </div>
+        <div class="flex-none snap-start w-[80%] md:w-[30%]">
+          <NewsCard />
+        </div>
+        <div class="flex-none snap-start w-[80%] md:w-[30%]">
+          <NewsCard />
+        </div>
+        <div class="flex-none snap-start w-[80%] md:w-[30%]">
+          <NewsCard />
+        </div>
+      </div>
     </div>
   </section>
+
   <section class="info-section grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom">
     <div class="grid md:grid-cols-2 col-start-2 col-span-10 items-center">
       <!-- Text and button section -->
@@ -200,52 +224,51 @@ import Button from "../components/Button.astro";
       </div>
     </div>
   </section>
-
-  <style>
-    /* Floating Animation */
-    @keyframes float {
-      0% {
-        transform: translatey(0);
-      }
-      50% {
-        transform: translatey(-10px);
-      }
-      100% {
-        transform: translatey(0);
-      }
-    }
-
-    .float {
-      animation: float 3s ease-in-out infinite;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Dark Mode */
-    body.dark .quote1,
-    body.dark .quote2,
-    body.dark .quote3,
-    body.dark .quote4 {
-      background-color: #4f4f4f;
-      color: #f6f6f6;
-    }
-
-    body.dark .quote1 p,
-    body.dark .quote2 p,
-    body.dark .quote3 p,
-    body.dark .quote4 p {
-      color: #f6f6f6;
-    }
-
-    body.dark h1,
-    body.dark h2,
-    body.dark h3,
-    body.dark h4,
-    body.dark p,
-    body.dark a {
-      color: #f6f6f6;
-    }
-  </style>
 </MainLayout>
+<style>
+  /* Floating Animation */
+  @keyframes float {
+    0% {
+      transform: translatey(0);
+    }
+    50% {
+      transform: translatey(-10px);
+    }
+    100% {
+      transform: translatey(0);
+    }
+  }
+
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Dark Mode */
+  body.dark .quote1,
+  body.dark .quote2,
+  body.dark .quote3,
+  body.dark .quote4 {
+    background-color: #4f4f4f;
+    color: #f6f6f6;
+  }
+
+  body.dark .quote1 p,
+  body.dark .quote2 p,
+  body.dark .quote3 p,
+  body.dark .quote4 p {
+    color: #f6f6f6;
+  }
+
+  body.dark h1,
+  body.dark h2,
+  body.dark h3,
+  body.dark h4,
+  body.dark p,
+  body.dark a {
+    color: #f6f6f6;
+  }
+</style>
