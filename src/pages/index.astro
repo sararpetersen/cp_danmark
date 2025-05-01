@@ -2,6 +2,51 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import NewsCard from "../components/NewsCard.astro";
 import Button from "../components/Button.astro";
+
+const news = [
+  {
+    image: "/images/newscard1.webp",
+    date: "9. april 2025",
+    title: "Olivia Dahl modtager ...",
+    description: "Hun ville ikke have noget med handicap ...",
+  },
+  {
+    image: "/images/newscard2.webp",
+    date: "13. marts 2025",
+    title: "Kom med CP Danmark ...",
+    description: "Vil du være med til at styrke dialogen ...",
+  },
+  {
+    image: "/images/newscard3.webp",
+    date: "24. februar 2025",
+    title: "TEMA: kreative udfoldelser og CP",
+    description: "Vi er klar med årets første CP INDBLIK ...",
+  },
+  {
+    image: "/images/newscard4.webp",
+    date: "23. februar 2025",
+    title: "Midt i frustrationerne ...",
+    description: "Massive nedskæringer rammer handicap ...",
+  },
+  {
+    image: "/images/newscard5.webp",
+    date: "11. december 2024",
+    title: "CP INDBLIK udkommer 4 gange ...",
+    description: "I det nye år går CP Danmarks ...",
+  },
+  {
+    image: "/images/newscard6.webp",
+    date: "10. december 2024",
+    title: "Nyhed: Læse- og skriveadgang ...",
+    description: "Nu kan du skrive digital post ...",
+  },
+  {
+    image: "/images/newscard7.webp",
+    date: "3. december 2024",
+    title: "Vi har også brug for et ...",
+    description: "I de seneste år er der kommet et øget fokus ...",
+  },
+];
 ---
 
 <MainLayout
@@ -13,7 +58,7 @@ import Button from "../components/Button.astro";
   <section
     class="hero-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom w-full h-screen md:px-0 px-4 relative"
   >
-    <div class="flex flex-col items-left relative z-10 col-start-2 col-span-10 md:pt-32 pt-40">
+    <div class="flex flex-col items-left relative z-10 col-start-2 col-span-10 md:pt-24 pt-28">
       <p class="md:text-h3-desktop text-h3-mobile font-semibold italic text-gray-50 pb-4">Velkommen</p>
       <hr class="md:w-[20%] w-[50%] pb-12 text-gray-50 border-dashed" />
       <h1 class="display">Vi er her for dig</h1>
@@ -50,7 +95,7 @@ import Button from "../components/Button.astro";
   </section>
 
   <section id="get-started" class="grid grid-cols-12 md:pt-20 pt-16 md:pb-desktop-bottom pb-mobil-bottom">
-    <h1 class="md:text-h2-desktop text-h2-mobile font-bold col-start-2 col-span-10 md:pb-8 pb-4">Kom godt i gang</h1>
+    <h1 class="md:text-h2-desktop text-h2-mobile font-bold col-start-2 col-span-10 pb-4">Kom godt i gang</h1>
     <p class="pb-4 col-start-2 col-span-10 max-w-2xl">
       Uanset om du er ny, søger viden om CP, har brug for støtte eller bare vil bidrage til et godt formål— her finder du de vigtigste veje videre.
     </p>
@@ -131,33 +176,17 @@ import Button from "../components/Button.astro";
     </div>
   </section>
   <section class="news grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom relative">
-    <h2 class="md:text-h3-desktop text-h3-mobile col-start-2 col-span-10 md:pb-8 pb-4">Seneste nyheder</h2>
+    <div class="col-start-2 col-span-10 md:pb-8 pb-4">
+      <h2 class="md:text-h3-desktop text-h3-mobile">Seneste nyheder</h2>
+      <a href="/nyheder">
+        <p class="underline hover:text-blue-700 transition duration-300 ease-in-out col-start-2 col-span-10">Se alle ...</p>
+      </a>
+    </div>
     <!-- Horizontal scroll container -->
     <div class="col-start-2 col-span-10 relative">
-      <div id="carousel" class="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide md:h-[35rem] h-[32rem]">
+      <div id="carousel" class="flex overflow-x-auto space-x-4 scroll-smooth scrollbar-hide md:h-[35rem] h-[31rem]">
         <!-- More cards -->
-        <div class="flex-none snap-start w-[80%] md:w-[30%]">
-          <NewsCard />
-        </div>
-        <div class="flex-none snap-start w-[80%] md:w-[30%]">
-          <NewsCard />
-        </div>
-        <div class="flex-none snap-start w-[80%] md:w-[30%]">
-          <NewsCard />
-        </div>
-        <!-- Additional cards to enable scrolling -->
-        <div class="flex-none snap-start w-[80%] md:w-[30%]">
-          <NewsCard />
-        </div>
-        <div class="flex-none snap-start w-[80%] md:w-[30%]">
-          <NewsCard />
-        </div>
-        <div class="flex-none snap-start w-[80%] md:w-[30%]">
-          <NewsCard />
-        </div>
-        <div class="flex-none snap-start w-[80%] md:w-[30%]">
-          <NewsCard />
-        </div>
+        {news.map((item) => <NewsCard image={item.image} date={item.date} title={item.title} description={item.description} />)}
       </div>
     </div>
   </section>

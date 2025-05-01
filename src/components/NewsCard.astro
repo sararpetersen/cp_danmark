@@ -1,22 +1,23 @@
 ---
 import Button from "./Button.astro";
+const { image, date, description, title } = Astro.props;
 ---
 
-<a href="/nyheder">
-  <div class="news-card bg-gray-100 rounded-[5px] shadow-drop25 hover:bg-gray-200 hover:translate-y-[-2px] transition duration-300 ease-in-out">
-    <div class="news-card_image">
-      <img src="/images/news_image1.webp" alt="Placeholder image" class="w-full h-full object-cover rounded-t-[5px]" />
-    </div>
-    <div class="news-card_content p-5">
-      <p id="date" class="text-gray-400 pb-2">Dato</p>
-      <h3 class="md:text-h4-desktop text-h4-mobile font-bold pb-2">Nyhedsoverskrift</h3>
-      <p class="pb-8">Nyhedsbeskrivelse</p>
-      <a href="/nyheder">
-        <Button variant="secondary" size="small">Læs mere</Button>
-      </a>
-    </div>
+<div
+  class="news-card min-w-[300px] md:min-w-[400px] self-start bg-gray-100 rounded-[5px] shadow-drop25 hover:bg-gray-200 hover:cursor-pointer hover:translate-y-[-2px] transition duration-300 ease-in-out"
+>
+  <div class="news-card_image">
+    <img src={image} alt={title} class="w-full h-full object-cover rounded-t-[5px]" />
   </div>
-</a>
+  <div class="news-card_content p-5">
+    <p id="date" class="text-gray-400 pb-2">{date}</p>
+    <h3 class="text-[18px] font-bold pb-2">{title}</h3>
+    <p class="pb-5">{description}</p>
+    <a href="/nyheder">
+      <Button variant="secondary" size="small">Læs mere</Button>
+    </a>
+  </div>
+</div>
 
 <style>
   body.dark .news-card {
