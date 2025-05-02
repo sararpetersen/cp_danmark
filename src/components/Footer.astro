@@ -5,25 +5,40 @@
 <!-- Footer til mobil format -->
 <footer class="bg-gray-950">
   <section class="max-w-7xl mx-auto md:p-0 md:py-8 p-8">
-    <section class="grid md:grid-cols-12 grid-cols-1 md:gap-20">
-      <div class="info1 md:col-span-3 col-span-12 pt-2 md:pb-o pb-8 w-[fit-content]">
-        <a href="/" class=""
-          ><img
-            class="object-contain h-24 pb-6 transform hover:-translate-y-1 transition duration-300 ease-in-out hover:opacity-70"
-            src="/images/logo_hvid.webp"
-            alt="logo"
-          /></a
-        >
-        <p class="pb-4 text-gray-50">CP Danmark - Landsforeningen <br /> for cerebral parese</p>
-        <p class="text-gray-50">Blekinge Boulevard 2</p>
-        <p class="pb-4 text-gray-50">2630 Taastrup</p>
-        <p class="text-gray-50">CVR: 20 24 88 15</p>
+    <div class="grid md:grid-cols-3 grid-cols-1 gap-gap">
+      <div class="info1">
+        <a href="/">
+          <img class="object-contain h-24 pb-6 transition duration-300 ease-in-out hover:opacity-70" src="/images/logo_hvid.webp" alt="logo" />
+        </a>
+        <!-- Adresse -->
+        <div class="space-y-1 max-w-xs">
+          <ul>
+            <li class="pb-2 text-gray-50 font-semibold">CP Danmark - Landsforeningen for cerebral parese</li>
+            <li class="text-gray-50">Blekinge Boulevard 2</li>
+            <li class="text-gray-50">2630 Taastrup</li>
+            <li class="text-gray-50">CVR: 20 24 88 15</li>
+          </ul>
+        </div>
+
+        <!-- Åbningstider -->
+        <div class="flex flex-col pt-6 md:pb-0 pb-8">
+          <p>
+            <span class="font-semibold text-gray-50">Åbningstider:</span>
+            <ul class="text-gray-50">
+              <li>Mandag: 10:30-12:00 & 13:00-14:00</li>
+              <li>Tirsdag-fredag: 10:30-12:00 & 13:00-14:00</li>
+            </ul>
+          </p>
+        </div>
       </div>
-      <div class="socials_newsletter md:col-span-4 col-span-12 pt-2">
+
+      <div class="info2">
         <!-- Sociale medier -->
-        <div class="md:pb-12 pb-8 pt-2">
+        <div class="md:pb-8 pb-4">
           <div>
-            <div class="flex justify-start gap-7 content-center items-center">
+            <!-- Title moved out of flex -->
+            <h1 class="md:text-h4-desktop text-h4-mobile text-gray-50 mb-4">Følg os på de sociale medier</h1>
+            <div class="flex justify-start gap-7 items-center">
               <div class="w-12 flex-shrink-0">
                 <a href="http://www.facebook.dk/cpdanmark.dk" target="_blank">
                   <img
@@ -64,60 +79,58 @@
           </div>
         </div>
 
+        <!-- Kontakt-oplysninger -->
+        <div class="flex flex-col md:pb-0 pb-8 md:pt-0 pt-8">
+          <span class="font-semibold text-gray-50">Telefon: </span>
+          <a href="tel:38 88 45 75" class="underline hover:text-blue-700 transition duration-300 ease-in-out pb-4 text-gray-50">+45 38 88 45 75</a>
+          <p class="font-semibold text-gray-50">Mail:</p>
+          <a href="mailto:cpdanmark@cpdanmark.dk" class="underline hover:text-blue-700 transition duration-300 ease-in-out text-gray-50">
+            cpdanmark@cpdanmark.dk
+          </a>
+        </div>
+      </div>
+
+      <div class="bank-newsletter">
         <!-- Nyhedsbrev -->
-        <h1 class="md:text-h4-desktop text-h4-mobile font-display font-bold text-gray-50">Tilmeld dig vores nyhedsbrev</h1>
-        <p class="pb-4 text-gray-50">Hold dig opdateret og få seneste nyt om livet med CP, info om vores aktiviteter og kurser, og meget andet.</p>
-        <form action="#" class="md:pb-0 pb-8">
-          <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
-            <div class="relative w-full">
-              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
-                  ><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path
-                    d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg
-                >
-              </div>
-              <input
-                class="block p-3 pl-24 pr-3 w-full text-[1rem] text-gray-400 bg-gray-50 placeholder-gray-400"
-                placeholder="Skriv din mail her"
-                type="email"
-                id="email"
-                required=""
-              />
-              <div class="absolute inset-y-0 left-0 flex items-center justify-start">
-                <button
-                  type="submit"
-                  class="py-3 px-5 text-center cursor-pointer -ml-px font-semibold border border-blue-600 bg-blue-600 hover:bg-blue-500 hover:border-blue-500 transition duration-300 ease-in-out text-gray-50 text-[1rem]"
-                  >SEND</button
-                >
+        <div id="newsletter">
+          <h1 class="md:text-h4-desktop text-h4-mobile text-gray-50">Tilmeld dig vores nyhedsbrev</h1>
+          <p class="pb-5 text-gray-50">Hold dig opdateret og få seneste nyt om livet med CP, info om vores aktiviteter og kurser, og meget andet.</p>
+          <form action="#" class="md:pb-0 pb-8">
+            <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
+              <div class="relative w-full">
+                <input
+                  class="block p-3 pl-24 pr-3 w-full text-[1rem] text-gray-400 bg-gray-50 placeholder-gray-400"
+                  placeholder="Skriv din mail her"
+                  type="email"
+                  id="email"
+                  required=""
+                />
+                <div class="absolute inset-y-0 left-0 flex items-center justify-start">
+                  <button
+                    type="submit"
+                    class="py-3 px-5 text-center cursor-pointer -ml-px font-semibold border border-blue-600 bg-blue-600 hover:bg-blue-500 hover:border-blue-500 transition duration-300 ease-in-out text-gray-50 text-[1rem]"
+                    >SEND</button
+                  >
+                </div>
               </div>
             </div>
-          </div>
-        </form>
-      </div>
-      <div class="info2 md:col-span-5 col-span-12 md:pl-8 pl-0">
-        <div class="flex flex-col md:pb-4 pb-8">
-          <span class="font-semibold text-gray-50">Telefon: </span>
-          <a href="tel:38 88 45 75" class="underline hover:text-blue-700 transition duration-300 ease-in-out pb-2 text-gray-50">38 88 45 75</a>
-          <p class="font-semibold text-gray-50">Mail:</p><a
-            href="mailto:cpdanmark@cpdanmark.dk"
-            class="underline hover:text-blue-700 transition duration-300 ease-in-out text-gray-50">cpdanmark@cpdanmark.dk</a
+          </form>
+        </div>
+
+        <!-- Bank-info -->
+        <div class="flex flex-col md:pb-0 pb-8 md:pt-4 pt-0">
+          <span class="font-semibold text-gray-50">Bank: </span>
+          <p class="text-gray-50 pb-4">Nordea – reg. nr. 2191 | kontonr. 0128390022</p>
+          <span class="font-semibold text-gray-50">MobilePay: </span>
+          <a
+            href="https://www.mobilepay.dk/erhverv/betalingslink/betalingslink-svar?phone=90866"
+            target="_blank"
+            class="underline hover:text-blue-700 transition duration-300 ease-in-out text-gray-50"
+            class="text-gray-50">90866</a
           >
         </div>
-        <div class="flex flex-col md:pb-4 pb-8">
-          <p>
-            <span class="font-semibold text-gray-50">Åbningstider:</span>
-            <ul class="text-gray-50">
-              <li>Mandag: 10:30-12:00 & 13:00-14:00</li>
-              <li>Tirsdag-fredag: 10:30-12:00 & 13:00-14:00</li>
-            </ul>
-          </p>
-        </div>
-        <div class="flex flex-col md:pb-0 pb-8">
-          <p class="text-gray-50"><span class="font-semibold pb-2 text-gray-50">Bank: </span>Nordea – reg. nr. 2191, kontonr. 0128390022</p>
-          <p class="text-gray-50"><span class="font-semibold text-gray-50">MobilePay: </span>90866</p>
-        </div>
       </div>
-      <section class="copyright_protector col-span-12 gap-4 flex flex-col">
+      <div class="copyright_protector gap-4 flex flex-col">
         <div>
           <hr class="w-[20%] pb-4 border-gray-50 opacity-50" />
           <p class="text-gray-50 pb-4"><span class="font-semibold">Protektor: </span> H.K.H. Prinsesse Benedikte</p>
@@ -139,7 +152,7 @@
             >
           </p>
         </div>
-      </section>
-    </section>
+      </div>
+    </div>
   </section>
 </footer>

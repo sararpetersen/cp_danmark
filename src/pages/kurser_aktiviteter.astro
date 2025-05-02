@@ -1,0 +1,152 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import CourseCard from "../components/CourseCard.astro";
+import ActivityCard from "../components/ActivityCard.astro";
+
+const courses = [
+  {
+    image: "/images/coursecard.webp",
+    date: "5. maj 2025, fra 19:00 til 20:30",
+    title: "Din vej til uddannelse og job (online)",
+    description:
+      "Webinar om støttemuligheder og forskellige indgange til uddannelse og arbejdsmarkedet. Få gode råd og konkrete værktøjer fra socialfaglig rådgiver og fleksjobambassadør.",
+    price_member: "Gratis",
+    price_guest: "250 kr.",
+    spots: "10",
+    duedate: "30. april 2025",
+  },
+  {
+    image: "/images/coursecard.webp",
+    date: "14. maj 2025, fra 16:00 til 17:30",
+    title: "Dig og din krop - intimitet, sex og bevægelse (online)",
+    description: "Webinar for unge, voksne og netværk som vil vide mere om emnerne og få gode råd med på vejen.",
+    price_member: "Gratis",
+    price_guest: "250 kr.",
+    spots: "18",
+    duedate: "6. maj 2025",
+  },
+  {
+    image: "/images/coursecard.webp",
+    date: "21. juni 2025, fra 11:30 til 15:00",
+    title: "Cykling i Københavns gader - mangfoldighedscykelløb sammen ...",
+    description: "Vi ønsker at samle alle der gerne vil cykle til en dag i cyklingens og fællesskabets tegn, når CP Danmark ...",
+    price_member: "Gratis",
+    price_guest: "Gratis",
+    spots: "50",
+    duedate: "1. juni 2025",
+  },
+  {
+    image: "/images/coursecard.webp",
+    date: "13. september 2025",
+    title: "Forældre, følelser og fællesskab",
+    description:
+      "Forældre, følelser og fællesskab er et netværksarrangement skabt for forældre til børn med CP, hvor der er plads til at dele erfaringer, følelser og skabe nye relationer.",
+    price_member: "Gratis",
+    price_guest: "500 kr.",
+    spots: "38",
+    duedate: "30. august 2025",
+  },
+  {
+    image: "/images/coursecard2.webp",
+    date: "Dato tilføjes",
+    title: "Kursus mangler",
+    description: "Vent for mere information",
+  },
+  {
+    image: "/images/coursecard2.webp",
+    date: "Dato tilføjes",
+    title: "Kursus mangler",
+    description: "Vent for mere information",
+  },
+];
+
+const activities = [
+  {
+    image: "/images/activitycard1.webp",
+    date: "9.-11. maj 2025",
+    title: "Weekend i Dronningens Ferieby",
+    description: "Tag med på en skøn weekendtur i naturskønne omgivelser arrangeret af CP Danmark Sydøstjylland.",
+  },
+  {
+    image: "/images/activitycard2.webp",
+    date: "10. maj 2025",
+    title: "Fest med livemusik",
+    description: "Kom med til en festlig aften arrangeret af CP Danmark Storkøbenhavn. Der vil være lækker mad, livemusik med ...",
+  },
+  {
+    image: "/images/activitycard3.webp",
+    date: "16-18. maj 2025",
+    title: "'Slap af'-weekend på Feriecenter Slettestrand",
+    description: "Tag med på en fantastisk weekend med hygge og socialt samvær med din og andre familier ...",
+  },
+  {
+    image: "/images/activitycard4.webp",
+    date: "18. maj 2025",
+    title: "Mød en ny ven",
+    description:
+      "CP Danmark Storstrøm inviterer til en dag med hygge omkring bålet og skattejagt sammen med andre mennesker, der kender til livet med CP.",
+  },
+  {
+    image: "/images/activitycard5.webp",
+    date: "23-25. maj 2025",
+    title: "Familieweekend på Feriecenter Slettestrand",
+    description: "Lyder familieweekend i naturskønne omgivelser ved Vesterhavet tillokkende? Så skal du med ...",
+  },
+  {
+    image: "/images/activitycard6.webp",
+    date: "24. maj 2025",
+    title: "Tur i Carlsberg Byen",
+    description: "Kom med på en guidet tur i Carlsberg Byen, hvor du sammen med CP Danmark Storkøbenhavn hører historien om ...",
+  },
+];
+---
+
+<MainLayout
+  title="CP Danmark | nyheder"
+  description="CP Danmark's nyheder"
+  ogtitle="CP Danmark – Landsforeningen for cerebral parese"
+  ogdescription="nyheder til CP Danmark's hjemmeside"
+>
+  <section class="hero grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom md:pt-36 pt-28 relative">
+    <div class="col-start-2 col-span-10 md:pb-16 pb-8">
+      <h1 class="md:text-h2-desktop text-h2-mobile pb-2 md:pt-16 pt-20">Kurser & aktiviteter</h1>
+      <p class="md:text-h4-desktop text-h4-mobile italic">
+        Deltag i faglige kurser, sociale aktiviteter og fællesskaber for mennesker med CP og deres pårørende
+      </p>
+    </div>
+    <div class="col-start-2 col-span-10 pb-4">
+      <h2 class="md:text-h3-desktop text-h3-mobile">Kurser & arrangementer</h2>
+    </div>
+    <div class="col-start-2 col-span-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 items-center justify-center">
+      {
+        courses.map((item) => (
+          <CourseCard
+            image={item.image}
+            date={item.date}
+            title={item.title}
+            description={item.description}
+            price_member={item.price_member}
+            price_guest={item.price_guest}
+            spots={item.spots}
+            duedate={item.duedate}
+          />
+        ))
+      }
+    </div>
+
+    <div class="col-start-2 col-span-10 md:pt-desktop-top pt-mobil-top pb-4">
+      <h2 class="md:text-h3-desktop text-h3-mobile">Aktiviteter</h2>
+    </div>
+    <div class="col-start-2 col-span-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 items-center justify-center">
+      {activities.map((item) => <ActivityCard image={item.image} date={item.date} title={item.title} description={item.description} />)}
+    </div>
+  </section>
+
+  <style>
+    body.dark h1,
+    body.dark p,
+    body.dark h2 {
+      color: #f6f6f6;
+    }
+  </style>
+</MainLayout>

@@ -3,10 +3,10 @@ import Button from "../components/Button.astro";
 ---
 
 <!-- Accessibility settings bar -->
-<div id="accessibility-bar" class="fixed w-full bg-gray-950 text-gray-50 flex justify-start gap-6 items-center h-10 px-4 z-50">
+<div id="accessibility-bar" class="fixed w-full bg-gray-950 text-gray-50 flex justify-start gap-6 items-center h-9 p-4 z-50">
   <!-- Text Size Toggle -->
   <div class="flex items-center gap-2">
-    <label for="textSizeToggle" class="cursor-pointer md:text-[15px] text-[13px]">Stor tekst</label>
+    <label for="textSizeToggle" class="cursor-pointer md:block hidden">Stor tekst</label>
     <button id="textSizeToggle" aria-pressed="false" class="toggle-switch">
       <span class="toggle-circle"></span>
     </button>
@@ -14,7 +14,7 @@ import Button from "../components/Button.astro";
 
   <!-- Dark Mode Toggle -->
   <div class="flex items-center gap-2">
-    <label for="darkModeToggle" class="cursor-pointer md:text-[15px] text-[13px]">Mørk tilstand</label>
+    <label for="darkModeToggle" class="cursor-pointer md:block hidden">Mørk tilstand</label>
     <button id="darkModeToggle" aria-pressed="false" class="toggle-switch">
       <span class="toggle-circle"></span>
     </button>
@@ -22,7 +22,7 @@ import Button from "../components/Button.astro";
 
   <!-- Reduce Motion Toggle -->
   <div class="flex items-center gap-2">
-    <label for="motionToggle" class="cursor-pointer md:text-[15px] text-[13px]">Fjern animationer</label>
+    <label for="motionToggle" class="cursor-pointer md:block hidden">Fjern animationer</label>
     <button id="motionToggle" aria-pressed="false" class="toggle-switch">
       <span class="toggle-circle"></span>
     </button>
@@ -30,11 +30,11 @@ import Button from "../components/Button.astro";
 </div>
 
 <div id="header" x-data="{ showmenu: false }" class="fixed p-4 z-20 w-full bg-gray-50 shadow-drop25 pt-12">
-  <div id="navbar" class="flex flex-row justify-between gap-8 max-w-7xl mx-auto md:pr-6 md:pl-6 pr-8 pl-8 pt-4 pb-3">
+  <div id="navbar" class="flex flex-row justify-between gap-8 max-w-7xl mx-auto px-9 py-3">
     <div class="">
       <a href="/">
-        <img src="/images/logo_blaa.webp" alt="Logo for CP Danmark" class="h-12 hover:opacity-50 transition duration-300 ease-in-out logo-light" />
-        <img src="/images/logo_hvid.webp" alt="Logo for CP Danmark" class="h-12 hover:opacity-50 transition duration-300 ease-in-out logo-dark" />
+        <img src="/images/logo_blaa.webp" alt="Logo for CP Danmark" class="h-11 hover:opacity-50 transition duration-300 ease-in-out logo-light" />
+        <img src="/images/logo_hvid.webp" alt="Logo for CP Danmark" class="h-11 hover:opacity-50 transition duration-300 ease-in-out logo-dark" />
       </a>
     </div>
     <nav id="desktopmenu" class="hidden lg:block content-center">
@@ -90,7 +90,7 @@ import Button from "../components/Button.astro";
             <ul>
               <li class="py-1 px-4"><a href="/raadgivning" class="hover:text-blue-700">Rådgivning</a></li>
               <li class="py-1 px-4"><a href="/materialer" class="hover:text-blue-700">Materialer</a></li>
-              <li class="py-1 px-4"><a href="/kurser_arrangementer" class="hover:text-blue-700">Kurser & arrangementer</a></li>
+              <li class="py-1 px-4"><a href="/kurser_aktiviteter" class="hover:text-blue-700">Kurser & aktiviteter</a></li>
             </ul>
           </div>
         </li>
@@ -170,7 +170,7 @@ import Button from "../components/Button.astro";
         <a href="/materialer" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Materialer</a>
       </li>
       <li class="text-center py-2 border-b">
-        <a href="/kurser_arrangementer" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Kurser & arrangementer</a>
+        <a href="/kurser_aktiviteter" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Kurser & aktiviteter</a>
       </li>
     </ul>
     <ul class="mx-auto py-4 text-gray-950">
@@ -263,27 +263,32 @@ import Button from "../components/Button.astro";
 </style>
 
 <script>
-  // Text size toggle
-  const textSizeToggle = document.getElementById("textSizeToggle");
-  textSizeToggle.addEventListener("click", () => {
-    const pressed = textSizeToggle.getAttribute("aria-pressed") === "true";
-    textSizeToggle.setAttribute("aria-pressed", String(!pressed));
-    document.body.classList.toggle("text-large", !pressed);
-  });
+  // Utility function to initialize toggle
+  function initToggle(toggleId, className, storageKey) {
+    const toggleButton = document.getElementById(toggleId);
+    const savedState = localStorage.getItem(storageKey) === "true";
 
-  // Reduce motion toggle
-  const motionToggle = document.getElementById("motionToggle");
-  motionToggle.addEventListener("click", () => {
-    const pressed = motionToggle.getAttribute("aria-pressed") === "true";
-    motionToggle.setAttribute("aria-pressed", String(!pressed));
-    document.body.classList.toggle("reduce-motion", !pressed);
-  });
+    // Apply saved state
+    if (savedState) {
+      document.body.classList.add(className);
+      toggleButton.setAttribute("aria-pressed", "true");
+    } else {
+      toggleButton.setAttribute("aria-pressed", "false");
+    }
 
-  // Dark mode toggle
-  const darkModeToggle = document.getElementById("darkModeToggle");
-  darkModeToggle.addEventListener("click", () => {
-    const pressed = darkModeToggle.getAttribute("aria-pressed") === "true";
-    darkModeToggle.setAttribute("aria-pressed", String(!pressed));
-    document.body.classList.toggle("dark", !pressed);
-  });
+    // Set up click handler
+    toggleButton.addEventListener("click", () => {
+      const isPressed = toggleButton.getAttribute("aria-pressed") === "true";
+      const newState = !isPressed;
+
+      toggleButton.setAttribute("aria-pressed", String(newState));
+      document.body.classList.toggle(className, newState);
+      localStorage.setItem(storageKey, String(newState));
+    });
+  }
+
+  // Initialize each toggle
+  initToggle("textSizeToggle", "text-large", "textSizeEnabled");
+  initToggle("motionToggle", "reduce-motion", "motionReductionEnabled");
+  initToggle("darkModeToggle", "dark", "darkModeEnabled");
 </script>

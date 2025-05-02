@@ -58,11 +58,11 @@ const news = [
   <section
     class="hero-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom w-full h-screen md:px-0 px-4 relative"
   >
-    <div class="flex flex-col items-left relative z-10 col-start-2 col-span-10 md:pt-24 pt-28">
-      <p class="md:text-h3-desktop text-h3-mobile font-semibold italic text-gray-50 pb-4">Velkommen</p>
-      <hr class="md:w-[20%] w-[50%] pb-12 text-gray-50 border-dashed" />
-      <h1 class="display">Vi er her for dig</h1>
-      <p class="md:text-h4-desktop text-h4-mobile text-gray-50 pt-10 max-w-3xl">
+    <div class="flex flex-col items-left relative z-10 col-start-2 col-span-10 pt-24">
+      <p id="hero-welcome" class="md:text-h3-desktop text-h3-mobile font-semibold italic text-gray-50 pb-2">Velkommen</p>
+      <hr id="hero-line" class="md:w-[20%] w-[50%] pb-4 text-gray-50 border-dashed" />
+      <h1 id="hero-title" class="display">Vi er her for dig</h1>
+      <p id="hero-text" class="md:text-h4-desktop text-h4-mobile text-gray-50 pt-6 max-w-3xl">
         Uanset hvem du er, så er du landet det rette sted. CP Danmark er foreningen for dig der lever med cerebral parese— og for dem der støtter dig
       </p>
     </div>
@@ -71,11 +71,14 @@ const news = [
       <img src="/images/hero_image.webp" alt="Hero-billede til CP Danmark's forside" class="w-full h-full object-cover scale-x-[-1]" />
     </div>
 
-    <div class="absolute top-0 left-0 w-full h-full bg-gray-950 bg-opacity-[50%] z-0"></div>
-    <div class="absolute top-0 left-0 md:w-[50%] w-full h-full md:backdrop-blur-sm bg-opacity-75 bg-blue-950 z-0 md:rounded-r-full hidden md:block">
+    <div id="overlay1" class="absolute top-0 left-0 w-full h-full bg-gray-950 bg-opacity-[50%] z-0"></div>
+    <div
+      id="overlay2"
+      class="absolute top-0 left-0 md:w-[50%] w-full h-full md:backdrop-blur-sm bg-opacity-75 bg-blue-950 z-0 md:rounded-r-full hidden md:block"
+    >
     </div>
 
-    <div class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
+    <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
       <a href="#get-started">
         <div class="float flex flex-col items-center hover:opacity-80 transition duration-300 ease-in-out">
           <p class="text-[18px] text-gray-50 font-semibold">Gå videre ned på siden</p>
@@ -95,7 +98,7 @@ const news = [
   </section>
 
   <section id="get-started" class="grid grid-cols-12 md:pt-20 pt-16 md:pb-desktop-bottom pb-mobil-bottom">
-    <h1 class="md:text-h2-desktop text-h2-mobile font-bold col-start-2 col-span-10 pb-4">Kom godt i gang</h1>
+    <h1 class="md:text-h2-desktop text-h2-mobile col-start-2 col-span-10">Kom godt i gang</h1>
     <p class="pb-4 col-start-2 col-span-10 max-w-2xl">
       Uanset om du er ny, søger viden om CP, har brug for støtte eller bare vil bidrage til et godt formål— her finder du de vigtigste veje videre.
     </p>
@@ -210,13 +213,13 @@ const news = [
 
       <!-- Image section -->
       <div class="flex justify-end md:pt-0 pt-8">
-        <img src="/images/info_section1.webp" alt="Første billede til info-sektion" class="w-[500px] h-[400px] object-cover brightness-75" />
+        <img src="/images/info_section1.webp" alt="Første billede til info-sektion" class="w-[550px] h-[400px] object-cover" />
       </div>
     </div>
     <div class="grid md:grid-cols-2 col-start-2 col-span-10 items-center md:pt-24 pt-20">
       <!-- Image section -->
       <div class="flex justify-start">
-        <img src="/images/info_section2.webp" alt="Andet billede til info-sektion" class="w-[500px] h-[400px] object-cover brightness-75" />
+        <img src="/images/info_section2.webp" alt="Andet billede til info-sektion" class="w-[550px] h-[400px] object-cover" />
       </div>
       <!-- Text and button section -->
       <div>
@@ -249,7 +252,7 @@ const news = [
 
       <!-- Image section -->
       <div class="flex justify-end md:pt-0 pt-8">
-        <img src="/images/info_section3.webp" alt="Tredje billede til info-sektion" class="w-[500px] h-[400px] object-cover brightness-75" />
+        <img src="/images/info_section3.webp" alt="Tredje billede til info-sektion" class="w-[550px] h-[400px] object-cover" />
       </div>
     </div>
   </section>
@@ -301,3 +304,40 @@ const news = [
     color: #f6f6f6;
   }
 </style>
+
+<script>
+  import { animate, inView } from "motion";
+  /*Entrance Animation*/
+  animate("body", { opacity: [0, 1] }, { duration: 1 });
+
+  /** inView Animations */
+  const elementmedanimation1 = document.querySelector("#hero-title");
+  inView(elementmedanimation1, () => {
+    elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
+  });
+
+  const elementmedanimation2 = document.querySelector("#hero-text");
+  inView(elementmedanimation2, () => {
+    elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
+  });
+
+  const elementmedanimation3 = document.querySelector("#hero-welcome");
+  inView(elementmedanimation3, () => {
+    elementmedanimation3.classList.add("animate__animated", "animate__fadeInDown");
+  });
+
+  const elementmedanimation4 = document.querySelector("#hero-line");
+  inView(elementmedanimation4, () => {
+    elementmedanimation4.classList.add("animate__animated", "animate__fadeInRight");
+  });
+
+  const elementmedanimation5 = document.querySelector("#overlay2");
+  inView(elementmedanimation5, () => {
+    elementmedanimation5.classList.add("animate__animated", "animate__rotateInDownLeft");
+  });
+
+  const elementmedanimation6 = document.querySelector("#scroll-down");
+  inView(elementmedanimation6, () => {
+    elementmedanimation6.classList.add("animate__animated", "animate__fadeInDown");
+  });
+</script>

@@ -1,0 +1,76 @@
+---
+const { image, date, description, title, spots, price_member, price_guest, duedate } = Astro.props;
+import Button from "./Button.astro";
+---
+
+<div
+  class="course-card min-w-[300px] md:min-w-[400px] h-[47.5rem] bg-gray-100 rounded-[5px] shadow-drop25 hover:bg-gray-200 hover:translate-y-[-2px] transition duration-300 ease-in-out"
+>
+  <div class="course-card_image">
+    <img src={image} alt={title} class="w-full h-full object-cover rounded-t-[5px]" />
+  </div>
+  <div class="course-card_content p-5">
+    <p id="date" class="text-gray-400 pb-2">{date}</p>
+    <h3 id="title" class="text-[18px] font-bold pb-2">{title}</h3>
+    <p id="description" class="pb-5">{description}</p>
+    <div class="info pb-6">
+      <hr class="w-[20%] pb-4 border-gray-400" />
+      {
+        price_member && (
+          <p class="pb-2">
+            <span class="italic font-semibold">Pris for medlemmer: </span>
+            {price_member}
+          </p>
+        )
+      }
+      {
+        price_guest && (
+          <p class="pb-2">
+            <span class="italic font-semibold">Pris for ikke-medlemmer: </span>
+            {price_guest}
+          </p>
+        )
+      }
+      {
+        spots && (
+          <p class="pb-2">
+            <span class="italic font-semibold">Pladser tilbage: </span>
+            {spots}
+          </p>
+        )
+      }
+      {
+        duedate && (
+          <p>
+            <span class="italic font-semibold">Tilmeldelsesfrist: </span>
+            {duedate}
+          </p>
+        )
+      }
+    </div>
+    {
+      price_member && price_guest && spots && duedate && (
+        <a href="#">
+          <Button variant="secondary" size="small">
+            Læs mere og tilmeld
+          </Button>
+        </a>
+      )
+    }
+  </div>
+</div>
+
+<style>
+  body.dark .course-card {
+    background-color: #4f4f4f;
+  }
+
+  body.dark .course-card_content h3,
+  body.dark .course-card_content p {
+    color: #f6f6f6;
+  }
+
+  body.dark .course-card_content #date {
+    color: #b3b3b3;
+  }
+</style>

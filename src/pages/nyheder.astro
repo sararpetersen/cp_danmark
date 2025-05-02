@@ -1,26 +1,25 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import NewsCard from "../components/NewsCard.astro";
+import NewsCard2 from "../components/NewsCard.astro";
 
 const news = [
   {
     image: "/images/newscard1.webp",
     date: "9. april 2025",
     title: "Olivia Dahl modtager Helene Elsass Prisen 2025",
-    description: "Hun ville ikke have noget med handicap at gøre— indtil hun opdagede, at hun kunne være med til at give handicap mere ...",
+    description: "Hun ville ikke have noget med handicap ...",
   },
   {
     image: "/images/newscard2.webp",
     date: "13. marts 2025",
     title: "Kom med CP Danmark til Folkemødet 2025",
-    description: "Vil du være med til at styrke dialogen om cerebral parese og deltage i vigtige samtaler med ...",
+    description: "Vil du være med til at styrke dialogen om ...",
   },
   {
     image: "/images/newscard3.webp",
     date: "24. februar 2025",
     title: "TEMA: kreative udfoldelser og CP",
-    description:
-      "Vi er klar med årets første CP INDBLIK. I dette magasin sætter vi fokus på, hvad du— eller dit familiemedlem med CP —kan få ud af at lave kreative aktiviteter.",
+    description: "Vi er klar med årets første CP INDBLIK. I dette magasin sætter vi fokus på ...",
   },
   {
     image: "/images/newscard4.webp",
@@ -37,29 +36,26 @@ const news = [
   {
     image: "/images/newscard6.webp",
     date: "10. december 2024",
-    title: "Nyhed: Læse- og skriveadgang til Digital Post",
+    title: "Nyhed: læse- og skriveadgang til Digital Post",
     description: "Nu kan du skrive digital post på vegne af ...",
   },
   {
     image: "/images/newscard7.webp",
     date: "3. december 2024",
     title: "Vi har også brug for et voksenløft på handicapområdet",
-    description:
-      "I de seneste år er der kommet et øget fokus på unge med handicap. Det hilser vi i CP Danmark velkommen. Vi må dog ikke glemme, at der også er en stor gruppe af voksne og ældre med cerebral parese og andre ...",
+    description: "I de seneste år er der kommet et øget ...",
   },
   {
     image: "/images/newscard8.webp",
     date: "28. november 2024",
     title: "Hvem skal hædres med Helene Elsass Prisen 2025?",
-    description:
-      "Tidligere i år modtog den professionelle cykelrytter, Emma Lund, Helene Elsass Prisen for at være en rollemodel for mennesker med cerebral parese. Men hvem skal have prisen i 2025?   En hæder til dem ...",
+    description: "Tidligere i år modtog den professionelle ...",
   },
   {
     image: "/images/newscard9.webp",
     date: "23. september 2024",
-    title: "Landsmøde 2024: Genvalg af formandskabet og et rørende farvel",
-    description:
-      "I weekenden den 20-22. september afholdt vi landsmøde på Egmont Højskolen. Et samlingspunkt for både nye og gamle bekendtskaber, gode samtaler og debatter, samt vigtige beslutninger for ...",
+    title: "Landsmøde 2024: genvalg af formandskabet og et rørende farvel",
+    description: "I weekenden den 20-22. september ...",
   },
 ];
 ---
@@ -76,7 +72,7 @@ const news = [
       <p class="md:text-h4-desktop text-h4-mobile italic">Hold dig opdateret på nyt om CP, rettigheder, arrangementer og CP Danmarks arbejde</p>
     </div>
     <div class="col-start-2 col-span-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 items-center justify-center">
-      {news.map((item) => <NewsCard image={item.image} date={item.date} title={item.title} description={item.description} />)}
+      {news.map((item) => <NewsCard2 image={item.image} date={item.date} title={item.title} description={item.description} />)}
     </div>
   </section>
 </MainLayout>
