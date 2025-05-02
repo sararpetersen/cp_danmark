@@ -1,0 +1,326 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+---
+
+<MainLayout
+  title="CP Danmark | støt os"
+  description="CP Danmark's 'støt os'-side"
+  ogtitle="CP Danmark – Landsforeningen for cerebral parese"
+  ogdescription="'støt os'-siden til CP Danmark's hjemmeside"
+>
+  <section
+    class="hero-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom w-full h-screen md:px-0 px-4 relative"
+  >
+    <div class="flex flex-col items-left relative z-10 col-start-2 col-span-10 md:pt-52 pt-60">
+      <h1 id="hero-title" class="display">Støt os</h1>
+      <p id="hero-text" class="md:text-h4-desktop text-h4-mobile text-gray-50 pt-6 max-w-3xl">Fordi ingen skal stå alene med CP</p>
+    </div>
+
+    <div class="hero_image w-full h-full absolute inset-0 z-0">
+      <img src="/images/support_image.webp" alt="Hero-billede til CP Danmark's 'støt os'-side" class="w-full h-full object-cover scale-x-[-1]" />
+    </div>
+
+    <div id="overlay1" class="absolute top-0 left-0 w-full h-full bg-gray-950 bg-opacity-[50%] z-0"></div>
+    <div
+      id="overlay2"
+      class="absolute top-0 left-0 md:w-[50%] w-full h-full md:backdrop-blur-sm bg-opacity-75 bg-blue-950 z-0 md:rounded-r-full hidden md:block"
+    >
+    </div>
+
+    <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
+      <a href="#top-section">
+        <div class="float flex flex-col items-center hover:opacity-80 transition duration-300 ease-in-out">
+          <p class="text-[18px] text-gray-50 font-semibold">Gå videre ned på siden</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8 sm:w-12 sm:h-12 text-gray-50 hover:text-blue-700 transition duration-300 ease-in-out"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </section>
+  <section>
+    <div class="grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom">
+      <div class="col-start-2 col-span-10 items-center md:pt-desktop-top pt-mobil-top">
+        <div id="top-section">
+          <h2 class="pb-4">Støt mennesker med cerebral parese</h2>
+          <p class="md:pb-10 pb-6 max-w-4xl">
+            CP Danmark er afhængig af bidrag i arbejdet for at forbedre forholdene og livskvaliteten for mennesker med cerebral parese og deres
+            pårørende.
+          </p>
+          <hr class="w-[40%] md:pb-10 pb-6 border-gray-400" />
+        </div>
+        <!-- Radio buttons to choose support type -->
+        <div class="md:mb-16 mb-10">
+          <h4 class="pb-2">Hvordan vil du støtte?</h4>
+          <label class="inline-flex items-center mr-6">
+            <input type="radio" name="supportType" value="enkelt" class="form-radio text-green-600" checked />
+            <span class="ml-2">Enkeltbidrag</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="radio" name="supportType" value="fast" class="form-radio text-green-600" />
+            <span class="ml-2">Fast bidrag</span>
+          </label>
+        </div>
+
+        <!-- Enkeltbidrag form -->
+        <div id="enkeltForm">
+          <div class="mb-8">
+            <h3 class="mb-1">Støt med enkeltbidrag</h3>
+            <p>Giv et valgfrit beløb og vær med til at støtte mennesker med cerebral parese— når det passer dig.</p>
+          </div>
+          <div class="mb-4">
+            <h4>Dine oplysninger</h4>
+          </div>
+          <label class="block mb-1 font-semibold">Fulde navn<span class="text-orange-500">*</span></label>
+          <input
+            type="text"
+            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-8"
+            placeholder="F.eks. Borris Jensen"
+            required
+          />
+
+          <label class="block mb-1 font-semibold">Adresse<span class="text-orange-500">*</span></label>
+          <input
+            type="text"
+            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
+            placeholder="F.eks. Guldbergsgade 29N"
+            required
+          />
+
+          <label class="block mb-1 font-semibold">Telefon</label>
+          <input type="number" class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4" placeholder="F.eks. 46 46 00 00" />
+
+          <label class="block mb-1 font-semibold">Mobiltelefon<span class="text-orange-500">*</span></label>
+          <input
+            type="number"
+            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
+            placeholder="F.eks. 11 22 33 44"
+            required
+          />
+
+          <label class="block mb-1 font-semibold">Email<span class="text-orange-500">*</span></label>
+          <input
+            type="email"
+            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
+            placeholder="F.eks. borris-jensen@gmail.com"
+            required
+          />
+
+          <label class="block mb-1 font-semibold">Gentag email<span class="text-orange-500">*</span></label>
+          <input
+            type="email"
+            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
+            placeholder="F.eks. borris-jensen@gmail.com"
+            required
+          />
+
+          <div class="mb-8">
+            <label class="block mb-1 font-semibold">CPR-nummer</label>
+            <input type="number" class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-2" placeholder="Indtast CPR-nummer" />
+            <p class="text-[14px] italic">Indtastes hvis du ønsker, at vi indberetter beløbet til SKAT</p>
+          </div>
+
+          <label class="block mb-1 font-semibold">Beløb (DKK)<span class="text-orange-500">*</span></label>
+          <select class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4" required>
+            <option>-- Vælg beløb --</option>
+            <option>50 kr.</option>
+            <option>100 kr.</option>
+            <option>200 kr.</option>
+            <option>300 kr.</option>
+            <option>400 kr.</option>
+            <option>500 kr.</option>
+            <option>600 kr.</option>
+            <option>700 kr.</option>
+            <option>800 kr.</option>
+            <option>900 kr.</option>
+            <option>1000 kr.</option>
+          </select>
+
+          <label class="block mb-1 font-semibold">Andet beløb</label>
+          <input type="number" class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4" placeholder="Indtast andet beløb" />
+
+          <label class="block mb-1 font-semibold">Besked til CP Danmark</label>
+          <textarea class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-2" placeholder="Skriv besked til CP Danmark"></textarea>
+
+          <div class="flex items-center mb-8">
+            <input type="checkbox" class="w-[20px] p-2 border" />
+            <label class="block md:ml-2 ml-3 font-medium"
+              >Jeg accepterer CP Danmarks <a
+                href="https://www.cpdanmark.dk/om-os/handelsbetingelser/"
+                target="_blank"
+                class="underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out">handelsbetingelser</a
+              > og <a
+                href="https://www.cpdanmark.dk/om-os/handelsbetingelser/"
+                target="_blank"
+                class="underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out">privatlivspolitik</a
+              >.</label
+            >
+          </div>
+        </div>
+
+        <!-- Fast bidragsyder form -->
+        <div id="fastForm" class="hidden">
+          <div class="mb-8">
+            <h3 class="mb-1">Bliv fast støtte</h3>
+            <p>Ved at støtte med et fast beløb hver måned, er du med til at sikre langsigtet hjælp og udvikling for mennesker med CP.</p>
+          </div>
+          <div class="mb-4">
+            <h4>Dine oplysninger</h4>
+          </div>
+          <label class="block mb-1 font-semibold">Fulde navn<span class="text-orange-500">*</span></label>
+          <input
+            type="text"
+            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-8"
+            placeholder="F.eks. Borris Jensen"
+            required
+          />
+
+          <label class="block mb-1 font-semibold">Adresse<span class="text-orange-500">*</span></label>
+          <input
+            type="text"
+            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
+            placeholder="F.eks. Guldbergsgade 29N"
+            required
+          />
+
+          <label class="block mb-1 font-semibold">Telefon</label>
+          <input type="number" class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4" placeholder="F.eks. 46 46 00 00" />
+
+          <label class="block mb-1 font-semibold">Mobiltelefon<span class="text-orange-500">*</span></label>
+          <input
+            type="number"
+            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
+            placeholder="F.eks. 11 22 33 44"
+            required
+          />
+
+          <label class="block mb-1 font-semibold">Email<span class="text-orange-500">*</span></label>
+          <input
+            type="email"
+            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
+            placeholder="F.eks. borris-jensen@gmail.com"
+            required
+          />
+
+          <label class="block mb-1 font-semibold">Gentag email<span class="text-orange-500">*</span></label>
+          <input
+            type="email"
+            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-3"
+            placeholder="F.eks. borris-jensen@gmail.com"
+            required
+          />
+          <div class="flex items-center mb-10">
+            <input type="checkbox" class="w-[20px] p-2 border" />
+            <label class="block ml-2 font-medium">Tilmeld til nyhedsbrev</label>
+          </div>
+          <div class="mb-10">
+            <p class="font-bold italic pb-4">Som fast bidragdsyder har du flere mulighed for valg af betaling</p>
+
+            <label class="block mb-1 font-semibold">Betalingsfrekvens</label>
+            <select class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4">
+              <option>-- Vælg betalingsfrekvens --</option>
+              <option>Månedlig</option>
+              <option>Halvårlig</option>
+              <option>Kvartalsvis</option>
+              <option>Årlig</option>
+            </select>
+
+            <label class="block mb-1 font-semibold">Beløb (DKK)</label>
+            <select class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px]">
+              <option>-- Vælg beløb --</option>
+              <option>50 kr.</option>
+              <option>100 kr.</option>
+              <option>200 kr.</option>
+              <option>300 kr.</option>
+              <option>400 kr.</option>
+              <option>500 kr.</option>
+              <option>600 kr.</option>
+              <option>700 kr.</option>
+              <option>800 kr.</option>
+              <option>900 kr.</option>
+              <option>1000 kr.</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <h4>Betalingsservice</h4>
+            <p class="italic pb-3">
+              Du skal være over 18 år for at tilmelde betaling af dit medlemskontingent til betalingsservice. <br /> Tilmeld dig ved at udfylde
+            </p>
+            <label class="block mb-1 font-semibold">CPR-nummer</label>
+            <input type="number" class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4" placeholder="Indtast CPR-nummer" />
+
+            <label class="block mb-1 font-semibold">Registreringsnummer</label>
+            <input
+              type="number"
+              class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
+              placeholder="Indtast registreringsnummer"
+            />
+
+            <label class="block mb-1 font-semibold">Kontonummer</label>
+            <input type="number" class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px]" placeholder="Indtast kontonummer" />
+          </div>
+          <div class="flex items-center mb-8">
+            <input type="checkbox" class="w-[20px] p-2 border" />
+            <label class="block md:ml-2 ml-3 font-medium"
+              >Jeg accepterer CP Danmarks <a
+                href="https://www.cpdanmark.dk/om-os/handelsbetingelser/"
+                target="_blank"
+                class="underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out">handelsbetingelser</a
+              > og <a
+                href="https://www.cpdanmark.dk/om-os/handelsbetingelser/"
+                target="_blank"
+                class="underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out">privatlivspolitik</a
+              >.</label
+            >
+          </div>
+        </div>
+        <a href="#" class="w-[50%]"><Button variant="tertiary" size="small">Støt nu</Button></a>
+      </div>
+    </div>
+
+    <style>
+      /* Floating Animation */
+      @keyframes float {
+        0% {
+          transform: translatey(0);
+        }
+        50% {
+          transform: translatey(-10px);
+        }
+        100% {
+          transform: translatey(0);
+        }
+      }
+
+      .float {
+        animation: float 3s ease-in-out infinite;
+      }
+    </style>
+  </section>
+</MainLayout>
+
+<script>
+  const radioButtons = document.querySelectorAll('input[name="supportType"]');
+  const enkeltForm = document.getElementById("enkeltForm");
+  const fastForm = document.getElementById("fastForm");
+
+  radioButtons.forEach((radio) => {
+    radio.addEventListener("change", () => {
+      if (radio.value === "enkelt") {
+        enkeltForm.classList.remove("hidden");
+        fastForm.classList.add("hidden");
+      } else {
+        fastForm.classList.remove("hidden");
+        enkeltForm.classList.add("hidden");
+      }
+    });
+  });
+</script>
