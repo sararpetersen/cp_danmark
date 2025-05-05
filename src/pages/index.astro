@@ -68,7 +68,7 @@ const news = [
     </div>
 
     <div class="hero_image w-full h-full absolute inset-0 z-0">
-      <img src="/images/hero_image.webp" alt="Hero-billede til CP Danmark's forside" class="w-full h-full object-cover scale-x-[-1]" />
+      <img src="/images/hero_image.webp" alt="Hero-billede til CP Danmarks forside" class="w-full h-full object-cover scale-x-[-1]" />
     </div>
 
     <div id="overlay1" class="absolute top-0 left-0 w-full h-full bg-gray-950 bg-opacity-[50%] z-0"></div>
@@ -79,7 +79,7 @@ const news = [
     </div>
 
     <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
-      <a href="#get-started">
+      <a href="#get-started" aria-label="Gå videre ned på siden">
         <div class="float flex flex-col items-center hover:opacity-80 transition duration-300 ease-in-out">
           <p class="text-[18px] text-gray-50 font-semibold">Gå videre ned på siden</p>
           <svg
@@ -104,10 +104,10 @@ const news = [
     </p>
     <div class="grid grid-cols-4 gap-4 items-center relative z-10 col-start-2 col-span-10 md:pt-8 pt-4">
       <div class="col-span-4 md:col-span-1 hover:opacity-80 transition duration-300 ease-in-out relative">
-        <a href="/hvad_er_cp" class="block">
+        <a href="/hvad_er_cp" aria-label="Gå til 'Hvad er CP?'" class="block">
           <img
             src="/images/submenu1.webp"
-            alt="Billede til den første undermenu på CP Danmark's forside"
+            alt="Billede til den første undermenu på CP Danmarks forside"
             class="md:w-[310px] md:h-[310px] w-full h-full object-cover brightness-75"
           />
           <div class="absolute inset-0 flex items-end pb-12 justify-center px-4">
@@ -118,10 +118,10 @@ const news = [
         </a>
       </div>
       <div class="col-span-4 md:col-span-1 hover:opacity-80 transition duration-300 ease-in-out relative">
-        <a href="/tilmeld" class="block">
+        <a href="/tilmeld" aria-label="Gå til 'Tilmeld'" class="block">
           <img
             src="/images/submenu2.webp"
-            alt="Billede til den første undermenu på CP Danmark's forside"
+            alt="Billede til den første undermenu på CP Danmarks forside"
             class="md:w-[310px] md:h-[310px] w-full h-full object-cover brightness-75"
           />
           <div class="absolute inset-0 flex items-end pb-12 justify-start md:justify-center px-4">
@@ -130,10 +130,10 @@ const news = [
         </a>
       </div>
       <div class="col-span-4 md:col-span-1 hover:opacity-80 transition duration-300 ease-in-out relative">
-        <a href="/stoet" class="block">
+        <a href="/stoet" aria-label="Gå til 'Støt os'" class="block">
           <img
             src="/images/submenu3.webp"
-            alt="Billede til den første undermenu på CP Danmark's forside"
+            alt="Billede til den første undermenu på CP Danmarks forside"
             class="md:w-[310px] md:h-[310px] w-full h-full object-cover brightness-75"
           />
           <div class="absolute inset-0 flex items-end pb-12 justify-center px-4">
@@ -181,7 +181,7 @@ const news = [
   <section class="news grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom relative">
     <div class="col-start-2 col-span-10 md:pb-8 pb-4">
       <h2 class="md:text-h3-desktop text-h3-mobile">Seneste nyheder</h2>
-      <a href="/nyheder">
+      <a href="/nyheder" aria-label="Gå til 'Nyheder'">
         <p class="underline hover:text-blue-700 transition duration-300 ease-in-out col-start-2 col-span-10">Se alle ...</p>
       </a>
     </div>
@@ -206,7 +206,7 @@ const news = [
           <br /><br />
           Tilmeld dig i dag og vær med til at styrke fællesskabet.
         </p>
-        <a href="/tilmeld">
+        <a href="/tilmeld" aria-label="Gå til 'Tilmeld'">
           <Button variant="tertiary" size="small">Gå til 'Tilmeld'</Button>
         </a>
       </div>
@@ -230,7 +230,7 @@ const news = [
           <br /><br />
           Skriv, ring— eller find den hjælp, du har brug for her.
         </p>
-        <a href="/raadgivning">
+        <a href="/raadgivning" aria-label="Gå til 'Rådgivning'">
           <Button variant="tertiary" size="small">Gå til 'Rådgivning'</Button>
         </a>
       </div>
@@ -245,7 +245,7 @@ const news = [
           <br /><br />
           Har du spørgsmål eller er du usikker på hvorhenne du skal starte? Vi er klar til at hjælpe dig med at finde vejen frem.
         </p>
-        <a href="/gode_raad">
+        <a href="/gode_raad" aria-label="Gå til 'Gode råd'">
           <Button variant="tertiary" size="small">Gå til 'Gode råd'</Button>
         </a>
       </div>

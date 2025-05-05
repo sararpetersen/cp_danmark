@@ -33,8 +33,16 @@ import Button from "../components/Button.astro";
   <div id="navbar" class="flex flex-row justify-between gap-8 max-w-7xl mx-auto px-9 py-3">
     <div class="">
       <a href="/">
-        <img src="/images/logo_blaa.webp" alt="Logo for CP Danmark" class="h-11 hover:opacity-50 transition duration-300 ease-in-out logo-light" />
-        <img src="/images/logo_hvid.webp" alt="Logo for CP Danmark" class="h-11 hover:opacity-50 transition duration-300 ease-in-out logo-dark" />
+        <img
+          src="/images/logo_blaa.webp"
+          alt="Logo for CP Danmark i blåt"
+          class="h-11 hover:opacity-50 transition duration-300 ease-in-out logo-light"
+        />
+        <img
+          src="/images/logo_hvid.webp"
+          alt="Logo for CP Danmark i hvidt"
+          class="h-11 hover:opacity-50 transition duration-300 ease-in-out logo-dark"
+        />
       </a>
     </div>
     <nav id="desktopmenu" class="hidden lg:block content-center">
@@ -61,9 +69,9 @@ import Button from "../components/Button.astro";
             class="dropdown1 absolute left-0 mt-2 w-[165px] bg-gray-50 shadow-drop25 border border-gray-400 z-10"
           >
             <ul>
-              <li class="py-1 px-4"><a href="/hvad_er_cp" class="hover:text-blue-700">Hvad er CP?</a></li>
-              <li class="py-1 px-4"><a href="/cp_ung" class="hover:text-blue-700">CP Ung</a></li>
-              <li class="py-1 px-4"><a href="/nyheder" class="hover:text-blue-700">Nyheder</a></li>
+              <li class="py-1 px-4"><a href="/hvad_er_cp" aria-label="Gå til Hvad er CP?" class="hover:text-blue-700">Hvad er CP?</a></li>
+              <li class="py-1 px-4"><a href="/cp_ung" aria-label="Gå til CP Ung" class="hover:text-blue-700">CP Ung</a></li>
+              <li class="py-1 px-4"><a href="/nyheder" aria-label="Gå til Nyheder" class="hover:text-blue-700">Nyheder</a></li>
             </ul>
           </div>
         </li>
@@ -88,18 +96,20 @@ import Button from "../components/Button.astro";
             class="dropdown2 absolute left-0 mt-2 w-[220px] bg-gray-50 shadow-drop25 border border-gray-400 z-10"
           >
             <ul>
-              <li class="py-1 px-4"><a href="/raadgivning" class="hover:text-blue-700">Rådgivning</a></li>
-              <li class="py-1 px-4"><a href="/materialer" class="hover:text-blue-700">Materialer</a></li>
-              <li class="py-1 px-4"><a href="/kurser_aktiviteter" class="hover:text-blue-700">Kurser & aktiviteter</a></li>
+              <li class="py-1 px-4"><a href="/raadgivning" aria-label="Gå til Gå til 'Rådgivning'" class="hover:text-blue-700">Rådgivning</a></li>
+              <li class="py-1 px-4"><a href="/materialer" aria-label="Gå til Gå til 'Materialer'" class="hover:text-blue-700">Materialer</a></li>
+              <li class="py-1 px-4">
+                <a href="/kurser_aktiviteter" aria-label="Gå til Kurser & aktiviteter" class="hover:text-blue-700">Kurser & aktiviteter</a>
+              </li>
             </ul>
           </div>
         </li>
-        <li><a href="/tilmeld" class="relative flex items-center hover:text-blue-700 py-1">Bliv medlem</a></li>
-        <li><a href="/goode_raad" class="relative flex items-center hover:text-blue-700 py-1">Gode råd</a></li>
+        <li><a href="/tilmeld" aria-label="Gå til Gå til 'Tilmeld'" class="relative flex items-center hover:text-blue-700 py-1">Bliv medlem</a></li>
+        <li><a href="/goode_raad" aria-label="Gå til Gå til 'Gode råd'" class="relative flex items-center hover:text-blue-700 py-1">Gode råd</a></li>
       </ul>
     </nav>
     <div class="ml-auto hidden md:block">
-      <a href="/stoet">
+      <a href="/stoet" aria-label="Gå til Gå til 'Støt os'">
         <Button variant="primary" size="small">Støt os</Button>
       </a>
     </div>
@@ -142,41 +152,57 @@ import Button from "../components/Button.astro";
     <ul class="mx-auto py-4 text-gray-950">
       <h4 class="text-center font-bold">Viden & information</h4>
       <li class="text-center py-2 border-b">
-        <a href="/cp_os" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">CP & os</a>
+        <a href="/cp_os" aria-label="Gå til 'CP & os'" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">CP & os</a>
       </li>
       <li class="text-center py-2 border-b">
-        <a href="/hvad_er_cp" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Hvad er CP?</a>
+        <a href="/hvad_er_cp" aria-label="Gå til 'Hvad er CP?'" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out"
+          >Hvad er CP?</a
+        >
       </li>
       <li class="text-center py-2 border-b">
-        <a href="/cp_ung" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">CP Ung</a>
+        <a href="/cp_ung" aria-label="Gå til 'CP Ung'" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">CP Ung</a>
       </li>
       <li class="text-center py-2 border-b">
-        <a href="/nyheder" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Nyheder</a>
+        <a href="/nyheder" aria-label="Gå til 'Nyheder'" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Nyheder</a>
       </li>
     </ul>
     <ul class="mx-auto py-4 text-gray-950">
       <h4 class="text-center font-bold">Medlemskab</h4>
       <li class="text-center py-2 border-b">
-        <a href="/tilmeld" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Bliv medlem</a>
+        <a href="/tilmeld" aria-label="Gå til 'Tilmeld'" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out"
+          >Bliv medlem</a
+        >
       </li>
-      <li class="text-center py-2"><a href="/stoet" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Støt os</a></li>
+      <li class="text-center py-2">
+        <a href="/stoet" aria-label="Gå til 'Støt os'" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Støt os</a>
+      </li>
     </ul>
     <ul class="mx-auto py-4 text-gray-950">
       <h4 class="text-center font-bold">Bliv klogere</h4>
       <li class="text-center py-2 border-b">
-        <a href="/raadgivning" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Rådgivning</a>
+        <a href="/raadgivning" aria-label="Gå til 'Rådgivning'" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out"
+          >Rådgivning</a
+        >
       </li>
       <li class="text-center py-2 border-b">
-        <a href="/materialer" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Materialer</a>
+        <a href="/materialer" aria-label="Gå til 'Materialer'" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out"
+          >Materialer</a
+        >
       </li>
       <li class="text-center py-2 border-b">
-        <a href="/kurser_aktiviteter" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Kurser & aktiviteter</a>
+        <a
+          href="/kurser_aktiviteter"
+          aria-label="Gå til 'Kurser & aktiviteter'"
+          class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Kurser & aktiviteter</a
+        >
       </li>
     </ul>
     <ul class="mx-auto py-4 text-gray-950">
       <h4 class="text-center font-bold">Andet</h4>
       <li class="text-center py-2">
-        <a href="/gode_raad" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Gode råd</a>
+        <a href="/gode_raad" aria-label="Gå til 'Gode råd'" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out"
+          >Gode råd</a
+        >
       </li>
     </ul>
   </nav>
