@@ -47,8 +47,8 @@ import Button from "../components/Button.astro";
     </div>
   </section>
   <section>
-    <div class="grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom">
-      <div class="col-start-2 col-span-10 items-center md:pt-desktop-top pt-mobil-top">
+    <div class="grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom">
+      <div class="col-start-2 col-span-10 items-center">
         <div id="top-section">
           <h2 class="pb-4">Støt mennesker med cerebral parese</h2>
           <p class="md:pb-10 pb-6 max-w-4xl">
@@ -58,15 +58,15 @@ import Button from "../components/Button.astro";
           <hr class="w-[40%] md:pb-10 pb-6 border-gray-400" />
         </div>
         <!-- Radio buttons to choose support type -->
-        <div class="md:mb-16 mb-10">
+        <div class="flex flex-col md:mb-16 mb-10">
           <h4 class="pb-2">Hvordan vil du støtte?</h4>
           <label class="inline-flex items-center mr-6">
-            <input type="radio" name="supportType" value="enkelt" class="form-radio text-green-600" checked />
-            <span class="ml-2">Enkeltbidrag</span>
+            <input type="radio" name="supportType" value="enkelt" class="form-radio" checked />
+            <span class="enkelt ml-2">Enkeltbidrag</span>
           </label>
           <label class="inline-flex items-center">
-            <input type="radio" name="supportType" value="fast" class="form-radio text-green-600" />
-            <span class="ml-2">Fast bidrag</span>
+            <input type="radio" name="supportType" value="fast" class="form-radio" />
+            <span class="fast ml-2">Fast bidrag</span>
           </label>
         </div>
 
@@ -125,7 +125,7 @@ import Button from "../components/Button.astro";
           <div class="mb-10">
             <label class="block mb-1 font-semibold">CPR-nummer</label>
             <input type="number" class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px]" placeholder="Indtast CPR-nummer" />
-            <p class="text-[14px] italic">Indtastes hvis du ønsker, at vi indberetter beløbet til SKAT</p>
+            <p class="text-[14px] italic pt-2">Indtastes hvis du ønsker, at vi indberetter beløbet til SKAT</p>
           </div>
 
           <label class="block mb-1 font-semibold">Beløb (DKK)<span class="text-orange-500">*</span></label>
@@ -283,31 +283,64 @@ import Button from "../components/Button.astro";
             >
           </div>
         </div>
-        <a href="#" class="w-[50%]"><Button variant="tertiary" size="small">Støt nu</Button></a>
+        <a href="#" class="w-[50%]"><Button variant="secondary" size="small">Støt nu</Button></a>
       </div>
     </div>
-
-    <style>
-      /* Floating Animation */
-      @keyframes float {
-        0% {
-          transform: translatey(0);
-        }
-        50% {
-          transform: translatey(-10px);
-        }
-        100% {
-          transform: translatey(0);
-        }
-      }
-
-      .float {
-        animation: float 3s ease-in-out infinite;
-      }
-    </style>
   </section>
 </MainLayout>
+<style>
+  /* Floating Animation */
+  @keyframes float {
+    0% {
+      transform: translatey(0);
+    }
+    50% {
+      transform: translatey(-10px);
+    }
+    100% {
+      transform: translatey(0);
+    }
+  }
 
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  body.dark h2,
+  body.dark h3,
+  body.dark h4,
+  body.dark p {
+    color: #f6f6f6;
+  }
+
+  body.dark input,
+  body.dark select,
+  body.dark textarea,
+  body.dark option {
+    background-color: #4f4f4f;
+    border: #7d7d7d 1px solid;
+  }
+
+  body.dark a {
+    color: #38a2f8;
+  }
+
+  body.dark span {
+    color: #ff4545;
+  }
+
+  body.dark .fast,
+  body.dark .enkelt {
+    color: #f6f6f6;
+  }
+
+  body.dark input::placeholder,
+  body.dark select::placeholder,
+  body.dark textarea::placeholder,
+  body.dark option::placeholder {
+    color: #b3b3b3;
+  }
+</style>
 <script>
   const radioButtons = document.querySelectorAll('input[name="supportType"]');
   const enkeltForm = document.getElementById("enkeltForm");

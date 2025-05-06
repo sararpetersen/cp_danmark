@@ -58,9 +58,7 @@ const news = [
   <section
     class="hero-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom w-full h-screen md:px-0 px-4 relative"
   >
-    <div class="flex flex-col items-left relative z-10 col-start-2 col-span-10 pt-24">
-      <p id="hero-welcome" class="md:text-h3-desktop text-h3-mobile font-semibold italic text-gray-50 pb-2">Velkommen</p>
-      <hr id="hero-line" class="md:w-[20%] w-[50%] pb-4 text-gray-50 border-dashed" />
+    <div class="flex flex-col items-left relative z-10 col-start-2 col-span-10 md:pt-44 pt-32">
       <h1 id="hero-title" class="display">Vi er her for dig</h1>
       <p id="hero-text" class="md:text-h4-desktop text-h4-mobile text-gray-50 pt-6 max-w-3xl">
         Uanset hvem du er, så er du landet det rette sted. CP Danmark er foreningen for dig der lever med cerebral parese— og for dem der støtter dig
@@ -88,7 +86,7 @@ const news = [
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-8 h-8 sm:w-12 sm:h-12 text-gray-50 hover:text-blue-700 transition duration-300 ease-in-out"
+            class="w-8 h-8 sm:w-12 sm:h-12 text-gray-50 transition duration-300 ease-in-out"
           >
             <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
           </svg>
@@ -97,7 +95,7 @@ const news = [
     </div>
   </section>
 
-  <section id="get-started" class="grid grid-cols-12 md:pt-20 pt-16 md:pb-desktop-bottom pb-mobil-bottom">
+  <section id="get-started" class="grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom">
     <h1 class="md:text-h2-desktop text-h2-mobile col-start-2 col-span-10">Kom godt i gang</h1>
     <p class="pb-4 col-start-2 col-span-10 max-w-2xl">
       Uanset om du er ny, søger viden om CP, har brug for støtte eller bare vil bidrage til et godt formål— her finder du de vigtigste veje videre.
@@ -157,28 +155,28 @@ const news = [
       </div>
     </div>
   </section>
-  <section class="experiences grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom">
+  <section class="experiences grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom">
     <h2 class="md:text-h3-desktop text-h3-mobile font-bold md:pb-8 pb-4 col-start-2 col-span-10">Personlige oplevelser fra fællesskabet</h2>
     <div class="col-start-2 col-span-10 grid md:grid-cols-4 gap-4 grid-cols-1 items-start justify-center">
-      <div class="quote1 bg-gray-100 p-5">
+      <div class="quote1 bg-gray-100 p-5 md:h-[170px] h-[130px]">
         <blockquote class="italic pb-4">"Jeg plejede at føle mig alene. Men her fandt jeg både svar, og nogen der forstår mig."</blockquote>
-        <p class="text-gray-800 text-[14px]">↳ Sofie, 17 år – lever med spastisk CP</p>
+        <p class="text-gray-800 text-[14px]">Sofie Madsen, 17 år – lever med spastisk CP</p>
       </div>
-      <div class="quote2 bg-gray-100 p-5">
+      <div class="quote2 bg-gray-100 p-5 md:h-[170px] h-[130px]">
         <blockquote class="italic pb-4">"Det var en jungle at finde hjælp&mdash; indtil jeg landede her. Nu føler vi os trygge."</blockquote>
-        <p class="text-gray-800 text-[14px]">↳ Jonas, far til barn med CP</p>
+        <p class="text-gray-800 text-[14px]">Jonas Kristensen, 41 år – far til barn med CP</p>
       </div>
-      <div class="quote3 bg-gray-100 p-5">
+      <div class="quote3 bg-gray-100 p-5 md:h-[170px] h-[130px]">
         <blockquote class="italic pb-4">"Som fagperson bruger jeg siden, når jeg skal guide forældre og unge videre."</blockquote>
-        <p class="text-gray-800 text-[14px]">↳ Maria, ergoterapeut</p>
+        <p class="text-gray-800 text-[14px]">Maria Lindholm, 45 år – fysioterapeut med speciale i CP</p>
       </div>
-      <div class="quote4 bg-gray-100 p-5">
-        <blockquote class="italic pb-4">"Jeg anede ikke hvorhenne jeg skulle starte. Det her sted blev mit første skridt."</blockquote>
-        <p class="text-gray-800 text-[14px]">↳ Camilla, 32 år – nydiagnosticeret</p>
+      <div class="quote4 bg-gray-100 p-5 md:h-[170px] h-[130px]">
+        <blockquote class="italic pb-4">"Jeg ville bare gerne forstå og kunne hjælpe min bror bedre. Her fandt jeg svarene og trygheden."</blockquote>
+        <p class="text-gray-800 text-[14px]">Camilla Jensen, 32 år – søster til ung mand med CP</p>
       </div>
     </div>
   </section>
-  <section class="news grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom relative">
+  <section class="news grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom relative">
     <div class="col-start-2 col-span-10 md:pb-8 pb-4">
       <h2 class="md:text-h3-desktop text-h3-mobile">Seneste nyheder</h2>
       <a href="/nyheder" aria-label="Gå til 'Nyheder'">
@@ -194,7 +192,7 @@ const news = [
     </div>
   </section>
 
-  <section class="info-section grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom">
+  <section class="info-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom">
     <div class="grid md:grid-cols-2 col-start-2 col-span-10 items-center">
       <!-- Text and button section -->
       <div>
@@ -207,7 +205,7 @@ const news = [
           Tilmeld dig i dag og vær med til at styrke fællesskabet.
         </p>
         <a href="/tilmeld" aria-label="Gå til 'Tilmeld'">
-          <Button variant="tertiary" size="small">Gå til 'Tilmeld'</Button>
+          <Button variant="secondary" size="small">Gå til 'Tilmeld'</Button>
         </a>
       </div>
 
@@ -231,7 +229,7 @@ const news = [
           Skriv, ring— eller find den hjælp, du har brug for her.
         </p>
         <a href="/raadgivning" aria-label="Gå til 'Rådgivning'">
-          <Button variant="tertiary" size="small">Gå til 'Rådgivning'</Button>
+          <Button variant="secondary" size="small">Gå til 'Rådgivning'</Button>
         </a>
       </div>
     </div>
@@ -246,7 +244,7 @@ const news = [
           Har du spørgsmål eller er du usikker på hvorhenne du skal starte? Vi er klar til at hjælpe dig med at finde vejen frem.
         </p>
         <a href="/gode_raad" aria-label="Gå til 'Gode råd'">
-          <Button variant="tertiary" size="small">Gå til 'Gode råd'</Button>
+          <Button variant="secondary" size="small">Gå til 'Gode råd'</Button>
         </a>
       </div>
 
@@ -288,7 +286,7 @@ const news = [
   body.dark .quote2 p,
   body.dark .quote3 p,
   body.dark .quote4 p {
-    color: #f6f6f6;
+    color: #e4e4e4;
   }
 
   body.dark h1,

@@ -4,7 +4,7 @@ import Button from "./Button.astro";
 ---
 
 <div
-  class="course-card min-w-[300px] md:min-w-[400px] h-[47.5rem] bg-gray-100 rounded-[5px] shadow-drop25 hover:bg-gray-200 hover:translate-y-[-2px] transition duration-300 ease-in-out"
+  class="course-card min-w-[300px] md:min-w-[400px] h-[44.5rem] bg-gray-100 rounded-[5px] shadow-drop25 hover:bg-gray-200 transition duration-300 ease-in-out"
 >
   <div class="course-card_image">
     <img src={image} alt={title} class="w-full h-full object-cover rounded-t-[5px]" />
@@ -13,7 +13,7 @@ import Button from "./Button.astro";
     <p id="date" class="text-gray-400 pb-2">{date}</p>
     <h3 id="title" class="text-[18px] font-bold pb-2">{title}</h3>
     <p id="description" class="pb-5">{description}</p>
-    <div class="info pb-6">
+    <div class="info">
       <hr class="w-[20%] pb-4 border-gray-400" />
       {
         price_member && (
@@ -48,21 +48,16 @@ import Button from "./Button.astro";
         )
       }
     </div>
-    {
-      price_member && price_guest && spots && duedate && (
-        <a href="#" aria-label="Placeholder-link (ingen funktionalitet)">
-          <Button variant="secondary" size="small">
-            Læs mere og tilmeld
-          </Button>
-        </a>
-      )
-    }
   </div>
 </div>
 
 <style>
   body.dark .course-card {
     background-color: #4f4f4f;
+  }
+
+  body.dark .course-card:hover {
+    background-color: #5b5b5b;
   }
 
   body.dark .course-card_content h3,

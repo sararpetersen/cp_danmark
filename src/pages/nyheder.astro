@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import NewsCard2 from "../components/NewsCard.astro";
+import NewsCard2 from "../components/NewsCard2.astro";
 
 const news = [
   {
@@ -68,7 +68,8 @@ const news = [
 >
   <section class="hero grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom md:pt-36 pt-28 relative">
     <div class="col-start-2 col-span-10 md:pb-16 pb-8">
-      <h1 class="md:text-h2-desktop text-h2-mobile pb-2 md:pt-16 pt-20">Nyheder</h1>
+      <h1 class="md:text-h2-desktop text-h2-mobile md:pt-16 pt-20 md:pb-0 pb-2">Nyheder</h1>
+      <hr class="md:w-[25%] w-[50%] pt-4 border-dashed pb-2" />
       <p class="md:text-h4-desktop text-h4-mobile italic">Hold dig opdateret på nyt om CP, rettigheder, arrangementer og CP Danmarks arbejde</p>
     </div>
     <div class="col-start-2 col-span-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 items-center justify-center">
