@@ -7,44 +7,49 @@ const news = [
   {
     image: "/images/newscard1.webp",
     date: "9. april 2025",
-    title: "Olivia Dahl modtager ...",
-    description: "Hun ville ikke have noget med handicap ...",
+    title: "Olivia Dahl modtager Helene Elsass Prisen 2025",
+    description:
+      "Hun ville ikke have noget med handicap at gøre— indtil hun opdagede, at hun kunne være med til at give handicap mere power. Nu er Olivia Dahl kåret som vinder af Danmarks største handicappris.",
   },
   {
     image: "/images/newscard2.webp",
     date: "13. marts 2025",
-    title: "Kom med CP Danmark ...",
-    description: "Vil du være med til at styrke dialogen ...",
+    title: "Kom med CP Danmark til Folkemødet 2025",
+    description:
+      "Vil du være med til at styrke dialogen om cerebral parese og deltage i vigtige samtaler med politikere, beslutningstagere og andre relevante aktører? ...",
   },
   {
     image: "/images/newscard3.webp",
     date: "24. februar 2025",
-    title: "TEMA: kreative udfoldelser og CP",
-    description: "Vi er klar med årets første CP INDBLIK ...",
+    title: "TEMA: <br>Kreative udfoldelser og CP",
+    description:
+      "Vi er klar med årets første CP INDBLIK. I dette magasin sætter vi fokus på, hvad du— eller dit familiemedlem med CP —kan få ud af at lave kreative aktiviteter.",
   },
   {
     image: "/images/newscard4.webp",
     date: "23. februar 2025",
-    title: "Midt i frustrationerne ...",
-    description: "Massive nedskæringer rammer handicap ...",
+    title: "Midt i frustrationerne: <br> Husk at der er valgår i år!",
+    description:
+      "Massive nedskæringer rammer handicapområdet, mens politikerne lover forenklinger, der i praksis gør livet sværere. Men efterårets kommunalvalg giver en mulighed for at handle. Læs formandskabets kommentar og opfordring!",
   },
   {
     image: "/images/newscard5.webp",
     date: "11. december 2024",
-    title: "CP INDBLIK udkommer 4 gange ...",
-    description: "I det nye år går CP Danmarks ...",
+    title: "CP INDBLIK udkommer 4 gange i 2025",
+    description: "I det nye år går CP Danmarks medlemsmagasin fra fem til fire udgaver årligt.",
   },
   {
     image: "/images/newscard6.webp",
     date: "10. december 2024",
-    title: "Nyhed: Læse- og skriveadgang ...",
-    description: "Nu kan du skrive digital post ...",
+    title: "Nyhed: <br> Læse- og skriveadgang til Digital Post",
+    description: "Nu kan du skrive digital post på vegne af dine nærmeste.",
   },
   {
     image: "/images/newscard7.webp",
     date: "3. december 2024",
-    title: "Vi har også brug for et ...",
-    description: "I de seneste år er der kommet et øget fokus ...",
+    title: "Vi har også brug for et voksenløft på handicapområdet",
+    description:
+      "I de seneste år er der kommet et øget fokus på unge med handicap. Det hilser vi i CP Danmark velkommen. Vi må dog ikke glemme, at der også er en stor gruppe af voksne og ældre med cerebral parese og andre handicap, som vi skylder et ...",
   },
 ];
 ---
@@ -58,8 +63,8 @@ const news = [
   <section
     class="hero-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom w-full h-screen md:px-0 px-4 relative"
   >
-    <div class="flex flex-col items-left relative z-10 col-start-2 col-span-10 md:pt-44 pt-32">
-      <h1 id="hero-title" class="display">Vi er her for dig</h1>
+    <div class="flex flex-col items-left relative z-10 col-start-2 col-span-10">
+      <h1 id="hero-title" class="display md:pt-[17%] pt-[50%]">Vi er her <br class="md:hidden block" /> for dig</h1>
       <p id="hero-text" class="md:text-h4-desktop text-h4-mobile text-gray-50 pt-6 max-w-3xl">
         Uanset hvem du er, så er du landet det rette sted. CP Danmark er foreningen for dig der lever med cerebral parese— og for dem der støtter dig
       </p>
@@ -155,7 +160,7 @@ const news = [
       </div>
     </div>
   </section>
-  <section class="experiences grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom">
+  <section class="experiences grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom">
     <h2 class="md:text-h3-desktop text-h3-mobile font-bold md:pb-8 pb-4 col-start-2 col-span-10">Personlige oplevelser fra fællesskabet</h2>
     <div class="col-start-2 col-span-10 grid md:grid-cols-4 gap-4 grid-cols-1 items-start justify-center">
       <div class="quote1 bg-gray-100 p-5 md:h-[170px] h-[130px]">
@@ -176,7 +181,7 @@ const news = [
       </div>
     </div>
   </section>
-  <section class="news grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom relative">
+  <section class="news grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom relative">
     <div class="col-start-2 col-span-10 md:pb-8 pb-4">
       <h2 class="md:text-h3-desktop text-h3-mobile">Seneste nyheder</h2>
       <a href="/nyheder" aria-label="Gå til 'Nyheder'">
@@ -185,14 +190,14 @@ const news = [
     </div>
     <!-- Horizontal scroll container -->
     <div class="col-start-2 col-span-10 relative">
-      <div id="carousel" class="flex overflow-x-auto space-x-4 scroll-smooth scrollbar-hide md:h-[35rem] h-[31rem]">
+      <div id="carousel" class="flex overflow-x-auto space-x-4 scroll-smooth scrollbar-hide h-[38rem]">
         <!-- More cards -->
         {news.map((item) => <NewsCard image={item.image} date={item.date} title={item.title} description={item.description} />)}
       </div>
     </div>
   </section>
 
-  <section class="info-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom">
+  <section class="info-section grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom">
     <div class="grid md:grid-cols-2 col-start-2 col-span-10 items-center">
       <!-- Text and button section -->
       <div>
@@ -202,7 +207,7 @@ const news = [
           du er også med til at gøre en forskel for alle, der lever med cerebral parese. Deltag i vores aktiviteter, støt vores arbejde, og vær med
           til at skabe forandring.
           <br /><br />
-          Tilmeld dig i dag og vær med til at styrke fællesskabet.
+          <em>Tilmeld dig i dag og vær med til at styrke fællesskabet.</em>
         </p>
         <a href="/tilmeld" aria-label="Gå til 'Tilmeld'">
           <Button variant="secondary" size="small">Gå til 'Tilmeld'</Button>
@@ -226,7 +231,7 @@ const news = [
           Uanset om du lever med CP, er pårørende eller står midt i en konkret udfordring, er du ikke alene. Vi tilbyder gratis og fortrolig
           rådgivning om alt fra rettigheder og hjælpemidler til skole, arbejde og hverdagsliv.
           <br /><br />
-          Skriv, ring— eller find den hjælp, du har brug for her.
+          <em>Skriv, ring— eller find den hjælp, du har brug for her.</em>
         </p>
         <a href="/raadgivning" aria-label="Gå til 'Rådgivning'">
           <Button variant="secondary" size="small">Gå til 'Rådgivning'</Button>
@@ -241,7 +246,7 @@ const news = [
           Vi forstår at det kan være overvældende at finde den rette vej videre. Uanset hvad du søger, så står vi klar til at hjælpe dig med at finde
           den rigtige støtte og information.
           <br /><br />
-          Har du spørgsmål eller er du usikker på hvorhenne du skal starte? Vi er klar til at hjælpe dig med at finde vejen frem.
+          <em>Har du spørgsmål eller er du usikker på hvorhenne du skal starte? Vi er klar til at hjælpe dig med at finde vejen frem.</em>
         </p>
         <a href="/gode_raad" aria-label="Gå til 'Gode råd'">
           <Button variant="secondary" size="small">Gå til 'Gode råd'</Button>

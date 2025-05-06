@@ -3,14 +3,16 @@ import Button from "./Button.astro";
 const { image, date, description, title } = Astro.props;
 ---
 
-<div class="news-card min-w-[300px] h-[34.5rem] bg-gray-100 rounded-[5px] hover:bg-gray-200 hover:cursor-pointer transition duration-300 ease-in-out">
+<div
+  class="news-card flex flex-col min-w-[300px] md:h-[37rem] h-[38.5rem] bg-gray-100 rounded-[5px] hover:bg-gray-200 hover:cursor-pointer transition duration-300 ease-in-out"
+>
   <div class="news-card_image">
     <img src={image} alt={title} class="w-full h-full object-cover rounded-t-[5px]" />
   </div>
-  <div class="news-card_content p-5">
+  <div class="news-card_content p-6 flex flex-col">
     <p id="date" class="text-gray-400 pb-2">{date}</p>
-    <h3 class="text-[18px] font-bold pb-2">{title}</h3>
-    <p class="pb-5">{description}</p>
+    <h3 class="text-h4-mobile mb-2 line-clamp-2" set:html={title} />
+    <p class="mb-5 line-clamp-2">{description}</p>
     <a href="#" aria-label="Placeholder-link (ingen funktionalitet)">
       <Button variant="secondary" size="small">Læs mere</Button>
     </a>

@@ -7,7 +7,7 @@ const courses = [
   {
     image: "/images/coursecard.webp",
     date: "5. maj 2025, fra 19:00 til 20:30",
-    title: "Din vej til uddannelse og job (online)",
+    title: "Din vej til uddannelse og job <br>(online)",
     description:
       "Webinar om støttemuligheder og forskellige indgange til uddannelse og arbejdsmarkedet. Få gode råd og konkrete værktøjer fra socialfaglig rådgiver og fleksjobambassadør.",
     price_member: "Gratis",
@@ -28,8 +28,9 @@ const courses = [
   {
     image: "/images/coursecard.webp",
     date: "21. juni 2025, fra 11:30 til 15:00",
-    title: "Cykling i Københavns gader - mangfoldighedscykelløb sammen ...",
-    description: "Vi ønsker at samle alle der gerne vil cykle til en dag i cyklingens og fællesskabets tegn, når CP Danmark ...",
+    title: "Cykling i Københavns gader - Mangfoldighedscykelløb sammen med CP Danmark og Elsass Fonden",
+    description:
+      "Vi ønsker at samle alle der gerne vil cykle til en dag i cyklingens og fællesskabets tegn, når CP Danmark og Elsass Fonden sammen cykler til Mangfoldighedsetapen til CPHsprint. Om din cykel har et, to, tre eller fire hjul - om du cykler på framerunner eller tandem - alle er velkomne i cykelfællesskabet. CP Danmark inviterer alle medlemmer og interesserede i at melde sig til. Formandskabet bestående af Pia Allerslev og Jacob Nossell vil cykle med, sammen med en del deltagere fra Tour de Elsass holdet, som cyklede til PL i Paris.",
     price_member: "Gratis",
     price_guest: "Gratis",
     spots: "50",
@@ -71,13 +72,14 @@ const activities = [
     image: "/images/activitycard2.webp",
     date: "10. maj 2025",
     title: "Fest med livemusik",
-    description: "Kom med til en festlig aften arrangeret af CP Danmark Storkøbenhavn. Der vil være lækker mad, livemusik med ...",
+    description:
+      "Kom med til en festlig aften arrangeret af CP Danmark Storkøbenhavn. Der vil være lækker mad, livemusik med bandet Recepten og masser af hyggeligt samvær.",
   },
   {
     image: "/images/activitycard3.webp",
     date: "16-18. maj 2025",
     title: "'Slap af'-weekend på Feriecenter Slettestrand",
-    description: "Tag med på en fantastisk weekend med hygge og socialt samvær med din og andre familier ...",
+    description: "Tag med på en fantastisk weekend med hygge og socialt samvær med din og andre familier - arrangeret af CP Danmark Østjylland.",
   },
   {
     image: "/images/activitycard4.webp",
@@ -90,13 +92,15 @@ const activities = [
     image: "/images/activitycard5.webp",
     date: "23-25. maj 2025",
     title: "Familieweekend på Feriecenter Slettestrand",
-    description: "Lyder familieweekend i naturskønne omgivelser ved Vesterhavet tillokkende? Så skal du med ...",
+    description:
+      "Lyder familieweekend i naturskønne omgivelser ved Vesterhavet tillokkende? Så skal du med på denne tur arrangeret af CP Danmark Nordøstjylland.",
   },
   {
     image: "/images/activitycard6.webp",
     date: "24. maj 2025",
     title: "Tur i Carlsberg Byen",
-    description: "Kom med på en guidet tur i Carlsberg Byen, hvor du sammen med CP Danmark Storkøbenhavn hører historien om ...",
+    description:
+      "Kom med på en guidet tur i Carlsberg Byen, hvor du sammen med CP Danmark Storkøbenhavn hører historien om bydelens bygninger og om gamle dage på Carlsberg.",
   },
 ];
 ---
@@ -110,12 +114,11 @@ const activities = [
   <section class="hero grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom md:pt-36 pt-28 relative">
     <div class="col-start-2 col-span-10 md:pb-16 pb-8">
       <h1 class="md:text-h2-desktop text-h2-mobile md:pt-16 pt-20 md:pb-0 pb-2">Kurser & aktiviteter</h1>
-      <hr class="md:w-[55%] w-[95%] pt-4 border-dashed pb-2" />
       <p class="md:text-h4-desktop text-h4-mobile italic">
         Deltag i faglige kurser, sociale aktiviteter og fællesskaber for mennesker med CP og deres pårørende
       </p>
     </div>
-    <div class="col-start-2 col-span-10 pb-4">
+    <div class="col-start-2 col-span-10 pb-5">
       <h2 class="md:text-h3-desktop text-h3-mobile">Kurser & arrangementer</h2>
     </div>
     <div class="col-start-2 col-span-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 items-center justify-center">
@@ -135,7 +138,7 @@ const activities = [
       }
     </div>
 
-    <div class="col-start-2 col-span-10 md:pt-desktop-top pt-mobil-top pb-4">
+    <div class="col-start-2 col-span-10 md:pt-desktop-top pt-mobil-top pb-5">
       <h2 class="md:text-h3-desktop text-h3-mobile">Aktiviteter</h2>
     </div>
     <div class="col-start-2 col-span-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 items-center justify-center">
@@ -148,6 +151,10 @@ const activities = [
     body.dark p,
     body.dark h2 {
       color: #f6f6f6;
+    }
+
+    body.dark hr {
+      border-color: #7d7d7d;
     }
   </style>
 </MainLayout>

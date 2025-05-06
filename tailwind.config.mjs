@@ -83,7 +83,7 @@ export default {
       "h2-mobile": ["2.5rem"],
       "h3-desktop": ["2.3rem"],
       "h3-mobile": ["2rem"],
-      "h4-desktop": ["1.5rem"],
+      "h4-desktop": ["1.4rem"],
       "h4-mobile": ["1.2rem"],
       "p-desktop": ["1.1rem"],
       "p-mobile": ["1.02rem"],
@@ -124,10 +124,10 @@ export default {
     extend: {
       spacing: {
         gap: "40px", // Keeps the 30px gap
-        "mobil-bottom": "70px", // Slightly reduced bottom spacing for mobile
-        "desktop-bottom": "90px", // Reduced bottom spacing for desktop
-        "mobil-top": "70px", // Reduced top spacing for mobile
-        "desktop-top": "90px", // Reduced top spacing for desktop
+        "mobil-bottom": "60px", // Slightly reduced bottom spacing for mobile
+        "desktop-bottom": "70px", // Reduced bottom spacing for desktop
+        "mobil-top": "60px", // Reduced top spacing for mobile
+        "desktop-top": "70px", // Reduced top spacing for desktop
       },
       fontSize: {
         large: "1.25rem", // eller vælg en anden størrelse som passer dig
