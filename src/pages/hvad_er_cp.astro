@@ -1,0 +1,146 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import AccordianCP from "../components/AccordianCP.astro";
+---
+
+<MainLayout
+  title="CP Danmark | Hvad er CP?"
+  description="CP Danmark's Hvad er CP-side"
+  ogtitle="CP Danmark – Landsforeningen for cerebral parese"
+  ogdescription="'Hvad er CP'-siden til CP Danmark's hjemmeside"
+>
+  <section class="hero-section grid grid-cols-12 md:pt-20 pt-16 md:pb-28 pb-20 w-full h-screen md:px-0 px-4 relative">
+    <div class="flex flex-col items-left relative z-10 col-start-2 col-span-10">
+      <div class="breadcrumb md:pt-[18%] pt-[70%]">
+        <a href="/" class="underline transition duration-300 ease-in-out">Forside</a>
+        <span> / </span>
+        <a href="/cp_os" class="underline transition duration-300 ease-in-out">CP & os</a>
+        <span> / </span>
+        <a href="/hvad_er_cp" class="underline transition duration-300 ease-in-out">Hvad er CP?</a>
+      </div>
+
+      <h1 id="hero-title" class="display">Hvad er CP?</h1>
+      <p id="hero-text" class="md:text-h4-desktop text-h4-mobile text-gray-50 md:pt-6 pt-4 max-w-3xl">
+        Få indsigt i diagnosen og livet med CP— fra symptomer til hverdagsliv
+      </p>
+    </div>
+
+    <div class="hero_image w-full h-full absolute inset-0 z-0">
+      <img src="/images/cp_image.webp" alt="Hero-billede til CP Danmarks forside" class="w-full h-full object-cover" />
+    </div>
+
+    <div id="overlay1" class="absolute top-0 left-0 w-full h-full bg-gray-950 bg-opacity-[50%] z-0"></div>
+    <div
+      id="overlay2"
+      class="absolute top-0 left-0 md:w-[50%] w-full h-full md:backdrop-blur-sm bg-opacity-75 bg-blue-950 z-0 md:rounded-r-full hidden md:block"
+    >
+    </div>
+
+    <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
+      <a href="#get-started" aria-label="Gå videre ned på siden">
+        <div class="float flex flex-col items-center hover:opacity-80 transition duration-300 ease-in-out">
+          <p class="text-[18px] text-gray-50 font-semibold">Gå videre ned på siden</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8 sm:w-12 sm:h-12 text-gray-50 transition duration-300 ease-in-out"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="info-section1 grid grid-cols-12 md:pt-14 pt-10 md:pb-28 pb-20">
+    <div class="grid md:grid-cols-2 col-start-2 col-span-10">
+      <!-- Text and button section -->
+      <div>
+        <h2 class="md:pb-6 pb-4 md:text-h3-desktop text-h3-mobile">Forstå cerebral parese og dens betydning i hverdagen</h2>
+        <p>
+          Cerebral parese (CP) er en neurologisk tilstand, der påvirker bevægelse og muskelkontrol. Det er den mest almindelige årsag til motorisk
+          funktionsnedsættelse hos børn. CP opstår som følge af en skade i hjernen, ofte før, under eller kort efter fødslen. Tilstanden varierer fra
+          person til person, og dens indvirkning på dagligdagen kan være forskellig. Forståelse af CP er afgørende for at kunne navigere i de
+          udfordringer og muligheder, som livet med CP indebærer.​
+        </p>
+      </div>
+
+      <!-- Image section -->
+      <div class="flex justify-end md:pt-0 pt-8">
+        <img src="/images/cp_section1.webp" alt="Første billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section1_1 grid grid-cols-12 md:pb-28 pb-20 max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-2 col-start-2 col-span-10">
+      <h3 class="md:pb-6 pb-4">Hvad er cerebral parese?</h3>
+    </div>
+    <div class="col-start-2 col-span-10">
+      <AccordianCP />
+    </div>
+  </section>
+
+  <section class="info-section2 grid grid-cols-12 md:pb-28 pb-20">
+    <div class="grid md:grid-cols-2 col-start-2 col-span-10">
+      <!-- Image section -->
+      <div class="flex justify-start md:pt-0 pt-8">
+        <img src="/images/cp_section2.webp" alt="Førstw billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
+      </div>
+      <!-- Text and button section -->
+      <div>
+        <h3 class="md:pb-6 pb-4 md:pt-0 pt-8">Hverdagen med cerebral parese</h3>
+        <p>
+          Livet med CP indebærer en række udfordringer, men også mange muligheder. Det kan inkludere behov for hjælpemidler, tilpasninger i hjemmet og
+          støtte i skolen eller på arbejdspladsen. Sociale relationer, fritidsaktiviteter og personlig udvikling er vigtige aspekter, hvor støtte og
+          forståelse fra omgivelserne spiller en central rolle.
+          <br /><br />
+          CP Danmark tilbyder rådgivning, netværk og ressourcer for at støtte personer med CP og deres familier i at leve et aktivt og meningsfuldt liv.
+        </p>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  /* Floating Animation */
+  @keyframes float {
+    0% {
+      transform: translatey(0);
+    }
+    50% {
+      transform: translatey(-10px);
+    }
+    100% {
+      transform: translatey(0);
+    }
+  }
+
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .breadcrumb a {
+    color: #c1c1c1;
+  }
+
+  .breadcrumb span {
+    color: #f6f6f6;
+  }
+
+  body.dark .breadcrumb a:hover,
+  body.dark .breadcrumb span:hover {
+    color: #0e86e9;
+  }
+
+  /* Dark Mode */
+  body.dark h2,
+  body.dark h3,
+  body.dark h4,
+  body.dark p {
+    color: #f6f6f6;
+  }
+</style>

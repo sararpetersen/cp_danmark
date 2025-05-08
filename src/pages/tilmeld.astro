@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import "../styles/tailwind.css";
 ---
 
 <MainLayout
@@ -9,9 +10,7 @@ import Button from "../components/Button.astro";
   ogtitle="CP Danmark – Landsforeningen for cerebral parese"
   ogdescription="'støt os'-siden til CP Danmark's hjemmeside"
 >
-  <section
-    class="hero-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom w-full h-screen md:px-0 px-4 relative"
-  >
+  <section class="hero-section grid grid-cols-12 md:pt-20 pt-16 md:pb-24 pb-20 w-full h-screen md:px-0 px-4 relative">
     <div class="hero_image w-full h-full absolute inset-0 z-0">
       <img src="/images/signup_image.webp" alt="Hero-billede til CP Danmark's 'tilmeld'-side" class="w-full h-full object-cover" />
     </div>
@@ -54,18 +53,18 @@ import Button from "../components/Button.astro";
     </div>
   </section>
 
-  <section class="main-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom">
+  <section class="main-section grid grid-cols-12 md:pt-12 pt-8 md:pb-24 pb-20">
     <div class="col-start-2 col-span-10">
       <div>
         <div id="top-section">
-          <h2 class="pb-2">Vær med til at styrke fællesskabet</h2>
-          <p class="md:pb-10 pb-6 font-regular text-h4-mobile max-w-5xl">
+          <h2 class="md:text-h3-desktop text-h3-mobile font-bold pb-2">Vær med til at styrke fællesskabet</h2>
+          <p class="md:pb-14 pb-10 font-regular text-h4-mobile max-w-3xl">
             Udfyld formularen herunder og bliv en del af CP Danmark&mdash; uanset om du selv har CP, er pårørende eller blot ønsker at støtte en
             vigtig sag.
           </p>
         </div>
         <!-- Radio buttons to choose support type -->
-        <div id="support-type" class="bg-dust-100 border border-dust-300 p-4 md:w-[40%] rounded-[5px] flex flex-col md:mb-20 mb-10">
+        <div id="support-type" class="bg-dust-100 border border-dust-300 p-4 md:w-[40%] rounded-[5px] flex flex-col md:mb-14 mb-10">
           <h4 class="pb-2">Hvilket medlemskab er der tale om?</h4>
           <label class="inline-flex items-center mr-6">
             <input type="radio" name="supportType" value="enkelt" id="radioEnkelt" />

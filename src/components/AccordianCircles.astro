@@ -1,0 +1,285 @@
+---
+const regions = [
+  {
+    navn: "Hovedstadsområdet",
+    kredse: [
+      {
+        navn: "Storkøbenhavn",
+        kommuner: [
+          "København, Frederiksberg, Albertslund, Ballerup, Brøndby, Dragør, Gentofte, Gladsaxe, Glostrup, Herlev, Hvidovre, Høje Taastrup, Ishøj, Rødovre, Lyngby-Taarbæk, Tårnby og Vallensbæk",
+        ],
+        bestyrelsesmedlemmer: {
+          formand: "Mansoor Siddiqi",
+          naestformand: "Tine Segel",
+          kasserer: "Mathias W. Christensen",
+          oevrigeBestyrelse: ["Sonny Fernandez", "Helge Krohn", "Jesper Brødsgaard Thomsen", "Caroline Ploug"],
+          suppleant: ["Jacob Yoon Egeskov Nossell", "Helle Brødsgaard Thomsen"],
+        },
+      },
+      {
+        navn: "Nordsjælland",
+        kommuner: [
+          "Allerød",
+          "Egedal",
+          "Fredensborg",
+          "Frederikssund",
+          "Halsnæs",
+          "Furesø",
+          "Gribskov",
+          "Helsingør",
+          "Hillerød",
+          "Hørsholm og Rudersdal",
+        ],
+        bestyrelsesmedlemmer: {
+          formand: "Anita Bager",
+          naestformand: "Maj-Britt Lyngby Sørensen",
+          kasserer: "Linda Bartholdy",
+          sekræter: "Betina Rønne",
+          oevrigeBestyrelse: ["Allan Kadribasic", "Lars V. Søndergaard-Nielsen", "Victoria Elgum", "Emil de la Motte Ørskov Olsen"],
+          suppleant: ["Tina Højager", "Lars Sandt"],
+        },
+      },
+      {
+        navn: "Roskilde",
+        kommuner: ["Greve", "Køge", "Lejre", "Ringsted", "Roskilde og Solrød"],
+        bestyrelsesmedlemmer: {
+          formand: "Bente Lis Clausen",
+          naestformand: "Daniel Michael Schleyer Qvist",
+          kasserer: "Anita Petersen",
+          sekræter: "Glennie Schleyer Qvist",
+          oevrigeBestyrelse: ["René Bengtson", "Kåre Kyed Hansen"],
+        },
+      },
+    ],
+  },
+  {
+    navn: "Sjælland",
+    kredse: [
+      {
+        navn: "Nordvestsjælland",
+        kommuner: ["Kalundborg", "Holbæk", "Odsherred", "Slagelse og Sorø" ],
+        bestyrelsesmedlemmer: {
+          formand: "Solveig Krogh Christiansen",
+          naestformand: "Britt Drud Sørensen",
+          kasserer: "Marlene Jørgensen",
+          sekræter: "Heidi Charlotte Hansen",
+          oevrigeBestyrelse: ["Mai-Britt Eriksen","Marianne Kristensen"],
+          suppleant: ["Annette Juul Pedersen", "Emil Vithus Hülz"],
+        },
+      },
+      {
+        navn: "Storstrøm",
+        kommuner: ["Guldborgsund", "Lolland", "Vordingborg", "Faxe", "Næstved", "Stevns"],
+        bestyrelsesmedlemmer: {
+          formand: "Erik Hansen",
+          naestformand: "Daniel Bente",
+          kasserer: "Marianne V. Hansen",
+          sekretær: "Mariann Hald",
+          oevrigeBestyrelse: [],
+          suppleant: ["Louise Sørensen"],
+        },
+      },
+    ],
+  },
+  {
+    navn: "Fyn & Sydjylland",
+    kredse: [
+      {
+        navn: "Fyn",
+        kommuner: ["Odense", "Middelfart"],
+        bestyrelsesmedlemmer: {
+          formand: "Formand Navn",
+          naestformand: "Næstformand Navn",
+          kasserer: "Kasserer Navn",
+          oevrigeBestyrelse: ["Medlem 1"],
+          suppleant: ["Suppleant 1", "Suppleant 2"],
+        },
+      },
+      {
+        navn: "Sønderjylland",
+        kommuner: ["Aabenraa", "Haderslev"],
+        bestyrelsesmedlemmer: {
+          formand: "Formand Navn",
+          naestformand: "Næstformand Navn",
+          kasserer: "Kasserer Navn",
+          oevrigeBestyrelse: ["Medlem 1", "Medlem 2"],
+          suppleant: ["Suppleant 1", "Suppleant 2"],
+        },
+      },
+      {
+        navn: "Sydøstjylland",
+        kommuner: ["Kolding", "Vejle"],
+        bestyrelsesmedlemmer: {
+          formand: "Formand Navn",
+          naestformand: "Næstformand Navn",
+          kasserer: "Kasserer Navn",
+          oevrigeBestyrelse: ["Medlem 1"],
+          suppleant: ["Suppleant 1", "Suppleant 2"],
+        },
+      },
+      {
+        navn: "Sydvestjylland",
+        kommuner: ["Esbjerg", "Varde"],
+        bestyrelsesmedlemmer: {
+          formand: "Formand Navn",
+          naestformand: "Næstformand Navn",
+          kasserer: "Kasserer Navn",
+          oevrigeBestyrelse: [],
+          suppleant: ["Suppleant 1", "Suppleant 2"],
+        },
+      },
+    ],
+  },
+  {
+    navn: "Vest- & Østjylland",
+    kredse: [
+      {
+        navn: "Vestjylland",
+        kommuner: ["Holstebro", "Ringkøbing"],
+        bestyrelsesmedlemmer: {
+          formand: "Formand Navn",
+          naestformand: "Næstformand Navn",
+          kasserer: "Kasserer Navn",
+          oevrigeBestyrelse: ["Medlem 1"],
+          suppleant: ["Suppleant 1", "Suppleant 2"],
+        },
+      },
+      {
+        navn: "Midtjylland",
+        kommuner: ["Aarhus", "Randers"],
+        bestyrelsesmedlemmer: {
+          formand: "Formand Navn",
+          naestformand: "Næstformand Navn",
+          kasserer: "Kasserer Navn",
+          oevrigeBestyrelse: [],
+          suppleant: ["Suppleant 1", "Suppleant 2"],
+        },
+      },
+      {
+        navn: "Østjylland",
+        kommuner: ["Odder", "Samsø"],
+        bestyrelsesmedlemmer: {
+          formand: "Formand Navn",
+          naestformand: "Næstformand Navn",
+          kasserer: "Kasserer Navn",
+          oevrigeBestyrelse: ["Medlem 1"],
+          suppleant: ["Suppleant 1", "Suppleant 2"],
+        },
+      },
+      {
+        navn: "Nordøstjylland",
+        kommuner: ["Horsens", "Skanderborg"],
+        bestyrelsesmedlemmer: {
+          formand: "Formand Navn",
+          naestformand: "Næstformand Navn",
+          kasserer: "Kasserer Navn",
+          oevrigeBestyrelse: ["Medlem 1", "Medlem 2"],
+          suppleant: ["Suppleant 1", "Suppleant 2"],
+        },
+      },
+      {
+        navn: "Nordjylland",
+        kommuner: ["Aalborg", "Hjørring"],
+        bestyrelsesmedlemmer: {
+          formand: "Formand Navn",
+          naestformand: "Næstformand Navn",
+          kasserer: "Kasserer Navn",
+          oevrigeBestyrelse: [],
+          suppleant: ["Suppleant 1", "Suppleant 2"],
+        },
+      },
+    ],
+  },
+];
+---
+
+<div class="mx-auto space-y-2" id="accordion-2">
+  {
+    regions.map((region, index) => (
+      <div class="accordion-item border border-gray-400 rounded-xl bg-gray-200 overflow-hidden" data-index={index}>
+        <button class="accordion-header w-full flex justify-between items-center px-4 py-3 text-left text-lg font-semibold text-gray-800">
+          <h4 class="text-lg font-semibold">{region.navn}</h4>
+          <svg class="accordion-icon w-5 h-5 text-gray-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <div class="accordion-content px-4 max-h-0 overflow-hidden transition-all duration-300">
+          {region.kredse.map((kreds) => (
+            <div class="pb-4">
+              <h4 class="text-h4-mobile">{kreds.navn}</h4>
+              <p class="pb-2">
+                <strong class="font-semibold">Kommuner:</strong> {kreds.kommuner.join(", ")}
+              </p>
+
+              <p>
+                <strong class="font-semibold">Bestyrelsesmedlemmer:</strong>
+              </p>
+              <ul class="list-none">
+                <li>
+                  <strong class="font-semibold">Formand:</strong> {kreds.bestyrelsesmedlemmer.formand}
+                </li>
+                <li>
+                  <strong class="font-semibold">Næstformand:</strong> {kreds.bestyrelsesmedlemmer.naestformand}
+                </li>
+                <li>
+                  <strong class="font-semibold">Kasserer:</strong> {kreds.bestyrelsesmedlemmer.kasserer}
+                </li>
+
+                {kreds.bestyrelsesmedlemmer.sekræter && (
+                  <li>
+                    <strong class="font-semibold">Sekretær:</strong> {kreds.bestyrelsesmedlemmer.sekræter}
+                  </li>
+                )}
+              </ul>
+              </div>
+              <div class="list-none pb-8">
+                {kreds.bestyrelsesmedlemmer.oevrigeBestyrelse.length > 0 && (
+                  <li>
+                    <strong class="font-semibold">Øvrige bestyrelsesmedlemmer:</strong> {kreds.bestyrelsesmedlemmer.oevrigeBestyrelse.join(", ")}
+                  </li>
+                )}
+                {kreds.bestyrelsesmedlemmer.suppleant && (
+                  <li>
+                    <strong class="font-semibold">Suppleanter:</strong> {kreds.bestyrelsesmedlemmer.suppleant.join(", ")}
+                  </li>
+                )}
+              </div>
+            
+          ))}
+        </div>
+      </div>
+    ))
+  }
+</div>
+
+<script>
+  const items = document.querySelectorAll("#accordion-2 .accordion-item");
+
+  items.forEach((item, idx) => {
+    const header = item.querySelector(".accordion-header");
+    const content = item.querySelector(".accordion-content");
+    const icon = item.querySelector(".accordion-icon");
+
+    header.addEventListener("click", () => {
+      items.forEach((otherItem, i) => {
+        const otherContent = otherItem.querySelector(".accordion-content");
+        const otherIcon = otherItem.querySelector(".accordion-icon");
+
+        if (i === idx) {
+          const isOpen = content.style.maxHeight;
+          if (isOpen) {
+            content.style.maxHeight = null;
+            icon.style.transform = "rotate(0deg)";
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            icon.style.transform = "rotate(180deg)";
+          }
+        } else {
+          otherContent.style.maxHeight = null;
+          otherIcon.style.transform = "rotate(0deg)";
+        }
+      });
+    });
+  });
+</script>

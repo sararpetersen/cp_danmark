@@ -1,0 +1,75 @@
+---
+const items = [
+  {
+    title: "Definition & årsager",
+    content:
+      "Cerebral parese (CP) er en fælles betegnelse for en gruppe neurologiske forstyrrelser, der påvirker kroppens bevægelse og muskelkontrol. Tilstanden skyldes en skade på hjernen, der typisk opstår under graviditeten, ved fødslen eller tidligt i barnets liv. Årsagerne kan inkludere iltmangel, infektioner, blødninger eller medfødte misdannelser i hjernen.",
+  },
+  {
+    title: "Symptomer",
+    content:
+      "Symptomerne på cerebral parese varierer afhængigt af typen og graden af hjerneskaden. De mest almindelige tegn inkluderer muskelstivhed <em>(spasticitet)</em>, ufrivillige bevægelser, dårlig balance, koordinationsproblemer og vanskeligheder med at gå. Nogle personer kan også opleve taleproblemer, syns- eller hørevanskeligheder samt kognitive udfordringer.",
+  },
+  {
+    title: "Typer af CP",
+    content:
+      "Der findes flere typer af cerebral parese, herunder spastisk CP <em>(den mest almindelige)</em>, dyskinetisk CP, ataktisk CP og blandede former. Hver type påvirker kroppen forskelligt— f.eks. kan spastisk CP medføre stive muskler, mens dyskinetisk CP er præget af ufrivillige bevægelser.",
+  },
+  {
+    title: "Hvordan stilles diagnosen?",
+    content:
+      "Diagnosen cerebral parese stilles typisk gennem observation af barnets motoriske udvikling, en fysisk undersøgelse og billeddiagnostik som MR- eller CT-scanning. Læger vurderer også reflekser, muskeltonus og bevægelsesmønstre for at udelukke andre lidelser og bekræfte diagnosen.",
+  },
+];
+---
+
+<div class="mx-auto space-y-2" id="accordion">
+  {
+    items.map((item, index) => (
+      <div class="accordion-item border border-gray-400 rounded-xl bg-gray-200 overflow-hidden" data-index={index}>
+        <button class="accordion-header w-full flex justify-between items-center px-4 py-3 text-left text-lg font-semibold text-gray-800">
+          <h4 class="text-lg font-semibold">{item.title}</h4>
+          <svg class="accordion-icon w-5 h-5 text-gray-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="accordion-content px-4 text-gray-600 max-h-0 overflow-hidden transition-all duration-300">
+          <p class="py-2" set:html={item.content} />
+        </div>
+      </div>
+    ))
+  }
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll("#accordion .accordion-item");
+
+    items.forEach((item, idx) => {
+      const header = item.querySelector(".accordion-header");
+      const content = item.querySelector(".accordion-content");
+      const icon = item.querySelector(".accordion-icon");
+
+      header.addEventListener("click", () => {
+        items.forEach((otherItem, i) => {
+          const otherContent = otherItem.querySelector(".accordion-content");
+          const otherIcon = otherItem.querySelector(".accordion-icon");
+
+          if (i === idx) {
+            const isOpen = content.style.maxHeight;
+            if (isOpen) {
+              content.style.maxHeight = null;
+              icon.style.transform = "rotate(0deg)";
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+              icon.style.transform = "rotate(180deg)";
+            }
+          } else {
+            otherContent.style.maxHeight = null;
+            otherIcon.style.transform = "rotate(0deg)";
+          }
+        });
+      });
+    });
+  });
+</script>
