@@ -3,17 +3,20 @@ const items = [
   {
     title: "Hvad gør vi?",
     content:
-      "Cerebral parese (CP) er en fælles betegnelse for en gruppe neurologiske forstyrrelser, der påvirker kroppens bevægelse og muskelkontrol. Tilstanden skyldes en skade på hjernen, der typisk opstår under graviditeten, ved fødslen eller tidligt i barnets liv. Årsagerne kan inkludere iltmangel, infektioner, blødninger eller medfødte misdannelser i hjernen.",
+      "CP Danmark arbejder for at skabe bedre vilkår for mennesker med cerebral parese og deres pårørende. Vi tilbyder rådgivning, laver politisk arbejde, skaber fællesskaber og deler viden.",
+    url: "https://www.cpdanmark.dk/om-os/det-goer-vi/",
   },
   {
     title: "Fællesskaberne",
     content:
-      "Symptomerne på cerebral parese varierer afhængigt af typen og graden af hjerneskaden. De mest almindelige tegn inkluderer muskelstivhed <em>(spasticitet)</em>, ufrivillige bevægelser, dårlig balance, koordinationsproblemer og vanskeligheder med at gå. Nogle personer kan også opleve taleproblemer, syns- eller hørevanskeligheder samt kognitive udfordringer.",
+      "Rundt i landet findes klubber og kredse, hvor mennesker med CP og deres familier mødes, deler erfaringer og deltager i sociale aktiviteter. Fællesskabet er en vigtig del af vores arbejde.",
+    url: "https://www.cpdanmark.dk/om-os/foreningens-klubber/",
   },
   {
     title: "Hvordan er vi opbygget?",
     content:
-      "Der findes flere typer af cerebral parese, herunder spastisk CP <em>(den mest almindelige)</em>, dyskinetisk CP, ataktisk CP og blandede former. Hver type påvirker kroppen forskelligt— f.eks. kan spastisk CP medføre stive muskler, mens dyskinetisk CP er præget af ufrivillige bevægelser.",
+      "CP Danmark er en medlemsorganisation med både frivillige og ansatte kræfter. Her kan du se hvordan vi er organiseret, hvem der står bag arbejdet, og hvordan du kan komme i kontakt med os.",
+    url: "https://www.cpdanmark.dk/om-os/organisation/",
   },
 ];
 ---
@@ -21,15 +24,21 @@ const items = [
 <div class="mx-auto space-y-2" id="accordion-1">
   {
     items.map((item, index) => (
-      <div class="accordion-item border border-gray-400 rounded-xl bg-gray-200 overflow-hidden" data-index={index}>
-        <button class="accordion-header w-full flex justify-between items-center px-4 py-3 text-left text-lg font-semibold text-gray-800">
-          <h4 class="text-lg font-semibold">{item.title}</h4>
-          <svg class="accordion-icon w-5 h-5 text-gray-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="accordion-item border border-gray-400 rounded-xl bg-gray-100 overflow-hidden" data-index={index}>
+        <button class="accordion-header w-full flex justify-between items-center px-4 py-5 text-left text-lg font-semibold text-gray-800">
+          <h4>{item.title}</h4>
+          <svg class="accordion-icon w-7 h-7 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
         <div class="accordion-content px-4 text-gray-600 max-h-0 overflow-hidden transition-all duration-300">
-          <p class="py-2" set:html={item.content} />
+          <div class="pb-4">
+            <p class="py-2">{item.content} </p>
+
+            <a href={item.url} target="_blank" class=" underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out">
+              Læs mere her
+            </a>
+          </div>
         </div>
       </div>
     ))
@@ -68,3 +77,23 @@ const items = [
     });
   });
 </script>
+
+<style>
+  /* Dark mode */
+  body.dark .accordion-header h4,
+  body.dark .accordion-content p {
+    color: #f6f6f6;
+  }
+  body.dark .accordion-icon svg {
+    stroke: #f6f6f6;
+  }
+
+  body.dark .accordion-item {
+    background-color: #4f4f4f;
+    border-color: #7d7d7d;
+  }
+
+  body.dark .accordion-content a {
+    color: #7dc1fc;
+  }
+</style>

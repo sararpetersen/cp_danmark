@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import AccordianInfo from "../components/AccordianInfo.astro";
 import AccordianCircles from "../components/AccordianCircles.astro";
+import Button from "../components/Button.astro";
 ---
 
 <MainLayout
@@ -10,7 +11,7 @@ import AccordianCircles from "../components/AccordianCircles.astro";
   ogtitle="CP Danmark – Landsforeningen for cerebral parese"
   ogdescription="'CP & os'-siden til CP Danmark's hjemmeside"
 >
-  <section class="hero-section grid grid-cols-12 md:pt-20 pt-16 md:pb-28 pb-20 w-full h-screen md:px-0 px-4 relative">
+  <section class="hero-section grid grid-cols-12 md:pt-20 pt-16 md:pb-desktop-bottom pb-mobil-bottom w-full h-screen md:px-0 px-4 relative">
     <div class="flex flex-col items-left relative z-10 col-start-2 col-span-10">
       <div class="breadcrumb md:pt-[18%] pt-[70%]">
         <a href="/" class="underline transition duration-300 ease-in-out">Forside</a>
@@ -53,7 +54,7 @@ import AccordianCircles from "../components/AccordianCircles.astro";
       </a>
     </div>
   </section>
-  <section class="info-section1 grid grid-cols-12 md:pt-14 pt-10 md:pb-28 pb-20">
+  <section class="info-section1 grid grid-cols-12 md:pt-14 pt-10 md:pb-20 pb-12">
     <div class="grid md:grid-cols-2 col-start-2 col-span-10">
       <!-- Text and button section -->
       <div>
@@ -74,13 +75,13 @@ import AccordianCircles from "../components/AccordianCircles.astro";
     </div>
   </section>
 
-  <section class="info-section1_1 grid grid-cols-12 md:pb-28 pb-20 max-w-7xl mx-auto">
+  <section class="info-section1_1 grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto">
     <div class="col-start-2 col-span-10">
       <AccordianInfo />
     </div>
   </section>
 
-  <section class="info-section1_2 grid grid-cols-12 md:pb-28 pb-20 max-w-7xl mx-auto">
+  <section class="info-section1_2 grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto">
     <div class="flex flex-col col-start-2 col-span-10">
       <h3 class="pb-2">Kredse</h3>
       <p class="md:pb-6 pb-4">
@@ -91,6 +92,84 @@ import AccordianCircles from "../components/AccordianCircles.astro";
     </div>
     <div class="col-start-2 col-span-10">
       <AccordianCircles />
+    </div>
+  </section>
+
+  <section class="contact grid grid-cols-12 md:pb-16 pb-12">
+    <div class="col-start-2 col-span-10">
+      <h3 class="pb-2">Har du et spørgsmål til CP Danmark?</h3>
+      <p class="md:pb-10 pb-8 max-w-3xl">
+        Så brug denne formular. Skriv dog <span class="font-semibold underline">ikke</span> ikke personfølsomme oplysninger i formularen, der heller ikke
+        kan benyttes til spørgsmål til rådgiverne <em>(det kræver telefonisk henvendelse)</em>.
+      </p>
+    </div>
+    <div class="form col-start-2 col-span-10 grid md:grid-cols-2 grid-cols-1 md:gap-16 gap-10 items-start justify-center">
+      <form class="md:order-none order-2">
+        <div class="form-group flex flex-col">
+          <label for="name" class="font-semibold mb-2">Navn</label>
+          <input type="text" class="form-control p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4" id="name" placeholder="F.eks. Borris Jensen" />
+
+          <label for="email" class="font-semibold mb-2">Email</label>
+          <input
+            type="email"
+            class="form-control p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
+            id="email"
+            placeholder="F.eks. borris-jensen@gmail.com"
+          />
+
+          <label for="message" class="font-semibold mb-2">Spørgsmål</label>
+          <textarea class="form-control bg-dust-100 border-dust-300 rounded-[5px] mb-4" id="message" rows="8" placeholder="Skriv dit spørgmål her"
+          ></textarea>
+
+          <!-- File input starts here -->
+          <label for="file" class="font-semibold mb-1">Vedhæft fil</label>
+          <input class="attachment" type="file" class="form-control" id="file" />
+          <!-- File input ends here -->
+
+          <a href="#" class="md:pt-8 pt-4" aria-label="Placeholder-link (ingen funktionalitet)">
+            <Button variant="secondary" size="small">Send</Button>
+          </a>
+        </div>
+      </form>
+
+      <div class="flex flex-col justify-center">
+        <h4 class="text-h4-mobile md:pb-6 pb-4">CP Danmark - Landsforeningen for cerebral parese</h4>
+        <ul class="space-y-1 pb-4">
+          <li>Blekinge Boulevard 2</li>
+          <li>2630 Taastrup</li>
+        </ul>
+
+        <ul class="space-y-1 pb-4">
+          <li>Mandag: Klokken 10.30-12.00 og 13.00-14.00</li>
+          <li>Tirsdag-fredag: Klokken 10.00-12.00 og 13.00-14.00</li>
+        </ul>
+
+        <ul class="space-y-1 pb-4">
+          <li>
+            Telefon: <a
+              href="tel: +45 38 88 45 75"
+              class="hover:text-blue-700 underline transition duration-300 ease-in-out"
+              aria-label="Ring CP Danmark på +45 38 88 45 75">+45 38 88 45 75</a
+            >
+          </li>
+          <li>
+            Mail: <a
+              href="mailto: cpdanmark@cpdanmark.dk"
+              class="hover:text-blue-700 underline transition duration-300 ease-in-out"
+              aria-label="Send mail til CP Danmark på cpdanmark@cpdanmark.dk">cpdanmark@cpdanmark.dk</a
+            >
+          </li>
+        </ul>
+
+        <p>
+          CP Danmarks sekretariat ligger i Handicaporganisationernes Hus i Høje-Taastrup – <a
+            href="https://www.cpdanmark.dk/media/379940/saadan_finder_du_handicaporganisationernes_hus.pdf"
+            target="_blank"
+            class="how-to-find text-blue-700 hover:text-blue-600 underline transition duration-300 ease-in-out"
+            aria-label="Læs mere om hvordan du finder vej til CP Danmarks sekretariat">sådan finder du vej til huset fra Høje-Taastrup Station</a
+          >
+        </p>
+      </div>
     </div>
   </section>
 </MainLayout>
@@ -121,16 +200,37 @@ import AccordianCircles from "../components/AccordianCircles.astro";
     color: #f6f6f6;
   }
 
+  /* Dark Mode */
+
   body.dark .breadcrumb a:hover,
   body.dark .breadcrumb span:hover {
-    color: #0e86e9;
+    color: #7dc1fc;
   }
 
-  /* Dark Mode */
   body.dark h2,
   body.dark h3,
   body.dark h4,
   body.dark p {
     color: #f6f6f6;
+  }
+
+  body.dark input,
+  body.dark textarea {
+    background-color: #4f4f4f;
+    border: #7d7d7d 1px solid;
+  }
+
+  body.dark .attachment {
+    background-color: #333333;
+    border: none;
+  }
+
+  body.dark input::placeholder,
+  body.dark textarea::placeholder {
+    color: #b3b3b3;
+  }
+
+  body.dark .how-to-find {
+    color: #7dc1fc;
   }
 </style>

@@ -1,0 +1,179 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+---
+
+<MainLayout
+  title="CP Danmark | CP Ung"
+  description="CP Danmark's 'CP Ung'-side"
+  ogtitle="CP Danmark – Landsforeningen for cerebral parese"
+  ogdescription="'CP Ung'-siden til CP Danmark's hjemmeside"
+>
+  <section class="hero-section grid grid-cols-12 md:pt-20 pt-16 md:pb-28 pb-20 w-full h-screen md:px-0 px-4 relative">
+    <div class="flex flex-col items-left relative z-10 col-start-2 col-span-10">
+      <div class="breadcrumb md:pt-[18%] pt-[70%]">
+        <a href="/" class="underline transition duration-300 ease-in-out">Forside</a>
+        <span> / </span>
+        <a href="/cp_os" class="underline transition duration-300 ease-in-out">CP & os</a>
+        <span> / </span>
+        <a href="/hvad_er_cp" class="underline transition duration-300 ease-in-out">CP Ung</a>
+      </div>
+
+      <h1 id="hero-title" class="display">CP Ung</h1>
+      <p id="hero-text" class="md:text-h4-desktop text-h4-mobile text-gray-50 md:pt-6 pt-4 max-w-3xl">
+        Et sted at dele erfaringer, mødes og have det sjovt
+      </p>
+    </div>
+
+    <div class="hero_image w-full h-full absolute inset-0 z-0">
+      <img src="/images/cpung_image.webp" alt="Hero-billede til CP Danmarks 'CP Ung'-side" class="w-full h-full object-cover" />
+    </div>
+
+    <div id="overlay1" class="absolute top-0 left-0 w-full h-full bg-gray-950 bg-opacity-[50%] z-0"></div>
+    <div
+      id="overlay2"
+      class="absolute top-0 left-0 md:w-[50%] w-full h-full md:backdrop-blur-sm bg-opacity-75 bg-blue-950 z-0 md:rounded-r-full hidden md:block"
+    >
+    </div>
+
+    <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
+      <a href="#get-started" aria-label="Gå videre ned på siden">
+        <div class="float flex flex-col items-center hover:opacity-80 transition duration-300 ease-in-out">
+          <p class="text-[18px] text-gray-50 font-semibold">Gå videre ned på siden</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8 sm:w-12 sm:h-12 text-gray-50 transition duration-300 ease-in-out"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="main">
+    <div class="main-section grid grid-cols-12 md:pt-12 pt-8 md:pb-desktop-bottom pb-mobil-bottom">
+      <div class="col-start-2 col-span-10">
+        <div class="pb-20">
+          <h2 class="mdtext-h2-desktop text-h2-mobile pb-4">Et tilbud til unge med cerebral parese</h2>
+          <p>
+            CP Ung er CP Danmarks tilbud til unge med cerebral parese i alderen 15 til 35 år. Her skaber vi rammerne for et stærkt fællesskab, hvor
+            unge mødes, deler erfaringer og står sammen om at gøre en forskel. Som en del af CP Ung får du mulighed for at engagere dig i projekter og
+            aktiviteter, der gør hverdagen med CP lettere&mdash; og sjovere. Du kan både være med til at udvikle indhold, tage del i events og få din
+            stemme hørt i foreningens arbejde.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 col-start-2 col-span-10">
+        <!-- Text and button section -->
+        <div>
+          <h4 class="md:pb-6 pb-4">Hold dig opdateret med CP Ung</h4>
+          <p class="pb-8">
+            Vil du følge med i hvad der rører sig hos CP Ung? På vores Instagram deler vi glimt fra hverdagen, nyheder om arrangementer og inspiration
+            fra unge med CP. Her kan du også få indblik i vores projekter og deltage i fællesskabet— både digitalt og i virkeligheden.
+          </p>
+        </div>
+
+        <!-- Image section -->
+        <div class="flex justify-end md:pt-0 pt-8">
+          <img src="/images/cpung_section1.webp" alt="Første billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 col-start-2 col-span-10 md:pt-24 pt-20">
+        <!-- Image section -->
+        <div class="flex justify-start">
+          <img src="/images/cpung_section2.webp" alt="Andet billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
+        </div>
+        <!-- Text and button section -->
+        <div>
+          <h4 class="md:pb-6 pb-4 md:pt-0 pt-8">Vil du være en del af fælleskabet?</h4>
+          <p class="pb-8">
+            CP Ung er for alle unge mellem 15 og 35 år med cerebral parese— og du behøver ikke være medlem af CP Danmark for at være med.<br />
+            Du kan være med lige præcis i det omfang, der passer dig. Tilmeld dig vores nyhedsbrev eller følg os på Instagram, og bliv en del af et stærkt
+            netværk med plads til forskellighed.
+          </p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 col-start-2 col-span-10 md:pt-24 pt-20">
+        <!-- Text and button section -->
+        <div>
+          <h4 class="md:pb-6 pb-4">CP Ung i Island – nyt samarbejde på tværs af grænser</h4>
+          <p class="pb-8">
+            I september 2024 besøgte CP Ungs bestyrelse vores islandske søsterorganisation Ungt CP á Íslandi i Reykjavik. Her udvekslede vi erfaringer
+            om ungdomsarbejde, fællesskab og politisk engagement. Turen styrkede både samarbejdet og vores viden— og blev fulgt op året efter, da de
+            islandske unge besøgte os i Danmark.
+            <br /><br />
+            <em>Projektet blev støttet af Elsass Fonden, Vanførefonden og Bevica Fonden.</em>
+          </p>
+        </div>
+
+        <!-- Image section -->
+        <div class="flex justify-end md:pt-0 pt-8">
+          <img src="/images/cpung_section3.webp" alt="Tredje billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 col-start-2 col-span-10 md:pt-24 pt-20">
+        <!-- Image section -->
+        <div class="flex justify-start">
+          <img src="/images/cpung_section4.webp" alt="Andet billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
+        </div>
+        <!-- Text and button section -->
+        <div>
+          <h4 class="md:pb-6 pb-4 md:pt-0 pt-8">Mød holdet bag CP Ung</h4>
+          <p class="pb-8">
+            CP Ung drives af unge med CP, der brænder for fællesskab, synlighed og indflydelse. Vil du vide, hvem der står bag aktiviteterne og
+            projekterne— eller har du lyst til selv at engagere dig?
+          </p>
+          <a href="https://www.cpdanmark.dk/ung-med-cp/bestyrelsen/" target="_blank" aria-label="Gå til CP Ungs bestyrelsesside">
+            <Button variant="secondary" size="small">Se bestyrelsen</Button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  /* Floating Animation */
+  @keyframes float {
+    0% {
+      transform: translatey(0);
+    }
+    50% {
+      transform: translatey(-10px);
+    }
+    100% {
+      transform: translatey(0);
+    }
+  }
+
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .breadcrumb a {
+    color: #c1c1c1;
+  }
+
+  .breadcrumb span {
+    color: #f6f6f6;
+  }
+
+  body.dark .breadcrumb a:hover,
+  body.dark .breadcrumb span:hover {
+    color: #7dc1fc;
+  }
+
+  /* Dark Mode */
+  body.dark h2,
+  body.dark h3,
+  body.dark h4,
+  body.dark p {
+    color: #f6f6f6;
+  }
+</style>

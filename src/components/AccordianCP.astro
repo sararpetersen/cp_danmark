@@ -73,3 +73,27 @@ const items = [
     });
   });
 </script>
+
+<style>
+  /* Dark mode */
+  body.dark .accordion-header h4,
+  body.dark .accordion-content p {
+    color: #f6f6f6;
+  }
+  body.dark .accordion-icon svg {
+    stroke: #f6f6f6;
+  }
+
+  body.dark .accordion-item {
+    background-color: #4f4f4f;
+    border-color: #7d7d7d;
+  }
+  body.dark .accordion-item:hover {
+    background-color: #5b5b5b;
+    transition: 0.3s ease-in-out;
+  }
+
+  body.dark .accordion-content a {
+    color: #7dc1fc;
+  }
+</style>

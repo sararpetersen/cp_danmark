@@ -127,10 +127,10 @@ const regions = [
 <div class="mx-auto space-y-2" id="accordion-2">
   {
     regions.map((region, index) => (
-      <div class="accordion-item border border-gray-400 rounded-xl bg-gray-200 overflow-hidden" data-index={index}>
-        <button class="accordion-header w-full flex justify-between items-center px-4 py-3 text-left text-lg font-semibold text-gray-800">
-          <h4 class="text-lg font-semibold">{region.navn}</h4>
-          <svg class="accordion-icon w-5 h-5 text-gray-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="accordion-item border border-gray-400 rounded-xl bg-gray-100 overflow-hidden" data-index={index}>
+        <button class="accordion-header w-full flex justify-between items-center px-4 py-5 text-left text-lg font-semibold text-gray-800">
+          <h4>{region.navn}</h4>
+          <svg class="accordion-icon w-7 h-7 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
@@ -151,35 +151,56 @@ const regions = [
       </div>
     ))
   }
+</div>
 
-  <script>
-    const items = document.querySelectorAll("#accordion-2 .accordion-item");
+<script>
+  const items = document.querySelectorAll("#accordion-2 .accordion-item");
 
-    items.forEach((item, idx) => {
-      const header = item.querySelector(".accordion-header");
-      const content = item.querySelector(".accordion-content");
-      const icon = item.querySelector(".accordion-icon");
+  items.forEach((item, idx) => {
+    const header = item.querySelector(".accordion-header");
+    const content = item.querySelector(".accordion-content");
+    const icon = item.querySelector(".accordion-icon");
 
-      header.addEventListener("click", () => {
-        items.forEach((otherItem, i) => {
-          const otherContent = otherItem.querySelector(".accordion-content");
-          const otherIcon = otherItem.querySelector(".accordion-icon");
+    header.addEventListener("click", () => {
+      items.forEach((otherItem, i) => {
+        const otherContent = otherItem.querySelector(".accordion-content");
+        const otherIcon = otherItem.querySelector(".accordion-icon");
 
-          if (i === idx) {
-            const isOpen = content.style.maxHeight;
-            if (isOpen) {
-              content.style.maxHeight = null;
-              icon.style.transform = "rotate(0deg)";
-            } else {
-              content.style.maxHeight = content.scrollHeight + "px";
-              icon.style.transform = "rotate(180deg)";
-            }
+        if (i === idx) {
+          const isOpen = content.style.maxHeight;
+          if (isOpen) {
+            content.style.maxHeight = null;
+            icon.style.transform = "rotate(0deg)";
           } else {
-            otherContent.style.maxHeight = null;
-            otherIcon.style.transform = "rotate(0deg)";
+            content.style.maxHeight = content.scrollHeight + "px";
+            icon.style.transform = "rotate(180deg)";
           }
-        });
+        } else {
+          otherContent.style.maxHeight = null;
+          otherIcon.style.transform = "rotate(0deg)";
+        }
       });
     });
-  </script>
-</div>
+  });
+</script>
+
+<style>
+  /* Dark mode */
+  body.dark .accordion-header h4,
+  body.dark .accordion-content h4,
+  body.dark .accordion-content p {
+    color: #f6f6f6;
+  }
+  body.dark .accordion-icon svg {
+    color: #f6f6f6;
+  }
+
+  body.dark .accordion-item {
+    background-color: #4f4f4f;
+    border-color: #7d7d7d;
+  }
+
+  body.dark .accordion-content a {
+    color: #7dc1fc;
+  }
+</style>
