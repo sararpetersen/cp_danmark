@@ -62,3 +62,8 @@ const { title } = Astro.props;
     font-size: 1.25rem;
   }
 </style>
+<script>
+  import { animate } from "motion";
+  /*Entrance Animation*/
+  animate("body", { opacity: [0, 1] }, { duration: 1 });
+</script>

@@ -106,14 +106,21 @@ const activities = [
 ---
 
 <MainLayout
-  title="CP Danmark | nyheder"
-  description="CP Danmark's nyheder"
+  title="CP Danmark | Kurser & aktiviteter"
+  description="CP Danmark's 'kurser & aktiviteter'-side"
   ogtitle="CP Danmark – Landsforeningen for cerebral parese"
-  ogdescription="nyheder til CP Danmark's hjemmeside"
+  ogdescription="'Kurser & aktiviteter'-side til CP Danmark's hjemmeside"
 >
   <section class="hero grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom md:pt-36 pt-28 relative">
-    <div class="col-start-2 col-span-10 md:pb-16 pb-8">
-      <h1 class="md:text-h2-desktop text-h2-mobile md:pt-16 pt-20 md:pb-0 pb-2">Kurser & aktiviteter</h1>
+    <div class="flex flex-col items-left relative z-10 col-start-2 col-span-10 md:pb-16 pb-8">
+      <div class="breadcrumb pb-2 md:pt-12 pt-16">
+        <a href="/" class="underline transition duration-300 ease-in-out">Forside</a>
+        <span> / </span>
+        <a href="#" class="underline transition duration-300 ease-in-out">Bliv klogere</a>
+        <span> / </span>
+        <a href="/kurser_aktiviteter" class="underline transition duration-300 ease-in-out">Kurser & aktiviteter</a>
+      </div>
+      <h1 class="md:text-h2-desktop text-h2-mobile md:pb-0 pb-2">Kurser & aktiviteter</h1>
       <p class="md:text-h4-desktop text-h4-mobile italic">
         Deltag i faglige kurser, sociale aktiviteter og fællesskaber for mennesker med CP og deres pårørende
       </p>

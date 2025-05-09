@@ -68,14 +68,21 @@ const news = [
 ---
 
 <MainLayout
-  title="CP Danmark | nyheder"
-  description="CP Danmark's nyheder"
+  title="CP Danmark | Nyheder"
+  description="CP Danmark's nyhedsside"
   ogtitle="CP Danmark – Landsforeningen for cerebral parese"
-  ogdescription="nyheder til CP Danmark's hjemmeside"
+  ogdescription="Nyheder til CP Danmark's hjemmeside"
 >
   <section class="hero grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom md:pt-36 pt-28 relative">
-    <div class="col-start-2 col-span-10 md:pb-16 pb-8">
-      <h1 class="md:text-h2-desktop text-h2-mobile md:pt-16 pt-20 md:pb-0 pb-2">Nyheder</h1>
+    <div class="flex flex-col items-left relative z-10 col-start-2 col-span-10 md:pb-16 pb-8">
+      <div class="breadcrumb pb-2 md:pt-12 pt-16">
+        <a href="/" class="underline transition duration-300 ease-in-out">Forside</a>
+        <span> / </span>
+        <a href="/cp_os" class="underline transition duration-300 ease-in-out">CP & os</a>
+        <span> / </span>
+        <a href="/nyheder" class="underline transition duration-300 ease-in-out">Nyheder</a>
+      </div>
+      <h1 class="md:text-h2-desktop text-h2-mobile md:pb-0 pb-2">Nyheder</h1>
       <p class="md:text-h4-desktop text-h4-mobile italic">Hold dig opdateret på nyt om CP, rettigheder, arrangementer og CP Danmarks arbejde</p>
     </div>
     <div class="col-start-2 col-span-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 items-center justify-center">

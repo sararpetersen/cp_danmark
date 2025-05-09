@@ -10,8 +10,8 @@ import Button from "../components/Button.astro";
   ogdescription="'CP Ung'-siden til CP Danmark's hjemmeside"
 >
   <section class="hero-section grid grid-cols-12 md:pt-20 pt-16 md:pb-28 pb-20 w-full h-screen md:px-0 px-4 relative">
-    <div class="flex flex-col items-left relative z-10 col-start-2 col-span-10">
-      <div class="breadcrumb md:pt-[18%] pt-[70%]">
+    <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center md:pb-28 pb-0 h-full">
+      <div class="breadcrumb col-span-12">
         <a href="/" class="underline transition duration-300 ease-in-out">Forside</a>
         <span> / </span>
         <a href="/cp_os" class="underline transition duration-300 ease-in-out">CP & os</a>
@@ -19,8 +19,8 @@ import Button from "../components/Button.astro";
         <a href="/hvad_er_cp" class="underline transition duration-300 ease-in-out">CP Ung</a>
       </div>
 
-      <h1 id="hero-title" class="display">CP Ung</h1>
-      <p id="hero-text" class="md:text-h4-desktop text-h4-mobile text-gray-50 md:pt-6 pt-4 max-w-3xl">
+      <h1 id="hero-title" class="col-span-12 display">CP Ung</h1>
+      <p id="hero-text" class="md:col-span-6 col-span-12 md:text-h4-desktop text-h4-mobile text-gray-50 max-w-3xl">
         Et sted at dele erfaringer, mødes og have det sjovt
       </p>
     </div>
@@ -59,7 +59,7 @@ import Button from "../components/Button.astro";
     <div class="main-section grid grid-cols-12 md:pt-12 pt-8 md:pb-desktop-bottom pb-mobil-bottom">
       <div class="col-start-2 col-span-10">
         <div class="pb-20">
-          <h2 class="mdtext-h2-desktop text-h2-mobile pb-4">Et tilbud til unge med cerebral parese</h2>
+          <h2 class="md:text-h3-desktop text-h3-mobile pb-4">Et tilbud til unge med cerebral parese</h2>
           <p>
             CP Ung er CP Danmarks tilbud til unge med cerebral parese i alderen 15 til 35 år. Her skaber vi rammerne for et stærkt fællesskab, hvor
             unge mødes, deler erfaringer og står sammen om at gøre en forskel. Som en del af CP Ung får du mulighed for at engagere dig i projekter og
@@ -73,14 +73,14 @@ import Button from "../components/Button.astro";
         <!-- Text and button section -->
         <div>
           <h4 class="md:pb-6 pb-4">Hold dig opdateret med CP Ung</h4>
-          <p class="pb-8">
+          <p class="md:pb-8 pb-4">
             Vil du følge med i hvad der rører sig hos CP Ung? På vores Instagram deler vi glimt fra hverdagen, nyheder om arrangementer og inspiration
             fra unge med CP. Her kan du også få indblik i vores projekter og deltage i fællesskabet— både digitalt og i virkeligheden.
           </p>
         </div>
 
         <!-- Image section -->
-        <div class="flex justify-end md:pt-0 pt-8">
+        <div class="flex justify-end md:pt-0 pt-3">
           <img src="/images/cpung_section1.webp" alt="Første billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
         </div>
       </div>
@@ -92,7 +92,7 @@ import Button from "../components/Button.astro";
         <!-- Text and button section -->
         <div>
           <h4 class="md:pb-6 pb-4 md:pt-0 pt-8">Vil du være en del af fælleskabet?</h4>
-          <p class="pb-8">
+          <p class="md:pb-8 pb-0">
             CP Ung er for alle unge mellem 15 og 35 år med cerebral parese— og du behøver ikke være medlem af CP Danmark for at være med.<br />
             Du kan være med lige præcis i det omfang, der passer dig. Tilmeld dig vores nyhedsbrev eller følg os på Instagram, og bliv en del af et stærkt
             netværk med plads til forskellighed.
@@ -103,7 +103,7 @@ import Button from "../components/Button.astro";
         <!-- Text and button section -->
         <div>
           <h4 class="md:pb-6 pb-4">CP Ung i Island – nyt samarbejde på tværs af grænser</h4>
-          <p class="pb-8">
+          <p class="md:pb-8 pb-2">
             I september 2024 besøgte CP Ungs bestyrelse vores islandske søsterorganisation Ungt CP á Íslandi i Reykjavik. Her udvekslede vi erfaringer
             om ungdomsarbejde, fællesskab og politisk engagement. Turen styrkede både samarbejdet og vores viden— og blev fulgt op året efter, da de
             islandske unge besøgte os i Danmark.
@@ -113,7 +113,7 @@ import Button from "../components/Button.astro";
         </div>
 
         <!-- Image section -->
-        <div class="flex justify-end md:pt-0 pt-8">
+        <div class="flex justify-end md:pt-0 pt-4">
           <img src="/images/cpung_section3.webp" alt="Tredje billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
         </div>
       </div>

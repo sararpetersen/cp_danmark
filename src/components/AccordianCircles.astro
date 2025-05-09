@@ -124,10 +124,10 @@ const regions = [
 ];
 ---
 
-<div class="mx-auto space-y-2" id="accordion-2">
+<div id="accordion-2" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
   {
     regions.map((region, index) => (
-      <div class="accordion-item border border-gray-400 rounded-xl bg-gray-100 overflow-hidden" data-index={index}>
+      <div class="accordion-item border border-gray-400 bg-gray-100 overflow-hidden" data-index={index}>
         <button class="accordion-header w-full flex justify-between items-center px-4 py-5 text-left text-lg font-semibold text-gray-800">
           <h4>{region.navn}</h4>
           <svg class="accordion-icon w-7 h-7 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">

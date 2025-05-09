@@ -1,0 +1,40 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import AccordianMaterials1 from "../components/AccordianMaterials1.astro";
+import AccordianMaterials2 from "../components/AccordianMaterials2.astro";
+import AccordianMaterials3 from "../components/AccordianMaterials3.astro";
+---
+
+<MainLayout
+  title="CP Danmark | Materialer"
+  description="CP Danmark's materialer"
+  ogtitle="CP Danmark – Landsforeningen for cerebral parese"
+  ogdescription="Materialer til CP Danmark's hjemmeside"
+>
+  <section class="hero grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom md:pt-36 pt-28 relative">
+    <div class="flex flex-col items-left relative z-10 col-start-2 col-span-10 md:pb-16 pb-8">
+      <div class="breadcrumb pb-2 md:pt-12 pt-16">
+        <a href="/" class="underline transition duration-300 ease-in-out">Forside</a>
+        <span> / </span>
+        <a href="#" class="underline transition duration-300 ease-in-out">Bliv klogere</a>
+        <span> / </span>
+        <a href="/materialer" class="underline transition duration-300 ease-in-out">Materialer</a>
+      </div>
+      <h1 class="md:text-h2-desktop text-h2-mobile md:pb-0 pb-2">Materialer</h1>
+      <p class="md:text-h4-desktop text-h4-mobile italic">Find viden, inspiration og fortællinger om livet med CP</p>
+    </div>
+
+    <div class="col-start-2 col-span-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+      <AccordianMaterials1 />
+      <AccordianMaterials2 />
+      <AccordianMaterials3 />
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  body.dark h1,
+  body.dark p {
+    color: #f6f6f6;
+  }
+</style>

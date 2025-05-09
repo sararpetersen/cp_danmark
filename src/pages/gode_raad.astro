@@ -1,0 +1,123 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import AccordianAdvice from "../components/AccordianAdvice.astro";
+---
+
+<MainLayout
+  title="CP Danmark | Gode råd"
+  description="CP Danmark's 'Gode råd'-side"
+  ogtitle="CP Danmark – Landsforeningen for cerebral parese"
+  ogdescription="'Gode råd'-siden til CP Danmark's hjemmeside"
+>
+  <section class="hero-section grid grid-cols-12 md:pt-20 pt-16 md:pb-28 pb-20 w-full h-screen md:px-0 px-4 relative">
+    <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center md:pb-24 pb-0 h-full">
+      <div class="breadcrumb col-span-12">
+        <a href="/" class="underline transition duration-300 ease-in-out">Forside</a>
+        <span> / </span>
+        <a href="/hvad_er_cp" class="underline transition duration-300 ease-in-out">Gode råd</a>
+      </div>
+
+      <h1 id="hero-title" class="col-span-12 display">Brug for gode råd?</h1>
+      <p id="hero-text" class="md:col-span-6 col-span-12 md:text-h4-desktop text-h4-mobile text-gray-50 max-w-3xl">
+        Find vej til den rette støtte— uanset om du selv har CP, er pårørende eller søger rådgivning
+      </p>
+    </div>
+
+    <div class="hero_image w-full h-full absolute inset-0 z-0">
+      <img src="/images/advice_image.webp" alt="Hero-billede til CP Danmarks 'Hvad er CP'-side'" class="w-full h-full object-cover" />
+    </div>
+
+    <div id="overlay1" class="absolute top-0 left-0 w-full h-full bg-gray-950 bg-opacity-[50%] z-0"></div>
+    <div
+      id="overlay2"
+      class="absolute top-0 left-0 md:w-[50%] w-full h-full md:backdrop-blur-sm bg-opacity-75 bg-blue-950 z-0 md:rounded-r-full hidden md:block"
+    >
+    </div>
+
+    <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
+      <a href="#first-section" aria-label="Gå videre ned på siden">
+        <div class="float flex flex-col items-center hover:opacity-80 transition duration-300 ease-in-out">
+          <p class="text-[18px] text-gray-50 font-semibold">Gå videre ned på siden</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8 sm:w-12 sm:h-12 text-gray-50 transition duration-300 ease-in-out"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="first-section" class="main-section grid grid-cols-12 md:pt-14 pt-10 md:pb-28 pb-20">
+    <div class="grid md:grid-cols-2 col-start-2 col-span-10">
+      <!-- Text and button section -->
+      <div>
+        <h2 class="md:pb-6 pb-4 md:text-h3-desktop text-h3-mobile">Vi hjælper dig videre</h2>
+        <p>
+          Uanset om du lever med cerebral parese, er forælder til et barn med CP, ung med spørgsmål eller fagperson med brug for sparring— så er du
+          ikke alene. På denne side har vi samlet genveje til den rette støtte, kontaktmuligheder og nyttig information, der kan hjælpe dig videre.
+          <br /><br />
+          <em>Find det der passer bedst til din situation nedenfor.</em>
+        </p>
+      </div>
+
+      <!-- Image section -->
+      <div class="flex justify-end md:pt-0 pt-8">
+        <img src="/images/advice_section.webp" alt="Første billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section2 grid grid-cols-12 md:pb-28 pb-20 max-w-7xl mx-auto">
+    <h3 class="md:pb-6 pb-4 col-start-2 col-span-10">Hvem er du— og hvad har du brug for?</h3>
+    <div class="grid md:grid-cols-2 col-start-2 col-span-10"></div>
+    <div class="col-start-2 col-span-10">
+      <AccordianAdvice />
+    </div>
+  </section>
+
+  <style>
+    /* Floating Animation */
+    @keyframes float {
+      0% {
+        transform: translatey(0);
+      }
+      50% {
+        transform: translatey(-10px);
+      }
+      100% {
+        transform: translatey(0);
+      }
+    }
+
+    .float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .breadcrumb a {
+      color: #c1c1c1;
+    }
+
+    .breadcrumb span {
+      color: #f6f6f6;
+    }
+
+    body.dark .breadcrumb a:hover,
+    body.dark .breadcrumb span:hover {
+      color: #7dc1fc;
+    }
+
+    /* Dark Mode */
+    body.dark h2,
+    body.dark h3,
+    body.dark h4,
+    body.dark p {
+      color: #f6f6f6;
+    }
+  </style></MainLayout
+>

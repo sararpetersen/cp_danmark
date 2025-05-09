@@ -1,0 +1,163 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import AccordianCounselling from "../components/AccordianCounselling.astro";
+---
+
+<MainLayout
+  title="CP Danmark | Rådgivning"
+  description="CP Danmark's 'CP Ung'-side"
+  ogtitle="CP Danmark – Landsforeningen for cerebral parese"
+  ogdescription="'CP Ung'-siden til CP Danmark's hjemmeside"
+>
+  <section class="hero-section grid grid-cols-12 md:pt-20 pt-16 md:pb-28 pb-20 w-full h-screen md:px-0 px-4 relative">
+    <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center md:pb-24 pb-0 h-full">
+      <div class="breadcrumb col-span-12">
+        <a href="/" class="underline transition duration-300 ease-in-out">Forside</a>
+        <span> / </span>
+        <a href="#" class="underline transition duration-300 ease-in-out">Bliv klogere</a>
+        <span> / </span>
+        <a href="/raadgivning" class="underline transition duration-300 ease-in-out">Rådgivning</a>
+      </div>
+
+      <h1 id="hero-title" class="col-span-12 display">Rådgivning</h1>
+      <p id="hero-text" class="md:col-span-6 col-span-12 md:text-h4-desktop text-h4-mobile text-gray-50 max-w-3xl">
+        Vi er her for at støtte dig— uanset hvor du er i livet med CP
+      </p>
+    </div>
+
+    <div class="hero_image w-full h-full absolute inset-0 z-0">
+      <img src="/images/counselling_image.webp" alt="Hero-billede til CP Danmarks 'Rådgivning'-side" class="w-full h-full object-cover" />
+    </div>
+
+    <div id="overlay1" class="absolute top-0 left-0 w-full h-full bg-gray-950 bg-opacity-[50%] z-0"></div>
+    <div
+      id="overlay2"
+      class="absolute top-0 left-0 md:w-[50%] w-full h-full md:backdrop-blur-sm bg-opacity-75 bg-blue-950 z-0 md:rounded-r-full hidden md:block"
+    >
+    </div>
+
+    <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
+      <a href="#get-started" aria-label="Gå videre ned på siden">
+        <div class="float flex flex-col items-center hover:opacity-80 transition duration-300 ease-in-out">
+          <p class="text-[18px] text-gray-50 font-semibold">Gå videre ned på siden</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8 sm:w-12 sm:h-12 text-gray-50 transition duration-300 ease-in-out"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="main">
+    <div class="main-section grid grid-cols-12 md:pt-12 pt-8 md:pb-desktop-bottom pb-mobil-bottom">
+      <div class="col-start-2 col-span-10">
+        <div class="pb-20">
+          <h2 class="mdtext-h2-desktop text-h2-mobile pb-4">Specialiseret rådgivning til dig</h2>
+          <p>
+            Hos CP Danmark tilbyder vi gratis, individuel rådgivning til mennesker med cerebral parese og deres pårørende. Uanset om du har brug for
+            støtte i hverdagen, hjælp til at navigere i det offentlige system, eller bare har spørgsmål om livet med CP, kan du få professionel
+            sparring fra vores erfarne rådgivere. Vi lytter, guider og støtter&mdash; og vi tager altid udgangspunkt i din situation og dine behov.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 grid-cols-1 gap-12 col-start-2 col-span-10">
+        <!-- First image + text block -->
+        <div class="flex flex-col gap-6">
+          <div>
+            <img src="/images/line.webp" alt="Første billede til info-sektion" class="w-auto h-[400px] object-cover" />
+          </div>
+          <div>
+            <h3 class="md:text-h4-desktop text-h4-mobile pb-4">Line McMonagle <em>(socialrådgiver)</em></h3>
+            <p class="pb-8">
+              Line er uddannet socialformidler og har gennem mange år arbejdet med børn, unge og voksne med særlige behov i det kommunale og senere på
+              et hospital, hvor hun blandt andet har rådgivet familier med børn og unge med cerebral parese. Udover rådgivning holder Line oplæg,
+              kurser og webinarer.
+            </p>
+            <em>Du kan kontakte og få rådgivning af Line ved at ringe på: 38 14 88 98</em>
+          </div>
+          <hr class="w-[50%]" />
+          <ul>
+            <li>Tirsdag kl. 14.30-18.00</li>
+            <li>Torsdag kl. 08.00-11.30</li>
+            <li>Fredag kl. 09.00-12.00</li>
+          </ul>
+        </div>
+
+        <!-- Second image + text block -->
+        <div class="flex flex-col gap-6">
+          <div>
+            <img src="/images/klaus.webp" alt="Andet billede til info-sektion" class="w-auto h-[400px] object-cover" />
+          </div>
+          <div>
+            <h3 class="md:text-h4-desktop text-h4-mobile pb-4">Klaus Christensen <em>(psykolog)</em></h3>
+            <p class="pb-8">
+              Klaus har en bred erfaring med at rådgive fagfolk, pårørende og mennesker med vidt forskellige handicap i forhold til uddannelse og
+              arbejde. Klaus har siden 2004 rådgivet og vejledt CP Danmarks medlemmer, været oplægsholder samt projektleder på
+              arbejdsmarkedsrelaterede projekter. Udover rådgivning holder Klaus oplæg, kurser og webinarer.
+            </p>
+            <em>Du kan kontakte og få rådgivning af Klaus ved at ringe på: 38 88 45 95</em>
+          </div>
+          <hr class="w-[50%]" />
+          <ul>
+            <li>Tirsdag kl. 09-12</li>
+            <li>Onsdag kl. 09-12</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="accordian-section grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto">
+    <div class="col-start-2 col-span-10">
+      <h3 class="md:pb-6 pb-4">Hvad kan vi hjælpe dig med?</h3>
+      <AccordianCounselling />
+    </div>
+  </section>
+
+  <style>
+    /* Floating Animation */
+    @keyframes float {
+      0% {
+        transform: translatey(0);
+      }
+      50% {
+        transform: translatey(-10px);
+      }
+      100% {
+        transform: translatey(0);
+      }
+    }
+
+    .float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .breadcrumb a {
+      color: #c1c1c1;
+    }
+
+    .breadcrumb span {
+      color: #f6f6f6;
+    }
+
+    body.dark .breadcrumb a:hover,
+    body.dark .breadcrumb span:hover {
+      color: #7dc1fc;
+    }
+
+    /* Dark Mode */
+    body.dark h2,
+    body.dark h3,
+    body.dark h4,
+    body.dark p {
+      color: #f6f6f6;
+    }
+  </style>
+</MainLayout>

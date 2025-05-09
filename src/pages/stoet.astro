@@ -4,15 +4,23 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout
-  title="CP Danmark | støt os"
+  title="CP Danmark | Støt os"
   description="CP Danmark's 'støt os'-side"
   ogtitle="CP Danmark – Landsforeningen for cerebral parese"
-  ogdescription="'støt os'-siden til CP Danmark's hjemmeside"
+  ogdescription="'Støt os'-siden til CP Danmark's hjemmeside"
 >
   <section class="hero-section grid grid-cols-12 md:pt-20 pt-16 md:pb-desktop-bottom pb-mobil-bottom w-full h-screen md:px-0 px-4 relative">
-    <div class="flex flex-col items-left relative z-10 col-start-2 col-span-10">
-      <h1 id="hero-title" class="display md:pt-[20%] pt-[70%]">Støt os</h1>
-      <p id="hero-text" class="md:text-h4-desktop text-h4-mobile text-gray-50 pt-6 max-w-3xl">Fordi ingen skal stå alene med CP</p>
+    <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center md:pb-24 pb-0 h-full">
+      <div class="breadcrumb col-span-12">
+        <a href="/" class="underline transition duration-300 ease-in-out">Forside</a>
+        <span> / </span>
+        <a href="/tilmeld" class="underline transition duration-300 ease-in-out">Støt os</a>
+      </div>
+
+      <h1 id="hero-title" class="display col-span-12">Støt os</h1>
+      <p id="hero-text" class="md:col-span-6 col-span-12 md:text-h4-desktop text-h4-mobile text-gray-50 max-w-3xl">
+        Fordi ingen skal stå alene med CP
+      </p>
     </div>
 
     <div class="hero_image w-full h-full absolute inset-0 z-0">
@@ -50,7 +58,7 @@ import Button from "../components/Button.astro";
         <div id="top-section">
           <h2 class="pb-4">Støt mennesker med cerebral parese</h2>
           <p class="md:pb-14 pb-10 max-w-4xl">
-            CP Danmark er afhængig af bidrag i arbejdet for at forbedre forholdene og livskvaliteten for mennesker med cerebral parese og deres
+            CP Danmark er afhængig af bidrag i arbejdet for at forbedre forholdene og livskvaliteten for mennesker med cerebral parese og deres
             pårørende.
           </p>
         </div>
@@ -303,6 +311,19 @@ import Button from "../components/Button.astro";
 
   .float {
     animation: float 3s ease-in-out infinite;
+  }
+
+  .breadcrumb a {
+    color: #c1c1c1;
+  }
+
+  .breadcrumb span {
+    color: #f6f6f6;
+  }
+
+  body.dark .breadcrumb a:hover,
+  body.dark .breadcrumb span:hover {
+    color: #7dc1fc;
   }
 
   body.dark h2,

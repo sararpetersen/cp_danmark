@@ -1,44 +1,40 @@
 ---
 const items = [
   {
-    title: "Hvad gør vi?",
-    content:
-      "CP Danmark arbejder for at skabe bedre vilkår for mennesker med cerebral parese og deres pårørende. Vi tilbyder rådgivning, laver politisk arbejde, skaber fællesskaber og deler viden.",
-    url: "https://www.cpdanmark.dk/om-os/det-goer-vi/",
-  },
-  {
-    title: "Fællesskaberne",
-    content:
-      "Rundt i landet findes klubber og kredse, hvor mennesker med CP og deres familier mødes, deler erfaringer og deltager i sociale aktiviteter. Fællesskabet er en vigtig del af vores arbejde.",
-    url: "https://www.cpdanmark.dk/om-os/foreningens-klubber/",
-  },
-  {
-    title: "Hvordan er vi opbygget?",
-    content:
-      "CP Danmark er en medlemsorganisation med både frivillige og ansatte kræfter. Her kan du se hvordan vi er organiseret, hvem der står bag arbejdet, og hvordan du kan komme i kontakt med os.",
-    url: "https://www.cpdanmark.dk/om-os/organisation/",
+    image: "/images/material_section1.webp",
+    title: "Pjecer",
+    description: "Bestil og læs pjecer om cerebral parese.",
+    contenturl: [
+      "https://www.cpdanmark.dk/media/382495/barn-med-cp.pdf",
+      "https://www.cpdanmark.dk/media/382289/kognitive-vanskeligheder-dec-2022.pdf",
+      "https://www.cpdanmark.dk/media/379806/jeg-er-her-ogsa.pdf",
+      "https://www.cpdanmark.dk/media/382496/lov-og-ret.pdf",
+    ],
+    name: ["Barn med CP (PDF)", "Kognitive vanskeligheder (PDF)", "Jeg er her også (PDF)", "Lov og ret (PDF)"],
   },
 ];
 ---
 
-<div class="mx-auto space-y-2" id="accordion-1">
+<div class="mx-auto space-y-2" id="accordion-3">
   {
     items.map((item, index) => (
       <div class="accordion-item border border-gray-400 bg-gray-100 overflow-hidden" data-index={index}>
+        <img src={item.image} alt={item.title} class="w-full h-full object-cover rounded-t-[5px]" />
         <button class="accordion-header w-full flex justify-between items-center px-4 py-5 text-left text-lg font-semibold text-gray-800">
-          <h4>{item.title}</h4>
-          <svg class="accordion-icon w-7 h-7 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <h4 class="text-lg font-semibold">{item.title}</h4>
+          <svg class="accordion-icon w-5 h-5 text-gray-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
-        <div class="accordion-content px-4 text-gray-600 max-h-0 overflow-hidden transition-all duration-300">
-          <div class="pb-4">
-            <p class="py-2">{item.content} </p>
-
-            <a href={item.url} target="_blank" class=" underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out">
-              Læs mere her
-            </a>
-          </div>
+        <div class="accordion-content px-4 max-h-0 overflow-hidden transition-all duration-300">
+          <p class="pb-4">{item.description}</p>
+          {item.contenturl.map((url) => (
+            <li class="list-none pb-4">
+              <a href={url} target="_blank" class="underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out">
+                {item.name[item.contenturl.indexOf(url)]}
+              </a>
+            </li>
+          ))}
         </div>
       </div>
     ))
@@ -47,7 +43,7 @@ const items = [
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const items = document.querySelectorAll("#accordion-1 .accordion-item");
+    const items = document.querySelectorAll("#accordion-3 .accordion-item");
 
     items.forEach((item, idx) => {
       const header = item.querySelector(".accordion-header");
@@ -84,7 +80,7 @@ const items = [
   body.dark .accordion-content p {
     color: #f6f6f6;
   }
-  body.dark .accordion-icon svg {
+  body.dark .accordion-icon {
     stroke: #f6f6f6;
   }
 

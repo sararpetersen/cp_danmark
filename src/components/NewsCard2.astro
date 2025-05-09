@@ -4,7 +4,7 @@ const { image, date, description, title } = Astro.props;
 ---
 
 <div
-  class="news-card flex flex-col min-w-[300px] md:h-[37rem] h-[38.5rem] bg-gray-100 rounded-[5px] hover:bg-gray-200 hover:cursor-pointer transition duration-300 ease-in-out"
+  class="news-card flex flex-col min-w-[300px] self-start bg-gray-100 rounded-[5px] hover:bg-gray-200 hover:cursor-pointer transition duration-300 ease-in-out"
 >
   <div class="news-card_image">
     <img src={image} alt={title} class="w-full h-full object-cover rounded-t-[5px]" />
