@@ -103,13 +103,13 @@ const news = [
     <p class="pb-4 col-start-2 col-span-10 max-w-2xl">
       Uanset om du er ny, søger viden om CP, har brug for støtte eller bare vil bidrage til et godt formål— her finder du de vigtigste veje videre.
     </p>
-    <div class="grid grid-cols-4 gap-4 items-center relative z-10 col-start-2 col-span-10 md:pt-8 pt-4">
+    <div id="submenus" class="grid grid-cols-4 gap-4 items-center relative z-10 col-start-2 col-span-10 md:pt-8 pt-4">
       <div class="col-span-4 md:col-span-1 hover:opacity-80 transition duration-300 ease-in-out relative">
-        <a href="/hvad_er_cp" aria-label="Gå til 'Hvad er CP?'" class="block">
+        <a href="/hvad_er_cp" aria-label="Gå til 'Hvad er CP?'" class="relative block aspect-[1/1] w-full">
           <img
             src="/images/submenu1.webp"
             alt="Billede til den første undermenu på CP Danmarks forside"
-            class="md:w-[310px] md:h-[310px] w-full h-full object-cover brightness-75"
+            class="w-full h-full object-cover brightness-75"
           />
           <div class="absolute inset-0 flex items-end pb-12 justify-center px-4">
             <p class="text-gray-50 text-center font-semibold bg-[#AE5D37]/85 p-4 hover:underline">
@@ -119,11 +119,11 @@ const news = [
         </a>
       </div>
       <div class="col-span-4 md:col-span-1 hover:opacity-80 transition duration-300 ease-in-out relative">
-        <a href="/tilmeld" aria-label="Gå til 'Tilmeld'" class="block">
+        <a href="/tilmeld" aria-label="Gå til 'Tilmeld'" class="relative block aspect-[1/1] w-full">
           <img
             src="/images/submenu2.webp"
             alt="Billede til den første undermenu på CP Danmarks forside"
-            class="md:w-[310px] md:h-[310px] w-full h-full object-cover brightness-75"
+            class="w-full h-full object-cover brightness-75"
           />
           <div class="absolute inset-0 flex items-end pb-12 justify-start md:justify-center px-4">
             <p class="text-gray-50 text-center font-semibold bg-[#BBA572]/85 p-4 hover:underline">Vær en del af fællesskabet og støt vores arbejde</p>
@@ -131,11 +131,11 @@ const news = [
         </a>
       </div>
       <div class="col-span-4 md:col-span-1 hover:opacity-80 transition duration-300 ease-in-out relative">
-        <a href="/stoet" aria-label="Gå til 'Støt os'" class="block">
+        <a href="/stoet" aria-label="Gå til 'Støt os'" class="relative block aspect-[1/1] w-full">
           <img
             src="/images/submenu3.webp"
             alt="Billede til den første undermenu på CP Danmarks forside"
-            class="md:w-[310px] md:h-[310px] w-full h-full object-cover brightness-75"
+            class="w-full h-full object-cover brightness-75"
           />
           <div class="absolute inset-0 flex items-end pb-12 justify-center px-4">
             <p class="text-gray-50 text-center font-semibold bg-[#89A685]/85 p-4 hover:underline">Giv et bidrag og hjælp mennesker med CP</p>
@@ -143,15 +143,15 @@ const news = [
         </a>
       </div>
       <div class="col-span-4 md:col-span-1 hover:opacity-80 transition duration-300 ease-in-out relative">
-        <a href="/gode_raad" class="block">
+        <a href="/gode_raad" class="relative block aspect-[1/1] w-full">
           <img
             src="/images/submenu4.webp"
             alt="Billede til den første undermenu på CP Danmark's forside"
-            class="md:w-[310px] md:h-[310px] w-full h-full object-cover brightness-75"
+            class="w-full h-full object-cover brightness-75"
           />
           <div class="absolute inset-0 flex items-end pb-12 justify-center px-4">
             <p class="text-gray-50 text-center font-semibold bg-[#7396B6]/85 p-4 hover:underline">
-              Find hjælp og vejledning til det, der fylder lige nu
+              Find hjælp og vejledning til det der fylder lige nu
             </p>
           </div>
         </a>
@@ -160,31 +160,49 @@ const news = [
   </section>
   <section class="experiences grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom">
     <h2 class="md:text-h3-desktop text-h3-mobile font-bold md:pb-8 pb-4 col-start-2 col-span-10">Personlige oplevelser fra fællesskabet</h2>
-    <div class="col-start-2 col-span-10 grid md:grid-cols-4 gap-4 grid-cols-1 items-start justify-center">
-      <div class="quote1 bg-gray-100 p-5 md:h-[170px] h-[130px]">
-        <blockquote class="italic pb-4">"Jeg plejede at føle mig alene. Men her fandt jeg både svar, og nogen der forstår mig."</blockquote>
-        <p class="text-gray-800 text-[14px]">Sofie Madsen, 17 år – lever med spastisk CP</p>
+    <div id="quotes" class="col-start-2 col-span-10 grid md:grid-cols-4 gap-4 grid-cols-1 items-center justify-center">
+      <div class="quote1 bg-gray-100 p-5 h-full flex flex-col justify-center">
+        <blockquote class="italic pb-4">
+          "Jeg plejede at føle mig alene og misforstået. Det var svært at finde nogen, der virkelig kunne sætte sig ind i min hverdag. Her fandt jeg
+          ikke bare viden, men et fællesskab, hvor jeg føler mig set og hørt."
+        </blockquote>
+        <p class="text-gray-800 text-[14px]">Sofie Madsen, 17 år</p>
+        <em class="text-[14px] text-gray-600">(Lever med spastisk CP)</em>
       </div>
-      <div class="quote2 bg-gray-100 p-5 md:h-[170px] h-[130px]">
-        <blockquote class="italic pb-4">"Det var en jungle at finde hjælp&mdash; indtil jeg landede her. Nu føler vi os trygge."</blockquote>
-        <p class="text-gray-800 text-[14px]">Jonas Kristensen, 41 år – far til barn med CP</p>
+      <div class="quote2 bg-gray-100 p-5 h-full flex flex-col justify-center">
+        <blockquote class="italic pb-4">
+          "Det føltes som en uoverskuelig jungle at finde den rette hjælp, især i starten. Men da vi fandt frem til denne side, faldt tingene bare på
+          plads. Vi har nu både støtte og svar, når hverdagen bliver udfordrende."
+        </blockquote>
+        <p class="text-gray-800 text-[14px]">Jonas Kristensen, 35 år</p>
+        <em class="text-[14px] text-gray-600">(Far til nydiagnosticeret barn med CP)</em>
       </div>
-      <div class="quote3 bg-gray-100 p-5 md:h-[170px] h-[130px]">
-        <blockquote class="italic pb-4">"Som fagperson bruger jeg siden, når jeg skal guide forældre og unge videre."</blockquote>
-        <p class="text-gray-800 text-[14px]">Maria Lindholm, 45 år – fysioterapeut med speciale i CP</p>
+      <div class="quote3 bg-gray-100 p-5 h-full flex flex-col justify-center">
+        <blockquote class="italic pb-4">
+          "Som fagperson er det vigtigt for mig at have adgang til opdateret og lettilgængelig information. Denne platform har været et uvurderligt
+          værktøj, når jeg skal støtte både forældre og unge i at forstå og håndtere livet med CP."
+        </blockquote>
+        <p class="text-gray-800 text-[14px]">Maria Lindholm, 42 år</p>
+        <em class="text-[14px] text-gray-600">(Fysioterapeut med speciale i CP)</em>
       </div>
-      <div class="quote4 bg-gray-100 p-5 md:h-[170px] h-[130px]">
-        <blockquote class="italic pb-4">"Jeg ville bare gerne forstå og kunne hjælpe min bror bedre. Her fandt jeg svarene og trygheden."</blockquote>
-        <p class="text-gray-800 text-[14px]">Camilla Jensen, 32 år – søster til ung mand med CP</p>
+      <div class="quote4 bg-gray-100 p-5 h-full flex flex-col justify-center">
+        <blockquote class="italic pb-4">
+          "Jeg har altid ønsket at være der for min bror, men manglede redskaberne til at forstå hans verden. Gennem denne side har jeg fået viden,
+          indsigt og følelsen af, at vi ikke står alene i det her. Det gør en kæmpe forskel&mdash; både for ham og mig."
+        </blockquote>
+        <p class="text-gray-800 text-[14px]">Camilla Jensen, 30 år</p>
+        <em class="text-[14px] text-gray-600">(Søster til ung mand med CP)</em>
       </div>
     </div>
   </section>
   <section class="news grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom relative">
-    <div class="col-start-2 col-span-10 md:pb-8 pb-4">
+    <div id="news" class="col-start-2 col-span-10 md:pb-8 pb-4">
       <h2 class="md:text-h3-desktop text-h3-mobile">Seneste nyheder</h2>
-      <a href="/nyheder" aria-label="Gå til 'Nyheder'">
-        <p class="underline hover:text-blue-700 transition duration-300 ease-in-out col-start-2 col-span-10">Se alle ...</p>
-      </a>
+      <a
+        href="/nyheder"
+        aria-label="Gå til 'Nyheder'"
+        class="underline hover:text-blue-700 transition duration-300 ease-in-out col-start-2 col-span-10">Se alle..</a
+      >
     </div>
     <!-- Horizontal scroll container -->
     <div class="col-start-2 col-span-10 relative">
@@ -195,8 +213,8 @@ const news = [
     </div>
   </section>
 
-  <section class="info-section grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom">
-    <div class="grid md:grid-cols-2 col-start-2 col-span-10">
+  <section id="info" class="info-section grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom">
+    <div id="info-section1" class="grid md:grid-cols-2 col-start-2 col-span-10">
       <!-- Text and button section -->
       <div>
         <h3 class="md:pb-6 pb-4">Støt fællesskabet og få adgang til vigtige ressourcer</h3>
@@ -217,7 +235,7 @@ const news = [
         <img src="/images/info_section1.webp" alt="Første billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
       </div>
     </div>
-    <div class="grid md:grid-cols-2 col-start-2 col-span-10 md:pt-24 pt-20">
+    <div id="info-section2" class="grid md:grid-cols-2 col-start-2 col-span-10 md:pt-24 pt-20">
       <!-- Image section -->
       <div class="flex justify-start">
         <img src="/images/info_section2.webp" alt="Andet billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
@@ -236,7 +254,7 @@ const news = [
         </a>
       </div>
     </div>
-    <div class="grid md:grid-cols-2 col-start-2 col-span-10 md:pt-24 pt-20">
+    <div id="info-section3" class="grid md:grid-cols-2 col-start-2 col-span-10 md:pt-24 pt-20">
       <!-- Text and button section -->
       <div>
         <h3 class="md:pb-6 pb-4">Er du i tvivl om noget?</h3>
@@ -282,7 +300,12 @@ const news = [
   body.dark .quote3,
   body.dark .quote4 {
     background-color: #4f4f4f;
-    color: #f6f6f6;
+  }
+  body.dark .quote1 em,
+  body.dark .quote2 em,
+  body.dark .quote3 em,
+  body.dark .quote4 em {
+    color: #b7b7b7;
   }
 
   body.dark .quote1 p,
@@ -334,5 +357,76 @@ const news = [
   const elementmedanimation6 = document.querySelector("#scroll-down");
   inView(elementmedanimation6, () => {
     elementmedanimation6.classList.add("animate__animated", "animate__fadeInDown");
+  });
+
+  const elementmedanimation7 = document.querySelector("#get-started h1");
+  inView(elementmedanimation7, () => {
+    elementmedanimation7.classList.add("animate__animated", "animate__fadeInLeft");
+  });
+
+  const elementmedanimation8 = document.querySelector("#get-started p");
+  inView(elementmedanimation8, () => {
+    elementmedanimation8.classList.add("animate__animated", "animate__fadeInRight");
+  });
+
+  const elementmedanimation9 = document.querySelector(".experiences h2");
+  inView(elementmedanimation9, () => {
+    elementmedanimation9.classList.add("animate__animated", "animate__fadeInRight");
+  });
+
+  const elementmedanimation10 = document.querySelector(".news #carousel");
+  inView(elementmedanimation10, () => {
+    elementmedanimation10.classList.add("animate__animated", "animate__slideInLeft");
+  });
+
+  const elementmedanimation12 = document.querySelector("#news");
+  inView(elementmedanimation12, () => {
+    elementmedanimation12.classList.add("animate__animated", "animate__fadeInRight");
+  });
+
+  // Delay-animations
+  const sections = document.querySelectorAll("#submenus > div");
+
+  sections.forEach((sections, index) => {
+    inView(sections, () => {
+      sections.classList.add("animate__animated", "animate__fadeInUp");
+      sections.style.animationDelay = `${index * 0.2}s`; // Delay each image by 0.2s
+    });
+  });
+
+  const quotes = document.querySelectorAll("#quotes > div");
+
+  quotes.forEach((quotes, index) => {
+    inView(quotes, () => {
+      quotes.classList.add("animate__animated", "animate__fadeInLeft");
+      quotes.style.animationDelay = `${index * 0.2}s`; // Delay each image by 0.2s
+    });
+  });
+
+  const info = document.querySelectorAll("#info-section1 > div");
+
+  info.forEach((info, index) => {
+    inView(info, () => {
+      info.classList.add("animate__animated", "animate__fadeInLeft");
+      info.style.animationDelay = `${index * 0.2}s`; // Delay each image by 0.2s
+    });
+  });
+
+  const info2 = document.querySelectorAll("#info-section2 > div");
+
+  info2.forEach((info2, index) => {
+    inView(info2, () => {
+      info2.classList.add("animate__animated", "animate__fadeInRight");
+      info2.style.animationDelay = `${index * 0.2}s`; // Delay each image by 0.2s
+    });
+  });
+
+  const info3 = document.querySelectorAll("#info-section3 > div");
+
+  info3.forEach((info3, index) => {
+    inView(info3, () => {
+      info3.classList.add("animate__animated", "animate__fadeInLeft");
+      info3.style.animationDelay = `${index * 0.2}s`; // Delay each image by 0.2s
+    });
   });
 </script>
