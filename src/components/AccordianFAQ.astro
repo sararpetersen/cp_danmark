@@ -1,29 +1,34 @@
 ---
 const items = [
   {
-    title: "Støtte til at forstå dine rettigheder",
+    title: "Kan man have et almindeligt liv med CP?",
     content:
-      "Det kan være en jungle at finde rundt i love, regler og støtteordninger— og det er helt naturligt at have spørgsmål. Vi hjælper dig med at skabe overblik over dine rettigheder og muligheder, uanset om det drejer sig om social støtte, hjælpemidler, bolig, uddannelse eller job. Du behøver ikke stå alene med at finde vej i systemet— vi guider dig og giver dig den viden du har brug for, så du kan træffe informerede valg.",
+      "Ja— mange med cerebral parese lever et aktivt og selvstændigt liv. Med de rette hjælpemidler, støtteordninger og forståelse fra omgivelserne kan man tage en uddannelse, arbejde, dyrke fritidsinteresser og have sociale relationer som alle andre.",
   },
   {
-    title: "Rådgivning i svære livssituationer",
+    title: "Hvilken støtte kan man få i hverdagen?",
     content:
-      "Når livet byder på udfordringer— store som små —kan det være en lettelse at tale med nogen, der lytter og forstår. Vi tilbyder rådgivning, når du står i en svær periode eller har brug for sparring omkring personlige, sociale eller praktiske forhold. Det kan være i forbindelse med en ny diagnose, overgange i livet, relationer eller andet som fylder. Vi tager udgangspunkt i din situation og støtter dig i at finde mulige veje videre.",
+      "Man kan få hjælpemidler, personlig assistance, bostøtte, transporthjælp og støtte i skole eller på arbejdspladsen. Støtten afhænger af den enkeltes behov og bliver som regel bevilget gennem kommunen.",
   },
   {
-    title: "Vejledning til forældre og pårørende",
+    title: "Hvordan søger man om hjælp eller støtte?",
     content:
-      "At være tæt på én med cerebral parese kan give anledning til mange spørgsmål og bekymringer— uanset om man er forælder, søskende, partner eller en anden nærtstående. Vi tilbyder vejledning, hvor du som pårørende kan få sparring, viden og støtte til at navigere i de udfordringer og overvejelser der kan følge med. Vi lytter, deler erfaringer og hjælper dig med at finde ro og retning i din rolle.",
+      "Du kontakter din kommune og taler med en sagsbehandler. CP Danmark tilbyder også rådgivning og kan hjælpe dig med at forstå dine rettigheder og muligheder.",
   },
   {
-    title: "Faglig sparring til professionelle",
+    title: "Hvordan påvirker CP det sociale liv?",
     content:
-      "Arbejder du med mennesker med CP— f.eks. som lærer, sagsbehandler, pædagog, fysioterapeut eller noget helt andet —og har du brug for et fagligt perspektiv? Vi tilbyder sparring, viden og dialog til fagpersoner, der ønsker at blive klogere på CP og de særlige behov og ressourcer, der kan være relevante at tage højde for. Sammen skaber vi bedre forudsætninger for støtte, trivsel og deltagelse.",
+      "Det er forskelligt fra person til person. Nogle oplever barrierer, mens andre har et aktivt socialt liv. Netværk, fritidsaktiviteter og støtte fra familie og venner spiller en vigtig rolle. CP Danmark har også netværksgrupper og arrangementer.",
+  },
+  {
+    title: "Hvor kan man få mere rådgivning eller vejledning?",
+    content:
+      "Du kan kontakte CP Danmarks rådgivning, som er gratis og åben for alle. De har viden om både hverdagsliv, rettigheder, støtteordninger og sociale tilbud.",
   },
 ];
 ---
 
-<div class="mx-auto space-y-2" id="accordion-6">
+<div class="mx-auto space-y-2" id="accordion-8">
   {
     items.map((item, index) => (
       <div class="accordion-item border border-gray-400 bg-gray-100 overflow-hidden" data-index={index}>
@@ -43,7 +48,7 @@ const items = [
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const items = document.querySelectorAll("#accordion-6 .accordion-item");
+    const items = document.querySelectorAll("#accordion-8 .accordion-item");
 
     items.forEach((item, idx) => {
       const header = item.querySelector(".accordion-header");

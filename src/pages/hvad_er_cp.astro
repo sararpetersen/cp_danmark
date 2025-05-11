@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import AccordianCP from "../components/AccordianCP.astro";
+import AccordianFAQ from "../components/AccordianFAQ.astro";
 ---
 
 <MainLayout
@@ -84,11 +85,11 @@ import AccordianCP from "../components/AccordianCP.astro";
     </div>
   </section>
 
-  <section class="info-section2 grid grid-cols-12 md:pb-28 pb-20">
+  <section class="everydays-section grid grid-cols-12 md:pb-20 pb-12">
     <div class="grid md:grid-cols-2 col-start-2 col-span-10">
       <!-- Image section -->
       <div class="flex justify-start md:pt-0 pt-8">
-        <img src="/images/cp_section2.webp" alt="Førstw billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
+        <img src="/images/cp_section2.webp" alt="Første billede til hverdagssektion" class="w-[550px] h-[350px] object-cover" />
       </div>
       <!-- Text and button section -->
       <div>
@@ -100,6 +101,21 @@ import AccordianCP from "../components/AccordianCP.astro";
           <br /><br />
           CP Danmark tilbyder rådgivning, netværk og ressourcer for at støtte personer med CP og deres familier i at leve et aktivt og meningsfuldt liv.
         </p>
+      </div>
+    </div>
+  </section>
+  <section class="faq grid grid-cols-12 md:pb-28 pb-20 max-w-7xl mx-auto">
+    <div class="md:col-span-12 col-start-2 col-span-10">
+      <h3 class="md:pb-6 pb-4">FAQ om livet med CP</h3>
+    </div>
+    <div class="md:col-span-12 col-start-2 col-span-10 grid md:grid-cols-2 gap-8 items-start">
+      <!-- Accordion section -->
+      <div>
+        <AccordianFAQ />
+      </div>
+      <!-- Image section -->
+      <div class="flex justify-end pt-8 md:pt-0">
+        <img src="/images/cp_section3.webp" alt="Førstw billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
       </div>
     </div>
   </section>

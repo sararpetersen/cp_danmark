@@ -34,7 +34,7 @@ const items = [
           </svg>
         </button>
         <div class="accordion-content px-4 text-gray-600 max-h-0 overflow-hidden transition-all duration-300">
-          <p class="py-2" set:html={item.content} />
+          <p class="pb-4" set:html={item.content} />
         </div>
       </div>
     ))
@@ -80,17 +80,13 @@ const items = [
   body.dark .accordion-content p {
     color: #f6f6f6;
   }
-  body.dark .accordion-icon svg {
+  body.dark .accordion-icon {
     stroke: #f6f6f6;
   }
 
   body.dark .accordion-item {
     background-color: #4f4f4f;
     border-color: #7d7d7d;
-  }
-  body.dark .accordion-item:hover {
-    background-color: #5b5b5b;
-    transition: 0.3s ease-in-out;
   }
 
   body.dark .accordion-content a {
