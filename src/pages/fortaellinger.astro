@@ -1,0 +1,284 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+---
+
+<MainLayout
+  title="CP Danmark | Fortællinger"
+  description="CP Danmark's 'Fortællinger'-side"
+  ogtitle="CP Danmark – Landsforeningen for cerebral parese"
+  ogdescription="'Fortællinger'-siden til CP Danmark's hjemmeside"
+>
+  <section class="hero-section grid grid-cols-12 md:pt-20 pt-16 md:pb-desktop-bottom pb-mobil-bottom w-full h-screen md:px-0 px-4 relative">
+    <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center md:pb-24 pb-0 h-full">
+      <div class="breadcrumb col-span-12">
+        <a href="/" class="underline transition duration-300 ease-in-out">Forside</a>
+        <span> / </span>
+        <a href="/cp_os" class="underline transition duration-300 ease-in-out">CP & os</a>
+        <span> / </span>
+        <a href="/fortaellinger" class="underline transition duration-300 ease-in-out">Fortællinger</a>
+      </div>
+
+      <h1 id="hero-title" class="col-span-12 display">Fortællinger</h1>
+      <p id="hero-text" class="md:col-span-6 col-span-12 md:text-h4-desktop text-h4-mobile text-gray-50 max-w-3xl">
+        Se og hør personlige historier fra mennesker med CP og deres pårørende
+      </p>
+    </div>
+
+    <div class="hero_image w-full h-full absolute inset-0 z-0">
+      <img src="/images/stories_image.webp" alt="Hero-billede til CP Danmarks fortællinger-side" class="w-full h-full object-cover scale-x-[-1]" />
+    </div>
+
+    <div id="overlay1" class="absolute top-0 left-0 w-full h-full bg-gray-950 bg-opacity-[50%] z-0"></div>
+    <div
+      id="overlay2"
+      class="absolute top-0 left-0 md:w-[50%] w-full h-full md:backdrop-blur-sm bg-opacity-75 bg-blue-950 z-0 md:rounded-r-full hidden md:block"
+    >
+    </div>
+
+    <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
+      <a href="#videos" aria-label="Gå videre ned på siden">
+        <div class="float flex flex-col items-center hover:opacity-80 transition duration-300 ease-in-out">
+          <p class="text-[18px] text-gray-50 font-semibold">Gå videre ned på siden</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8 sm:w-12 sm:h-12 text-gray-50 transition duration-300 ease-in-out"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="videos" class="videos-section grid grid-cols-12 md:pt-20 pt-16 md:pb-12 w-full md:px-0 px-4 relative">
+    <!-- Videosektion: Personer med CP -->
+    <div class="mb-16 col-start-2 col-span-10">
+      <h3 class="font-semibold mb-6">At have et barn med CP</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Video kort -->
+        <div id="video1" class="bg-gray-100 rounded-[5px] overflow-hidden">
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/RT8x_FsDLDI?si=NSxPcNcn8yGt5jJ1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+          <div class="p-4">
+            <h4 class="font-semibold text-h4-mobile mb-2">Se hvad jeg kan</h4>
+            <p class="text-sm text-gray-600">Se den første video fra Norges CP-forening omkring børn med CP</p>
+          </div>
+        </div>
+        <!-- Dupliker for flere videoer -->
+        <!-- Video kort -->
+        <div id="video2" class="bg-gray-100 rounded-[5px] overflow-hidden">
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/I6RFEr3KL8Q?si=xJIFMa-marWA-krc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+          <div class="p-4">
+            <h4 class="font-semibold text-h4-mobile mb-2">Se hvem jeg er</h4>
+            <p class="text-sm text-gray-600">Se den anden video fra Norges CP-forening omkring børn med CP</p>
+          </div>
+        </div>
+        <!-- Video kort -->
+        <div id="video3" class="bg-gray-100 rounded-[5px] overflow-hidden">
+          <img src="/images/coursecard2.webp" alt="Placeholder-billede for utilgængelig video" class="w-full h-[300px] object-cover" />
+          <div class="p-4">
+            <h4 class="font-semibold text-h4-mobile mb-2">Ingen video endnu</h4>
+            <p class="text-sm text-gray-600">Vent for yderligere information</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Videosektion: Pårørende -->
+    <div class="mb-16 col-start-2 col-span-10">
+      <h3 class="font-semibold mb-6">At være pårørende</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Video kort -->
+        <div id="video1_1" class="bg-gray-100 rounded-[5px] overflow-hidden">
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/16j0eSxxKKk?si=mTs3bDUUMYgNTKNF"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+          <div class="p-4">
+            <h4 class="font-semibold text-h4-mobile mb-2">Pernille og Mads: Hvordan er det at være forældre til et barn med CP?</h4>
+            <p class="text-sm text-gray-600">
+              Pernille og Mads, der er forældre til 5-årige Elias, fortæller omkring hvordan det er at have et barn med CP— og hvilke erfaringer de
+              har gjort sig.
+            </p>
+          </div>
+        </div>
+        <div id="video2_1" class="bg-gray-100 rounded-[5px] overflow-hidden">
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/jTQkkZgKcZY?si=V3ct2BGRZartiUFQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+          <div class="p-4">
+            <h4 class="font-semibold text-h4-mobile mb-2">Mads og Sinne: Det at være forældre til en ung med CP</h4>
+            <p class="text-sm text-gray-600">
+              Mads og Sinne, der er forældre til hhv. Andreas på 15 og Gustav på 18 år, fortæller om hvordan det er at have et ungt barn med CP.
+            </p>
+          </div>
+        </div>
+        <div id="video3_1" class="bg-gray-100 rounded-[5px] overflow-hidden">
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/EcT-MkclgvE?si=Ar7CBmd_Hnu2x1xQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+          <div class="p-4">
+            <h4 class="font-semibold text-h4-mobile mb-2">Ung med CP: Hvad skal forældrene være opmærksom på?</h4>
+            <p class="text-sm text-gray-600">
+              Emma og Bertram, der er to unge med CP på 25 og 21 år, fortæller om det at være ung med CP— og hvad forældrene skal være opmærksom på.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Videosektion: Forældre med CP -->
+    <div class="mb-16 col-start-2 col-span-10">
+      <h3 class="font-semibold mb-6">At være forældre med CP</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Video kort -->
+        <div id="video1_2" class="bg-gray-100 rounded-[5px] overflow-hidden">
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/RjYRyTKdvcU?si=vF_d9u5rpGfOF9w5"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+          <div class="p-4">
+            <h4 class="font-semibold text-h4-mobile mb-2">Forældreskab og CP</h4>
+            <p class="text-sm text-gray-600">
+              Introducerende video omkring det med at være en forældre med CP, samt lysten til at være forældre og hvordan det kan lade sig gøre— især
+              når diagnosen er en del af livet.
+            </p>
+          </div>
+        </div>
+        <div id="video2_2" class="bg-gray-100 rounded-[5px] overflow-hidden">
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/V2SCtbm2u5Y?si=AiW2A08k_xHXrAeA"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+          <div class="p-4">
+            <h4 class="font-semibold text-h4-mobile mb-2">Jonathan: "Kan jeg være en god far?"</h4>
+            <p class="text-sm text-gray-600">
+              Jonathan, der er 24 år og har CP, fortæller om hvilke tanker han har gjort sig omkring det med at gerne ville være forældre— både
+              generelt og når det kommer til hans CP.
+            </p>
+          </div>
+        </div>
+        <div id="video3_2" class="bg-gray-100 rounded-[5px] overflow-hidden">
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/KwmUjgB2mG4?si=UA2GsQmbyORJ7gM6"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+          <div class="p-4">
+            <h4 class="font-semibold text-h4-mobile mb-2">Nynne: "Det har jeg ikke prøvet før, så det kan jeg nok godt"</h4>
+            <p class="text-sm text-gray-600">Nynne, der er 32 år, er formand for CP Ung og har CP, fortæller om drømmen omkring at få børn.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  /* Floating Animation */
+  @keyframes float {
+    0% {
+      transform: translatey(0);
+    }
+    50% {
+      transform: translatey(-10px);
+    }
+    100% {
+      transform: translatey(0);
+    }
+  }
+
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .breadcrumb a {
+    color: #c1c1c1;
+  }
+
+  .breadcrumb span {
+    color: #f6f6f6;
+  }
+
+  body.dark .breadcrumb a:hover,
+  body.dark .breadcrumb span:hover {
+    color: #7dc1fc;
+  }
+
+  .breadcrumb a:hover,
+  .breadcrumb span:hover {
+    color: #7dc1fc;
+  }
+
+  body.dark h1,
+  body.dark p,
+  body.dark h2,
+  body.dark h3,
+  body.dark h4 {
+    color: #f6f6f6;
+  }
+
+  body.dark #video1,
+  body.dark #video2,
+  body.dark #video3,
+  body.dark #video1_1,
+  body.dark #video2_1,
+  body.dark #video3_1,
+  body.dark #video1_2,
+  body.dark #video2_2,
+  body.dark #video3_2 {
+    background-color: #4f4f4f;
+    border-color: #7d7d7d;
+  }
+</style>
