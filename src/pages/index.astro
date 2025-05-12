@@ -60,8 +60,11 @@ const news = [
   ogtitle="CP Danmark – Landsforeningen for cerebral parese"
   ogdescription="Forsiden til CP Danmark's hjemmeside"
 >
-  <section class="hero-section grid grid-cols-12 md:pt-20 pt-16 md:pb-desktop-bottom pb-mobil-bottom w-full h-screen md:px-0 px-4 relative">
-    <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center md:pb-24 pb-0 h-full">
+  <section
+    class="hero-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom w-full h-screen md:px-0 px-4 relative"
+  >
+    <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center md:pb-28 pb-0 h-full">
+      <p id="hero-welcome" class="md:text-h3-desktop text-h3-mobile font-semibold italic text-gray-50">Velkommen</p>
       <h1 id="hero-title" class="display col-span-12">Vi er her <br class="md:hidden block" /> for dig</h1>
       <p id="hero-text" class="col-span-12 md:col-span-6 md:text-h4-desktop text-h4-mobile text-gray-50 max-w-3xl">
         Uanset hvem du er, så er du landet det rette sted. CP Danmark er foreningen for dig der lever med cerebral parese— og for dem der støtter dig
@@ -98,7 +101,7 @@ const news = [
     </div>
   </section>
 
-  <section id="get-started" class="grid grid-cols-12 md:pt-20 pt-16 md:pb-desktop-bottom pb-mobil-bottom">
+  <section id="get-started" class="grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom">
     <h1 class="md:text-h2-desktop text-h2-mobile col-start-2 col-span-10">Kom godt i gang</h1>
     <p class="pb-4 col-start-2 col-span-10 max-w-2xl">
       Uanset om du er ny, søger viden om CP, har brug for støtte eller bare vil bidrage til et godt formål— her finder du de vigtigste veje videre.
@@ -122,7 +125,7 @@ const news = [
         <a href="/tilmeld" aria-label="Gå til 'Tilmeld'" class="relative block aspect-[1/1] w-full">
           <img
             src="/images/submenu2.webp"
-            alt="Billede til den første undermenu på CP Danmarks forside"
+            alt="Billede til den anden undermenu på CP Danmarks forside"
             class="w-full h-full object-cover brightness-75"
           />
           <div class="absolute inset-0 flex items-end pb-12 justify-start md:justify-center px-4">
@@ -134,7 +137,7 @@ const news = [
         <a href="/stoet" aria-label="Gå til 'Støt os'" class="relative block aspect-[1/1] w-full">
           <img
             src="/images/submenu3.webp"
-            alt="Billede til den første undermenu på CP Danmarks forside"
+            alt="Billede til den tredje undermenu på CP Danmarks forside"
             class="w-full h-full object-cover brightness-75"
           />
           <div class="absolute inset-0 flex items-end pb-12 justify-center px-4">
@@ -146,7 +149,7 @@ const news = [
         <a href="/gode_raad" class="relative block aspect-[1/1] w-full">
           <img
             src="/images/submenu4.webp"
-            alt="Billede til den første undermenu på CP Danmark's forside"
+            alt="Billede til den fjerde undermenu på CP Danmark's forside"
             class="w-full h-full object-cover brightness-75"
           />
           <div class="absolute inset-0 flex items-end pb-12 justify-center px-4">
@@ -201,7 +204,8 @@ const news = [
       <a
         href="/nyheder"
         aria-label="Gå til 'Nyheder'"
-        class="underline hover:text-blue-700 transition duration-300 ease-in-out col-start-2 col-span-10">Se alle..</a
+        class="underline focus:outline-none focus:ring-2 focus:ring-blue-500 hover:text-blue-700 transition duration-300 ease-in-out col-start-2 col-span-10"
+        >Se alle..</a
       >
     </div>
     <!-- Horizontal scroll container -->
@@ -328,105 +332,105 @@ const news = [
 <script>
   import { inView } from "motion";
 
-  /** inView Animations */
-  const elementmedanimation1 = document.querySelector("#hero-title");
-  inView(elementmedanimation1, () => {
-    elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
-  });
+  document.addEventListener("DOMContentLoaded", () => {
+    const reduceMotion = document.body.classList.contains("reduce-motion");
 
-  const elementmedanimation2 = document.querySelector("#hero-text");
-  inView(elementmedanimation2, () => {
-    elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
-  });
+    if (!reduceMotion) {
+      const elementmedanimation1 = document.querySelector("#hero-title");
+      inView(elementmedanimation1, () => {
+        elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
+      });
 
-  const elementmedanimation3 = document.querySelector("#hero-welcome");
-  inView(elementmedanimation3, () => {
-    elementmedanimation3.classList.add("animate__animated", "animate__fadeInDown");
-  });
+      const elementmedanimation2 = document.querySelector("#hero-text");
+      inView(elementmedanimation2, () => {
+        elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
+      });
 
-  const elementmedanimation4 = document.querySelector("#hero-line");
-  inView(elementmedanimation4, () => {
-    elementmedanimation4.classList.add("animate__animated", "animate__fadeInRight");
-  });
+      const elementmedanimation3 = document.querySelector("#hero-welcome");
+      inView(elementmedanimation3, () => {
+        elementmedanimation3.classList.add("animate__animated", "animate__fadeInDown");
+      });
 
-  const elementmedanimation5 = document.querySelector("#overlay2");
-  inView(elementmedanimation5, () => {
-    elementmedanimation5.classList.add("animate__animated", "animate__rotateInDownLeft");
-  });
+      const elementmedanimation4 = document.querySelector("#hero-line");
+      inView(elementmedanimation4, () => {
+        elementmedanimation4.classList.add("animate__animated", "animate__fadeInRight");
+      });
 
-  const elementmedanimation6 = document.querySelector("#scroll-down");
-  inView(elementmedanimation6, () => {
-    elementmedanimation6.classList.add("animate__animated", "animate__fadeInDown");
-  });
+      const elementmedanimation5 = document.querySelector("#overlay2");
+      inView(elementmedanimation5, () => {
+        elementmedanimation5.classList.add("animate__animated", "animate__rotateInDownLeft");
+      });
 
-  const elementmedanimation7 = document.querySelector("#get-started h1");
-  inView(elementmedanimation7, () => {
-    elementmedanimation7.classList.add("animate__animated", "animate__fadeInLeft");
-  });
+      const elementmedanimation6 = document.querySelector("#scroll-down");
+      inView(elementmedanimation6, () => {
+        elementmedanimation6.classList.add("animate__animated", "animate__fadeInDown");
+      });
 
-  const elementmedanimation8 = document.querySelector("#get-started p");
-  inView(elementmedanimation8, () => {
-    elementmedanimation8.classList.add("animate__animated", "animate__fadeInRight");
-  });
+      const elementmedanimation7 = document.querySelector("#get-started h1");
+      inView(elementmedanimation7, () => {
+        elementmedanimation7.classList.add("animate__animated", "animate__fadeInLeft");
+      });
 
-  const elementmedanimation9 = document.querySelector(".experiences h2");
-  inView(elementmedanimation9, () => {
-    elementmedanimation9.classList.add("animate__animated", "animate__fadeInRight");
-  });
+      const elementmedanimation8 = document.querySelector("#get-started p");
+      inView(elementmedanimation8, () => {
+        elementmedanimation8.classList.add("animate__animated", "animate__fadeInRight");
+      });
 
-  const elementmedanimation10 = document.querySelector(".news #carousel");
-  inView(elementmedanimation10, () => {
-    elementmedanimation10.classList.add("animate__animated", "animate__slideInLeft");
-  });
+      const elementmedanimation9 = document.querySelector(".experiences h2");
+      inView(elementmedanimation9, () => {
+        elementmedanimation9.classList.add("animate__animated", "animate__fadeInRight");
+      });
 
-  const elementmedanimation12 = document.querySelector("#news");
-  inView(elementmedanimation12, () => {
-    elementmedanimation12.classList.add("animate__animated", "animate__fadeInRight");
-  });
+      const elementmedanimation10 = document.querySelector(".news #carousel");
+      inView(elementmedanimation10, () => {
+        elementmedanimation10.classList.add("animate__animated", "animate__slideInLeft");
+      });
 
-  // Delay-animations
-  const sections = document.querySelectorAll("#submenus > div");
+      const elementmedanimation12 = document.querySelector("#news");
+      inView(elementmedanimation12, () => {
+        elementmedanimation12.classList.add("animate__animated", "animate__fadeInRight");
+      });
 
-  sections.forEach((sections, index) => {
-    inView(sections, () => {
-      sections.classList.add("animate__animated", "animate__fadeInUp");
-      sections.style.animationDelay = `${index * 0.2}s`; // Delay each image by 0.2s
-    });
-  });
+      // Delay animations
+      const sections = document.querySelectorAll("#submenus > div");
+      sections.forEach((el, index) => {
+        inView(el, () => {
+          el.classList.add("animate__animated", "animate__fadeInUp");
+          el.style.animationDelay = `${index * 0.2}s`;
+        });
+      });
 
-  const quotes = document.querySelectorAll("#quotes > div");
+      const quotes = document.querySelectorAll("#quotes > div");
+      quotes.forEach((el, index) => {
+        inView(el, () => {
+          el.classList.add("animate__animated", "animate__fadeInLeft");
+          el.style.animationDelay = `${index * 0.2}s`;
+        });
+      });
 
-  quotes.forEach((quotes, index) => {
-    inView(quotes, () => {
-      quotes.classList.add("animate__animated", "animate__fadeInLeft");
-      quotes.style.animationDelay = `${index * 0.2}s`; // Delay each image by 0.2s
-    });
-  });
+      const info = document.querySelectorAll("#info-section1 > div");
+      info.forEach((el, index) => {
+        inView(el, () => {
+          el.classList.add("animate__animated", "animate__fadeInLeft");
+          el.style.animationDelay = `${index * 0.2}s`;
+        });
+      });
 
-  const info = document.querySelectorAll("#info-section1 > div");
+      const info2 = document.querySelectorAll("#info-section2 > div");
+      info2.forEach((el, index) => {
+        inView(el, () => {
+          el.classList.add("animate__animated", "animate__fadeInRight");
+          el.style.animationDelay = `${index * 0.2}s`;
+        });
+      });
 
-  info.forEach((info, index) => {
-    inView(info, () => {
-      info.classList.add("animate__animated", "animate__fadeInLeft");
-      info.style.animationDelay = `${index * 0.2}s`; // Delay each image by 0.2s
-    });
-  });
-
-  const info2 = document.querySelectorAll("#info-section2 > div");
-
-  info2.forEach((info2, index) => {
-    inView(info2, () => {
-      info2.classList.add("animate__animated", "animate__fadeInRight");
-      info2.style.animationDelay = `${index * 0.2}s`; // Delay each image by 0.2s
-    });
-  });
-
-  const info3 = document.querySelectorAll("#info-section3 > div");
-
-  info3.forEach((info3, index) => {
-    inView(info3, () => {
-      info3.classList.add("animate__animated", "animate__fadeInLeft");
-      info3.style.animationDelay = `${index * 0.2}s`; // Delay each image by 0.2s
-    });
+      const info3 = document.querySelectorAll("#info-section3 > div");
+      info3.forEach((el, index) => {
+        inView(el, () => {
+          el.classList.add("animate__animated", "animate__fadeInLeft");
+          el.style.animationDelay = `${index * 0.2}s`;
+        });
+      });
+    }
   });
 </script>

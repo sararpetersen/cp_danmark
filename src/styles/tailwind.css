@@ -59,7 +59,7 @@
 
   /* Base style for toggle switch */
   .toggle-switch {
-    @apply relative inline-flex h-5 w-10 items-center rounded-full bg-gray-500 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500;
+    @apply relative inline-flex h-5 w-10 items-center rounded-full bg-gray-500 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-300;
   }
 
   /* When pressed (active) */
@@ -79,7 +79,11 @@
 
   /* Extra hover effect for fun */
   .toggle-switch:hover {
-    @apply bg-blue-700;
+    @apply bg-blue-500;
+  }
+
+  body.dark .toggle-switch:hover {
+    @apply bg-blue-500;
   }
 
   .course-card_content .info {

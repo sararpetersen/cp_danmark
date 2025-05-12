@@ -11,12 +11,22 @@ import Button from "../components/Button.astro";
   ogtitle="CP Danmark – Landsforeningen for cerebral parese"
   ogdescription="'CP & os'-siden til CP Danmark's hjemmeside"
 >
-  <section class="hero-section grid grid-cols-12 md:pt-20 pt-16 md:pb-desktop-bottom pb-mobil-bottom w-full h-screen md:px-0 px-4 relative">
+  <section
+    class="hero-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom w-full h-screen md:px-0 px-4 relative"
+  >
     <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center md:pb-28 pb-0 h-full">
       <div class="breadcrumb col-span-12">
-        <a href="/" class="underline transition duration-300 ease-in-out">Forside</a>
+        <a
+          href="/"
+          aria-label="Gå tilbage til forsiden"
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">Forside</a
+        >
         <span> / </span>
-        <a href="/cp_os" class="underline transition duration-300 ease-in-out">CP & os</a>
+        <a
+          href="/cp_os"
+          aria-label="Denne side er CP & os"
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">CP & os</a
+        >
       </div>
 
       <h1 id="hero-title" class="col-span-12 display">CP & os</h1>
@@ -37,7 +47,7 @@ import Button from "../components/Button.astro";
     </div>
 
     <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
-      <a href="#get-started" aria-label="Gå videre ned på siden">
+      <a href="#about" aria-label="Gå videre ned på siden">
         <div class="float flex flex-col items-center hover:opacity-80 transition duration-300 ease-in-out">
           <p class="text-[18px] text-gray-50 font-semibold">Gå videre ned på siden</p>
           <svg
@@ -54,7 +64,7 @@ import Button from "../components/Button.astro";
       </a>
     </div>
   </section>
-  <section class="info-section1 grid grid-cols-12 md:pt-14 pt-10 md:pb-20 pb-12">
+  <section id="about" class="info-section1 grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom">
     <div class="grid md:grid-cols-2 col-start-2 col-span-10">
       <!-- Text and button section -->
       <div>
@@ -70,18 +80,18 @@ import Button from "../components/Button.astro";
 
       <!-- Image section -->
       <div class="flex justify-end md:pt-0 pt-8">
-        <img src="/images/about_section.webp" alt="Første billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
+        <img src="/images/about_section.webp" alt="Billede til 'hvad er CP Danmark?'-sektion" class="w-[550px] h-[350px] object-cover" />
       </div>
     </div>
   </section>
 
-  <section class="info-section1_1 grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto">
+  <section id="info-accordian" class="info-section1_1 grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto">
     <div class="col-start-2 col-span-10">
       <AccordianInfo />
     </div>
   </section>
 
-  <section class="info-section1_2 grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto">
+  <section id="kreds-accordian" class="info-section1_2 grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto">
     <div class="flex flex-col col-start-2 col-span-10">
       <h3 class="pb-2">Kredse</h3>
       <p class="pb-6">
@@ -95,7 +105,7 @@ import Button from "../components/Button.astro";
     </div>
   </section>
 
-  <section class="contact grid grid-cols-12 md:pb-16 pb-12">
+  <section id="contact" class="contact grid grid-cols-12 md:pb-16 pb-12">
     <div class="col-start-2 col-span-10">
       <h3 class="pb-2">Har du et spørgsmål til CP Danmark?</h3>
       <p class="md:pb-10 pb-8 max-w-3xl">
@@ -104,18 +114,13 @@ import Button from "../components/Button.astro";
       </p>
     </div>
     <div class="form col-start-2 col-span-10 grid md:grid-cols-2 grid-cols-1 md:gap-16 gap-10 items-start justify-center">
-      <form class="md:order-none order-2">
+      <form id="contact-form" class="md:order-none order-2">
         <div class="form-group flex flex-col">
           <label for="name" class="font-semibold mb-2">Navn</label>
-          <input type="text" class="form-control p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4" id="name" placeholder="F.eks. Borris Jensen" />
+          <input class="form-control p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4" id="name" placeholder="F.eks. Borris Jensen" />
 
           <label for="email" class="font-semibold mb-2">Email</label>
-          <input
-            type="email"
-            class="form-control p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
-            id="email"
-            placeholder="F.eks. borris-jensen@gmail.com"
-          />
+          <input class="form-control p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4" id="email" placeholder="F.eks. borris-jensen@gmail.com" />
 
           <label for="message" class="font-semibold mb-2">Spørgsmål</label>
           <textarea class="form-control bg-dust-100 border-dust-300 rounded-[5px] mb-4" id="message" rows="8" placeholder="Skriv dit spørgmål her"
@@ -123,7 +128,7 @@ import Button from "../components/Button.astro";
 
           <!-- File input starts here -->
           <label for="file" class="font-semibold mb-1">Vedhæft fil</label>
-          <input class="attachment" type="file" class="form-control" id="file" />
+          <input type="file" class="attachment" id="file" />
           <!-- File input ends here -->
 
           <a href="#" class="md:pt-8 pt-4" aria-label="Placeholder-link (ingen funktionalitet)">
@@ -132,7 +137,7 @@ import Button from "../components/Button.astro";
         </div>
       </form>
 
-      <div class="flex flex-col justify-center">
+      <div id="contact-info" class="flex flex-col justify-center">
         <h4 class="text-h4-mobile md:pb-6 pb-4">CP Danmark - Landsforeningen for cerebral parese</h4>
         <ul class="space-y-1 pb-4">
           <li>Blekinge Boulevard 2</li>
@@ -148,14 +153,14 @@ import Button from "../components/Button.astro";
           <li>
             Telefon: <a
               href="tel: +45 38 88 45 75"
-              class="hover:text-blue-700 underline transition duration-300 ease-in-out"
+              class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 underline transition duration-300 ease-in-out"
               aria-label="Ring CP Danmark på +45 38 88 45 75">+45 38 88 45 75</a
             >
           </li>
           <li>
             Mail: <a
               href="mailto: cpdanmark@cpdanmark.dk"
-              class="hover:text-blue-700 underline transition duration-300 ease-in-out"
+              class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 underline transition duration-300 ease-in-out"
               aria-label="Send mail til CP Danmark på cpdanmark@cpdanmark.dk">cpdanmark@cpdanmark.dk</a
             >
           </li>
@@ -200,6 +205,12 @@ import Button from "../components/Button.astro";
     color: #f6f6f6;
   }
 
+  input:focus,
+  textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #7dc1fc;
+  }
+
   /* Dark Mode */
 
   body.dark .breadcrumb a:hover,
@@ -234,3 +245,103 @@ import Button from "../components/Button.astro";
     color: #7dc1fc;
   }
 </style>
+
+<script>
+  import { inView } from "motion";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const reduceMotion = document.body.classList.contains("reduce-motion");
+
+    if (!reduceMotion) {
+      const elementmedanimation1 = document.querySelector("#hero-title");
+      inView(elementmedanimation1, () => {
+        elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
+      });
+
+      const elementmedanimation2 = document.querySelector("#hero-text");
+      inView(elementmedanimation2, () => {
+        elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
+      });
+
+      const elementmedanimation3 = document.querySelector("#hero-welcome");
+      inView(elementmedanimation3, () => {
+        elementmedanimation3.classList.add("animate__animated", "animate__fadeInDown");
+      });
+
+      const elementmedanimation4 = document.querySelector("#hero-line");
+      inView(elementmedanimation4, () => {
+        elementmedanimation4.classList.add("animate__animated", "animate__fadeInRight");
+      });
+
+      const elementmedanimation5 = document.querySelector("#overlay2");
+      inView(elementmedanimation5, () => {
+        elementmedanimation5.classList.add("animate__animated", "animate__rotateInDownLeft");
+      });
+
+      const elementmedanimation6 = document.querySelector("#scroll-down");
+      inView(elementmedanimation6, () => {
+        elementmedanimation6.classList.add("animate__animated", "animate__fadeInDown");
+      });
+
+      const elementmedanimation7 = document.querySelector("#about p");
+      inView(elementmedanimation7, () => {
+        elementmedanimation7.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      const elementmedanimation8 = document.querySelector("#about img");
+      inView(elementmedanimation8, () => {
+        elementmedanimation8.classList.add("animate__animated", "animate__fadeInRight");
+      });
+
+      const elementmedanimation9 = document.querySelector("#about h2");
+      inView(elementmedanimation9, () => {
+        elementmedanimation9.classList.add("animate__animated", "animate__slideInRight");
+      });
+
+      const elementmedanimation10 = document.querySelector("#info-accordian");
+      inView(elementmedanimation10, () => {
+        elementmedanimation10.classList.add("animate__animated", "animate__fadeInUp");
+      });
+
+      const elementmedanimation11 = document.querySelector("#kreds-accordian h3");
+      inView(elementmedanimation11, () => {
+        elementmedanimation11.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      const elementmedanimation12 = document.querySelector("#kreds-accordian p");
+      inView(elementmedanimation12, () => {
+        elementmedanimation12.classList.add("animate__animated", "animate__fadeInRight");
+      });
+
+      const elementmedanimation13 = document.querySelector("#kreds-accordian");
+      inView(elementmedanimation13, () => {
+        elementmedanimation13.classList.add("animate__animated", "animate__fadeInUp");
+      });
+
+      const elementmedanimation14 = document.querySelector(".breadcrumb");
+      inView(elementmedanimation14, () => {
+        elementmedanimation14.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      const elementmedanimation15 = document.querySelector("#contact h3");
+      inView(elementmedanimation15, () => {
+        elementmedanimation15.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      const elementmedanimation16 = document.querySelector("#contact p");
+      inView(elementmedanimation16, () => {
+        elementmedanimation16.classList.add("animate__animated", "animate__fadeInRight");
+      });
+
+      const elementmedanimation17 = document.querySelector("#contact-form");
+      inView(elementmedanimation17, () => {
+        elementmedanimation17.classList.add("animate__animated", "animate__fadeInUp");
+      });
+
+      const elementmedanimation18 = document.querySelector("#contact-info");
+      inView(elementmedanimation18, () => {
+        elementmedanimation18.classList.add("animate__animated", "animate__fadeInRight");
+      });
+    }
+  });
+</script>

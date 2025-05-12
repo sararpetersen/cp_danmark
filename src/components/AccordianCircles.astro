@@ -142,7 +142,12 @@ const regions = [
               <p class="pb-2">
                 <strong class="font-semibold">Kommuner:</strong> {kreds.kommuner.join(", ")}
               </p>
-              <a href={kreds.url} target="_blank" class="underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out">
+              <a
+                href={kreds.url}
+                target="_blank"
+                aria-label="Læs mere om kredsen (eksternt link)"
+                class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out"
+              >
                 Læs mere om kredsen her
               </a>
             </div>

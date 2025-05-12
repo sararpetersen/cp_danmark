@@ -5,16 +5,24 @@ import Button from "../components/Button.astro";
 
 <MainLayout
   title="CP Danmark | Støt os"
-  description="CP Danmark's 'støt os'-side"
+  description="CP Danmark's 'Støt os'-side"
   ogtitle="CP Danmark – Landsforeningen for cerebral parese"
   ogdescription="'Støt os'-siden til CP Danmark's hjemmeside"
 >
-  <section class="hero-section grid grid-cols-12 md:pt-20 pt-16 md:pb-desktop-bottom pb-mobil-bottom w-full h-screen md:px-0 px-4 relative">
+  <section id="hero" class="hero-section grid grid-cols-12 md:pt-20 pt-16 md:pb-desktop-bottom pb-mobil-bottom w-full h-screen md:px-0 px-4 relative">
     <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center md:pb-24 pb-0 h-full">
       <div class="breadcrumb col-span-12">
-        <a href="/" class="underline transition duration-300 ease-in-out">Forside</a>
+        <a
+          href="/"
+          aria-label="Gå tilbage til forsiden"
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">Forside</a
+        >
         <span> / </span>
-        <a href="/tilmeld" class="underline transition duration-300 ease-in-out">Støt os</a>
+        <a
+          href="/stoet"
+          aria-label="Denne side er 'Støt os'"
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">Støt os</a
+        >
       </div>
 
       <h1 id="hero-title" class="display col-span-12">Støt os</h1>
@@ -24,7 +32,7 @@ import Button from "../components/Button.astro";
     </div>
 
     <div class="hero_image w-full h-full absolute inset-0 z-0">
-      <img src="/images/support_image.webp" alt="Hero-billede til CP Danmark's 'støt os'-side" class="w-full h-full object-cover scale-x-[-1]" />
+      <img src="/images/support_image.webp" alt="Hero-billede til CP Danmark's 'Støt os'-side" class="w-full h-full object-cover scale-x-[-1]" />
     </div>
 
     <div id="overlay1" class="absolute top-0 left-0 w-full h-full bg-gray-950 bg-opacity-[50%] z-0"></div>
@@ -35,7 +43,7 @@ import Button from "../components/Button.astro";
     </div>
 
     <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
-      <a href="#top-section">
+      <a href="#main-section">
         <div class="float flex flex-col items-center hover:opacity-80 transition duration-300 ease-in-out">
           <p class="text-[18px] text-gray-50 font-semibold">Gå videre ned på siden</p>
           <svg
@@ -52,7 +60,7 @@ import Button from "../components/Button.astro";
       </a>
     </div>
   </section>
-  <section>
+  <section id="main-section">
     <div class="grid grid-cols-12 md:pt-20 pt-16 md:pb-desktop-bottom pb-mobil-bottom">
       <div class="col-start-2 col-span-10 items-center">
         <div id="top-section">
@@ -161,11 +169,13 @@ import Button from "../components/Button.astro";
               >Jeg accepterer CP Danmarks <a
                 href="https://www.cpdanmark.dk/om-os/handelsbetingelser/"
                 target="_blank"
-                class="underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out">handelsbetingelser</a
+                class="underline focus:outline-none focus:ring-2 focus:ring-blue-500 text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out"
+                >handelsbetingelser</a
               > og <a
                 href="https://www.cpdanmark.dk/om-os/handelsbetingelser/"
                 target="_blank"
-                class="underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out">privatlivspolitik</a
+                class="underline focus:outline-none focus:ring-2 focus:ring-blue-500 text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out"
+                >privatlivspolitik</a
               >.</label
             >
           </div>
@@ -281,16 +291,18 @@ import Button from "../components/Button.astro";
               >Jeg accepterer CP Danmarks <a
                 href="https://www.cpdanmark.dk/om-os/handelsbetingelser/"
                 target="_blank"
-                class="underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out">handelsbetingelser</a
+                class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out"
+                >handelsbetingelser</a
               > og <a
                 href="https://www.cpdanmark.dk/om-os/handelsbetingelser/"
                 target="_blank"
-                class="underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out">privatlivspolitik</a
+                class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out"
+                >privatlivspolitik</a
               >.</label
             >
           </div>
         </div>
-        <a href="#" class="w-[50%]"><Button variant="secondary" size="small">Støt nu</Button></a>
+        <a href="#" aria-label="Placeholder-link (ingen funktionalitet)" class="w-[50%]"><Button variant="secondary" size="small">Støt nu</Button></a>
       </div>
     </div>
   </section>
@@ -324,6 +336,14 @@ import Button from "../components/Button.astro";
   body.dark .breadcrumb a:hover,
   body.dark .breadcrumb span:hover {
     color: #7dc1fc;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus,
+  option:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #7dc1fc;
   }
 
   body.dark h2,
@@ -381,5 +401,55 @@ import Button from "../components/Button.astro";
         enkeltForm.classList.add("hidden");
       }
     });
+  });
+
+  // inView-animations
+
+  import { inView } from "motion";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const reduceMotion = document.body.classList.contains("reduce-motion");
+
+    if (!reduceMotion) {
+      const elementmedanimation1 = document.querySelector("#hero h1");
+      inView(elementmedanimation1, () => {
+        elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
+      });
+
+      const elementmedanimation2 = document.querySelector("#hero p");
+      inView(elementmedanimation2, () => {
+        elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
+      });
+
+      const elementmedanimation3 = document.querySelector(".breadcrumb");
+      inView(elementmedanimation3, () => {
+        elementmedanimation3.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      const elementmedanimation4 = document.querySelector("#top-section h2");
+      inView(elementmedanimation4, () => {
+        elementmedanimation4.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      const elementmedanimation5 = document.querySelector("#top-section p");
+      inView(elementmedanimation5, () => {
+        elementmedanimation5.classList.add("animate__animated", "animate__fadeInRight");
+      });
+
+      const elementmedanimation5a = document.querySelector("#support-type");
+      inView(elementmedanimation5a, () => {
+        elementmedanimation5a.classList.add("animate__animated", "animate__slideInLeft");
+      });
+
+      const elementmedanimation6 = document.querySelector("#enkeltForm");
+      inView(elementmedanimation6, () => {
+        elementmedanimation6.classList.add("animate__animated", "animate__fadeInUp");
+      });
+
+      const elementmedanimation7 = document.querySelector("#fastForm");
+      inView(elementmedanimation7, () => {
+        elementmedanimation7.classList.add("animate__animated", "animate__fadeInUp");
+      });
+    }
   });
 </script>

@@ -9,12 +9,20 @@ import AccordianAdvice from "../components/AccordianAdvice.astro";
   ogtitle="CP Danmark – Landsforeningen for cerebral parese"
   ogdescription="'Gode råd'-siden til CP Danmark's hjemmeside"
 >
-  <section class="hero-section grid grid-cols-12 md:pt-20 pt-16 md:pb-28 pb-20 w-full h-screen md:px-0 px-4 relative">
+  <section id="hero" class="hero-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-28 pb-20 w-full h-screen md:px-0 px-4 relative">
     <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center md:pb-24 pb-0 h-full">
       <div class="breadcrumb col-span-12">
-        <a href="/" class="underline transition duration-300 ease-in-out">Forside</a>
+        <a
+          href="/"
+          aria-label="Gå tilbage til forsiden"
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">Forside</a
+        >
         <span> / </span>
-        <a href="/hvad_er_cp" class="underline transition duration-300 ease-in-out">Gode råd</a>
+        <a
+          href="/hvad_er_cp"
+          aria-label="Denne side er 'Gode råd'"
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">Gode råd</a
+        >
       </div>
 
       <h1 id="hero-title" class="col-span-12 display">Brug for gode råd?</h1>
@@ -24,7 +32,7 @@ import AccordianAdvice from "../components/AccordianAdvice.astro";
     </div>
 
     <div class="hero_image w-full h-full absolute inset-0 z-0">
-      <img src="/images/advice_image.webp" alt="Hero-billede til CP Danmarks 'Hvad er CP'-side'" class="w-full h-full object-cover" />
+      <img src="/images/advice_image.webp" alt="Hero-billede til CP Danmarks 'Gode råd'-side'" class="w-full h-full object-cover" />
     </div>
 
     <div id="overlay1" class="absolute top-0 left-0 w-full h-full bg-gray-950 bg-opacity-[50%] z-0"></div>
@@ -53,7 +61,7 @@ import AccordianAdvice from "../components/AccordianAdvice.astro";
     </div>
   </section>
 
-  <section id="first-section" class="main-section grid grid-cols-12 md:pt-14 pt-10 md:pb-28 pb-20">
+  <section id="first-section" class="main-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-28 pb-20">
     <div class="grid md:grid-cols-2 col-start-2 col-span-10">
       <!-- Text and button section -->
       <div>
@@ -68,15 +76,15 @@ import AccordianAdvice from "../components/AccordianAdvice.astro";
 
       <!-- Image section -->
       <div class="flex justify-end md:pt-0 pt-8">
-        <img src="/images/advice_section.webp" alt="Første billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
+        <img src="/images/advice_section.webp" alt="Første billede til 'vi hjælper dig videre'-sektion" class="w-[550px] h-[350px] object-cover" />
       </div>
     </div>
   </section>
 
-  <section class="info-section2 grid grid-cols-12 md:pb-28 pb-20 max-w-7xl mx-auto">
+  <section id="second-section" class="info-section2 grid grid-cols-12 md:pb-28 pb-20 max-w-7xl mx-auto">
     <h3 class="md:pb-6 pb-4 col-start-2 col-span-10">Hvem er du— og hvad har du brug for?</h3>
     <div class="grid md:grid-cols-2 col-start-2 col-span-10"></div>
-    <div class="col-start-2 col-span-10">
+    <div id="second-section-accordian" class="col-start-2 col-span-10">
       <AccordianAdvice />
     </div>
   </section>
@@ -119,5 +127,65 @@ import AccordianAdvice from "../components/AccordianAdvice.astro";
     body.dark p {
       color: #f6f6f6;
     }
-  </style></MainLayout
->
+  </style>
+
+  <script>
+    import { inView } from "motion";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const reduceMotion = document.body.classList.contains("reduce-motion");
+
+      if (!reduceMotion) {
+        const elementmedanimation1 = document.querySelector("#hero-title");
+        inView(elementmedanimation1, () => {
+          elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
+        });
+
+        const elementmedanimation2 = document.querySelector("#hero-text");
+        inView(elementmedanimation2, () => {
+          elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
+        });
+
+        const elementmedanimation5 = document.querySelector("#overlay2");
+        inView(elementmedanimation5, () => {
+          elementmedanimation5.classList.add("animate__animated", "animate__rotateInDownLeft");
+        });
+
+        const elementmedanimation6 = document.querySelector("#scroll-down");
+        inView(elementmedanimation6, () => {
+          elementmedanimation6.classList.add("animate__animated", "animate__fadeInDown");
+        });
+
+        const elementmedanimation7 = document.querySelector("#first-section p");
+        inView(elementmedanimation7, () => {
+          elementmedanimation7.classList.add("animate__animated", "animate__fadeInLeft");
+        });
+
+        const elementmedanimation8 = document.querySelector("#first-section img");
+        inView(elementmedanimation8, () => {
+          elementmedanimation8.classList.add("animate__animated", "animate__fadeInLeft");
+        });
+
+        const elementmedanimation9 = document.querySelector("#first-section h2");
+        inView(elementmedanimation9, () => {
+          elementmedanimation9.classList.add("animate__animated", "animate__slideInRight");
+        });
+
+        const elementmedanimation10 = document.querySelector("#second-section #second-section-accordian");
+        inView(elementmedanimation10, () => {
+          elementmedanimation10.classList.add("animate__animated", "animate__fadeInUp");
+        });
+
+        const elementmedanimation11 = document.querySelector("#second-section h3");
+        inView(elementmedanimation11, () => {
+          elementmedanimation11.classList.add("animate__animated", "animate__fadeInLeft");
+        });
+
+        const elementmedanimation14 = document.querySelector(".breadcrumb");
+        inView(elementmedanimation14, () => {
+          elementmedanimation14.classList.add("animate__animated", "animate__fadeInLeft");
+        });
+      }
+    });
+  </script>
+</MainLayout>

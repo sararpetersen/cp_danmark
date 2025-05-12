@@ -5,18 +5,31 @@ import AccordianCounselling from "../components/AccordianCounselling.astro";
 
 <MainLayout
   title="CP Danmark | Rådgivning"
-  description="CP Danmark's 'CP Ung'-side"
+  description="CP Danmark's 'Rådgivning'-side"
   ogtitle="CP Danmark – Landsforeningen for cerebral parese"
-  ogdescription="'CP Ung'-siden til CP Danmark's hjemmeside"
+  ogdescription="'Rådgivning'-siden til CP Danmark's hjemmeside"
 >
-  <section class="hero-section grid grid-cols-12 md:pt-20 pt-16 md:pb-28 pb-20 w-full h-screen md:px-0 px-4 relative">
+  <section id="hero" class="hero-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-28 pb-20 w-full h-screen md:px-0 px-4 relative">
     <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center md:pb-24 pb-0 h-full">
       <div class="breadcrumb col-span-12">
-        <a href="/" class="underline transition duration-300 ease-in-out">Forside</a>
+        <a
+          href="/"
+          aria-label="Gå tilbage til forsiden"
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">Forside</a
+        >
         <span> / </span>
-        <a href="#" class="underline transition duration-300 ease-in-out">Bliv klogere</a>
+        <a
+          href="#"
+          aria-label="Det overordnede menupunkt er 'Bliv klogere' (menu-link med ingen funktion)"
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out"
+          >Bliv klogere</a
+        >
         <span> / </span>
-        <a href="/raadgivning" class="underline transition duration-300 ease-in-out">Rådgivning</a>
+        <a
+          href="/raadgivning"
+          aria-label="Denne side er 'Rådgivning'"
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">Rådgivning</a
+        >
       </div>
 
       <h1 id="hero-title" class="col-span-12 display">Rådgivning</h1>
@@ -37,7 +50,7 @@ import AccordianCounselling from "../components/AccordianCounselling.astro";
     </div>
 
     <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
-      <a href="#get-started" aria-label="Gå videre ned på siden">
+      <a href="#main-content" aria-label="Gå videre ned på siden">
         <div class="float flex flex-col items-center hover:opacity-80 transition duration-300 ease-in-out">
           <p class="text-[18px] text-gray-50 font-semibold">Gå videre ned på siden</p>
           <svg
@@ -55,11 +68,11 @@ import AccordianCounselling from "../components/AccordianCounselling.astro";
     </div>
   </section>
 
-  <section class="main">
+  <section id="main-content" class="main">
     <div class="main-section grid grid-cols-12 md:pt-12 pt-8 md:pb-desktop-bottom pb-mobil-bottom">
       <div class="col-start-2 col-span-10">
         <div class="pb-20">
-          <h2 class="mdtext-h2-desktop text-h2-mobile pb-4">Specialiseret rådgivning til dig</h2>
+          <h2 class="md:text-h3-desktop text-h3-mobile pb-4">Specialiseret rådgivning til dig</h2>
           <p>
             Hos CP Danmark tilbyder vi gratis, individuel rådgivning til mennesker med cerebral parese og deres pårørende. Uanset om du har brug for
             støtte i hverdagen, hjælp til at navigere i det offentlige system, eller bare har spørgsmål om livet med CP, kan du få professionel
@@ -68,7 +81,7 @@ import AccordianCounselling from "../components/AccordianCounselling.astro";
         </div>
       </div>
 
-      <div class="grid md:grid-cols-2 grid-cols-1 gap-12 col-start-2 col-span-10">
+      <div id="info" class="grid md:grid-cols-2 grid-cols-1 gap-12 col-start-2 col-span-10">
         <!-- First image + text block -->
         <div class="flex flex-col gap-6">
           <div>
@@ -115,7 +128,7 @@ import AccordianCounselling from "../components/AccordianCounselling.astro";
     </div>
   </section>
   <section class="accordian-section grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto">
-    <div class="col-start-2 col-span-10">
+    <div id="accordian" class="col-start-2 col-span-10">
       <h3 class="md:pb-6 pb-4">Hvad kan vi hjælpe dig med?</h3>
       <AccordianCounselling />
     </div>
@@ -160,4 +173,67 @@ import AccordianCounselling from "../components/AccordianCounselling.astro";
       color: #f6f6f6;
     }
   </style>
+
+  <script>
+    import { inView } from "motion";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const reduceMotion = document.body.classList.contains("reduce-motion");
+
+      if (!reduceMotion) {
+        const elementmedanimation1 = document.querySelector("#hero-title");
+        inView(elementmedanimation1, () => {
+          elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
+        });
+
+        const elementmedanimation2 = document.querySelector("#hero-text");
+        inView(elementmedanimation2, () => {
+          elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
+        });
+
+        const elementmedanimation5 = document.querySelector("#overlay2");
+        inView(elementmedanimation5, () => {
+          elementmedanimation5.classList.add("animate__animated", "animate__rotateInDownLeft");
+        });
+
+        const elementmedanimation6 = document.querySelector("#scroll-down");
+        inView(elementmedanimation6, () => {
+          elementmedanimation6.classList.add("animate__animated", "animate__fadeInDown");
+        });
+
+        const elementmedanimation7 = document.querySelector(".main-section h2");
+        inView(elementmedanimation7, () => {
+          elementmedanimation7.classList.add("animate__animated", "animate__fadeInLeft");
+        });
+
+        const elementmedanimation8 = document.querySelector(".main-section p");
+        inView(elementmedanimation8, () => {
+          elementmedanimation8.classList.add("animate__animated", "animate__fadeInRight");
+        });
+
+        const elementmedanimation9 = document.querySelector(".accordian-section h3");
+        inView(elementmedanimation9, () => {
+          elementmedanimation9.classList.add("animate__animated", "animate__fadeInLeft");
+        });
+
+        const elementmedanimation10 = document.querySelector("#accordian");
+        inView(elementmedanimation10, () => {
+          elementmedanimation10.classList.add("animate__animated", "animate__fadeInUp");
+        });
+
+        const elementmedanimation11 = document.querySelector(".breadcrumb");
+        inView(elementmedanimation11, () => {
+          elementmedanimation11.classList.add("animate__animated", "animate__fadeInLeft");
+        });
+
+        const info = document.querySelectorAll("#info > div");
+        info.forEach((el, index) => {
+          inView(el, () => {
+            el.classList.add("animate__animated", "animate__fadeInRight");
+            el.style.animationDelay = `${index * 0.2}s`;
+          });
+        });
+      }
+    });
+  </script>
 </MainLayout>

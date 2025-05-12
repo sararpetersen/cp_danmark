@@ -6,11 +6,14 @@ import "../styles/tailwind.css";
 
 <MainLayout
   title="CP Danmark | Tilmeld dig"
-  description="CP Danmark's 'tilmeld dig'-side"
+  description="CP Danmark's 'Tilmeld dig'-side"
   ogtitle="CP Danmark – Landsforeningen for cerebral parese"
   ogdescription="'Tilmeld dig'-siden til CP Danmark's hjemmeside"
 >
-  <section class="hero-section grid grid-cols-12 md:pt-20 pt-16 md:pb-desktop-bottom pb-mobil-bottom w-full h-screen md:px-0 px-4 relative">
+  <section
+    id="hero"
+    class="hero-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom w-full h-screen md:px-0 px-4 relative"
+  >
     <div class="hero_image w-full h-full absolute inset-0 z-0">
       <img src="/images/signup_image.webp" alt="Hero-billede til CP Danmark's 'tilmeld'-side" class="w-full h-full object-cover" />
     </div>
@@ -25,9 +28,17 @@ import "../styles/tailwind.css";
     <!-- Moved breadcrumb inside content container and above the title -->
     <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center md:pb-24 pb-0 h-full">
       <div class="breadcrumb col-span-12">
-        <a href="/" class="underline transition duration-300 ease-in-out">Forside</a>
+        <a
+          href="/"
+          aria-label="Gå tilbage til forsiden"
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">Forside</a
+        >
         <span> / </span>
-        <a href="/tilmeld" class="underline transition duration-300 ease-in-out">Bliv medlem</a>
+        <a
+          href="/tilmeld"
+          aria-label="Denne side er 'Tilmeld'"
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">Bliv medlem</a
+        >
       </div>
 
       <h1 id="hero-title" class="col-span-12 display">Bliv medlem</h1>
@@ -37,7 +48,7 @@ import "../styles/tailwind.css";
     </div>
 
     <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
-      <a href="#top-section">
+      <a href="#main-section">
         <div class="float flex flex-col items-center hover:opacity-80 transition duration-300 ease-in-out">
           <p class="text-[18px] text-gray-50 font-semibold">Gå videre ned på siden</p>
           <svg
@@ -55,7 +66,7 @@ import "../styles/tailwind.css";
     </div>
   </section>
 
-  <section class="main-section grid grid-cols-12 md:pt-12 pt-8 md:pb-desktop-bottom pb-mobil-bottom">
+  <section id="main-section" class="main-section grid grid-cols-12 md:pt-12 pt-8 md:pb-desktop-bottom pb-mobil-bottom">
     <div class="col-start-2 col-span-10">
       <div>
         <div id="top-section">
@@ -180,11 +191,13 @@ import "../styles/tailwind.css";
               >Jeg accepterer CP Danmarks <a
                 href="https://www.cpdanmark.dk/om-os/handelsbetingelser/"
                 target="_blank"
-                class="underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out">handelsbetingelser</a
+                class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out"
+                >handelsbetingelser</a
               > og <a
                 href="https://www.cpdanmark.dk/om-os/handelsbetingelser/"
                 target="_blank"
-                class="underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out">privatlivspolitik</a
+                class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out"
+                >privatlivspolitik</a
               >.</label
             >
           </div>
@@ -299,11 +312,13 @@ import "../styles/tailwind.css";
               >Jeg accepterer CP Danmarks <a
                 href="https://www.cpdanmark.dk/om-os/handelsbetingelser/"
                 target="_blank"
-                class="underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out">handelsbetingelser</a
+                class="underline focus:outline-none focus:ring-2 focus:ring-blue-500 text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out"
+                >handelsbetingelser</a
               > og <a
                 href="https://www.cpdanmark.dk/om-os/handelsbetingelser/"
                 target="_blank"
-                class="underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out">privatlivspolitik</a
+                class="underline focus:outline-none focus:ring-2 focus:ring-blue-500 text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out"
+                >privatlivspolitik</a
               >.</label
             >
           </div>
@@ -449,11 +464,13 @@ import "../styles/tailwind.css";
               >Jeg accepterer CP Danmarks <a
                 href="https://www.cpdanmark.dk/om-os/handelsbetingelser/"
                 target="_blank"
-                class="underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out">handelsbetingelser</a
+                class="underline focus:outline-none focus:ring-2 focus:ring-blue-500 text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out"
+                >handelsbetingelser</a
               > og <a
                 href="https://www.cpdanmark.dk/om-os/handelsbetingelser/"
                 target="_blank"
-                class="underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out">privatlivspolitik</a
+                class="underline focus:outline-none focus:ring-2 focus:ring-blue-500 text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out"
+                >privatlivspolitik</a
               >.</label
             >
           </div>
@@ -510,17 +527,19 @@ import "../styles/tailwind.css";
               >Jeg accepterer CP Danmarks <a
                 href="https://www.cpdanmark.dk/om-os/handelsbetingelser/"
                 target="_blank"
-                class="underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out">handelsbetingelser</a
+                class="underline focus:outline-none focus:ring-2 focus:ring-blue-500 text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out"
+                >handelsbetingelser</a
               > og <a
                 href="https://www.cpdanmark.dk/om-os/handelsbetingelser/"
                 target="_blank"
-                class="underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out">privatlivspolitik</a
+                class="underline focus:outline-none focus:ring-2 focus:ring-blue-500 text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out"
+                >privatlivspolitik</a
               >.</label
             >
           </div>
         </div>
 
-        <a href="#" class="w-[50%]"><Button variant="secondary" size="small">Tilmeld</Button></a>
+        <a href="#" aria-label="Placeholder-link (ingen funktionalitet)" class="w-[50%]"><Button variant="secondary" size="small">Tilmeld</Button></a>
       </div>
     </div>
   </section>
@@ -587,6 +606,12 @@ import "../styles/tailwind.css";
 
   .breadcrumb span {
     color: #f6f6f6;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #7dc1fc;
   }
 
   body.dark .breadcrumb a:hover,
@@ -658,5 +683,65 @@ import "../styles/tailwind.css";
         formSections[selected].classList.remove("hidden");
       }
     });
+  });
+
+  // inView-animations
+
+  import { inView } from "motion";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const reduceMotion = document.body.classList.contains("reduce-motion");
+
+    if (!reduceMotion) {
+      const elementmedanimation1 = document.querySelector("#hero h1");
+      inView(elementmedanimation1, () => {
+        elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
+      });
+
+      const elementmedanimation2 = document.querySelector("#hero p");
+      inView(elementmedanimation2, () => {
+        elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
+      });
+
+      const elementmedanimation3 = document.querySelector(".breadcrumb");
+      inView(elementmedanimation3, () => {
+        elementmedanimation3.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      const elementmedanimation4 = document.querySelector("#top-section h2");
+      inView(elementmedanimation4, () => {
+        elementmedanimation4.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      const elementmedanimation5 = document.querySelector("#top-section p");
+      inView(elementmedanimation5, () => {
+        elementmedanimation5.classList.add("animate__animated", "animate__fadeInRight");
+      });
+
+      const elementmedanimation5a = document.querySelector("#support-type");
+      inView(elementmedanimation5a, () => {
+        elementmedanimation5a.classList.add("animate__animated", "animate__slideInLeft");
+      });
+
+      const elementmedanimation6 = document.querySelector("#enkeltForm");
+      inView(elementmedanimation6, () => {
+        elementmedanimation6.classList.add("animate__animated", "animate__fadeInUp");
+      });
+
+      const elementmedanimation7 = document.querySelector("#fastForm");
+      inView(elementmedanimation7, () => {
+        elementmedanimation7.classList.add("animate__animated", "animate__fadeInUp");
+      });
+
+      const elementmedanimation8 = document.querySelector("#supportForm");
+      inView(elementmedanimation8, () => {
+        elementmedanimation8.classList.add("animate__animated", "animate__fadeInUp");
+      });
+
+      const elementmedanimation9 = document.querySelector("#lifeForm");
+      inView(elementmedanimation9, () => {
+        elementmedanimation9.classList.add("animate__animated", "animate__fadeInUp");
+      });
+    }
   });
 </script>

@@ -9,14 +9,26 @@ import Button from "../components/Button.astro";
   ogtitle="CP Danmark – Landsforeningen for cerebral parese"
   ogdescription="'CP Ung'-siden til CP Danmark's hjemmeside"
 >
-  <section class="hero-section grid grid-cols-12 md:pt-20 pt-16 md:pb-28 pb-20 w-full h-screen md:px-0 px-4 relative">
+  <section class="hero-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-28 pb-20 w-full h-screen md:px-0 px-4 relative">
     <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center md:pb-28 pb-0 h-full">
       <div class="breadcrumb col-span-12">
-        <a href="/" class="underline transition duration-300 ease-in-out">Forside</a>
+        <a
+          href="/"
+          aria-label="Gå tilbage til forsiden"
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">Forside</a
+        >
         <span> / </span>
-        <a href="/cp_os" class="underline transition duration-300 ease-in-out">CP & os</a>
+        <a
+          href="/cp_os"
+          aria-label="Undersiden til denne side er 'CP & os'"
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">CP & os</a
+        >
         <span> / </span>
-        <a href="/hvad_er_cp" class="underline transition duration-300 ease-in-out">CP Ung</a>
+        <a
+          href="/hvad_er_cp"
+          aria-label="Denne side er 'CP Ung'"
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">CP Ung</a
+        >
       </div>
 
       <h1 id="hero-title" class="col-span-12 display">CP Ung</h1>
@@ -37,7 +49,7 @@ import Button from "../components/Button.astro";
     </div>
 
     <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
-      <a href="#get-started" aria-label="Gå videre ned på siden">
+      <a href="#top-section" aria-label="Gå videre ned på siden">
         <div class="float flex flex-col items-center hover:opacity-80 transition duration-300 ease-in-out">
           <p class="text-[18px] text-gray-50 font-semibold">Gå videre ned på siden</p>
           <svg
@@ -55,7 +67,7 @@ import Button from "../components/Button.astro";
     </div>
   </section>
 
-  <section class="main">
+  <section id="top-section" class="main">
     <div class="main-section grid grid-cols-12 md:pt-12 pt-8 md:pb-desktop-bottom pb-mobil-bottom">
       <div class="col-start-2 col-span-10">
         <div class="pb-20">
@@ -69,7 +81,7 @@ import Button from "../components/Button.astro";
         </div>
       </div>
 
-      <div class="grid md:grid-cols-2 col-start-2 col-span-10">
+      <div id="section1" class="grid md:grid-cols-2 col-start-2 col-span-10">
         <!-- Text and button section -->
         <div>
           <h4 class="md:pb-6 pb-4">Hold dig opdateret med CP Ung</h4>
@@ -81,13 +93,13 @@ import Button from "../components/Button.astro";
 
         <!-- Image section -->
         <div class="flex justify-end md:pt-0 pt-3">
-          <img src="/images/cpung_section1.webp" alt="Første billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
+          <img src="/images/cpung_section1.webp" alt="Første billede til 'CP Ung'-sektion" class="w-[550px] h-[350px] object-cover" />
         </div>
       </div>
-      <div class="grid md:grid-cols-2 col-start-2 col-span-10 md:pt-24 pt-20">
+      <div id="section2" class="grid md:grid-cols-2 col-start-2 col-span-10 md:pt-24 pt-20">
         <!-- Image section -->
         <div class="flex justify-start">
-          <img src="/images/cpung_section2.webp" alt="Andet billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
+          <img src="/images/cpung_section2.webp" alt="Andet billede til 'CP Ung'-sektion" class="w-[550px] h-[350px] object-cover" />
         </div>
         <!-- Text and button section -->
         <div>
@@ -99,7 +111,7 @@ import Button from "../components/Button.astro";
           </p>
         </div>
       </div>
-      <div class="grid md:grid-cols-2 col-start-2 col-span-10 md:pt-24 pt-20">
+      <div id="section3" class="grid md:grid-cols-2 col-start-2 col-span-10 md:pt-24 pt-20">
         <!-- Text and button section -->
         <div>
           <h4 class="md:pb-6 pb-4">CP Ung i Island – nyt samarbejde på tværs af grænser</h4>
@@ -114,13 +126,13 @@ import Button from "../components/Button.astro";
 
         <!-- Image section -->
         <div class="flex justify-end md:pt-0 pt-4">
-          <img src="/images/cpung_section3.webp" alt="Tredje billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
+          <img src="/images/cpung_section3.webp" alt="Tredje billede til 'CP Ung'-sektion" class="w-[550px] h-[350px] object-cover" />
         </div>
       </div>
-      <div class="grid md:grid-cols-2 col-start-2 col-span-10 md:pt-24 pt-20">
+      <div id="section4" class="grid md:grid-cols-2 col-start-2 col-span-10 md:pt-24 pt-20">
         <!-- Image section -->
         <div class="flex justify-start">
-          <img src="/images/cpung_section4.webp" alt="Andet billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
+          <img src="/images/cpung_section4.webp" alt="Fjerde billede til 'CP Ung'-sektion" class="w-[550px] h-[350px] object-cover" />
         </div>
         <!-- Text and button section -->
         <div>
@@ -129,7 +141,7 @@ import Button from "../components/Button.astro";
             CP Ung drives af unge med CP, der brænder for fællesskab, synlighed og indflydelse. Vil du vide, hvem der står bag aktiviteterne og
             projekterne— eller har du lyst til selv at engagere dig?
           </p>
-          <a href="https://www.cpdanmark.dk/ung-med-cp/bestyrelsen/" target="_blank" aria-label="Gå til CP Ungs bestyrelsesside">
+          <a href="https://www.cpdanmark.dk/ung-med-cp/bestyrelsen/" target="_blank" aria-label="Gå til CP Ungs bestyrelsesside (eksternt link)">
             <Button variant="secondary" size="small">Se bestyrelsen</Button>
           </a>
         </div>
@@ -177,3 +189,81 @@ import Button from "../components/Button.astro";
     color: #f6f6f6;
   }
 </style>
+
+<script>
+  import { inView } from "motion";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const reduceMotion = document.body.classList.contains("reduce-motion");
+
+    if (!reduceMotion) {
+      const elementmedanimation1 = document.querySelector("#hero-title");
+      inView(elementmedanimation1, () => {
+        elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
+      });
+
+      const elementmedanimation2 = document.querySelector("#hero-text");
+      inView(elementmedanimation2, () => {
+        elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
+      });
+
+      const elementmedanimation3 = document.querySelector("#overlay2");
+      inView(elementmedanimation3, () => {
+        elementmedanimation3.classList.add("animate__animated", "animate__rotateInDownLeft");
+      });
+
+      const elementmedanimation4 = document.querySelector("#scroll-down");
+      inView(elementmedanimation4, () => {
+        elementmedanimation4.classList.add("animate__animated", "animate__fadeInDown");
+      });
+
+      const elementmedanimation5 = document.querySelector("#top-section h2");
+      inView(elementmedanimation5, () => {
+        elementmedanimation5.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      const elementmedanimation6 = document.querySelector("#top-section p");
+      inView(elementmedanimation6, () => {
+        elementmedanimation6.classList.add("animate__animated", "animate__fadeInRight");
+      });
+
+      const elementmedanimation7 = document.querySelector(".breadcrumb");
+      inView(elementmedanimation7, () => {
+        elementmedanimation7.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      // Delay animations
+      const quotes = document.querySelectorAll("#section1 > div");
+      quotes.forEach((el, index) => {
+        inView(el, () => {
+          el.classList.add("animate__animated", "animate__fadeInLeft");
+          el.style.animationDelay = `${index * 0.2}s`;
+        });
+      });
+
+      const info = document.querySelectorAll("#section2 > div");
+      info.forEach((el, index) => {
+        inView(el, () => {
+          el.classList.add("animate__animated", "animate__fadeInLeft");
+          el.style.animationDelay = `${index * 0.2}s`;
+        });
+      });
+
+      const info2 = document.querySelectorAll("#section3 > div");
+      info2.forEach((el, index) => {
+        inView(el, () => {
+          el.classList.add("animate__animated", "animate__fadeInRight");
+          el.style.animationDelay = `${index * 0.2}s`;
+        });
+      });
+
+      const info3 = document.querySelectorAll("#section4 > div");
+      info3.forEach((el, index) => {
+        inView(el, () => {
+          el.classList.add("animate__animated", "animate__fadeInLeft");
+          el.style.animationDelay = `${index * 0.2}s`;
+        });
+      });
+    }
+  });
+</script>

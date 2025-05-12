@@ -3,29 +3,47 @@ import Button from "../components/Button.astro";
 ---
 
 <!-- Accessibility settings bar -->
-<div id="accessibility-bar" class="fixed w-full bg-gray-950 text-gray-50 flex justify-start gap-6 items-center h-9 p-4 z-50">
-  <!-- Text Size Toggle -->
-  <div class="flex items-center gap-2">
-    <label for="textSizeToggle" class="cursor-pointer md:block hidden">Stor tekst</label>
-    <button id="textSizeToggle" aria-pressed="false" class="toggle-switch">
-      <span class="toggle-circle"></span>
-    </button>
-  </div>
+<div id="accessibility-bar" class="fixed w-full bg-gray-950 text-gray-50 flex items-center h-9 p-4 z-50">
+  <!-- Gear Icon -->
+  <button id="accessibilityToggle" class="svg-gear focus:outline-none">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      class="size-6 hover:text-blue-500 transition duration-300 ease-in-out"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M11.078 2.25c-.917 0-1.699.663-1.85 1.567L9.05 4.889c-.02.12-.115.26-.297.348a7.493 7.493 0 0 0-.986.57c-.166.115-.334.126-.45.083L6.3 5.508a1.875 1.875 0 0 0-2.282.819l-.922 1.597a1.875 1.875 0 0 0 .432 2.385l.84.692c.095.078.17.229.154.43a7.598 7.598 0 0 0 0 1.139c.015.2-.059.352-.153.43l-.841.692a1.875 1.875 0 0 0-.432 2.385l.922 1.597a1.875 1.875 0 0 0 2.282.818l1.019-.382c.115-.043.283-.031.45.082.312.214.641.405.985.57.182.088.277.228.297.35l.178 1.071c.151.904.933 1.567 1.85 1.567h1.844c.916 0 1.699-.663 1.85-1.567l.178-1.072c.02-.12.114-.26.297-.349.344-.165.673-.356.985-.57.167-.114.335-.125.45-.082l1.02.382a1.875 1.875 0 0 0 2.28-.819l.923-1.597a1.875 1.875 0 0 0-.432-2.385l-.84-.692c-.095-.078-.17-.229-.154-.43a7.614 7.614 0 0 0 0-1.139c-.016-.2.059-.352.153-.43l.84-.692c.708-.582.891-1.59.433-2.385l-.922-1.597a1.875 1.875 0 0 0-2.282-.818l-1.02.382c-.114.043-.282.031-.449-.083a7.49 7.49 0 0 0-.985-.57c-.183-.087-.277-.227-.297-.348l-.179-1.072a1.875 1.875 0 0 0-1.85-1.567h-1.843ZM12 15.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z"
+        clip-rule="evenodd"></path>
+    </svg>
+  </button>
 
-  <!-- Dark Mode Toggle -->
-  <div class="flex items-center gap-2">
-    <label for="darkModeToggle" class="cursor-pointer md:block hidden">Mørk tilstand</label>
-    <button id="darkModeToggle" aria-pressed="false" class="toggle-switch">
-      <span class="toggle-circle"></span>
-    </button>
-  </div>
+  <!-- Accessibility Options -->
+  <div id="accessibilityOptions" class="ml-4 flex gap-6 items-center transition-all duration-300 origin-left scale-x-0 opacity-0">
+    <!-- Text Size Toggle -->
+    <div class="flex items-center gap-2">
+      <label for="textSizeToggle" class="cursor-pointer md:block hidden">Stor tekst</label>
+      <button id="textSizeToggle" aria-pressed="false" class="toggle-switch">
+        <span class="toggle-circle"></span>
+      </button>
+    </div>
 
-  <!-- Reduce Motion Toggle -->
-  <div class="flex items-center gap-2">
-    <label for="motionToggle" class="cursor-pointer md:block hidden">Fjern animationer</label>
-    <button id="motionToggle" aria-pressed="false" class="toggle-switch">
-      <span class="toggle-circle"></span>
-    </button>
+    <!-- Dark Mode Toggle -->
+    <div class="flex items-center gap-2">
+      <label for="darkModeToggle" class="cursor-pointer md:block hidden">Mørk tilstand</label>
+      <button id="darkModeToggle" aria-pressed="false" class="toggle-switch">
+        <span class="toggle-circle"></span>
+      </button>
+    </div>
+
+    <!-- Reduce Motion Toggle -->
+    <div class="flex items-center gap-2">
+      <label for="motionToggle" class="cursor-pointer md:block hidden">Fjern animationer</label>
+      <button id="motionToggle" aria-pressed="false" class="toggle-switch">
+        <span class="toggle-circle"></span>
+      </button>
+    </div>
   </div>
 </div>
 
@@ -49,7 +67,10 @@ import Button from "../components/Button.astro";
       <ul class="flex flex-row content-center gap-4">
         <!-- CP & os Dropdown -->
         <li class="relative" x-data="{ showDropdown1: false }" x-cloak @mouseenter="showDropdown1 = true" @mouseleave="showDropdown1 = false">
-          <a href="/cp_os" class="hover:text-blue-700 py-1 flex items-center">
+          <a
+            href="/cp_os"
+            class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 py-1 flex items-center"
+          >
             CP & os
             <svg
               class="w-4 h-4 ml-2 transition-transform duration-300 transform"
@@ -69,15 +90,46 @@ import Button from "../components/Button.astro";
             class="dropdown1 absolute left-0 mt-2 w-[165px] bg-gray-50 shadow-drop25 border border-gray-400 z-10"
           >
             <ul>
-              <li class="py-1 px-4"><a href="/hvad_er_cp" aria-label="Gå til 'Hvad er CP?'" class="hover:text-blue-700">Hvad er CP?</a></li>
-              <li class="py-1 px-4"><a href="/fortaellinger" aria-label="Gå til 'Fortællinger'" class="hover:text-blue-700">Fortællinger</a></li>
-              <li class="py-1 px-4"><a href="/cp_ung" aria-label="Gå til 'CP Ung'" class="hover:text-blue-700">CP Ung</a></li>
-              <li class="py-1 px-4"><a href="/nyheder" aria-label="Gå til 'Nyheder'" class="hover:text-blue-700">Nyheder</a></li>
+              <li class="py-1 px-4">
+                <a
+                  href="/hvad_er_cp"
+                  aria-label="Gå til 'Hvad er CP?'"
+                  class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >Hvad er CP?</a
+                >
+              </li>
+              <li class="py-1 px-4">
+                <a
+                  href="/fortaellinger"
+                  aria-label="Gå til 'Fortællinger'"
+                  class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >Fortællinger</a
+                >
+              </li>
+              <li class="py-1 px-4">
+                <a
+                  href="/cp_ung"
+                  aria-label="Gå til 'CP Ung'"
+                  class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >CP Ung</a
+                >
+              </li>
+              <li class="py-1 px-4">
+                <a
+                  href="/nyheder"
+                  aria-label="Gå til 'Nyheder'"
+                  class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >Nyheder</a
+                >
+              </li>
             </ul>
           </div>
         </li>
         <li class="relative" x-data="{ showDropdown2: false }" x-cloak @mouseenter="showDropdown2 = true" @mouseleave="showDropdown2 = false">
-          <a href="#" class="hover:text-blue-700 py-1 flex items-center">
+          <a
+            href="#"
+            class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 py-1 flex items-center"
+          >
             Bliv klogere
             <svg
               class="w-4 h-4 ml-2 transition-transform duration-300 transform"
@@ -97,16 +149,45 @@ import Button from "../components/Button.astro";
             class="dropdown2 absolute left-0 mt-2 w-[190px] bg-gray-50 shadow-drop25 border border-gray-400 z-10"
           >
             <ul>
-              <li class="py-1 px-4"><a href="/raadgivning" aria-label="Gå til Gå til 'Rådgivning'" class="hover:text-blue-700">Rådgivning</a></li>
-              <li class="py-1 px-4"><a href="/materialer" aria-label="Gå til Gå til 'Materialer'" class="hover:text-blue-700">Materialer</a></li>
               <li class="py-1 px-4">
-                <a href="/kurser_aktiviteter" aria-label="Gå til Kurser & aktiviteter" class="hover:text-blue-700">Kurser & aktiviteter</a>
+                <a
+                  href="/raadgivning"
+                  aria-label="Gå til Gå til 'Rådgivning'"
+                  class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >Rådgivning</a
+                >
+              </li>
+              <li class="py-1 px-4">
+                <a
+                  href="/materialer"
+                  aria-label="Gå til Gå til 'Materialer'"
+                  class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >Materialer</a
+                >
+              </li>
+              <li class="py-1 px-4">
+                <a
+                  href="/kurser_aktiviteter"
+                  aria-label="Gå til Kurser & aktiviteter"
+                  class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >Kurser & aktiviteter</a
+                >
               </li>
             </ul>
           </div>
         </li>
-        <li><a href="/tilmeld" aria-label="Gå til Gå til 'Tilmeld'" class="relative flex items-center hover:text-blue-700 py-1">Bliv medlem</a></li>
-        <li><a href="/gode_raad" aria-label="Gå til Gå til 'Gode råd'" class="relative flex items-center hover:text-blue-700 py-1">Gode råd</a></li>
+        <li>
+          <a
+            href="/tilmeld"
+            aria-label="Gå til Gå til 'Tilmeld'"
+            class="relative flex items-center hover:text-blue-700 hover:underline py-1 transition duration-300 ease-in-out">Bliv medlem</a>
+        </li>
+        <li>
+          <a
+            href="/gode_raad"
+            aria-label="Gå til Gå til 'Gode råd'"
+            class="relative flex items-center hover:text-blue-700 hover:underline py-1 transition duration-300 ease-in-out">Gode råd</a>
+        </li>
       </ul>
     </nav>
     <div class="ml-auto hidden md:block">
@@ -153,40 +234,80 @@ import Button from "../components/Button.astro";
     <ul class="mx-auto py-4 text-gray-950">
       <h4 class="text-center font-bold">Viden & information</h4>
       <li class="text-center py-2 border-b">
-        <a href="/cp_os" aria-label="Gå til 'CP & os'" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">CP & os</a>
+        <a
+          href="/cp_os"
+          aria-label="Gå til 'CP & os'"
+          class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 hover:underline transition duration-300 ease-in-out"
+          >CP & os</a
+        >
       </li>
       <li class="text-center py-2 border-b">
-        <a href="/hvad_er_cp" aria-label="Gå til 'Hvad er CP?'" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out"
+        <a
+          href="/hvad_er_cp"
+          aria-label="Gå til 'Hvad er CP?'"
+          class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 hover:underline transition duration-300 ease-in-out"
           >Hvad er CP?</a
         >
       </li>
       <li class="text-center py-2 border-b">
-        <a href="/cp_ung" aria-label="Gå til 'CP Ung'" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">CP Ung</a>
+        <a
+          href="/fortaellinger"
+          aria-label="Gå til 'Fortællinger'"
+          class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 hover:underline transition duration-300 ease-in-out"
+          >Fortællinger</a
+        >
       </li>
       <li class="text-center py-2 border-b">
-        <a href="/nyheder" aria-label="Gå til 'Nyheder'" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Nyheder</a>
+        <a
+          href="/cp_ung"
+          aria-label="Gå til 'CP Ung'"
+          class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 hover:underline transition duration-300 ease-in-out"
+          >CP Ung</a
+        >
+      </li>
+      <li class="text-center py-2 border-b">
+        <a
+          href="/nyheder"
+          aria-label="Gå til 'Nyheder'"
+          class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 hover:underline transition duration-300 ease-in-out"
+          >Nyheder</a
+        >
       </li>
     </ul>
     <ul class="mx-auto py-4 text-gray-950">
       <h4 class="text-center font-bold">Medlemskab</h4>
       <li class="text-center py-2 border-b">
-        <a href="/tilmeld" aria-label="Gå til 'Tilmeld'" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out"
+        <a
+          href="/tilmeld"
+          aria-label="Gå til 'Tilmeld'"
+          class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 hover:underline transition duration-300 ease-in-out"
           >Bliv medlem</a
         >
       </li>
       <li class="text-center py-2">
-        <a href="/stoet" aria-label="Gå til 'Støt os'" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Støt os</a>
+        <a
+          href="/stoet"
+          aria-label="Gå til 'Støt os'"
+          class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 hover:underline transition duration-300 ease-in-out"
+          >Støt os</a
+        >
       </li>
     </ul>
     <ul class="mx-auto py-4 text-gray-950">
       <h4 class="text-center font-bold">Bliv klogere</h4>
       <li class="text-center py-2 border-b">
-        <a href="/raadgivning" aria-label="Gå til 'Rådgivning'" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out"
+        <a
+          href="/raadgivning"
+          aria-label="Gå til 'Rådgivning'"
+          class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 hover:underline transition duration-300 ease-in-out"
           >Rådgivning</a
         >
       </li>
       <li class="text-center py-2 border-b">
-        <a href="/materialer" aria-label="Gå til 'Materialer'" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out"
+        <a
+          href="/materialer"
+          aria-label="Gå til 'Materialer'"
+          class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 hover:underline transition duration-300 ease-in-out"
           >Materialer</a
         >
       </li>
@@ -194,14 +315,18 @@ import Button from "../components/Button.astro";
         <a
           href="/kurser_aktiviteter"
           aria-label="Gå til 'Kurser & aktiviteter'"
-          class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out">Kurser & aktiviteter</a
+          class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 hover:underline transition duration-300 ease-in-out"
+          >Kurser & aktiviteter</a
         >
       </li>
     </ul>
     <ul class="mx-auto py-4 text-gray-950">
       <h4 class="text-center font-bold">Andet</h4>
       <li class="text-center py-2">
-        <a href="/gode_raad" aria-label="Gå til 'Gode råd'" class="hover:text-blue-700 hover:underline transition duration-300 ease-in-out"
+        <a
+          href="/gode_raad"
+          aria-label="Gå til 'Gode råd'"
+          class="hover:underline hover:text-blue-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 hover:underline transition duration-300 ease-in-out"
           >Gode råd</a
         >
       </li>
@@ -318,4 +443,30 @@ import Button from "../components/Button.astro";
   initToggle("textSizeToggle", "text-large", "textSizeEnabled");
   initToggle("motionToggle", "reduce-motion", "motionReductionEnabled");
   initToggle("darkModeToggle", "dark", "darkModeEnabled");
+
+  // Accessibility-toggle
+  const toggleButton = document.getElementById("accessibilityToggle");
+  const options = document.getElementById("accessibilityOptions");
+
+  // Function to show or hide the options based on state
+  function setToggleState(isOpen) {
+    if (isOpen) {
+      options.classList.remove("scale-x-0", "opacity-0");
+      options.classList.add("scale-x-100", "opacity-100");
+    } else {
+      options.classList.remove("scale-x-100", "opacity-100");
+      options.classList.add("scale-x-0", "opacity-0");
+    }
+  }
+
+  // Load saved state from localStorage
+  let isOpen = localStorage.getItem("accessibilityOpen") === "true";
+  setToggleState(isOpen);
+
+  // On click: toggle state, update localStorage and UI
+  toggleButton.addEventListener("click", () => {
+    isOpen = !isOpen;
+    localStorage.setItem("accessibilityOpen", isOpen);
+    setToggleState(isOpen);
+  });
 </script>

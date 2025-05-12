@@ -107,28 +107,42 @@ const activities = [
 
 <MainLayout
   title="CP Danmark | Kurser & aktiviteter"
-  description="CP Danmark's 'kurser & aktiviteter'-side"
+  description="CP Danmark's 'Kurser & aktiviteter'-side"
   ogtitle="CP Danmark – Landsforeningen for cerebral parese"
   ogdescription="'Kurser & aktiviteter'-side til CP Danmark's hjemmeside"
 >
-  <section class="hero grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom md:pt-36 pt-28 relative">
+  <section id="hero" class="hero grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom md:pt-36 pt-28 relative">
     <div class="flex flex-col items-left relative z-10 col-start-2 col-span-10 md:pb-16 pb-8">
       <div class="breadcrumb pb-2 md:pt-12 pt-16">
-        <a href="/" class="underline transition duration-300 ease-in-out">Forside</a>
+        <a
+          href="/"
+          aria-label="Gå tilbage til forsiden"
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">Forside</a
+        >
         <span> / </span>
-        <a href="#" class="underline transition duration-300 ease-in-out">Bliv klogere</a>
+        <a
+          href="#"
+          aria-label="Det overordnede menupunkt er 'Bliv klogere' (menu-link med ingen funktion)"
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out"
+          >Bliv klogere</a
+        >
         <span> / </span>
-        <a href="/kurser_aktiviteter" class="underline transition duration-300 ease-in-out">Kurser & aktiviteter</a>
+        <a
+          href="/kurser_aktiviteter"
+          aria-label="Denne side er 'Kurser & aktiviteter'"
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out"
+          >Kurser & aktiviteter</a
+        >
       </div>
       <h1 class="md:text-h2-desktop text-h2-mobile md:pb-0 pb-2">Kurser & aktiviteter</h1>
       <p class="md:text-h4-desktop text-h4-mobile italic">
         Deltag i faglige kurser, sociale aktiviteter og fællesskaber for mennesker med CP og deres pårørende
       </p>
     </div>
-    <div class="col-start-2 col-span-10 pb-5">
+    <div id="course" class="col-start-2 col-span-10 pb-5">
       <h2 class="md:text-h3-desktop text-h3-mobile">Kurser & arrangementer</h2>
     </div>
-    <div class="col-start-2 col-span-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 items-center justify-center">
+    <div id="courses" class="col-start-2 col-span-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 items-center justify-center">
       {
         courses.map((item) => (
           <CourseCard
@@ -145,10 +159,10 @@ const activities = [
       }
     </div>
 
-    <div class="col-start-2 col-span-10 md:pt-20 pt-16 pb-5">
+    <div id="activity" class="col-start-2 col-span-10 md:pt-desktop-top pt-mobil-top pb-5">
       <h2 class="md:text-h3-desktop text-h3-mobile">Aktiviteter</h2>
     </div>
-    <div class="col-start-2 col-span-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 items-center justify-center">
+    <div id="activities" class="col-start-2 col-span-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 items-center justify-center">
       {activities.map((item) => <ActivityCard image={item.image} date={item.date} title={item.title} description={item.description} />)}
     </div>
   </section>
@@ -164,4 +178,55 @@ const activities = [
       border-color: #7d7d7d;
     }
   </style>
+
+  <script>
+    import { inView } from "motion";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const reduceMotion = document.body.classList.contains("reduce-motion");
+
+      if (!reduceMotion) {
+        const elementmedanimation1 = document.querySelector("#hero h1");
+        inView(elementmedanimation1, () => {
+          elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
+        });
+
+        const elementmedanimation2 = document.querySelector("#hero p");
+        inView(elementmedanimation2, () => {
+          elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
+        });
+
+        const elementmedanimation3 = document.querySelector(".breadcrumb");
+        inView(elementmedanimation3, () => {
+          elementmedanimation3.classList.add("animate__animated", "animate__fadeInLeft");
+        });
+
+        const elementmedanimation4 = document.querySelector("#course h2");
+        inView(elementmedanimation4, () => {
+          elementmedanimation4.classList.add("animate__animated", "animate__fadeInLeft");
+        });
+
+        const elementmedanimation5 = document.querySelector("#activity h2");
+        inView(elementmedanimation5, () => {
+          elementmedanimation5.classList.add("animate__animated", "animate__fadeInLeft");
+        });
+
+        const activities = document.querySelectorAll("#activities > div");
+        activities.forEach((el, index) => {
+          inView(el, () => {
+            el.classList.add("animate__animated", "animate__fadeInRight");
+            el.style.animationDelay = `${index * 0.2}s`;
+          });
+        });
+
+        const courses = document.querySelectorAll("#courses > div");
+        courses.forEach((el, index) => {
+          inView(el, () => {
+            el.classList.add("animate__animated", "animate__fadeInRight");
+            el.style.animationDelay = `${index * 0.2}s`;
+          });
+        });
+      }
+    });
+  </script>
 </MainLayout>

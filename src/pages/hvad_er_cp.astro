@@ -10,14 +10,26 @@ import AccordianFAQ from "../components/AccordianFAQ.astro";
   ogtitle="CP Danmark – Landsforeningen for cerebral parese"
   ogdescription="'Hvad er CP?'-siden til CP Danmark's hjemmeside"
 >
-  <section class="hero-section grid grid-cols-12 md:pt-20 pt-16 md:pb-28 pb-20 w-full h-screen md:px-0 px-4 relative">
+  <section class="hero-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-28 pb-20 w-full h-screen md:px-0 px-4 relative">
     <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center md:pb-24 pb-0 h-full">
       <div class="breadcrumb col-span-12">
-        <a href="/" class="underline transition duration-300 ease-in-out">Forside</a>
+        <a
+          href="/"
+          aria-label="Gå tilbage til forsiden"
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">Forside</a
+        >
         <span> / </span>
-        <a href="/cp_os" class="underline transition duration-300 ease-in-out">CP & os</a>
+        <a
+          href="/cp_os"
+          aria-label="Undersiden til denne side er 'CP & os'"
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">CP & os</a
+        >
         <span> / </span>
-        <a href="/hvad_er_cp" class="underline transition duration-300 ease-in-out">Hvad er CP?</a>
+        <a
+          href="/hvad_er_cp"
+          aria-label="Denne side er 'Hvad er CP?'"
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">Hvad er CP?</a
+        >
       </div>
 
       <h1 id="hero-title" class="col-span-12 display">Hvad er CP?</h1>
@@ -38,7 +50,7 @@ import AccordianFAQ from "../components/AccordianFAQ.astro";
     </div>
 
     <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
-      <a href="#get-started" aria-label="Gå videre ned på siden">
+      <a href="#what-is-cp" aria-label="Gå videre ned på siden">
         <div class="float flex flex-col items-center hover:opacity-80 transition duration-300 ease-in-out">
           <p class="text-[18px] text-gray-50 font-semibold">Gå videre ned på siden</p>
           <svg
@@ -56,7 +68,7 @@ import AccordianFAQ from "../components/AccordianFAQ.astro";
     </div>
   </section>
 
-  <section class="info-section1 grid grid-cols-12 md:pt-14 pt-10 md:pb-28 pb-20">
+  <section id="what-is-cp" class="info-section1 grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-28 pb-20">
     <div class="grid md:grid-cols-2 col-start-2 col-span-10">
       <!-- Text and button section -->
       <div>
@@ -71,12 +83,12 @@ import AccordianFAQ from "../components/AccordianFAQ.astro";
 
       <!-- Image section -->
       <div class="flex justify-end md:pt-0 pt-8">
-        <img src="/images/cp_section1.webp" alt="Første billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
+        <img src="/images/cp_section1.webp" alt="Første billede til 'forstå cerebral parese'-sektion" class="w-[550px] h-[350px] object-cover" />
       </div>
     </div>
   </section>
 
-  <section class="info-section1_1 grid grid-cols-12 md:pb-28 pb-20 max-w-7xl mx-auto">
+  <section id="cp-accordian" class="info-section1_1 grid grid-cols-12 md:pb-28 pb-20 max-w-7xl mx-auto">
     <div class="grid md:grid-cols-2 col-start-2 col-span-10">
       <h3 class="md:pb-6 pb-4">Hvad er cerebral parese?</h3>
     </div>
@@ -85,7 +97,7 @@ import AccordianFAQ from "../components/AccordianFAQ.astro";
     </div>
   </section>
 
-  <section class="everydays-section grid grid-cols-12 md:pb-20 pb-12">
+  <section id="everydays" class="everydays-section grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom">
     <div class="grid md:grid-cols-2 col-start-2 col-span-10">
       <!-- Image section -->
       <div class="flex justify-start md:pt-0 pt-8">
@@ -104,7 +116,7 @@ import AccordianFAQ from "../components/AccordianFAQ.astro";
       </div>
     </div>
   </section>
-  <section class="faq grid grid-cols-12 md:pb-28 pb-20 max-w-7xl mx-auto">
+  <section id="faq-accordian" class="faq grid grid-cols-12 md:pb-28 pb-20 max-w-7xl mx-auto">
     <div class="md:col-span-12 col-start-2 col-span-10">
       <h3 class="md:pb-6 pb-4">FAQ om livet med CP</h3>
     </div>
@@ -115,7 +127,7 @@ import AccordianFAQ from "../components/AccordianFAQ.astro";
       </div>
       <!-- Image section -->
       <div class="flex justify-end pt-8 md:pt-0">
-        <img src="/images/cp_section3.webp" alt="Førstw billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
+        <img src="/images/cp_section3.webp" alt="Billede til FAQ-sektion" class="w-[550px] h-[350px] object-cover" />
       </div>
     </div>
   </section>
@@ -160,3 +172,113 @@ import AccordianFAQ from "../components/AccordianFAQ.astro";
     color: #f6f6f6;
   }
 </style>
+
+<script>
+  import { inView } from "motion";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const reduceMotion = document.body.classList.contains("reduce-motion");
+
+    if (!reduceMotion) {
+      const elementmedanimation1 = document.querySelector("#hero-title");
+      inView(elementmedanimation1, () => {
+        elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
+      });
+
+      const elementmedanimation2 = document.querySelector("#hero-text");
+      inView(elementmedanimation2, () => {
+        elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
+      });
+
+      const elementmedanimation3 = document.querySelector("#hero-welcome");
+      inView(elementmedanimation3, () => {
+        elementmedanimation3.classList.add("animate__animated", "animate__fadeInDown");
+      });
+
+      const elementmedanimation4 = document.querySelector("#hero-line");
+      inView(elementmedanimation4, () => {
+        elementmedanimation4.classList.add("animate__animated", "animate__fadeInRight");
+      });
+
+      const elementmedanimation5 = document.querySelector("#overlay2");
+      inView(elementmedanimation5, () => {
+        elementmedanimation5.classList.add("animate__animated", "animate__rotateInDownLeft");
+      });
+
+      const elementmedanimation6 = document.querySelector("#scroll-down");
+      inView(elementmedanimation6, () => {
+        elementmedanimation6.classList.add("animate__animated", "animate__fadeInDown");
+      });
+
+      const elementmedanimation7 = document.querySelector("#what-is-cp p");
+      inView(elementmedanimation7, () => {
+        elementmedanimation7.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      const elementmedanimation8 = document.querySelector("#what-is-cp img");
+      inView(elementmedanimation8, () => {
+        elementmedanimation8.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      const elementmedanimation9 = document.querySelector("#what-is-cp h2");
+      inView(elementmedanimation9, () => {
+        elementmedanimation9.classList.add("animate__animated", "animate__slideInRight");
+      });
+
+      const elementmedanimation10 = document.querySelector("#cp-accordian");
+      inView(elementmedanimation10, () => {
+        elementmedanimation10.classList.add("animate__animated", "animate__fadeInUp");
+      });
+
+      const elementmedanimation11 = document.querySelector("#cp-accordian h3");
+      inView(elementmedanimation11, () => {
+        elementmedanimation11.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      const elementmedanimation12 = document.querySelector("#cp-accordian");
+      inView(elementmedanimation12, () => {
+        elementmedanimation12.classList.add("animate__animated", "animate__fadeInRight");
+      });
+
+      const elementmedanimation13 = document.querySelector("#everydays h3");
+      inView(elementmedanimation13, () => {
+        elementmedanimation13.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      const elementmedanimation14 = document.querySelector(".breadcrumb");
+      inView(elementmedanimation14, () => {
+        elementmedanimation14.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      const elementmedanimation15 = document.querySelector("#faq-accordian h3");
+      inView(elementmedanimation15, () => {
+        elementmedanimation15.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      const elementmedanimation16 = document.querySelector("#faq-accordian p");
+      inView(elementmedanimation16, () => {
+        elementmedanimation16.classList.add("animate__animated", "animate__fadeInRight");
+      });
+
+      const elementmedanimation17 = document.querySelector("#faq-accordian");
+      inView(elementmedanimation17, () => {
+        elementmedanimation17.classList.add("animate__animated", "animate__fadeInUp");
+      });
+
+      const elementmedanimation18 = document.querySelector("#faq-accordian img");
+      inView(elementmedanimation18, () => {
+        elementmedanimation18.classList.add("animate__animated", "animate__fadeInRight");
+      });
+
+      const elementmedanimation19 = document.querySelector("#everydays p");
+      inView(elementmedanimation19, () => {
+        elementmedanimation19.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      const elementmedanimation20 = document.querySelector("#everydays img");
+      inView(elementmedanimation20, () => {
+        elementmedanimation20.classList.add("animate__animated", "animate__fadeInRight");
+      });
+    }
+  });
+</script>
