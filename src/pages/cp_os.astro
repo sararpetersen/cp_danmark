@@ -19,13 +19,13 @@ import Button from "../components/Button.astro";
         <a
           href="/"
           aria-label="Gå tilbage til forsiden"
-          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">Forside</a
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300 ease-in-out">Forside</a
         >
         <span> / </span>
         <a
           href="/cp_os"
           aria-label="Denne side er CP & os"
-          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">CP & os</a
+          class="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300 ease-in-out">CP & os</a
         >
       </div>
 
@@ -47,7 +47,7 @@ import Button from "../components/Button.astro";
     </div>
 
     <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
-      <a href="#about" aria-label="Gå videre ned på siden">
+      <a href="#about" aria-label="Gå videre ned på siden" class="focus:outline-none focus:ring-2 focus:ring-blue-400">
         <div class="float flex flex-col items-center hover:opacity-80 transition duration-300 ease-in-out">
           <p class="text-[18px] text-gray-50 font-semibold">Gå videre ned på siden</p>
           <svg
@@ -117,21 +117,37 @@ import Button from "../components/Button.astro";
       <form id="contact-form" class="md:order-none order-2">
         <div class="form-group flex flex-col">
           <label for="name" class="font-semibold mb-2">Navn</label>
-          <input class="form-control p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4" id="name" placeholder="F.eks. Borris Jensen" />
+          <input
+            class="form-control focus:outline-none focus:ring-2 focus:ring-blue-400 p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
+            id="name"
+            placeholder="F.eks. Borris Jensen"
+          />
 
           <label for="email" class="font-semibold mb-2">Email</label>
-          <input class="form-control p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4" id="email" placeholder="F.eks. borris-jensen@gmail.com" />
+          <input
+            class="form-control focus:outline-none focus:ring-2 focus:ring-blue-400 p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
+            id="email"
+            placeholder="F.eks. borris-jensen@gmail.com"
+          />
 
           <label for="message" class="font-semibold mb-2">Spørgsmål</label>
-          <textarea class="form-control bg-dust-100 border-dust-300 rounded-[5px] mb-4" id="message" rows="8" placeholder="Skriv dit spørgmål her"
-          ></textarea>
+          <textarea
+            class="focus:outline-none focus:ring-2 focus:ring-blue-400 form-control bg-dust-100 border-dust-300 rounded-[5px] mb-4"
+            id="message"
+            rows="8"
+            placeholder="Skriv dit spørgmål her"></textarea>
 
           <!-- File input starts here -->
           <label for="file" class="font-semibold mb-1">Vedhæft fil</label>
-          <input type="file" class="attachment" id="file" />
+          <input type="file" class="attachment focus:outline-none focus:ring-2 focus:ring-blue-400" id="file" />
           <!-- File input ends here -->
 
-          <a href="#" class="md:pt-8 pt-4" aria-label="Placeholder-link (ingen funktionalitet)">
+          <a
+            href="#"
+            class="md:pt-8 pt-4"
+            aria-label="Placeholder-link (ingen funktionalitet)"
+            class="focus:outline-none focus:ring-2 focus:ring-blue-400"
+          >
             <Button variant="secondary" size="small">Send</Button>
           </a>
         </div>
@@ -153,14 +169,14 @@ import Button from "../components/Button.astro";
           <li>
             Telefon: <a
               href="tel: +45 38 88 45 75"
-              class="hover:underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 underline transition duration-300 ease-in-out"
+              class="hover:underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 underline transition duration-300 ease-in-out"
               aria-label="Ring CP Danmark på +45 38 88 45 75">+45 38 88 45 75</a
             >
           </li>
           <li>
             Mail: <a
               href="mailto: cpdanmark@cpdanmark.dk"
-              class="hover:underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 underline transition duration-300 ease-in-out"
+              class="hover:underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 underline transition duration-300 ease-in-out"
               aria-label="Send mail til CP Danmark på cpdanmark@cpdanmark.dk">cpdanmark@cpdanmark.dk</a
             >
           </li>
@@ -170,7 +186,7 @@ import Button from "../components/Button.astro";
           CP Danmarks sekretariat ligger i Handicaporganisationernes Hus i Høje-Taastrup – <a
             href="https://www.cpdanmark.dk/media/379940/saadan_finder_du_handicaporganisationernes_hus.pdf"
             target="_blank"
-            class="how-to-find text-blue-700 hover:text-blue-600 underline transition duration-300 ease-in-out"
+            class="how-to-find focus:outline-none focus:ring-2 focus:ring-blue-400 text-blue-700 hover:text-blue-600 underline transition duration-300 ease-in-out"
             aria-label="Læs mere om hvordan du finder vej til CP Danmarks sekretariat">sådan finder du vej til huset fra Høje-Taastrup Station</a
           >
         </p>

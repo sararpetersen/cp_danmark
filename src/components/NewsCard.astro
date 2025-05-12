@@ -13,7 +13,7 @@ const { image, date, description, title } = Astro.props;
     <p id="date" class="text-gray-400 mb-2">{date}</p>
     <h3 class="text-h4-mobile mb-2 line-clamp-2" set:html={title} />
     <p class="mb-5 line-clamp-2">{description}</p>
-    <a href="/nyheder" aria-label="Placeholder-link (ingen funktionalitet)">
+    <a href="/nyheder" aria-label="Placeholder-link (ingen funktionalitet)" class="focus:outline-none focus:ring-2 focus:ring-blue-400">
       <Button variant="secondary" size="small">Læs mere</Button>
     </a>
   </div>

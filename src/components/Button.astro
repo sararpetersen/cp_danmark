@@ -5,9 +5,9 @@ const buttonStyling = "px-6 p-2 font-semibold transition duration-300 uppercase"
 
 const variantClasses = {
   primary:
-    "main-button bg-blue-600 border-2 border-blue-600 text-gray-50 hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500",
+    "main-button bg-blue-600 border-2 border-blue-600 text-gray-50 hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400",
   secondary:
-    "secondary-button bg-orange-500 hover:bg-orange-700 text-gray-50 border-2 border-orange-500 hover:border-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500",
+    "secondary-button bg-orange-500 hover:bg-orange-600 text-gray-50 border-2 border-orange-500 hover:border-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400",
 };
 
 const sizeClasses = {
@@ -33,11 +33,6 @@ const sizeClasses = {
     cursor: pointer;
   }
 
-  .active {
-    background-color: #0268c7;
-    color: #f6f6f6;
-  }
-
   /* Dark Mode */
   body.dark .main-button {
     background-color: #0268c7;
@@ -47,13 +42,8 @@ const sizeClasses = {
   }
 
   body.dark .main-button:hover {
-    background-color: #7dc1fc;
-    border: #7dc1fc 2px solid;
+    background-color: #0e86e9;
+    border: #0e86e9 2px solid;
     cursor: pointer;
-  }
-
-  body.dark .active {
-    background-color: #7dc1fc;
-    color: #f6f6f6;
   }
 </style>
