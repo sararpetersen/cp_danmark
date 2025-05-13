@@ -27,8 +27,9 @@
     @apply text-h4-mobile font-bold text-gray-950;
   }
 
-  p {
-    @apply text-gray-950;
+  p,
+  a {
+    @apply text-p-mobile text-gray-950;
   }
 
   @screen md {
@@ -52,8 +53,9 @@
       @apply text-h4-desktop font-bold text-gray-950;
     }
 
-    p {
-      @apply text-gray-950;
+    p,
+    a {
+      @apply text-p-desktop text-gray-950;
     }
   }
 
@@ -88,5 +90,10 @@
 
   .course-card_content .info {
     @apply text-[14px];
+  }
+
+  body.dark p,
+  body.dark a {
+    @apply text-gray-50;
   }
 }

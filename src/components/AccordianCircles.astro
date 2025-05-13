@@ -132,7 +132,7 @@ const regions = [
         data-index={index}
       >
         <button class="accordion-header w-full flex justify-between items-center px-4 py-5 text-left text-lg font-semibold text-gray-800">
-          <h4>{region.navn}</h4>
+          <h4 class="text-h4-mobile italic">{region.navn}</h4>
           <svg class="accordion-icon w-7 h-7 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
@@ -140,10 +140,11 @@ const regions = [
 
         <div class="accordion-content px-4 max-h-0 overflow-hidden transition-all duration-300">
           {region.kredse.map((kreds) => (
-            <div class="pb-6">
-              <h4 class="text-h4-mobile">{kreds.navn}</h4>
-              <p class="pb-2">
-                <strong class="font-semibold">Kommuner:</strong> {kreds.kommuner.join(", ")}
+            <div class="pb-7">
+              <h4 class="text-[20px] font-semibold italic">{kreds.navn}</h4>
+              <p class="pb-3">
+                <strong class="font-semibold">Kommuner:</strong>
+                <br /> {kreds.kommuner.join(", ")}
               </p>
               <a
                 href={kreds.url}

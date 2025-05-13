@@ -32,8 +32,8 @@ import AccordianCounselling from "../components/AccordianCounselling.astro";
         >
       </div>
 
-      <h1 id="hero-title" class="col-span-12 display">Rådgivning</h1>
-      <h2 id="hero-text" class="font-regular italic md:col-span-6 col-span-12 md:text-h4-desktop text-h4-mobile text-gray-50 max-w-3xl">
+      <h1 id="hero-title" class="md:pb-6 pb-0 col-span-12 display">Rådgivning</h1>
+      <h2 id="hero-text" class="font-regular italic md:col-span-6 col-span-12 text-h4-mobile text-gray-50 max-w-3xl">
         Vi er her for at støtte dig— uanset hvor du er i livet med CP
       </h2>
     </div>
@@ -73,10 +73,10 @@ import AccordianCounselling from "../components/AccordianCounselling.astro";
   </section>
 
   <section id="main-content" class="main">
-    <div class="main-section grid grid-cols-12 md:pt-12 pt-8 md:pb-desktop-bottom pb-mobil-bottom">
+    <div class="main-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom">
       <div class="col-start-2 col-span-10">
-        <div class="pb-20">
-          <h3 class="pb-4">Specialiseret rådgivning til dig</h3>
+        <div class="md:pb-24 pb-20">
+          <h3 class="pb-6">Specialiseret rådgivning til dig</h3>
           <p>
             Hos CP Danmark tilbyder vi gratis, individuel rådgivning til mennesker med cerebral parese og deres pårørende. Uanset om du har brug for
             støtte i hverdagen, hjælp til at navigere i det offentlige system, eller bare har spørgsmål om livet med CP, kan du få professionel
@@ -85,14 +85,14 @@ import AccordianCounselling from "../components/AccordianCounselling.astro";
         </div>
       </div>
 
-      <div id="info" class="grid md:grid-cols-2 grid-cols-1 gap-12 col-start-2 col-span-10">
+      <div id="info" class="grid md:grid-cols-2 grid-cols-1 gap-gap col-start-2 col-span-10">
         <!-- First image + text block -->
         <div class="flex flex-col gap-6">
           <div>
             <img src="/images/line.webp" alt="Første billede til info-sektion" class="w-auto h-[400px] object-cover" />
           </div>
           <div>
-            <h4 class="pb-4">Line McMonagle <em>(socialrådgiver)</em></h4>
+            <h4 class="text-h4-mobile pb-4 md:pt-5 pt-0">Line McMonagle <em>(socialrådgiver)</em></h4>
             <p class="pb-8">
               Line er uddannet socialformidler og har gennem mange år arbejdet med børn, unge og voksne med særlige behov i det kommunale og senere på
               et hospital, hvor hun blandt andet har rådgivet familier med børn og unge med cerebral parese. Udover rådgivning holder Line oplæg,
@@ -114,7 +114,7 @@ import AccordianCounselling from "../components/AccordianCounselling.astro";
             <img src="/images/klaus.webp" alt="Andet billede til info-sektion" class="w-auto h-[400px] object-cover" />
           </div>
           <div>
-            <h4 class="pb-4">Klaus Christensen <em>(psykolog)</em></h4>
+            <h4 class="text-h4-mobile pb-4 md:pt-5 pt-0">Klaus Christensen <em>(psykolog)</em></h4>
             <p class="pb-8">
               Klaus har en bred erfaring med at rådgive fagfolk, pårørende og mennesker med vidt forskellige handicap i forhold til uddannelse og
               arbejde. Klaus har siden 2004 rådgivet og vejledt CP Danmarks medlemmer, været oplægsholder samt projektleder på
@@ -133,7 +133,7 @@ import AccordianCounselling from "../components/AccordianCounselling.astro";
   </section>
   <section class="accordian-section grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto">
     <div id="accordian" class="col-start-2 col-span-10">
-      <h4 class="md:text-h3-desktop text-h3-mobile md:pb-6 pb-4">Hvad kan vi hjælpe dig med?</h4>
+      <h4 class="md:text-h3-desktop text-h3-mobile md:pb-8 pb-6">Hvad kan vi hjælpe dig med?</h4>
       <AccordianCounselling />
     </div>
   </section>
@@ -205,7 +205,7 @@ import AccordianCounselling from "../components/AccordianCounselling.astro";
           elementmedanimation6.classList.add("animate__animated", "animate__fadeInDown");
         });
 
-        const elementmedanimation7 = document.querySelector(".main-section h2");
+        const elementmedanimation7 = document.querySelector(".main-section h3");
         inView(elementmedanimation7, () => {
           elementmedanimation7.classList.add("animate__animated", "animate__fadeInLeft");
         });
@@ -215,7 +215,7 @@ import AccordianCounselling from "../components/AccordianCounselling.astro";
           elementmedanimation8.classList.add("animate__animated", "animate__fadeInRight");
         });
 
-        const elementmedanimation9 = document.querySelector(".accordian-section h3");
+        const elementmedanimation9 = document.querySelector(".accordian-section h4");
         inView(elementmedanimation9, () => {
           elementmedanimation9.classList.add("animate__animated", "animate__fadeInLeft");
         });

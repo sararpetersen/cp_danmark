@@ -75,20 +75,20 @@ export default {
     },
 
     fontSize: {
-      "display-desktop": ["6.5rem"],
-      "display-mobile": ["3.9rem"],
-      "h1-desktop": ["4.8rem"],
-      "h1-mobile": ["3.5rem"],
-      "h2-desktop": ["4rem"],
-      "h2-mobile": ["2.5rem"],
-      "h3-desktop": ["2.3rem"],
-      "h3-mobile": ["2rem"],
-      "h4-desktop": ["1.4rem"],
-      "h4-mobile": ["1.2rem"],
-      "p-desktop": ["1.1rem"],
-      "p-mobile": ["1.02rem"],
-      "a-desktop": ["1.1rem"],
-      "a-mobile": ["1.02rem"],
+      "display-desktop": ["5.5rem", { lineHeight: "5.5rem" }],
+      "display-mobile": ["4.5rem", { lineHeight: "5rem" }],
+      "h1-desktop": ["4.8rem", { lineHeight: "3.75rem" }],
+      "h1-mobile": ["3.5rem", { lineHeight: "3.75rem" }],
+      "h2-desktop": ["4rem", { lineHeight: "3.75rem" }],
+      "h2-mobile": ["2rem", { lineHeight: "2.5rem" }],
+      "h3-desktop": ["2.5rem", { lineHeight: "2.5rem" }],
+      "h3-mobile": ["2rem", { lineHeight: "2.25rem" }],
+      "h4-desktop": ["1.8rem", { lineHeight: "2.25rem" }],
+      "h4-mobile": ["1.4rem", { lineHeight: "1.875rem" }],
+      "p-desktop": ["1.123rem", { lineHeight: "1.875rem" }],
+      "p-mobile": ["1rem", { lineHeight: "1.5rem" }],
+      "a-desktop": ["1.123rem", { lineHeight: "1.875rem" }],
+      "a-mobile": ["1rem", { lineHeight: "1.5rem" }],
     },
     fontWeight: {
       light: "300",
@@ -123,11 +123,11 @@ export default {
 
     extend: {
       spacing: {
-        gap: "40px",
-        "mobil-bottom": "100px",
-        "desktop-bottom": "120px",
-        "mobil-top": "100px",
-        "desktop-top": "120px",
+        gap: "25px",
+        "mobil-bottom": "85px",
+        "desktop-bottom": "100px",
+        "mobil-top": "85px",
+        "desktop-top": "100px",
       },
       fontSize: {
         large: "1.25rem", // eller vælg en anden størrelse som passer dig

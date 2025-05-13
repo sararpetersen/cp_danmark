@@ -25,8 +25,8 @@ import Button from "../components/Button.astro";
         >
       </div>
 
-      <h1 id="hero-title" class="display col-span-12">Støt os</h1>
-      <h2 id="hero-text" class="font-regular italic md:col-span-6 col-span-12 md:text-h4-desktop text-h4-mobile text-gray-50 max-w-3xl">
+      <h1 id="hero-title" class="md:pb-6 pb-0 display col-span-12">Støt os</h1>
+      <h2 id="hero-text" class="font-regular italic md:col-span-6 col-span-12 text-h4-mobile text-gray-50 max-w-3xl">
         Fordi ingen skal stå alene med CP
       </h2>
     </div>
@@ -69,15 +69,15 @@ import Button from "../components/Button.astro";
     <div class="grid grid-cols-12 md:pt-20 pt-16 md:pb-desktop-bottom pb-mobil-bottom">
       <div class="col-start-2 col-span-10 items-center">
         <div id="top-section">
-          <h3 class="pb-4">Støt mennesker med cerebral parese</h3>
-          <p class="md:pb-14 pb-10 max-w-4xl">
+          <h3 class="pb-6">Støt mennesker med cerebral parese</h3>
+          <p class="md:pb-16 pb-12 max-w-4xl">
             CP Danmark er afhængig af bidrag i arbejdet for at forbedre forholdene og livskvaliteten for mennesker med cerebral parese og deres
             pårørende.
           </p>
         </div>
         <!-- Radio buttons to choose support type -->
-        <div id="support-type" class="flex flex-col md:mb-14 mb-10 bg-dust-100 border border-dust-300 p-4 md:w-[40%] rounded-[5px]">
-          <h3 class="md:text-h4-desktop text-h4-mobile pb-2">Hvordan vil du støtte?</h3>
+        <div id="support-type" class="flex flex-col md:mb-24 mb-12 bg-dust-100 border border-dust-300 p-4 md:w-[40%] rounded-[5px]">
+          <h3 class="text-h4-mobile pb-2">Hvordan vil du støtte?</h3>
           <label class="inline-flex items-center mr-6">
             <input type="radio" name="supportType" value="enkelt" class="form-radio focus:outline-none focus:ring-2 focus:ring-blue-400" checked />
             <span class="enkelt ml-2">Enkeltbidrag</span>
@@ -90,17 +90,13 @@ import Button from "../components/Button.astro";
 
         <!-- Enkeltbidrag form -->
         <div id="enkeltForm">
-          <div class="mb-8">
-            <h3 class="mb-1">Støt med enkeltbidrag</h3>
-            <p>Giv et valgfrit beløb og vær med til at støtte mennesker med cerebral parese— når det passer dig.</p>
-          </div>
           <div class="mb-4">
             <h4>Dine oplysninger</h4>
           </div>
           <label class="block mb-1 font-semibold">Fulde navn<span class="text-orange-500">*</span></label>
           <input
             type="text"
-            class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-10"
+            class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-12"
             placeholder="F.eks. Borris Jensen"
             required
           />
@@ -140,7 +136,7 @@ import Button from "../components/Button.astro";
             required
           />
 
-          <div class="mb-10">
+          <div class="mb-12">
             <label class="block mb-1 font-semibold">CPR-nummer</label>
             <input
               type="number"
@@ -202,17 +198,13 @@ import Button from "../components/Button.astro";
 
         <!-- Fast bidragsyder form -->
         <div id="fastForm" class="hidden">
-          <div class="mb-8">
-            <h3 class="mb-1">Bliv fast støtte</h3>
-            <p>Ved at støtte med et fast beløb hver måned, er du med til at sikre langsigtet hjælp og udvikling for mennesker med CP.</p>
-          </div>
           <div class="mb-4">
             <h4>Dine oplysninger</h4>
           </div>
           <label class="block mb-1 font-semibold">Fulde navn<span class="text-orange-500">*</span></label>
           <input
             type="text"
-            class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-10"
+            class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-12"
             placeholder="F.eks. Borris Jensen"
             required
           />
@@ -254,12 +246,12 @@ import Button from "../components/Button.astro";
             placeholder="F.eks. borris-jensen@gmail.com"
             required
           />
-          <div class="flex items-center mb-10">
+          <div class="flex items-center mb-12">
             <input type="checkbox" class="focus:outline-none focus:ring-2 focus:ring-blue-400 w-[20px] p-2 border" />
             <label class="block ml-2 font-medium">Tilmeld til nyhedsbrev</label>
           </div>
-          <div class="mb-10">
-            <p class="font-bold italic pb-4">Som fast bidragdsyder har du flere mulighed for valg af betaling</p>
+          <div class="mb-12">
+            <p class="font-bold italic pb-5">Som fast bidragdsyder har du flere mulighed for valg af betaling...</p>
 
             <label class="block mb-1 font-semibold">Betalingsfrekvens</label>
             <select class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4">
@@ -287,11 +279,9 @@ import Button from "../components/Button.astro";
             </select>
           </div>
           <div class="mb-3">
-            <h4>Betalingsservice</h4>
-            <p class="italic pb-3">
-              <p class="italic pb-3">
-                Du skal være over 18 år for at tilmelde betaling af dit medlemskontingent til betalingsservice. <br /> Tilmeld dig ved at udfylde...
-              </p>
+            <h4 class="text-h4-mobile mb-1">Betalingsservice</h4>
+            <p class="italic pb-5 max-w-xl">
+              Du skal være over 18 år for at tilmelde betaling af dit medlemskontingent til betalingsservice. Tilmeld dig ved at udfylde...
             </p>
             <label class="block mb-1 font-semibold">CPR-nummer<span class="text-orange-500">*</span></label>
             <input

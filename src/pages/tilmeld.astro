@@ -45,8 +45,8 @@ import "../styles/tailwind.css";
         >
       </div>
 
-      <h1 id="hero-title" class="col-span-12 display">Bliv medlem</h1>
-      <h2 id="hero-text" class="font-regular italic md:col-span-6 col-span-12 md:text-h4-desktop text-h4-mobile text-gray-50 max-w-3xl">
+      <h1 id="hero-title" class="md:pb-6 pb-0 col-span-12 display">Bliv medlem</h1>
+      <h2 id="hero-text" class="font-regular italic md:col-span-6 col-span-12 text-h4-mobile text-gray-50 max-w-3xl">
         Støt sagen og bliv en del af fællesskabet
       </h2>
     </div>
@@ -61,7 +61,7 @@ import "../styles/tailwind.css";
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-8 h-8 sm:w-12 sm:h-12 text-gray-50 hover:text-blue-700 transition duration-300 ease-in-out"
+            class="w-8 h-8 sm:w-12 sm:h-12 text-gray-50"
           >
             <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
           </svg>
@@ -70,21 +70,21 @@ import "../styles/tailwind.css";
     </div>
   </section>
 
-  <section id="main-section" class="main-section grid grid-cols-12 md:pt-12 pt-8 md:pb-desktop-bottom pb-mobil-bottom">
+  <section id="main-section" class="main-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom">
     <div class="col-start-2 col-span-10">
       <div>
         <div id="top-section">
-          <h3 class="pb-2">Vær med til at styrke fællesskabet</h3>
-          <p class="md:pb-14 pb-10 font-regular text-h4-mobile max-w-3xl">
+          <h3 class="pb-6">Vær med til at styrke fællesskabet</h3>
+          <p class="md:pb-16 pb-12 max-w-4xl">
             Udfyld formularen herunder og bliv en del af CP Danmark&mdash; uanset om du selv har CP, er pårørende eller blot ønsker at støtte en
             vigtig sag.
           </p>
         </div>
         <!-- Radio buttons to choose support type -->
-        <div id="support-type" class="bg-dust-100 border border-dust-300 p-4 md:w-[40%] rounded-[5px] flex flex-col md:mb-14 mb-10">
-          <h4 class="pb-4">Hvilket medlemskab er der tale om?</h4>
+        <div id="support-type" class="bg-dust-100 border border-dust-300 p-4 md:w-[40%] rounded-[5px] flex flex-col md:mb-16 mb-12">
+          <h4 class="text-h4-mobile pb-5">Hvilket medlemskab er der tale om?</h4>
           <label class="inline-flex items-center mb-2">
-            <input type="radio" name="supportType" value="enkelt" id="radioEnkelt" class="mr-2" />
+            <input type="radio" name="supportType" value="enkelt" id="radioEnkelt" class="mr-2" checked />
             <span class="option-line">
               <span>Enkeltmedlemskab</span>
               <span class="text-gray-700 italic">(375,- om året)</span>
@@ -124,7 +124,7 @@ import "../styles/tailwind.css";
           <label class="block mb-1 font-semibold">Fulde navn<span class="text-orange-500">*</span></label>
           <input
             type="text"
-            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-10 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-12 focus:outline-none focus:ring-2 focus:ring-blue-400"
             placeholder="F.eks. Borris Jensen"
             required
           />
@@ -162,7 +162,7 @@ import "../styles/tailwind.css";
           <label class="block mb-1 font-semibold">Gentag email<span class="text-orange-500">*</span></label>
           <input
             type="email"
-            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-10 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-12 focus:outline-none focus:ring-2 focus:ring-blue-400"
             placeholder="F.eks. borris-jensen@gmail.com"
             required
           />
@@ -184,7 +184,7 @@ import "../styles/tailwind.css";
           </div>
 
           <label class="block mb-1 font-semibold">Fødselsdato<span class="text-orange-500">*</span></label>
-          <div class="flex md:flex-row flex-col gap-5 mb-10">
+          <div class="flex md:flex-row flex-col gap-5 mb-12">
             <input
               type="number"
               class="p-2 bg-dust-100 border-dust-300 rounded-[5px] focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -203,9 +203,9 @@ import "../styles/tailwind.css";
           </div>
 
           <div class="mb-4">
-            <h4>Betalingsservice</h4>
-            <p class="italic pb-5">
-              Du skal være over 18 år for at tilmelde betaling af dit medlemskontingent til betalingsservice. <br /> Tilmeld dig ved at udfylde...
+            <h4 class="text-h4-mobile mb-1">Betalingsservice</h4>
+            <p class="italic pb-5 max-w-xl">
+              Du skal være over 18 år for at tilmelde betaling af dit medlemskontingent til betalingsservice. Tilmeld dig ved at udfylde...
             </p>
             <label class="block mb-1 font-semibold">CPR-nummer<span class="text-orange-500">*</span></label>
             <input
@@ -257,7 +257,7 @@ import "../styles/tailwind.css";
           <label class="block mb-1 font-semibold">Fulde navn<span class="text-orange-500">*</span></label>
           <input
             type="text"
-            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-10 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-12 focus:outline-none focus:ring-2 focus:ring-blue-400"
             placeholder="F.eks. Borris Jensen"
             required
           />
@@ -343,13 +343,13 @@ import "../styles/tailwind.css";
             placeholder="Angiv hvor mange udover dig selv, der skal tilføjes i husstanden"
           />
 
-          <div class="flex items-center mb-10">
+          <div class="flex items-center mb-12">
             <input type="checkbox" class="w-[20px] p-2 border focus:outline-none focus:ring-2 focus:ring-blue-400" />
             <label class="block md:ml-2 ml-3 font-medium">Tilmeld dig nyhedsbrev </label>
           </div>
           <div class="mb-3">
-            <h4>Betalingsservice</h4>
-            <p class="italic pb-3">
+            <h4 class="text-h4-mobile mb-1">Betalingsservice</h4>
+            <p class="italic pb-5 max-w-xl">
               Du skal være over 18 år for at tilmelde betaling af dit medlemskontingent til betalingsservice. Tilmeld dig ved at udfylde...
             </p>
             <label class="block mb-1 font-semibold">CPR-nummer<span class="text-orange-500">*</span></label>
@@ -401,7 +401,7 @@ import "../styles/tailwind.css";
           <label class="block mb-1 font-semibold">Fulde navn<span class="text-orange-500">*</span></label>
           <input
             type="text"
-            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-10 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-12 focus:outline-none focus:ring-2 focus:ring-blue-400"
             placeholder="F.eks. Borris Jensen"
             required
           />
@@ -487,14 +487,14 @@ import "../styles/tailwind.css";
             placeholder="Angiv hvor mange udover dig selv, der skal tilføjes i husstanden"
           />
 
-          <div class="flex items-center mb-10">
+          <div class="flex items-center mb-12">
             <input type="checkbox" class="w-[20px] p-2 border focus:outline-none focus:ring-2 focus:ring-blue-400" />
             <label class="block md:ml-2 ml-3 font-medium">Tilmeld dig nyhedsbrev </label>
           </div>
 
-          <div class="mb-10">
-            <h4>Medlemstype</h4>
-            <p class="italic pb-3">Som støttemedlem har du flere muligheder for valg af betaling...</p>
+          <div class="mb-12">
+            <h4 class="text-h4-mobile mb-1">Medlemstype</h4>
+            <p class="italic pb-5">Som støttemedlem har du flere muligheder for valg af betaling...</p>
             <label class="block mb-1 font-semibold">Betalingsfrekvens</label>
             <select class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400">
               <option>-- Vælg betalingsfrekvens --</option>
@@ -522,11 +522,9 @@ import "../styles/tailwind.css";
           </div>
 
           <div class="mb-3">
-            <h4>Betalingsservice</h4>
-            <p class="italic pb-3">
-              <p class="italic pb-3">
-                Du skal være over 18 år for at tilmelde betaling af dit medlemskontingent til betalingsservice. <br /> Tilmeld dig ved at udfylde...
-              </p>
+            <h4 class="text-h4-mobile mb-1">Betalingsservice</h4>
+            <p class="italic pb-5 max-w-xl">
+              Du skal være over 18 år for at tilmelde betaling af dit medlemskontingent til betalingsservice. Tilmeld dig ved at udfylde...
             </p>
             <label class="block mb-1 font-semibold">CPR-nummer<span class="text-orange-500">*</span></label>
             <input
@@ -577,7 +575,7 @@ import "../styles/tailwind.css";
           <label class="block mb-1 font-semibold">Fulde navn<span class="text-orange-500">*</span></label>
           <input
             type="text"
-            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-10 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-12 focus:outline-none focus:ring-2 focus:ring-blue-400"
             placeholder="F.eks. Borris Jensen"
             required
           />
@@ -615,11 +613,11 @@ import "../styles/tailwind.css";
           <label class="block mb-1 font-semibold">Gentag email<span class="text-orange-500">*</span></label>
           <input
             type="email"
-            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
             placeholder="F.eks. borris-jensen@gmail.com"
             required
           />
-          <div class="flex items-center mb-4">
+          <div class="flex items-center">
             <input type="checkbox" class="w-[20px] p-2 border" />
             <label class="block ml-2 font-medium">Tilmeld til nyhedsbrev</label>
           </div>
@@ -664,7 +662,7 @@ import "../styles/tailwind.css";
       </div>
 
       <!-- Image section -->
-      <div class="flex justify-end md:pt-0 pt-8">
+      <div class="flex justify-end md:pt-0 pt-9">
         <img src="/images/signup_section1.webp" alt="Første billede til fordele-sektion" class="w-[550px] h-[350px] object-cover" />
       </div>
     </div>
@@ -675,7 +673,7 @@ import "../styles/tailwind.css";
       </div>
       <!-- Text and button section -->
       <div>
-        <h4 class="md:pb-6 pb-4 md:pt-0 pt-8">Fællesskab, aktiviteter og indflydelse</h4>
+        <h4 class="md:pb-6 pb-4 md:pt-0 pt-9">Fællesskab, aktiviteter og indflydelse</h4>
         <p class="pb-8">
           Når du melder dig ind, vil du blive en del af et fællesskab med plads til alle— både børn, unge og voksne. Du får mulighed for at deltage i
           sociale og faglige arrangementer, udveksle erfaringer med andre i samme situation og engagere dig i vores lokale kredse, hvor du kan få
