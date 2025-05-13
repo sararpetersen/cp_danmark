@@ -95,7 +95,9 @@ const news = [
         >
       </div>
       <h1 class="md:text-h2-desktop text-h2-mobile md:pb-0 pb-2">Nyheder</h1>
-      <p class="md:text-h4-desktop text-h4-mobile italic">Hold dig opdateret på nyt om CP, rettigheder, arrangementer og CP Danmarks arbejde</p>
+      <h2 class="md:text-h4-desktop text-h4-mobile italic font-regular">
+        Hold dig opdateret på nyt om CP, rettigheder, arrangementer og CP Danmarks arbejde
+      </h2>
     </div>
     <div id="news" class="col-start-2 col-span-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 items-center justify-center">
       {news.map((item) => <NewsCard2 image={item.image} date={item.date} title={item.title} description={item.description} />)}
@@ -105,7 +107,7 @@ const news = [
 
 <style>
   body.dark h1,
-  body.dark p {
+  body.dark h2 {
     color: #f6f6f6;
   }
 
@@ -126,7 +128,7 @@ const news = [
         elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
       });
 
-      const elementmedanimation2 = document.querySelector("#hero p");
+      const elementmedanimation2 = document.querySelector("#hero h2");
       inView(elementmedanimation2, () => {
         elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
       });

@@ -34,7 +34,7 @@ import AccordianMaterials3 from "../components/AccordianMaterials3.astro";
         >
       </div>
       <h1 class="md:text-h2-desktop text-h2-mobile md:pb-0 pb-2">Materialer</h1>
-      <p class="md:text-h4-desktop text-h4-mobile italic">Find viden, inspiration og fortællinger om livet med CP</p>
+      <h2 class="md:text-h4-desktop text-h4-mobile italic font-regular">Find viden, inspiration og fortællinger om livet med CP</h2>
     </div>
 
     <div id="materials" class="col-start-2 col-span-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
@@ -47,7 +47,7 @@ import AccordianMaterials3 from "../components/AccordianMaterials3.astro";
 
 <style>
   body.dark h1,
-  body.dark p {
+  body.dark h2 {
     color: #f6f6f6;
   }
 </style>
@@ -64,7 +64,7 @@ import AccordianMaterials3 from "../components/AccordianMaterials3.astro";
         elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
       });
 
-      const elementmedanimation2 = document.querySelector("#hero p");
+      const elementmedanimation2 = document.querySelector("#hero h2");
       inView(elementmedanimation2, () => {
         elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
       });

@@ -135,12 +135,12 @@ const activities = [
         >
       </div>
       <h1 class="md:text-h2-desktop text-h2-mobile md:pb-0 pb-2">Kurser & aktiviteter</h1>
-      <p class="md:text-h4-desktop text-h4-mobile italic">
+      <h2 class="md:text-h4-desktop text-h4-mobile italic font-regular">
         Deltag i faglige kurser, sociale aktiviteter og fællesskaber for mennesker med CP og deres pårørende
-      </p>
+      </h2>
     </div>
     <div id="course" class="col-start-2 col-span-10 pb-5">
-      <h2 class="md:text-h3-desktop text-h3-mobile">Kurser & arrangementer</h2>
+      <h3>Kurser & arrangementer</h3>
     </div>
     <div id="courses" class="col-start-2 col-span-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 items-center justify-center">
       {
@@ -160,7 +160,7 @@ const activities = [
     </div>
 
     <div id="activity" class="col-start-2 col-span-10 md:pt-desktop-top pt-mobil-top pb-5">
-      <h2 class="md:text-h3-desktop text-h3-mobile">Aktiviteter</h2>
+      <h3>Aktiviteter</h3>
     </div>
     <div id="activities" class="col-start-2 col-span-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 items-center justify-center">
       {activities.map((item) => <ActivityCard image={item.image} date={item.date} title={item.title} description={item.description} />)}
@@ -169,8 +169,8 @@ const activities = [
 
   <style>
     body.dark h1,
-    body.dark p,
-    body.dark h2 {
+    body.dark h2,
+    body.dark h3 {
       color: #f6f6f6;
     }
 
@@ -191,7 +191,7 @@ const activities = [
           elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
         });
 
-        const elementmedanimation2 = document.querySelector("#hero p");
+        const elementmedanimation2 = document.querySelector("#hero h2");
         inView(elementmedanimation2, () => {
           elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
         });
@@ -201,12 +201,12 @@ const activities = [
           elementmedanimation3.classList.add("animate__animated", "animate__fadeInLeft");
         });
 
-        const elementmedanimation4 = document.querySelector("#course h2");
+        const elementmedanimation4 = document.querySelector("#course h3");
         inView(elementmedanimation4, () => {
           elementmedanimation4.classList.add("animate__animated", "animate__fadeInLeft");
         });
 
-        const elementmedanimation5 = document.querySelector("#activity h2");
+        const elementmedanimation5 = document.querySelector("#activity h3");
         inView(elementmedanimation5, () => {
           elementmedanimation5.classList.add("animate__animated", "animate__fadeInLeft");
         });

@@ -26,9 +26,9 @@ import Button from "../components/Button.astro";
       </div>
 
       <h1 id="hero-title" class="display col-span-12">Støt os</h1>
-      <p id="hero-text" class="md:col-span-6 col-span-12 md:text-h4-desktop text-h4-mobile text-gray-50 max-w-3xl">
+      <h2 id="hero-text" class="font-regular italic md:col-span-6 col-span-12 md:text-h4-desktop text-h4-mobile text-gray-50 max-w-3xl">
         Fordi ingen skal stå alene med CP
-      </p>
+      </h2>
     </div>
 
     <div class="hero_image w-full h-full absolute inset-0 z-0">
@@ -64,7 +64,7 @@ import Button from "../components/Button.astro";
     <div class="grid grid-cols-12 md:pt-20 pt-16 md:pb-desktop-bottom pb-mobil-bottom">
       <div class="col-start-2 col-span-10 items-center">
         <div id="top-section">
-          <h2 class="pb-4">Støt mennesker med cerebral parese</h2>
+          <h3 class="pb-4">Støt mennesker med cerebral parese</h3>
           <p class="md:pb-14 pb-10 max-w-4xl">
             CP Danmark er afhængig af bidrag i arbejdet for at forbedre forholdene og livskvaliteten for mennesker med cerebral parese og deres
             pårørende.
@@ -72,7 +72,7 @@ import Button from "../components/Button.astro";
         </div>
         <!-- Radio buttons to choose support type -->
         <div id="support-type" class="flex flex-col md:mb-14 mb-10 bg-dust-100 border border-dust-300 p-4 md:w-[40%] rounded-[5px]">
-          <h4 class="pb-2">Hvordan vil du støtte?</h4>
+          <h3 class="md:text-h4-desktop text-h4-mobile pb-2">Hvordan vil du støtte?</h3>
           <label class="inline-flex items-center mr-6">
             <input type="radio" name="supportType" value="enkelt" class="form-radio focus:outline-none focus:ring-2 focus:ring-blue-400" checked />
             <span class="enkelt ml-2">Enkeltbidrag</span>
@@ -445,7 +445,7 @@ import Button from "../components/Button.astro";
         elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
       });
 
-      const elementmedanimation2 = document.querySelector("#hero p");
+      const elementmedanimation2 = document.querySelector("#hero h2");
       inView(elementmedanimation2, () => {
         elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
       });
@@ -455,7 +455,7 @@ import Button from "../components/Button.astro";
         elementmedanimation3.classList.add("animate__animated", "animate__fadeInLeft");
       });
 
-      const elementmedanimation4 = document.querySelector("#top-section h2");
+      const elementmedanimation4 = document.querySelector("#top-section h3");
       inView(elementmedanimation4, () => {
         elementmedanimation4.classList.add("animate__animated", "animate__fadeInLeft");
       });

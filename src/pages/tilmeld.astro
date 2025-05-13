@@ -42,9 +42,9 @@ import "../styles/tailwind.css";
       </div>
 
       <h1 id="hero-title" class="col-span-12 display">Bliv medlem</h1>
-      <p id="hero-text" class="md:col-span-6 col-span-12 md:text-h4-desktop text-h4-mobile text-gray-50 max-w-3xl">
+      <h2 id="hero-text" class="font-regular italic md:col-span-6 col-span-12 md:text-h4-desktop text-h4-mobile text-gray-50 max-w-3xl">
         Støt sagen og bliv en del af fællesskabet
-      </p>
+      </h2>
     </div>
 
     <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
@@ -70,7 +70,7 @@ import "../styles/tailwind.css";
     <div class="col-start-2 col-span-10">
       <div>
         <div id="top-section">
-          <h2 class="md:text-h3-desktop text-h3-mobile font-bold pb-2">Vær med til at styrke fællesskabet</h2>
+          <h3 class="pb-2">Vær med til at styrke fællesskabet</h3>
           <p class="md:pb-14 pb-10 font-regular text-h4-mobile max-w-3xl">
             Udfyld formularen herunder og bliv en del af CP Danmark&mdash; uanset om du selv har CP, er pårørende eller blot ønsker at støtte en
             vigtig sag.
@@ -632,7 +632,7 @@ import "../styles/tailwind.css";
 
   <section id="benefits" class="info-section grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom">
     <div class="col-start-2 col-span-10">
-      <h3 class="md:pb-12 pb-8">Fordele ved at være medlem</h3>
+      <h4 class="md:text-h3-desktop text-h3-mobile md:pb-12 pb-8">Fordele ved at være medlem</h4>
     </div>
     <div id="benefits-section1" class="grid md:grid-cols-2 col-start-2 col-span-10">
       <!-- Text and button section -->
@@ -784,7 +784,7 @@ import "../styles/tailwind.css";
         elementmedanimation1.classList.add("animate__animated", "animate__backInLeft");
       });
 
-      const elementmedanimation2 = document.querySelector("#hero p");
+      const elementmedanimation2 = document.querySelector("#hero h2");
       inView(elementmedanimation2, () => {
         elementmedanimation2.classList.add("animate__animated", "animate__backInRight");
       });
@@ -794,7 +794,7 @@ import "../styles/tailwind.css";
         elementmedanimation3.classList.add("animate__animated", "animate__fadeInLeft");
       });
 
-      const elementmedanimation4 = document.querySelector("#top-section h2");
+      const elementmedanimation4 = document.querySelector("#top-section h3");
       inView(elementmedanimation4, () => {
         elementmedanimation4.classList.add("animate__animated", "animate__fadeInLeft");
       });
