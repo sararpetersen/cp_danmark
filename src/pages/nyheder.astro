@@ -52,14 +52,26 @@ const cards = await news.json();
 
 <style>
   .breadcrumb a {
-    color: #c1c1c1;
+    color: #6d6d6d;
   }
 
   .breadcrumb a:hover {
-    color: #7dc1fc;
+    color: #034f9a;
   }
 
   .breadcrumb span {
+    color: #4f4f4f;
+  }
+
+  body.dark .breadcrumb a {
+    color: #c1c1c1;
+  }
+
+  body.dark .breadcrumb a:hover {
+    color: #7dc1fc;
+  }
+
+  body.dark .breadcrumb span {
     color: #f6f6f6;
   }
 

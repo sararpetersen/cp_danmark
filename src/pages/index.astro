@@ -31,7 +31,11 @@ const newscards = await fetchedNews.json();
     </div>
 
     <div class="hero_image w-full h-full absolute inset-0 z-0">
-      <img src="/images/hero_image.webp" alt="Hero-billede til CP Danmarks forside" class="w-full h-full object-cover scale-x-[-1]" />
+      <img
+        src="/images/hero_image.webp"
+        alt="Hero-billede til CP Danmarks forside"
+        class="w-full h-full object-cover scale-x-[-1] brightness-[65%] md:brightness-75"
+      />
     </div>
 
     <div id="overlay1" class="absolute top-0 left-0 w-full h-full bg-gray-950 bg-opacity-[50%] z-0"></div>
@@ -71,7 +75,8 @@ const newscards = await fetchedNews.json();
           <img
             src="/images/submenu1.webp"
             alt="Billede til den første undermenu på CP Danmarks forside"
-            class="w-full h-full object-cover brightness-75"
+            "
+            class="w-full h-full object-cover brightness-[65%] md:brightness-75"
           />
           <div class="absolute inset-0 flex items-end pb-12 justify-center px-4">
             <p class="text-gray-50 text-center font-semibold bg-[#AE5D37]/85 p-4 hover:underline">
