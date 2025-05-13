@@ -12,6 +12,7 @@ import Button from "../components/Button.astro";
   ogdescription="Læs mere om hvem CP Danmark er og hvordan de arbejder"
 >
   <section
+    id="hero"
     class="hero-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom w-full h-screen md:px-0 px-4 relative"
   >
     <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center md:pb-28 pb-0 h-full">
@@ -46,7 +47,7 @@ import Button from "../components/Button.astro";
     >
     </div>
 
-    <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
+    <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[20]">
       <a href="#about" aria-label="Gå videre ned på siden" class="focus:outline-none focus:ring-2 focus:ring-blue-400">
         <div class="float flex flex-col items-center hover:opacity-80 transition duration-300 ease-in-out">
           <p class="text-[18px] text-gray-50 font-semibold">Gå videre ned på siden</p>
@@ -142,12 +143,7 @@ import Button from "../components/Button.astro";
           <input type="file" class="attachment focus:outline-none focus:ring-2 focus:ring-blue-400" id="file" />
           <!-- File input ends here -->
 
-          <a
-            href="#"
-            class="md:pt-8 pt-4"
-            aria-label="Placeholder-link (ingen funktionalitet)"
-            class="focus:outline-none focus:ring-2 focus:ring-blue-400"
-          >
+          <a href="#" class="pt-8 focus:outline-none focus:ring-2 focus:ring-blue-400" aria-label="Placeholder-link (ingen funktionalitet)">
             <Button variant="secondary" size="small">Send</Button>
           </a>
         </div>
@@ -215,6 +211,10 @@ import Button from "../components/Button.astro";
 
   .breadcrumb a {
     color: #c1c1c1;
+  }
+
+  .breadcrumb a:hover {
+    color: #7dc1fc;
   }
 
   .breadcrumb span {

@@ -43,47 +43,80 @@
             <!-- Title moved out of flex -->
             <h1 class="md:text-h4-desktop text-h4-mobile text-gray-50 mb-4">Følg os på de sociale medier</h1>
             <div class="flex justify-start gap-7 items-center">
-              <div class="w-12 flex-shrink-0">
-                <a href="http://www.facebook.dk/cpdanmark.dk" aria-label="Gå til CP Danmarks Facebook-side (eksternt link)" target="_blank">
+              <div class="w-12 flex-shrink-0 group relative">
+                <a
+                  href="http://www.facebook.dk/cpdanmark.dk"
+                  aria-label="Gå til CP Danmarks Facebook-side (eksternt link)"
+                  target="_blank"
+                  class="block w-full hover:-translate-y-[3px] transition duration-300 ease-in-out"
+                >
+                  <!-- Default icon -->
                   <img
-                    class="w-full transform hover:-translate-y-[2px] transition duration-300 ease-in-out hover:opacity-70 hover:cursor-pointer"
+                    class="w-full absolute top-0 left-0 transition duration-300 ease-in-out group-hover:opacity-0"
                     src="/images/facebook.svg"
                     alt="Facebook-ikon"
                   />
+                  <!-- Colored icon -->
+                  <img
+                    class="w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                    src="/images/facebook_blaa.svg"
+                    alt="Facebook-ikon (hover)"
+                  />
                 </a>
               </div>
-              <div class="w-12 flex-shrink-0">
-                <a href="https://www.instagram.com/cpdanmark" aria-label="Gå til CP Danmarks Instagram-konto (eksternt link)" target="_blank">
+
+              <div class="w-12 flex-shrink-0 group relative">
+                <a
+                  href="https://www.instagram.com/cpdanmark"
+                  aria-label="Gå til CP Danmarks Instagram-konto (eksternt link)"
+                  target="_blank"
+                  class="block w-full hover:-translate-y-[3px] transition duration-300 ease-in-out"
+                >
                   <img
-                    class="w-full transform hover:-translate-y-[2px] transition duration-300 ease-in-out hover:opacity-70 hover:cursor-pointer"
+                    class="w-full absolute top-0 left-0 transition duration-300 ease-in-out group-hover:opacity-0"
                     src="/images/instagram.svg"
                     alt="Instagram-ikon"
                   />
-                </a>
-              </div>
-              <div class="w-12 flex-shrink-0">
-                <a
-                  href="https://www.linkedin.com/company/cp-danmark-landsforeningen-for-cerebral-parese/"
-                  aria-label="Gå til CP Danmarks LinkedIn-profil (eksternt link)"
-                  target="_blank"
-                >
                   <img
-                    class="w-full transform hover:-translate-y-[2px] transition duration-300 ease-in-out hover:opacity-70 hover:cursor-pointer"
-                    src="/images/linkedin.svg"
-                    alt="Linkedin-ikon"
+                    class="w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                    src="/images/instagram_blaa.svg"
+                    alt="Instagram-ikon (hover)"
                   />
                 </a>
               </div>
-              <div class="w-12 flex-shrink-0">
+              <div class="w-12 flex-shrink-0 group relative">
+                <a
+                  href="https://www.linkedin.com/company/cp-danmark-landsforeningen-for-cerebral-parese/"
+                  aria-label="Gå til CP Danmarks LinkedIn-profil (eksternt link)"
+                  class="block w-full hover:-translate-y-[3px] transition duration-300 ease-in-out"
+                >
+                  <img
+                    class="w-full absolute top-0 left-0 transition duration-300 ease-in-out group-hover:opacity-0"
+                    src="/images/linkedin.svg"
+                    alt="LinkedIn-ikon"
+                  />
+                  <img
+                    class="w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                    src="/images/linkedin_blaa.svg"
+                    alt="LinkedIn-ikon (hover)"
+                  />
+                </a>
+              </div>
+              <div class="w-12 flex-shrink-0 group relative">
                 <a
                   href="https://www.youtube.com/channel/UCN2nN9axOe-Z_RiMT_H4_yg/ (eksternt link)"
                   aria-label="Gå til CP Danmarks YouTube-kanal"
-                  target="_blank"
+                  class="block w-full hover:-translate-y-[3px] transition duration-300 ease-in-out"
                 >
                   <img
-                    class="w-full transform hover:-translate-y-[2px] transition duration-300 ease-in-out hover:opacity-70 hover:cursor-pointer"
+                    class="w-full absolute top-0 left-0 transition duration-300 ease-in-out group-hover:opacity-0"
                     src="/images/youtube.svg"
-                    alt="Youtube-ikon"
+                    alt="YouTube-ikon"
+                  />
+                  <img
+                    class="w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                    src="/images/youtube_blaa.svg"
+                    alt="YouTube-ikon (hover)"
                   />
                 </a>
               </div>
@@ -98,7 +131,7 @@
             href="tel:38 88 45 75"
             target="_blank"
             aria-label="Ring til 38 88 45 75"
-            class="underline focus:outline-none focus:ring-2 focus:ring-blue-400 hover:text-blue-700 transition duration-300 ease-in-out pb-4 text-gray-50"
+            class="underline focus:outline-none focus:ring-2 focus:ring-blue-400 hover:text-blue-500 transition duration-300 ease-in-out pb-4 text-gray-50"
             >+45 38 88 45 75</a
           >
           <p class="font-semibold text-gray-50">Mail:</p>
@@ -106,7 +139,7 @@
             href="mailto:cpdanmark@cpdanmark.dk"
             target="_blank"
             aria-label="Send mail til cpdanmark@cpdanmark.dk"
-            class="underline focus:outline-none focus:ring-2 focus:ring-blue-400 hover:text-blue-700 transition duration-300 ease-in-out text-gray-50"
+            class="underline focus:outline-none focus:ring-2 focus:ring-blue-400 hover:text-blue-500 transition duration-300 ease-in-out text-gray-50"
           >
             cpdanmark@cpdanmark.dk
           </a>
@@ -157,7 +190,7 @@
             href="https://www.mobilepay.dk/erhverv/betalingslink/betalingslink-svar?phone=90866"
             target="_blank"
             aria-label="Gå til MobilePay-betalingsside (eksternt link)"
-            class="text-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-400 underline hover:text-blue-700 transition duration-300 ease-in-out"
+            class="text-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-400 underline hover:text-blue-500 transition duration-300 ease-in-out"
             >90866</a
           >
         </div>
@@ -174,13 +207,13 @@
               href="https://www.cpdanmark.dk/om-os/privatlivspolitik/"
               aria-label="Gå til CP Danmarks Privatlivspolitik (eksternt link)"
               target="_blank"
-              class="text-[12px] underline text-blue-500 hover:text-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400"
+              class="text-[12px] underline text-blue-300 hover:text-blue-500 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400"
               >Privatlivspolitik
             </a><span class="opacity-50">|</span><a
               href="https://www.cpdanmark.dk/om-os/cookiepolitik/"
               aria-label="Gå til CP Danmarks Cookiepolitik (eksternt link)"
               target="_blank"
-              class="text-[12px] underline text-blue-500 hover:text-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400"
+              class="text-[12px] underline text-blue-300 hover:text-blue-500 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400"
             >
               Cookiepolitik</a
             >

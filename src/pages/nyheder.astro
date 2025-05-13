@@ -1,70 +1,15 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import NewsCard2 from "../components/NewsCard2.astro";
+import NewsCard from "../components/NewsCard.astro";
 
-const news = [
-  {
-    image: "/images/newscard1.webp",
-    date: "9. april 2025",
-    title: "Olivia Dahl modtager Helene Elsass Prisen 2025",
-    description:
-      "Hun ville ikke have noget med handicap at gøre – indtil hun opdagede, at hun kunne være med til at give handicap mere power. Nu er Olivia Dahl kåret som vinder af Danmarks største handicappris.",
+const news = await fetch("https://tpemfmjlaqjtxbgiffqm.supabase.co/rest/v1/news_card", {
+  method: "GET",
+  headers: {
+    apikey:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZW1mbWpsYXFqdHhiZ2lmZnFtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcxNDYwMTMsImV4cCI6MjA2MjcyMjAxM30.CJxrmjwnfT8ybomcMvCxq0nn-rT0WwLtO9SJuvIttbo",
   },
-  {
-    image: "/images/newscard2.webp",
-    date: "13. marts 2025",
-    title: "Kom med CP Danmark til Folkemødet 2025",
-    description:
-      "Vil du være med til at styrke dialogen om cerebral parese og deltage i vigtige samtaler med politikere, beslutningstagere og andre relevante aktører? ...",
-  },
-  {
-    image: "/images/newscard3.webp",
-    date: "24. februar 2025",
-    title: "TEMA: <br>Kreative udfoldelser og CP",
-    description:
-      "Vi er klar med årets første CP INDBLIK. I dette magasin sætter vi fokus på, hvad du— eller dit familiemedlem med CP —kan få ud af at lave kreative aktiviteter.",
-  },
-  {
-    image: "/images/newscard4.webp",
-    date: "23. februar 2025",
-    title: "Midt i frustrationerne: <br> Husk at der er valgår i år!",
-    description:
-      "Massive nedskæringer rammer handicapområdet, mens politikerne lover forenklinger, der i praksis gør livet sværere. Men efterårets kommunalvalg giver en mulighed for at handle. Læs formandskabets kommentar og opfordring!",
-  },
-  {
-    image: "/images/newscard5.webp",
-    date: "11. december 2024",
-    title: "CP INDBLIK udkommer 4 gange <br>i 2025",
-    description: "I det nye år går CP Danmarks medlemsmagasin fra fem til fire udgaver årligt.",
-  },
-  {
-    image: "/images/newscard6.webp",
-    date: "10. december 2024",
-    title: "Nyhed: <br> Læse- og skriveadgang til Digital Post",
-    description: "Nu kan du skrive digital post på vegne af dine nærmeste.",
-  },
-  {
-    image: "/images/newscard7.webp",
-    date: "3. december 2024",
-    title: "Vi har også brug for et voksenløft på handicapområdet",
-    description:
-      "I de seneste år er der kommet et øget fokus på unge med handicap. Det hilser vi i CP Danmark velkommen. Vi må dog ikke glemme, at der også er en stor gruppe af voksne og ældre med cerebral parese og andre handicap, som vi skylder et ...",
-  },
-  {
-    image: "/images/newscard8.webp",
-    date: "28. november 2024",
-    title: "Hvem skal hædres med Helene Elsass Prisen 2025?",
-    description:
-      "Tidligere i år modtog den professionelle cykelrytter Emma Lund, Helene Elsass Prisen for at være en rollemodel for mennesker med cerebral parese. Men hvem skal have prisen i 2025?   En hæder til dem, der gør en forskel Helene Elsass Prisen er ...",
-  },
-  {
-    image: "/images/newscard9.webp",
-    date: "23. september 2024",
-    title: "Landsmøde 2024: genvalg af formandskabet og et rørende farvel",
-    description:
-      "I weekenden den 20-22. september afholdt vi landsmøde på Egmont Højskolen. Et samlingspunkt for både nye og gamle bekendtskaber, gode samtaler og debatter, samt vigtige beslutninger for ...",
-  },
-];
+});
+const cards = await news.json();
 ---
 
 <MainLayout
@@ -100,12 +45,24 @@ const news = [
       </h2>
     </div>
     <div id="news" class="col-start-2 col-span-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 items-center justify-center">
-      {news.map((item) => <NewsCard2 image={item.image} date={item.date} title={item.title} description={item.description} />)}
+      <NewsCard cards={cards} />
     </div>
   </section>
 </MainLayout>
 
 <style>
+  .breadcrumb a {
+    color: #c1c1c1;
+  }
+
+  .breadcrumb a:hover {
+    color: #7dc1fc;
+  }
+
+  .breadcrumb span {
+    color: #f6f6f6;
+  }
+
   body.dark h1,
   body.dark h2 {
     color: #f6f6f6;

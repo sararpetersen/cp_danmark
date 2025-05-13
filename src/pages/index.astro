@@ -1,57 +1,16 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import NewsCard from "../components/NewsCard.astro";
 import Button from "../components/Button.astro";
+import NewsCard from "../components/NewsCard.astro";
 
-const news = [
-  {
-    image: "/images/newscard1.webp",
-    date: "9. april 2025",
-    title: "Olivia Dahl modtager Helene Elsass Prisen 2025",
-    description:
-      "Hun ville ikke have noget med handicap at gøre— indtil hun opdagede, at hun kunne være med til at give handicap mere power. Nu er Olivia Dahl kåret som vinder af Danmarks største handicappris.",
+const fetchedNews = await fetch("https://tpemfmjlaqjtxbgiffqm.supabase.co/rest/v1/news_card", {
+  method: "GET",
+  headers: {
+    apikey:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZW1mbWpsYXFqdHhiZ2lmZnFtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcxNDYwMTMsImV4cCI6MjA2MjcyMjAxM30.CJxrmjwnfT8ybomcMvCxq0nn-rT0WwLtO9SJuvIttbo",
   },
-  {
-    image: "/images/newscard2.webp",
-    date: "13. marts 2025",
-    title: "Kom med CP Danmark til Folkemødet 2025",
-    description:
-      "Vil du være med til at styrke dialogen om cerebral parese og deltage i vigtige samtaler med politikere, beslutningstagere og andre relevante aktører? ...",
-  },
-  {
-    image: "/images/newscard3.webp",
-    date: "24. februar 2025",
-    title: "TEMA: <br>Kreative udfoldelser og CP",
-    description:
-      "Vi er klar med årets første CP INDBLIK. I dette magasin sætter vi fokus på, hvad du— eller dit familiemedlem med CP —kan få ud af at lave kreative aktiviteter.",
-  },
-  {
-    image: "/images/newscard4.webp",
-    date: "23. februar 2025",
-    title: "Midt i frustrationerne: <br> Husk at der er valgår i år!",
-    description:
-      "Massive nedskæringer rammer handicapområdet, mens politikerne lover forenklinger, der i praksis gør livet sværere. Men efterårets kommunalvalg giver en mulighed for at handle. Læs formandskabets kommentar og opfordring!",
-  },
-  {
-    image: "/images/newscard5.webp",
-    date: "11. december 2024",
-    title: "CP INDBLIK udkommer 4 gange i 2025",
-    description: "I det nye år går CP Danmarks medlemsmagasin fra fem til fire udgaver årligt.",
-  },
-  {
-    image: "/images/newscard6.webp",
-    date: "10. december 2024",
-    title: "Nyhed: <br> Læse- og skriveadgang til Digital Post",
-    description: "Nu kan du skrive digital post på vegne af dine nærmeste.",
-  },
-  {
-    image: "/images/newscard7.webp",
-    date: "3. december 2024",
-    title: "Vi har også brug for et voksenløft på handicapområdet",
-    description:
-      "I de seneste år er der kommet et øget fokus på unge med handicap. Det hilser vi i CP Danmark velkommen. Vi må dog ikke glemme, at der også er en stor gruppe af voksne og ældre med cerebral parese og andre handicap, som vi skylder et ...",
-  },
-];
+});
+const newscards = await fetchedNews.json();
 ---
 
 <MainLayout
@@ -82,7 +41,7 @@ const news = [
     >
     </div>
 
-    <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
+    <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[20]">
       <a href="#get-started" aria-label="Gå videre ned på siden" class="focus:outline-none focus:ring-2 focus:ring-blue-400">
         <div class="float flex flex-col items-center hover:opacity-80 transition duration-300 ease-in-out">
           <p class="text-[18px] text-gray-50 font-semibold">Gå videre ned på siden</p>
@@ -210,9 +169,9 @@ const news = [
     </div>
     <!-- Horizontal scroll container -->
     <div class="col-start-2 col-span-10 relative">
-      <div id="carousel" class="flex overflow-x-auto space-x-4 scroll-smooth scrollbar-hide h-[38rem]">
+      <div id="carousel" class="flex overflow-x-auto space-x-4 scroll-smooth scrollbar-hide h-[38.5rem]">
         <!-- More cards -->
-        {news.map((item) => <NewsCard image={item.image} date={item.date} title={item.title} description={item.description} />)}
+        <NewsCard newscards={newscards} limit={6} />
       </div>
     </div>
   </section>

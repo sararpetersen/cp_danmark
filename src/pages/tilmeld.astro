@@ -47,7 +47,7 @@ import "../styles/tailwind.css";
       </h2>
     </div>
 
-    <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[10]">
+    <div id="scroll-down" class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[20]">
       <a href="#main-section" aria-label="Gå videre ned på siden" class="focus:outline-none focus:ring-2 focus:ring-blue-400">
         <div class="float flex flex-col items-center hover:opacity-80 transition duration-300 ease-in-out">
           <p class="text-[18px] text-gray-50 font-semibold">Gå videre ned på siden</p>
@@ -690,6 +690,10 @@ import "../styles/tailwind.css";
     color: #c1c1c1;
   }
 
+  .breadcrumb a:hover {
+    color: #7dc1fc;
+  }
+
   .breadcrumb span {
     color: #f6f6f6;
   }
@@ -827,6 +831,28 @@ import "../styles/tailwind.css";
       const elementmedanimation9 = document.querySelector("#lifeForm");
       inView(elementmedanimation9, () => {
         elementmedanimation9.classList.add("animate__animated", "animate__fadeInUp");
+      });
+
+      const elementmedanimation10 = document.querySelector("#benefits h4");
+      inView(elementmedanimation10, () => {
+        elementmedanimation10.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      // Delay animations
+      const benefits1 = document.querySelectorAll("#benefits-section1 > div");
+      benefits1.forEach((el, index) => {
+        inView(el, () => {
+          el.classList.add("animate__animated", "animate__fadeInRight");
+          el.style.animationDelay = `${index * 0.2}s`;
+        });
+      });
+
+      const benefits2 = document.querySelectorAll("#benefits-section2 > div");
+      benefits2.forEach((el, index) => {
+        inView(el, () => {
+          el.classList.add("animate__animated", "animate__fadeInLeft");
+          el.style.animationDelay = `${index * 0.2}s`;
+        });
       });
     }
   });

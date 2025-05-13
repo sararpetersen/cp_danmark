@@ -1,38 +1,87 @@
 ---
+const { newscards = [], limit = null } = Astro.props;
+
+const fetchedNews = await fetch("https://tpemfmjlaqjtxbgiffqm.supabase.co/rest/v1/news_card", {
+  method: "GET",
+  headers: {
+    apikey:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwZW1mbWpsYXFqdHhiZ2lmZnFtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcxNDYwMTMsImV4cCI6MjA2MjcyMjAxM30.CJxrmjwnfT8ybomcMvCxq0nn-rT0WwLtO9SJuvIttbo",
+  },
+}).then((res) => res.json());
+
+const cards = fetchedNews.map((newscard) => ({
+  title: newscard.title,
+  image: newscard.image,
+  date: newscard.date,
+  description: newscard.description,
+}));
+
+const displayedCards = limit ? cards.slice(0, limit) : cards;
+
+function breakTitle(title, maxLength = 25) {
+  if (title.length > maxLength) {
+    const words = title.split(" ");
+    let line = "";
+    let lines = [];
+
+    words.forEach((word) => {
+      if ((line + " " + word).length <= maxLength) {
+        line += " " + word;
+      } else {
+        lines.push(line.trim());
+        line = word;
+      }
+    });
+
+    lines.push(line.trim());
+    return lines;
+  }
+  return [title];
+}
+
 import Button from "./Button.astro";
-const { image, date, description, title } = Astro.props;
 ---
 
-<div
-  class="news-card flex flex-col min-w-[400px] self-start bg-gray-100 rounded-[5px] hover:bg-gray-200 hover:cursor-pointer transition duration-300 ease-in-out"
->
-  <div class="news-card_image">
-    <img src={image} alt={title} class="w-full h-full object-cover rounded-t-[5px]" />
-  </div>
-  <div class="news-card_content p-6 flex flex-col">
-    <p id="date" class="text-gray-400 mb-2">{date}</p>
-    <h3 class="text-h4-mobile mb-2 line-clamp-2" set:html={title} />
-    <p class="mb-5 line-clamp-2">{description}</p>
-    <a href="/nyheder" aria-label="Placeholder-link (ingen funktionalitet)" class="focus:outline-none focus:ring-2 focus:ring-blue-400">
-      <Button variant="secondary" size="small">Læs mere</Button>
-    </a>
-  </div>
-</div>
+{
+  displayedCards.map((card) => (
+    <div class="news-card flex flex-col min-w-[400px] self-start bg-gray-100 rounded-[5px] hover:bg-gray-200 hover:cursor-pointer transition duration-300 ease-in-out">
+      <div class="news-card_image">
+        <img src={card.image} alt={card.title} class="w-full h-full object-cover rounded-t-[5px]" />
+      </div>
+      <div class="news-card_content p-6 flex flex-col">
+        <p id="date" class="text-gray-400 mb-2">
+          {card.date}
+        </p>
+        <h3 class="text-h4-mobile mb-2 line-clamp-2">
+          {breakTitle(card.title).map((line) => (
+            <span>
+              {line}
+              <br />
+            </span>
+          ))}
+        </h3>
+        <p class="mb-5 line-clamp-2">{card.description}</p>
+        <a href="/nyheder" aria-label="Placeholder-link (ingen funktionalitet)" class="focus:outline-none focus:ring-2 focus:ring-blue-400">
+          <Button variant="secondary" size="small">
+            Læs mere
+          </Button>
+        </a>
+      </div>
+    </div>
+  ))
+}
 
 <style>
   body.dark .news-card {
     background-color: #4f4f4f;
   }
-
   body.dark .news-card:hover {
     background-color: #5b5b5b;
   }
-
   body.dark .news-card_content h3,
   body.dark .news-card_content p {
     color: #f6f6f6;
   }
-
   body.dark .news-card_content #date {
     color: #b3b3b3;
   }
