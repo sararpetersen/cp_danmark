@@ -82,24 +82,38 @@ import "../styles/tailwind.css";
         </div>
         <!-- Radio buttons to choose support type -->
         <div id="support-type" class="bg-dust-100 border border-dust-300 p-4 md:w-[40%] rounded-[5px] flex flex-col md:mb-14 mb-10">
-          <h4 class="pb-2">Hvilket medlemskab er der tale om?</h4>
-          <label class="inline-flex items-center mr-6">
-            <input type="radio" name="supportType" value="enkelt" id="radioEnkelt" class="focus:outline-none focus:ring-2 focus:ring-blue-400" />
-            <span class="enkelt ml-2">Enkeltmedlemskab ............ (375,- om året)</span>
-          </label>
-          <label class="inline-flex items-center">
-            <input type="radio" name="supportType" value="fast" id="radioFast" class="focus:outline-none focus:ring-2 focus:ring-blue-400" />
-            <span class="fast ml-2">Husstandsmedlemskab .... (475,- om året)</span>
-          </label>
-          <label class="inline-flex items-center">
-            <input type="radio" name="supportType" value="support" id="radioSupport" class="focus:outline-none focus:ring-2 focus:ring-blue-400" />
-            <span class="fast ml-2">Støttemedlem .................... (50,- om måneden)</span>
+          <h4 class="pb-4">Hvilket medlemskab er der tale om?</h4>
+          <label class="inline-flex items-center mb-2">
+            <input type="radio" name="supportType" value="enkelt" id="radioEnkelt" class="mr-2" />
+            <span class="option-line">
+              <span>Enkeltmedlemskab</span>
+              <span class="text-gray-700 italic">(375,- om året)</span>
+            </span>
           </label>
 
-          <label class="inline-flex items-center"
-            ><input type="radio" name="supportType" value="life" id="radioLife" class="focus:outline-none focus:ring-2 focus:ring-blue-400" />
-            <span class="fast ml-2">Livsvarigt medlem ............. (5000,- én gang)</span></label
-          >
+          <label class="inline-flex items-center mb-2">
+            <input type="radio" name="supportType" value="fast" id="radioFast" class="mr-2" />
+            <span class="option-line">
+              <span>Husstandsmedlemskab</span>
+              <span class="text-gray-700 italic">(475,- om året)</span>
+            </span>
+          </label>
+
+          <label class="inline-flex items-center mb-2">
+            <input type="radio" name="supportType" value="support" id="radioSupport" class="mr-2" />
+            <span class="option-line">
+              <span>Støttemedlem</span>
+              <span class="text-gray-700 italic">(50,- om måneden)</span>
+            </span>
+          </label>
+
+          <label class="inline-flex items-center mb-2">
+            <input type="radio" name="supportType" value="life" id="radioLife" class="mr-2" />
+            <span class="option-line">
+              <span>Livsvarigt medlem</span>
+              <span class="text-gray-700 italic">(5000,- én gang)</span>
+            </span>
+          </label>
         </div>
 
         <!-- Enkeltmedlemskab form -->
@@ -708,12 +722,48 @@ import "../styles/tailwind.css";
     box-shadow: 0 0 0 2px #7dc1fc;
   }
 
+  .option-line {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .option-line span:first-child {
+    position: relative;
+    padding-right: 0.5rem;
+    white-space: nowrap;
+  }
+
+  .option-line span:first-child::after {
+    flex-grow: 1;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-left: 0.5rem;
+  }
+
+  .option-line span:last-child {
+    white-space: nowrap;
+    margin-left: auto;
+  }
+
+  /* Dark Mode */
+  body.dark .option-line span:first-child::after {
+    color: #b3b3b3;
+  }
+
+  body.dark .option-line span {
+    color: #f6f6f6;
+  }
+
   body.dark .breadcrumb a:hover,
   body.dark .breadcrumb span:hover {
     color: #7dc1fc;
   }
 
-  /* Dark Mode */
   body.dark h2,
   body.dark h3,
   body.dark h4,
