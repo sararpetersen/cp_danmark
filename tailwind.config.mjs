@@ -123,11 +123,11 @@ export default {
 
     extend: {
       spacing: {
-        gap: "25px",
-        "mobil-bottom": "85px",
-        "desktop-bottom": "90px",
-        "mobil-top": "85px",
-        "desktop-top": "90px",
+        gap: "40px",
+        "mobil-bottom": "100px",
+        "desktop-bottom": "120px",
+        "mobil-top": "100px",
+        "desktop-top": "120px",
       },
       fontSize: {
         large: "1.25rem", // eller vælg en anden størrelse som passer dig
