@@ -11,7 +11,7 @@ import Button from "./Button.astro";
   </div>
   <div class="activity-card_content p-5 flex flex-col">
     <p id="date" class="text-gray-400 pb-2">{date}</p>
-    <h4 class="text-[20.5px] leading-7 line-clamp-1 mb-2">{title}</h4>
+    <h4 class="text-h4-mobile leading-7 line-clamp-1 mb-2">{title}</h4>
     <p class="line-clamp-2 mb-5">{description}</p>
     <a href="#" aria-label="Placeholder-link (ingen funktionalitet)" class="focus:outline-none focus:ring-2 focus:ring-blue-400">
       <Button variant="secondary" size="small">Læs mere og tilmeld</Button>
@@ -28,7 +28,7 @@ import Button from "./Button.astro";
     background-color: #5b5b5b;
   }
 
-  body.dark .activity-card_content h3,
+  body.dark .activity-card_content h4,
   body.dark .activity-card_content p {
     color: #f6f6f6;
   }

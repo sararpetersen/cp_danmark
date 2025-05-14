@@ -13,7 +13,7 @@ import Button from "./Button.astro";
   <div class="course-card_content p-5 flex flex-col">
     <div>
       <p id="date" class="text-gray-400 pb-3">{date}</p>
-      <h4 class="text-[20.5px] leading-7 line-clamp-2 mb-3" set:html={title} />
+      <h4 class="text-h4-mobile leading-7 line-clamp-2 mb-3" set:html={title} />
       <p id="description" class="line-clamp-2 mb-5 mt-3">{description}</p>
     </div>
 
@@ -75,7 +75,7 @@ import Button from "./Button.astro";
     background-color: #5b5b5b;
   }
 
-  body.dark .course-card_content h3,
+  body.dark .course-card_content h4,
   body.dark .course-card_content p {
     color: #f6f6f6;
   }
