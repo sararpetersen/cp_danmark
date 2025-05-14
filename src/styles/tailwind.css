@@ -97,7 +97,9 @@
   }
 
   body.dark p,
-  body.dark a {
+  body.dark a,
+  body.dark ul li,
+  body.dark span {
     @apply text-gray-50;
   }
 }

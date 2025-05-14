@@ -71,11 +71,15 @@ const newscards = await fetchedNews.json();
     </p>
     <div id="submenus" class="grid grid-cols-4 gap-gap items-center relative z-10 col-start-2 col-span-10 md:pt-8 pt-4">
       <div class="col-span-4 md:col-span-1 hover:opacity-80 transition duration-300 ease-in-out relative">
-        <a href="/hvad_er_cp" aria-label="Gå til 'Hvad er CP?'" class="relative block aspect-[1/1] w-full">
+        <a
+          href="/hvad_er_cp"
+          aria-label="Gå til 'Hvad er CP?'"
+          class="relative block aspect-[1/1] w-full hover:opacity-80 transition duration-300 ease-in-out"
+        >
           <img
             src="/images/submenu1.webp"
             alt="Billede til den første undermenu på CP Danmarks forside"
-            class="w-full h-full object-cover brightness-[65%] md:brightness-75"
+            class="w-full h-full object-cover md:brightness-75"
           />
           <div class="absolute inset-0 flex items-end pb-12 justify-center px-4">
             <p class="text-gray-50 text-center font-semibold bg-[#AE5D37]/85 p-4 hover:underline leading-6 text-[16px]">
@@ -85,7 +89,11 @@ const newscards = await fetchedNews.json();
         </a>
       </div>
       <div class="col-span-4 md:col-span-1 hover:opacity-80 transition duration-300 ease-in-out relative">
-        <a href="/tilmeld" aria-label="Gå til 'Tilmeld'" class="relative block aspect-[1/1] w-full">
+        <a
+          href="/tilmeld"
+          aria-label="Gå til 'Tilmeld'"
+          class="relative block aspect-[1/1] w-full hover:opacity-80 transition duration-300 ease-in-out"
+        >
           <img
             src="/images/submenu2.webp"
             alt="Billede til den anden undermenu på CP Danmarks forside"
@@ -98,8 +106,12 @@ const newscards = await fetchedNews.json();
           </div>
         </a>
       </div>
-      <div class="col-span-4 md:col-span-1 hover:opacity-80 transition duration-300 ease-in-out relative">
-        <a href="/stoet" aria-label="Gå til 'Støt os'" class="relative block aspect-[1/1] w-full">
+      <div class="col-span-4 md:col-span-1 relative">
+        <a
+          href="/stoet"
+          aria-label="Gå til 'Støt os'"
+          class="relative block aspect-[1/1] w-full hover:opacity-80 transition duration-300 ease-in-out"
+        >
           <img
             src="/images/submenu3.webp"
             alt="Billede til den tredje undermenu på CP Danmarks forside"
@@ -113,7 +125,7 @@ const newscards = await fetchedNews.json();
         </a>
       </div>
       <div class="col-span-4 md:col-span-1 hover:opacity-80 transition duration-300 ease-in-out relative">
-        <a href="/gode_raad" class="relative block aspect-[1/1] w-full">
+        <a href="/gode_raad" class="relative block aspect-[1/1] w-full hover:opacity-80 transition duration-300 ease-in-out">
           <img
             src="/images/submenu4.webp"
             alt="Billede til den fjerde undermenu på CP Danmark's forside"
