@@ -43,9 +43,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       <img
         src="/images/stories_image.webp"
         alt="Hero-billede til CP Danmarks 'Fortællinger'-side"
-        "
-        class="w-full h-full object-cover brightness-[65%] md:brightness-75"
-        scale-x-[-1]"
+        class="w-full h-full object-cover brightness-[65%] md:brightness-75 scale-x-[-1]"
       />
     </div>
 
@@ -76,9 +74,16 @@ import MainLayout from "../layouts/MainLayout.astro";
   </section>
 
   <section id="videos" class="videos-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-12 w-full md:px-0 px-4 relative">
+    <div class="md:pb-24 pb-20 col-start-2 col-span-10">
+      <h3 class="pb-4 col-span-12">Fortællinger fra virkeligheden</h3>
+      <p>
+        Her kan du møde mennesker, der deler deres egne oplevelser med cerebral parese&mdash; enten som børn, forældre eller pårørende. Gennem
+        personlige fortællinger giver videoerne et indblik i hverdagen, udfordringerne og styrken i at leve med eller tæt på CP.
+      </p>
+    </div>
     <!-- Videosektion: Personer med CP -->
-    <div class="mb-12 col-start-2 col-span-10">
-      <h3 class="font-semibold md:pb-8 pb-7">At have et barn med CP</h3>
+    <div class="mb-16 col-start-2 col-span-10">
+      <h4 class="font-semibold pb-4">At have et barn med CP</h4>
       <div id="boern" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gap">
         <!-- Video kort -->
         <div id="video1" class="bg-gray-100 rounded-[5px] overflow-hidden">
@@ -131,9 +136,9 @@ import MainLayout from "../layouts/MainLayout.astro";
     </div>
 
     <!-- Videosektion: Pårørende -->
-    <div class="mb-12 col-start-2 col-span-10">
-      <h3 class="font-semibold md:pb-8 pb-7">At være pårørende</h3>
-      <div id="paaroerende" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="mb-16 col-start-2 col-span-10">
+      <h4 class="font-semibold pb-4">At være pårørende</h4>
+      <div id="paaroerende" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gap">
         <!-- Video kort -->
         <div id="video1_1" class="bg-gray-100 rounded-[5px] overflow-hidden">
           <iframe
@@ -151,8 +156,8 @@ import MainLayout from "../layouts/MainLayout.astro";
           <div class="p-5">
             <h4 class="font-semibold text-[19px] leading-7 mb-2">Pernille og Mads: Hvordan er det at være forældre til et barn med CP?</h4>
             <p class="text-[16px] leading-6 text-gray-600">
-              Pernille og Mads, der er forældre til 5-årige Elias, fortæller omkring hvordan det er at have et barn med CP— og hvilke erfaringer de
-              har gjort sig.
+              Pernille og Mads, der er forældre til 5-årige Elias, fortæller omkring det er at have et barn med CP— og hvilke erfaringer de har gjort
+              sig.
             </p>
           </div>
         </div>
@@ -192,7 +197,7 @@ import MainLayout from "../layouts/MainLayout.astro";
           <div class="p-5">
             <h4 class="font-semibold text-[19px] leading-7 mb-2">Ung med CP: Hvad skal forældrene være opmærksom på?</h4>
             <p class="text-[16px] leading-6 text-gray-600">
-              Emma og Bertram, der er to unge med CP på 25 og 21 år, fortæller om det at være ung med CP— og hvad forældrene skal være opmærksom på.
+              Emma og Bertram, der er to unge med CP på 25 og 21 år, fortæller om at være ung med CP— og hvad forældrene skal være opmærksom på.
             </p>
           </div>
         </div>
@@ -200,9 +205,9 @@ import MainLayout from "../layouts/MainLayout.astro";
     </div>
 
     <!-- Videosektion: Forældre med CP -->
-    <div class="mb-12 col-start-2 col-span-10">
-      <h3 class="font-semibold md:pb-8 pb-7">At være forældre med CP</h3>
-      <div id="foraeldre" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="mb-16 col-start-2 col-span-10">
+      <h4 class="font-semibold pb-4">At være forældre med CP</h4>
+      <div id="foraeldre" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gap">
         <!-- Video kort -->
         <div id="video1_2" class="bg-gray-100 rounded-[5px] overflow-hidden">
           <iframe
@@ -359,9 +364,19 @@ import MainLayout from "../layouts/MainLayout.astro";
         elementmedanimation5.classList.add("animate__animated", "animate__fadeInLeft");
       });
 
-      const elementmedanimation6 = document.querySelector(".breadcrumb");
+      const elementmedanimation6 = document.querySelector("#videos p");
       inView(elementmedanimation6, () => {
-        elementmedanimation6.classList.add("animate__animated", "animate__fadeInLeft");
+        elementmedanimation6.classList.add("animate__animated", "animate__fadeInRight");
+      });
+
+      const elementmedanimation7 = document.querySelector("#videos h4");
+      inView(elementmedanimation7, () => {
+        elementmedanimation7.classList.add("animate__animated", "animate__fadeInUp");
+      });
+
+      const elementmedanimation8 = document.querySelector(".breadcrumb");
+      inView(elementmedanimation8, () => {
+        elementmedanimation8.classList.add("animate__animated", "animate__fadeInLeft");
       });
 
       // Delay animations

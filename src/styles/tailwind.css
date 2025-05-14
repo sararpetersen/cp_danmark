@@ -28,7 +28,9 @@
   }
 
   p,
-  a {
+  a,
+  ul li,
+  span {
     @apply text-p-mobile text-gray-950;
   }
 
@@ -54,7 +56,9 @@
     }
 
     p,
-    a {
+    a,
+    ul li,
+    span {
       @apply text-p-desktop text-gray-950;
     }
   }
