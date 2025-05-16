@@ -106,7 +106,7 @@ import Button from "../components/Button.astro";
           <div class="mb-4">
             <h4>Dine oplysninger</h4>
           </div>
-          <label class="block mb-1 font-semibold">Fulde navn<span class="text-orange-500">*</span></label>
+          <label class="block mb-1 font-semibold">Fulde navn<span class="text-orange-600">*</span></label>
           <input
             type="text"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-12"
@@ -115,7 +115,7 @@ import Button from "../components/Button.astro";
             required
           />
 
-          <label class="block mb-1 font-semibold">Adresse<span class="text-orange-500">*</span></label>
+          <label class="block mb-1 font-semibold">Adresse<span class="text-orange-600">*</span></label>
           <input
             type="text"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
@@ -125,9 +125,14 @@ import Button from "../components/Button.astro";
           />
 
           <label class="block mb-1 font-semibold">Telefon</label>
-          <input type="number" class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4" placeholder="F.eks. 46 46 00 00" />
+          <input
+            type="number"
+            class="md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
+            placeholder="F.eks. 46 46 00 00"
+            aria-label="Telefon"
+          />
 
-          <label class="block mb-1 font-semibold">Mobiltelefon<span class="text-orange-500">*</span></label>
+          <label class="block mb-1 font-semibold">Mobiltelefon<span class="text-orange-600">*</span></label>
           <input
             type="number"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
@@ -136,7 +141,7 @@ import Button from "../components/Button.astro";
             required
           />
 
-          <label class="block mb-1 font-semibold">Email<span class="text-orange-500">*</span></label>
+          <label class="block mb-1 font-semibold">Email<span class="text-orange-600">*</span></label>
           <input
             type="email"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
@@ -145,7 +150,7 @@ import Button from "../components/Button.astro";
             required
           />
 
-          <label class="block mb-1 font-semibold">Gentag email<span class="text-orange-500">*</span></label>
+          <label class="block mb-1 font-semibold">Gentag email<span class="text-orange-600">*</span></label>
           <input
             type="email"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
@@ -165,7 +170,7 @@ import Button from "../components/Button.astro";
             <p class="text-[14px] italic pt-2">Indtastes hvis du ønsker, at vi indberetter beløbet til SKAT</p>
           </div>
 
-          <label class="block mb-1 font-semibold">Beløb (DKK)<span class="text-orange-500">*</span></label>
+          <label class="block mb-1 font-semibold">Beløb (DKK)<span class="text-orange-600">*</span></label>
           <select
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
             aria-label="Vælg beløb"
@@ -231,7 +236,7 @@ import Button from "../components/Button.astro";
           <div class="mb-4">
             <h4>Dine oplysninger</h4>
           </div>
-          <label class="block mb-1 font-semibold">Fulde navn<span class="text-orange-500">*</span></label>
+          <label class="block mb-1 font-semibold">Fulde navn<span class="text-orange-600">*</span></label>
           <input
             type="text"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-12"
@@ -240,7 +245,7 @@ import Button from "../components/Button.astro";
             required
           />
 
-          <label class="block mb-1 font-semibold">Adresse<span class="text-orange-500">*</span></label>
+          <label class="block mb-1 font-semibold">Adresse<span class="text-orange-600">*</span></label>
           <input
             type="text"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
@@ -265,7 +270,7 @@ import Button from "../components/Button.astro";
             aria-label="Mobiltelefon"
           />
 
-          <label class="block mb-1 font-semibold">Email<span class="text-orange-500">*</span></label>
+          <label class="block mb-1 font-semibold">Email<span class="text-orange-600">*</span></label>
           <input
             type="email"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
@@ -274,7 +279,7 @@ import Button from "../components/Button.astro";
             required
           />
 
-          <label class="block mb-1 font-semibold">Gentag email<span class="text-orange-500">*</span></label>
+          <label class="block mb-1 font-semibold">Gentag email<span class="text-orange-600">*</span></label>
           <input
             type="email"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-3"
@@ -329,7 +334,7 @@ import Button from "../components/Button.astro";
             <p class="italic pb-5 max-w-xl">
               Du skal være over 18 år for at tilmelde betaling af dit medlemskontingent til betalingsservice. Tilmeld dig ved at udfylde...
             </p>
-            <label class="block mb-1 font-semibold">CPR-nummer<span class="text-orange-500">*</span></label>
+            <label class="block mb-1 font-semibold">CPR-nummer<span class="text-orange-600">*</span></label>
             <input
               type="number"
               class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
@@ -338,7 +343,7 @@ import Button from "../components/Button.astro";
               required
             />
 
-            <label class="block mb-1 font-semibold">Registreringsnummer<span class="text-orange-500">*</span></label>
+            <label class="block mb-1 font-semibold">Registreringsnummer<span class="text-orange-600">*</span></label>
             <input
               type="number"
               class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
@@ -347,7 +352,7 @@ import Button from "../components/Button.astro";
               required
             />
 
-            <label class="block mb-1 font-semibold">Kontonummer<span class="text-orange-500">*</span></label>
+            <label class="block mb-1 font-semibold">Kontonummer<span class="text-orange-600">*</span></label>
             <input
               type="number"
               class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px]"
