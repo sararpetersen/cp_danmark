@@ -193,7 +193,7 @@ import Button from "../components/Button.astro";
         <Button variant="primary" size="small">Støt os</Button>
       </a>
     </div>
-    <button id="burgermenu" class="lg:hidden z-50" x-on:click="showmenu = !showmenu">
+    <button id="burgermenu" class="lg:hidden z-50" x-on:click="showmenu = !showmenu" aria-label="Åbn og luk burgermenu">
       <template x-if="showmenu">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -223,6 +223,7 @@ import Button from "../components/Button.astro";
   <nav
     id="mobilmenu"
     class="flex flex-col content-center pt-4"
+    aria-labelledby="Mobilmenu"
     x-show="showmenu"
     x-transition
     x-cloak
