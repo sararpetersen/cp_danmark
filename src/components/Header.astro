@@ -5,7 +5,7 @@ import Button from "../components/Button.astro";
 <!-- Accessibility settings bar -->
 <div id="accessibility-bar" class="fixed w-full bg-gray-950 text-gray-50 flex items-center h-9 p-4 z-50">
   <!-- Gear Icon -->
-  <button id="accessibilityToggle" class="svg-gear focus:outline-none">
+  <button id="accessibilityToggle" class="svg-gear focus:outline-none focus:ring-2 focus:ring-blue-400" aria-label="See accessibility-settings">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
@@ -24,7 +24,7 @@ import Button from "../components/Button.astro";
     <!-- Dark Mode Toggle -->
     <div class="flex items-center gap-2">
       <label for="darkModeToggle" class="cursor-pointer md:block hidden">Mørk tilstand</label>
-      <button id="darkModeToggle" aria-pressed="false" class="toggle-switch">
+      <button id="darkModeToggle" aria-pressed="false" class="toggle-switch" aria-label="Skift til mørk tilstand">
         <span class="toggle-circle"></span>
       </button>
     </div>
@@ -32,7 +32,7 @@ import Button from "../components/Button.astro";
     <!-- Reduce Motion Toggle -->
     <div class="flex items-center gap-2">
       <label for="motionToggle" class="cursor-pointer md:block hidden">Fjern animationer</label>
-      <button id="motionToggle" aria-pressed="false" class="toggle-switch">
+      <button id="motionToggle" aria-pressed="false" class="toggle-switch" aria-label="Fjern animationer">
         <span class="toggle-circle"></span>
       </button>
     </div>
