@@ -79,11 +79,24 @@ import Button from "../components/Button.astro";
         <div id="support-type" class="flex flex-col md:mb-24 mb-12 bg-dust-100 border border-dust-300 p-4 md:w-[40%] rounded-[5px]">
           <h3 class="text-h4-mobile pb-2">Hvordan vil du støtte?</h3>
           <label class="inline-flex items-center mr-6">
-            <input type="radio" name="supportType" value="enkelt" class="form-radio focus:outline-none focus:ring-2 focus:ring-blue-400" checked />
+            <input
+              type="radio"
+              name="supportType"
+              value="enkelt"
+              class="form-radio focus:outline-none focus:ring-2 focus:ring-blue-400"
+              aria-label="Enkeltbidrag"
+              checked
+            />
             <span class="enkelt ml-2">Enkeltbidrag</span>
           </label>
           <label class="inline-flex items-center">
-            <input type="radio" name="supportType" value="fast" class="form-radio focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            <input
+              type="radio"
+              name="supportType"
+              value="fast"
+              class="form-radio focus:outline-none focus:ring-2 focus:ring-blue-400"
+              aria-label="Fast bidrag"
+            />
             <span class="fast ml-2">Fast bidrag</span>
           </label>
         </div>
@@ -98,6 +111,7 @@ import Button from "../components/Button.astro";
             type="text"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-12"
             placeholder="F.eks. Borris Jensen"
+            aria-label="Fulde navn"
             required
           />
 
@@ -106,6 +120,7 @@ import Button from "../components/Button.astro";
             type="text"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
             placeholder="F.eks. Guldbergsgade 29N"
+            aria-label="Adresse"
             required
           />
 
@@ -117,6 +132,7 @@ import Button from "../components/Button.astro";
             type="number"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
             placeholder="F.eks. 11 22 33 44"
+            aria-label="Mobiltelefon"
             required
           />
 
@@ -125,6 +141,7 @@ import Button from "../components/Button.astro";
             type="email"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
             placeholder="F.eks. borris-jensen@gmail.com"
+            aria-label="Email"
             required
           />
 
@@ -133,6 +150,7 @@ import Button from "../components/Button.astro";
             type="email"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
             placeholder="F.eks. borris-jensen@gmail.com"
+            aria-label="Gentag email"
             required
           />
 
@@ -142,6 +160,7 @@ import Button from "../components/Button.astro";
               type="number"
               class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px]"
               placeholder="Indtast CPR-nummer"
+              aria-label="CPR-nummer"
             />
             <p class="text-[14px] italic pt-2">Indtastes hvis du ønsker, at vi indberetter beløbet til SKAT</p>
           </div>
@@ -149,6 +168,7 @@ import Button from "../components/Button.astro";
           <label class="block mb-1 font-semibold">Beløb (DKK)<span class="text-orange-500">*</span></label>
           <select
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
+            aria-label="Vælg beløb"
             required
           >
             <option>-- Vælg beløb --</option>
@@ -170,17 +190,26 @@ import Button from "../components/Button.astro";
             type="number"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
             placeholder="Indtast andet beløb"
+            aria-label="Andet beløb"
           />
 
           <label class="block mb-1 font-semibold">Besked til CP Danmark</label>
           <textarea
             rows="8"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-2"
-            placeholder="Skriv besked til CP Danmark"></textarea>
+            placeholder="Skriv besked til CP Danmark"
+            aria-label="Besked til CP Danmark"
+          >
+          </textarea>
 
           <div class="flex items-center mb-8">
             <label class="block md:ml-2 ml-3 font-medium"></label>
-            <input type="checkbox" class="w-[20px] p-2 border focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            <input
+              type="checkbox"
+              class="w-[20px] p-2 border focus:outline-none focus:ring-2 focus:ring-blue-400"
+              aria-label="Accepter handelsbetingelser og privatlivspolitik"
+              required
+            />
             <label class="block md:ml-2 ml-3 font-medium"
               >Jeg accepterer CP Danmarks <a
                 href="https://www.cpdanmark.dk/om-os/handelsbetingelser/"
@@ -207,6 +236,7 @@ import Button from "../components/Button.astro";
             type="text"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-12"
             placeholder="F.eks. Borris Jensen"
+            aria-label="Fulde navn"
             required
           />
 
@@ -215,6 +245,7 @@ import Button from "../components/Button.astro";
             type="text"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
             placeholder="F.eks. Guldbergsgade 29N"
+            aria-label="Adresse"
             required
           />
 
@@ -223,6 +254,7 @@ import Button from "../components/Button.astro";
             type="number"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
             placeholder="F.eks. 46 46 00 00"
+            aria-label="Telefon"
           />
 
           <label class="block mb-1 font-semibold">Mobiltelefon</label>
@@ -230,6 +262,7 @@ import Button from "../components/Button.astro";
             type="number"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
             placeholder="F.eks. 11 22 33 44"
+            aria-label="Mobiltelefon"
           />
 
           <label class="block mb-1 font-semibold">Email<span class="text-orange-500">*</span></label>
@@ -237,6 +270,7 @@ import Button from "../components/Button.astro";
             type="email"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
             placeholder="F.eks. borris-jensen@gmail.com"
+            aria-label="Email"
             required
           />
 
@@ -245,17 +279,25 @@ import Button from "../components/Button.astro";
             type="email"
             class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-3"
             placeholder="F.eks. borris-jensen@gmail.com"
+            aria-label="Gentag email"
             required
           />
           <div class="flex items-center mb-12">
-            <input type="checkbox" class="focus:outline-none focus:ring-2 focus:ring-blue-400 w-[20px] p-2 border" />
+            <input
+              type="checkbox"
+              class="focus:outline-none focus:ring-2 focus:ring-blue-400 w-[20px] p-2 border"
+              aria-label="Tilmeld til nyhedsbrev"
+            />
             <label class="block ml-2 font-medium">Tilmeld til nyhedsbrev</label>
           </div>
           <div class="mb-12">
             <p class="font-bold italic pb-5">Som fast bidragdsyder har du flere mulighed for valg af betaling...</p>
 
             <label class="block mb-1 font-semibold">Betalingsfrekvens</label>
-            <select class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4">
+            <select
+              class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
+              aria-label="Betalingsfrekvens"
+            >
               <option>-- Vælg betalingsfrekvens --</option>
               <option>Månedlig</option>
               <option>Halvårlig</option>
@@ -264,7 +306,10 @@ import Button from "../components/Button.astro";
             </select>
 
             <label class="block mb-1 font-semibold">Beløb (DKK)</label>
-            <select class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px]">
+            <select
+              class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px]"
+              aria-label="Vælg beløb"
+            >
               <option>-- Vælg beløb --</option>
               <option>50 kr.</option>
               <option>100 kr.</option>
@@ -289,6 +334,7 @@ import Button from "../components/Button.astro";
               type="number"
               class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
               placeholder="Indtast CPR-nummer"
+              aria-label="CPR-nummer"
               required
             />
 
@@ -297,6 +343,7 @@ import Button from "../components/Button.astro";
               type="number"
               class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px] mb-4"
               placeholder="Indtast registreringsnummer"
+              aria-label="Registreringsnummer"
               required
             />
 
@@ -305,11 +352,12 @@ import Button from "../components/Button.astro";
               type="number"
               class="focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-[50%] w-full p-2 bg-dust-100 border-dust-300 rounded-[5px]"
               placeholder="Indtast kontonummer"
+              aria-label="Kontonummer"
               required
             />
           </div>
           <div class="flex items-center mb-8">
-            <input type="checkbox" class="w-[20px] p-2 border" />
+            <input type="checkbox" class="w-[20px] p-2 border" aria-label="Jeg accepterer CP Danmarks handelsbetingelser og privatlivspolitik" />
             <label class="block md:ml-2 ml-3 font-medium"
               >Jeg accepterer CP Danmarks <a
                 href="https://www.cpdanmark.dk/om-os/handelsbetingelser/"
