@@ -131,7 +131,7 @@
             href="tel:38 88 45 75"
             target="_blank"
             aria-label="Ring til 38 88 45 75"
-            class="underline focus:outline-none focus:ring-2 focus:ring-blue-400 hover:text-blue-500 transition duration-300 ease-in-out pb-4 text-gray-50"
+            class="w-[fit-content] underline focus:outline-none focus:ring-2 focus:ring-blue-400 hover:text-[#4E94FD] transition duration-300 ease-in-out pb-4 text-gray-50"
             >+45 38 88 45 75</a
           >
           <p class="font-semibold text-gray-50">Mail:</p>
@@ -139,7 +139,7 @@
             href="mailto:cpdanmark@cpdanmark.dk"
             target="_blank"
             aria-label="Send mail til cpdanmark@cpdanmark.dk"
-            class="underline focus:outline-none focus:ring-2 focus:ring-blue-400 hover:text-blue-500 transition duration-300 ease-in-out text-gray-50"
+            class="w-[fit-content] underline focus:outline-none focus:ring-2 focus:ring-blue-400 hover:text-[#4E94FD] transition duration-300 ease-in-out text-gray-50"
           >
             cpdanmark@cpdanmark.dk
           </a>
@@ -151,30 +151,30 @@
         <div id="newsletter">
           <h1 class="text-h4-mobile text-gray-50 pb-2">Tilmeld dig vores nyhedsbrev</h1>
           <p class="pb-5 text-gray-50">Hold dig opdateret og få seneste nyt om livet med CP, info om vores aktiviteter og kurser, og meget andet.</p>
-          <form action="#" class="md:pb-0 pb-8">
+          <p class="pb-2 font-bold">Email</p>
+          <form action="#">
             <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
-              <label class="sr-only font-bold">Email</label>
               <div class="relative w-full">
+                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                  <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                    ><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path
+                      d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg
+                  >
+                </div>
                 <input
-                  class="block
-                  p-3
-                  pl-24
-                  pr-3
-                  w-full
-                  text-[1rem]
-                  text-gray-400
-                  bg-gray-50
-                  placeholder-gray-400"
-                  placeholder="Skriv din mail her"
+                  class="block p-3 pl-10 pr-3 w-full border border-gray-50 text-[1rem] focus:outline-none focus:ring-blue-300 focus:border-blue-300 sm:text-sm"
+                  placeholder="Skriv din email her"
                   type="email"
                   id="email"
+                  required=""
+                  aria-required="true"
                   aria-label="Email"
-                  required
                 />
-                <div class="absolute inset-y-0 left-0 flex items-center justify-start">
+                <div class="absolute inset-y-0 right-0 flex items-center justify-end">
                   <button
                     type="submit"
-                    class="py-3 px-5 text-center cursor-pointer -ml-px font-semibold border border-blue-600 bg-blue-600 hover:bg-blue-500 hover:border-blue-500 transition duration-300 ease-in-out text-gray-50 text-[1rem]"
+                    aria-label="Send nyhedsbrev"
+                    class="py-3 px-5 text-center cursor-pointer -ml-px bg-blue-500 border border-blue-500 font-semibold hover:bg-[#4E94FD] hover:border-[#4E94FD] focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-300 ease-in-out text-gray-50 text-[1rem]"
                     >SEND</button
                   >
                 </div>
@@ -192,7 +192,7 @@
             href="https://www.mobilepay.dk/erhverv/betalingslink/betalingslink-svar?phone=90866"
             target="_blank"
             aria-label="Gå til MobilePay-betalingsside (eksternt link)"
-            class="text-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-400 underline hover:text-blue-500 transition duration-300 ease-in-out"
+            class="w-[fit-content] text-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-400 underline hover:text-[#4E94FD] transition duration-300 ease-in-out"
             >90866</a
           >
         </div>
@@ -204,18 +204,18 @@
         </div>
         <div class="flex-col">
           <p class="text-gray-50 opacity-50 text-[14px]">2025 © CP Danmark – Landsforeningen for cerebral parese</p>
-          <p class="text-gray-50">
+          <p>
             <a
               href="https://www.cpdanmark.dk/om-os/privatlivspolitik/"
               aria-label="Gå til CP Danmarks Privatlivspolitik (eksternt link)"
               target="_blank"
-              class="text-[14px] underline text-blue-300 hover:text-blue-200 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400"
+              class="text-[14px] underline text-blue-300 hover:text-[#4E94FD] transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400"
               >Privatlivspolitik
-            </a><span class="opacity-50">|</span><a
+            </a><span class="opacity-50 text-gray-50">|</span><a
               href="https://www.cpdanmark.dk/om-os/cookiepolitik/"
               aria-label="Gå til CP Danmarks Cookiepolitik (eksternt link)"
               target="_blank"
-              class="text-[14px] underline text-blue-300 hover:text-blue-200 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400"
+              class="text-[14px] underline text-blue-300 hover:text-[#4E94FD] transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400"
             >
               Cookiepolitik</a
             >

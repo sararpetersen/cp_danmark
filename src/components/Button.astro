@@ -33,17 +33,43 @@ const sizeClasses = {
     cursor: pointer;
   }
 
+  .secondary-button {
+    background-color: #ad4e32;
+    border: #ad4e32 2px solid;
+    color: #f6f6f6;
+    transition: 0.6s;
+  }
+
+  .secondary-button:hover {
+    background-color: #903a2d;
+    border: #903a2d 2px solid;
+    cursor: pointer;
+  }
+
   /* Dark Mode */
   body.dark .main-button {
-    background-color: #0268c7;
-    border: #0268c7 2px solid;
+    background-color: #0e86e9;
+    border: #0e86e9 2px solid;
     color: #f6f6f6;
     transition: 0.6s;
   }
 
   body.dark .main-button:hover {
-    background-color: #0e86e9;
-    border: #0e86e9 2px solid;
+    background-color: #4e94fd;
+    border: #4e94fd 2px solid;
+    cursor: pointer;
+  }
+
+  body.dark .secondary-button {
+    background-color: #be6439;
+    border: #be6439 2px solid;
+    color: #f6f6f6;
+    transition: 0.6s;
+  }
+
+  body.dark .secondary-button:hover {
+    background-color: #ce8551;
+    border: #ce8551 2px solid;
     cursor: pointer;
   }
 </style>
