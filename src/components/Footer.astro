@@ -174,7 +174,7 @@
                   <button
                     type="submit"
                     aria-label="Send nyhedsbrev"
-                    class="py-3 px-5 text-center cursor-pointer -ml-px bg-blue-500 border border-blue-500 font-semibold hover:bg-[#4E94FD] hover:border-[#4E94FD] focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-300 ease-in-out text-gray-50 text-[1rem]"
+                    class="newsletter-button py-3 px-5 text-center cursor-pointer -ml-px bg-blue-500 border border-blue-500 font-semibold hover:bg-[#4E94FD] hover:border-[#4E94FD] focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-300 ease-in-out text-gray-50 text-[1rem]"
                     >SEND</button
                   >
                 </div>
@@ -225,3 +225,36 @@
     </div>
   </section>
 </footer>
+
+<style>
+  /* Base button styling */
+  .newsletter-button {
+    position: relative;
+    overflow: hidden;
+    color: #f6f6f6;
+    transition: background-color 0.6s ease;
+  }
+
+  /* Shine animation base */
+  .newsletter-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.2) 100%);
+    transform: skewX(-20deg);
+    transition: left 0.5s ease;
+    z-index: 0;
+  }
+
+  .newsletter-button:hover::before {
+    left: 125%;
+  }
+
+  .newsletter-button span {
+    position: relative;
+    z-index: 1;
+  }
+</style>
