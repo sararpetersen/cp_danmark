@@ -132,7 +132,7 @@ const regions = [
         data-index={index}
       >
         <button class="accordion-header w-full flex justify-between items-center px-4 py-5 text-left text-lg font-semibold text-gray-800">
-          <h4 class="text-h4-mobile italic">{region.navn}</h4>
+          <h3 class="text-h4-mobile italic">{region.navn}</h3>
           <svg class="accordion-icon w-7 h-7 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
@@ -150,7 +150,7 @@ const regions = [
                 href={kreds.url}
                 target="_blank"
                 aria-label="Læs mere om kredsen (eksternt link)"
-                class="underline focus:outline-none focus:ring-2 focus:ring-blue-400 text-[#4E94FD] hover:text-blue-600 transition duration-300 ease-in-out"
+                class="underline focus:outline-none focus:ring-2 focus:ring-blue-400 text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out"
               >
                 Læs mere om kredsen her
               </a>
@@ -195,7 +195,7 @@ const regions = [
 
 <style>
   /* Dark mode */
-  body.dark .accordion-header h4,
+  body.dark .accordion-header h3,
   body.dark .accordion-content h4,
   body.dark .accordion-content p {
     color: #f6f6f6;
@@ -211,5 +211,9 @@ const regions = [
 
   body.dark .accordion-content a {
     color: #7dc1fc;
+  }
+
+  body.dark .accordion-content a:hover {
+    color: #a4c8fe;
   }
 </style>

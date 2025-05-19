@@ -31,7 +31,7 @@ const items = [
         data-index={index}
       >
         <button class="accordion-header w-full flex justify-between items-center px-4 py-5 text-left text-lg font-semibold text-gray-800">
-          <h4 class="text-h4-mobile italic">{item.title}</h4>
+          <h3 class="text-h4-mobile italic">{item.title}</h3>
           <svg class="accordion-icon w-5 h-5 text-gray-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
@@ -79,7 +79,7 @@ const items = [
 
 <style>
   /* Dark mode */
-  body.dark .accordion-header h4,
+  body.dark .accordion-header h3,
   body.dark .accordion-content p {
     color: #f6f6f6;
   }

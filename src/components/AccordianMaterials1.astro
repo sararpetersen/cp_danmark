@@ -24,7 +24,7 @@ const items = [
       >
         <img src={item.image} alt={item.title} class="w-full h-full object-cover rounded-t-[5px]" />
         <button class="accordion-header w-full flex justify-between items-center px-4 py-5 text-left text-lg font-semibold text-gray-800">
-          <h4 class="text-h4-mobile italic">{item.title}</h4>
+          <h3 class="text-h4-mobile italic">{item.title}</h3>
           <svg class="accordion-icon w-5 h-5 text-gray-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
@@ -37,7 +37,7 @@ const items = [
                 href={url}
                 target="_blank"
                 aria-label="Læs mere om pjecen (eksternt link)"
-                class="underline focus:outline-none focus:ring-2 focus:ring-blue-400 text-[#4E94FD] hover:text-blue-600 transition duration-300 ease-in-out"
+                class="underline focus:outline-none focus:ring-2 focus:ring-blue-400 text-blue-500 hover:text-blue-600 transition duration-300 ease-in-out"
               >
                 {item.name[item.contenturl.indexOf(url)]}
               </a>
@@ -84,7 +84,7 @@ const items = [
 
 <style>
   /* Dark mode */
-  body.dark .accordion-header h4,
+  body.dark .accordion-header h3,
   body.dark .accordion-content p {
     color: #f6f6f6;
   }
@@ -99,5 +99,9 @@ const items = [
 
   body.dark .accordion-content a {
     color: #7dc1fc;
+  }
+
+  body.dark .accordion-content a:hover {
+    color: #a4c8fe;
   }
 </style>

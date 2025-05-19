@@ -29,7 +29,7 @@ const items = [
         data-index={index}
       >
         <button class="accordion-header w-full flex justify-between items-center px-4 py-5 text-left text-lg font-semibold text-gray-800">
-          <h4 class="text-h4-mobile italic">{item.title}</h4>
+          <h3 class="text-h4-mobile italic">{item.title}</h3>
           <svg class="accordion-icon w-7 h-7 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
@@ -42,7 +42,7 @@ const items = [
               href={item.url}
               aria-label="Læs mere om CP Danmark (eksternt link)"
               target="_blank"
-              class=" underline text-[#4E94FD] hover:text-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400"
+              class=" underline text-blue-700 hover:text-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400"
             >
               Læs mere her
             </a>
@@ -88,7 +88,7 @@ const items = [
 
 <style>
   /* Dark mode */
-  body.dark .accordion-header h4,
+  body.dark .accordion-header h3,
   body.dark .accordion-content p {
     color: #f6f6f6;
   }
@@ -103,5 +103,9 @@ const items = [
 
   body.dark .accordion-content a {
     color: #7dc1fc;
+  }
+
+  body.dark .accordion-content a:hover {
+    color: #a4c8fe;
   }
 </style>
