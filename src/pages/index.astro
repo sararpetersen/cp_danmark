@@ -24,8 +24,9 @@ const newscards = await fetchedNews.json();
   >
     <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center md:pb-16 pb-0 h-full">
       <h1 id="hero-title" class="md:pb-6 pb-0 display col-span-12">Vi er her <br class="md:hidden block" /> for dig</h1>
-      <h2 id="hero-text" class="font-regular italic col-span-12 md:col-span-6 text-h4-mobile text-gray-50 max-w-3xl">
-        Uanset hvem du er, så er du landet det rette sted. CP Danmark er foreningen for dig der lever med cerebral parese— og for dem der støtter dig
+      <h2 id="hero-text" class="font-regular italic col-span-12 md:col-span-7 text-h4-mobile text-gray-50 max-w-3xl">
+        Hos CP Danmark er du velkommen&mdash; uanset om du selv har CP, er tæt på én der har, eller arbejder professionelt med diagnosen. Her finder
+        du fællesskab, viden og støtte&mdash; fra mennesker der forstår
       </h2>
     </div>
 
@@ -98,7 +99,7 @@ const newscards = await fetchedNews.json();
             alt="Billede til den anden undermenu på CP Danmarks forside"
             class="w-full h-full object-cover brightness-75"
           />
-          <div class="absolute inset-0 flex items-end pb-12 justify-start md:justify-center px-4">
+          <div class="absolute inset-0 flex items-end pb-12 justify-center px-4">
             <p class="text-gray-50 text-center font-semibold bg-[#BBA572]/85 p-4 hover:underline leading-6 text-[16px]">
               Vær en del af fællesskabet og støt vores arbejde
             </p>
@@ -179,8 +180,8 @@ const newscards = await fetchedNews.json();
   <section class="news grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom relative">
     <div class="col-start-2 col-span-10 md:pb-8 pb-6">
       <h3 class="md:pb-6 pb-4">Seneste nyheder</h3>
-      <div class="see-all">
-        <a href="/nyheder" aria-label="Se alle nyheder"><Button variant="primary" size="small">Se alle nyheder</Button></a>
+      <div class="see-all md:pb-0 pb-4">
+        <a href="/nyheder" aria-label="Se alle nyheder"><Button variant="primary" size="small">Se alle</Button></a>
       </div>
     </div>
     <!-- Horizontal scroll container -->
@@ -210,14 +211,14 @@ const newscards = await fetchedNews.json();
       </div>
 
       <!-- Image section -->
-      <div class="flex justify-end md:pt-0 pt-9">
-        <img src="/images/info_section1.webp" alt="Første billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
+      <div class="flex md:justify-end justify-center md:pt-0 pt-9">
+        <img src="/images/info_section1.webp" alt="Første billede til info-sektion" class="md:w-[550px] md:h-[400px] h-[450px] w-full object-cover" />
       </div>
     </div>
     <div id="info-section2" class="grid md:grid-cols-2 col-start-2 col-span-10 md:pt-24 pt-20">
       <!-- Image section -->
-      <div class="flex justify-start">
-        <img src="/images/info_section2.webp" alt="Andet billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
+      <div class="flex md:justify-start justify-center">
+        <img src="/images/info_section2.webp" alt="Andet billede til info-sektion" class="md:w-[550px] md:h-[400px] h-[450px] w-full object-cover" />
       </div>
       <!-- Text and button section -->
       <div>
@@ -249,8 +250,8 @@ const newscards = await fetchedNews.json();
       </div>
 
       <!-- Image section -->
-      <div class="flex justify-end md:pt-0 pt-9">
-        <img src="/images/info_section3.webp" alt="Tredje billede til info-sektion" class="w-[550px] h-[350px] object-cover" />
+      <div class="flex md:justify-end justify-center md:pt-0 pt-9">
+        <img src="/images/info_section3.webp" alt="Tredje billede til info-sektion" class="md:w-[550px] md:h-[400px] h-[450px] w-full object-cover" />
       </div>
     </div>
   </section>
