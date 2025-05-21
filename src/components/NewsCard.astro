@@ -1,7 +1,7 @@
 ---
 const { newscards = [], limit = null } = Astro.props;
 
-const fetchedNews = await fetch("https://tpemfmjlaqjtxbgiffqm.supabase.co/rest/v1/news_card", {
+const fetchedNews = await fetch("https://tpemfmjlaqjtxbgiffqm.supabase.co/rest/v1/news_card?order=id.asc", {
   method: "GET",
   headers: {
     apikey:
@@ -18,7 +18,7 @@ const cards = fetchedNews.map((newscard) => ({
 
 const displayedCards = limit ? cards.slice(0, limit) : cards;
 
-function breakTitle(title, maxLength = 25) {
+function breakTitle(title, maxLength = 30) {
   if (title.length > maxLength) {
     const words = title.split(" ");
     let line = "";
@@ -44,25 +44,19 @@ import Button from "./Button.astro";
 
 {
   displayedCards.map((card) => (
-    <div class="news-card flex flex-col min-w-[400px] self-start bg-gray-100 rounded-[5px] hover:bg-gray-200 hover:cursor-pointer transition duration-300 ease-in-out">
+    <div class="news-card flex flex-col min-w-[400px] self-start bg-gray-100 rounded-[5px] hover:bg-gray-200 hover:cursor-pointer transition duration-300 ease-in-out overflow-visible relative z-10">
       <div class="news-card_image">
         <img src={card.image} alt={card.title} class="w-full h-full object-cover rounded-t-[5px]" />
       </div>
-      <div class="news-card_content p-6 flex flex-col">
+      <div class="news-card_content p-6 flex flex-col relative z-20">
         <p id="date" class="text-gray-400 mb-2">
           {card.date}
         </p>
-        <h3 class="text-h4-mobile mb-2 line-clamp-2">
-          {breakTitle(card.title).map((line) => (
-            <span>
-              {line}
-              <br />
-            </span>
-          ))}
-        </h3>
+        <h3 class="text-h4-mobile mb-2 line-clamp-2 relative group cursor-pointer">{card.title}</h3>
+
         <p class="mb-5 line-clamp-2">{card.description}</p>
         <a href="/nyheder" aria-label="Placeholder-link (ingen funktionalitet)" class="focus:outline-none focus:ring-2 focus:ring-blue-400">
-          <Button variant="secondary" size="small">
+          <Button variant="primary" size="small">
             Læs mere
           </Button>
         </a>

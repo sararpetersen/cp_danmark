@@ -5,7 +5,6 @@ const buttonStyling = "px-6 p-2 font-semibold transition duration-300 uppercase"
 
 const variantClasses = {
   primary: "main-button bg-blue-600 text-gray-50 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400",
-  secondary: "secondary-button bg-orange-600 hover:bg-orange-700 text-gray-50 focus:outline-none focus:ring-2 focus:ring-orange-400",
 };
 
 const sizeClasses = {
@@ -19,8 +18,7 @@ const sizeClasses = {
 
 <style>
   /* Base button styling */
-  .main-button,
-  .secondary-button {
+  .main-button {
     position: relative;
     overflow: hidden;
     color: #f6f6f6;
@@ -28,8 +26,7 @@ const sizeClasses = {
   }
 
   /* Shine animation base */
-  .main-button::before,
-  .secondary-button::before {
+  .main-button::before {
     content: "";
     position: absolute;
     top: 0;
@@ -42,13 +39,11 @@ const sizeClasses = {
     z-index: 0;
   }
 
-  .main-button:hover::before,
-  .secondary-button:hover::before {
+  .main-button:hover::before {
     left: 125%;
   }
 
-  .main-button span,
-  .secondary-button span {
+  .main-button span {
     position: relative;
     z-index: 1;
   }
@@ -62,14 +57,6 @@ const sizeClasses = {
     background-color: #0268c7;
   }
 
-  .secondary-button {
-    background-color: #ad4e32;
-  }
-
-  .secondary-button:hover {
-    background-color: #903a2d;
-  }
-
   /* Dark mode overrides */
   body.dark .main-button {
     background-color: #0e86e9;
@@ -79,17 +66,8 @@ const sizeClasses = {
     background-color: #4e94fd;
   }
 
-  body.dark .secondary-button {
-    background-color: #be6439;
-  }
-
-  body.dark .secondary-button:hover {
-    background-color: #ce8551;
-  }
-
   /* Optional: slightly brighter shine for dark mode */
-  body.dark .main-button::before,
-  body.dark .secondary-button::before {
+  body.dark .main-button::before {
     background: linear-gradient(120deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.3) 100%);
   }
 </style>

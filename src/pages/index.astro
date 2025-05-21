@@ -64,7 +64,7 @@ const newscards = await fetchedNews.json();
   </section>
 
   <section id="get-started" class="grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom">
-    <h2 id="get-started-title" class="col-start-2 col-span-10 pb-4">Kom godt i gang</h2>
+    <h2 id="get-started-title" class="col-start-2 col-span-10 md:pb-6 pb-4">Kom godt i gang</h2>
     <p id="get-started-text" class="md:pb-4 pb-6 col-start-2 col-span-10 max-w-3xl">
       Uanset om du er ny, søger viden om CP, har brug for støtte eller bare vil bidrage til et godt formål— her finder du de vigtigste veje videre.
     </p>
@@ -177,14 +177,11 @@ const newscards = await fetchedNews.json();
     </div>
   </section>
   <section class="news grid grid-cols-12 md:pb-desktop-bottom pb-mobil-bottom relative">
-    <div id="news" class="col-start-2 col-span-10 md:pb-8 pb-6">
-      <h3>Seneste nyheder</h3>
-      <a
-        href="/nyheder"
-        aria-label="Gå til 'Nyheder'"
-        class="underline focus:outline-none focus:ring-2 focus:ring-blue-400 hover:text-[#4E94FD] transition duration-300 ease-in-out col-start-2 col-span-10"
-        >Se alle..</a
-      >
+    <div class="col-start-2 col-span-10 md:pb-8 pb-6">
+      <h3 class="md:pb-6 pb-4">Seneste nyheder</h3>
+      <div class="see-all">
+        <a href="/nyheder" aria-label="Se alle nyheder"><Button variant="primary" size="small">Se alle nyheder</Button></a>
+      </div>
     </div>
     <!-- Horizontal scroll container -->
     <div class="col-start-2 col-span-10 relative">
@@ -208,7 +205,7 @@ const newscards = await fetchedNews.json();
           <em>Tilmeld dig i dag og vær med til at styrke fællesskabet.</em>
         </p>
         <a href="/tilmeld" aria-label="Gå til 'Tilmeld'">
-          <Button variant="secondary" size="small">Gå til 'Tilmeld'</Button>
+          <Button variant="primary" size="small">Gå til 'Tilmeld'</Button>
         </a>
       </div>
 
@@ -232,7 +229,7 @@ const newscards = await fetchedNews.json();
           <em>Skriv, ring— eller find den hjælp, du har brug for her.</em>
         </p>
         <a href="/raadgivning" aria-label="Gå til 'Rådgivning'">
-          <Button variant="secondary" size="small">Gå til 'Rådgivning'</Button>
+          <Button variant="primary" size="small">Gå til 'Rådgivning'</Button>
         </a>
       </div>
     </div>
@@ -247,7 +244,7 @@ const newscards = await fetchedNews.json();
           <em>Har du spørgsmål eller er du usikker på hvorhenne du skal starte? Vi er klar til at hjælpe dig med at finde vejen frem.</em>
         </p>
         <a href="/gode_raad" aria-label="Gå til 'Gode råd'">
-          <Button variant="secondary" size="small">Gå til 'Gode råd'</Button>
+          <Button variant="primary" size="small">Gå til 'Gode råd'</Button>
         </a>
       </div>
 
@@ -305,6 +302,14 @@ const newscards = await fetchedNews.json();
   body.dark a {
     color: #f6f6f6;
   }
+
+  body.dark .see-all a {
+    color: #7dc1fc;
+  }
+
+  body.dark .see-all a:hover {
+    color: #a4c8fe;
+  }
 </style>
 
 <script>
@@ -359,9 +364,14 @@ const newscards = await fetchedNews.json();
         elementmedanimation10.classList.add("animate__animated", "animate__slideInLeft");
       });
 
-      const elementmedanimation12 = document.querySelector("#news");
+      const elementmedanimation12 = document.querySelector(".news h3");
       inView(elementmedanimation12, () => {
         elementmedanimation12.classList.add("animate__animated", "animate__fadeInRight");
+      });
+
+      const elementmedanimation13 = document.querySelector(".see-all");
+      inView(elementmedanimation13, () => {
+        elementmedanimation13.classList.add("animate__animated", "animate__fadeInLeft");
       });
 
       // Delay animations
