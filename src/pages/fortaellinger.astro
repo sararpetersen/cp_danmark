@@ -75,14 +75,14 @@ import MainLayout from "../layouts/MainLayout.astro";
 
   <section id="videos" class="videos-section grid grid-cols-12 md:pt-desktop-top pt-mobil-top md:pb-12 w-full md:px-0 px-4 relative">
     <div class="md:pb-24 pb-20 col-start-2 col-span-10">
-      <h3 class="pb-5 col-span-12">Fortællinger fra virkeligheden</h3>
+      <h3 class="md:pb-6 pb-4 col-span-12">Fortællinger fra virkeligheden</h3>
       <p class="max-w-4xl">
         Her kan du møde mennesker, der deler deres egne oplevelser med cerebral parese&mdash; enten som børn, forældre eller pårørende. Gennem
         personlige fortællinger giver videoerne et indblik i hverdagen, udfordringerne og styrken i at leve med eller tæt på CP.
       </p>
     </div>
     <!-- Videosektion: Personer med CP -->
-    <div class="mb-16 col-start-2 col-span-10">
+    <div id="boern_section" class="mb-16 col-start-2 col-span-10">
       <h4 class="font-semibold pb-4">At have et barn med CP</h4>
       <div id="boern" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gap">
         <!-- Video kort -->
@@ -133,7 +133,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     </div>
 
     <!-- Videosektion: Pårørende -->
-    <div class="mb-16 col-start-2 col-span-10">
+    <div id="paaroerende_section" class="mb-16 col-start-2 col-span-10">
       <h4 class="font-semibold pb-4">At være pårørende</h4>
       <div id="paaroerende" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gap">
         <!-- Video kort -->
@@ -198,7 +198,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     </div>
 
     <!-- Videosektion: Forældre med CP -->
-    <div class="mb-16 col-start-2 col-span-10">
+    <div id="foraeldre_section" class="mb-16 col-start-2 col-span-10">
       <h4 class="font-semibold pb-4">At være forældre med CP</h4>
       <div id="foraeldre" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gap">
         <!-- Video kort -->
@@ -298,11 +298,15 @@ import MainLayout from "../layouts/MainLayout.astro";
     color: #7dc1fc;
   }
 
-  body.dark h1,
   body.dark p,
   body.dark h2,
-  body.dark h3,
-  body.dark h4 {
+  body.dark h3 {
+    color: #f6f6f6;
+  }
+
+  body.dark #boern_section h4,
+  body.dark #paaroerende_section h4,
+  body.dark #foraeldre_section h4 {
     color: #f6f6f6;
   }
 
@@ -317,6 +321,7 @@ import MainLayout from "../layouts/MainLayout.astro";
   body.dark #video3_2 {
     background-color: #4f4f4f;
     border-color: #7d7d7d;
+    color: #f6f6f6;
   }
 </style>
 
@@ -357,14 +362,24 @@ import MainLayout from "../layouts/MainLayout.astro";
         elementmedanimation6.classList.add("animate__animated", "animate__fadeInRight");
       });
 
-      const elementmedanimation7 = document.querySelector("#videos h4");
+      const elementmedanimation7 = document.querySelector("#boern_section h4");
       inView(elementmedanimation7, () => {
         elementmedanimation7.classList.add("animate__animated", "animate__fadeInUp");
       });
 
-      const elementmedanimation8 = document.querySelector(".breadcrumb");
+      const elementmedanimation8 = document.querySelector("#paaroerende_section h4");
       inView(elementmedanimation8, () => {
-        elementmedanimation8.classList.add("animate__animated", "animate__fadeInLeft");
+        elementmedanimation8.classList.add("animate__animated", "animate__fadeInUp");
+      });
+
+      const elementmedanimation9 = document.querySelector("#foraeldre_section h4");
+      inView(elementmedanimation9, () => {
+        elementmedanimation9.classList.add("animate__animated", "animate__fadeInUp");
+      });
+
+      const elementmedanimation10 = document.querySelector(".breadcrumb");
+      inView(elementmedanimation10, () => {
+        elementmedanimation10.classList.add("animate__animated", "animate__fadeInLeft");
       });
 
       // Delay animations
