@@ -500,23 +500,17 @@ import Button from "../components/Button.astro";
 </style>
 <script>
   const radioButtons = document.querySelectorAll('input[name="supportType"]');
-  const formSections = {
-    enkelt: document.getElementById("enkeltForm"),
-    fast: document.getElementById("fastForm"),
-  };
+  const enkeltForm = document.getElementById("enkeltForm");
+  const fastForm = document.getElementById("fastForm");
 
   radioButtons.forEach((radio) => {
     radio.addEventListener("change", () => {
-      // Skjul og nulstil alle formularer
-      Object.values(formSections).forEach((form) => {
-        form.classList.add("hidden");
-        form.querySelectorAll("input, select, textarea, option, a").forEach((input) => (input.value = ""));
-      });
-
-      // Vis den valgte formular
-      const selectedForm = formSections[radio.value];
-      if (selectedForm) {
-        selectedForm.classList.remove("hidden");
+      if (radio.value === "enkelt") {
+        enkeltForm.classList.remove("hidden");
+        fastForm.classList.add("hidden");
+      } else {
+        fastForm.classList.remove("hidden");
+        enkeltForm.classList.add("hidden");
       }
     });
   });
