@@ -122,14 +122,13 @@ const schemamarkup = {
       }
       .loginmodal-container h1 {
         text-align: left;
-        line-height: 24px;
+        line-height: 25px;
         font-size: 1.5em;
         margin-bottom: 20px;
       }
       .loginmodal-container input[type=submit] {
         width: 100%;
         display: block;
-        margin-bottom: 10px;
         position: relative;
       }
       input[type=password] {
@@ -150,7 +149,7 @@ const schemamarkup = {
         box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
       }
       .loginmodal {
-        text-align: center;
+        text-align: left;
         font-size: 14px;
         font-weight: 700;
         height: 36px;
@@ -160,32 +159,39 @@ const schemamarkup = {
         border: 0px;
         color: #fff;
         text-shadow: 0 1px rgba(0,0,0,0.1); 
-        background-color: #4d90fe;
+        background-color: #034f9a;
         padding: 17px 0px;
         font-size: 14px;
       }
       .loginmodal-submit:hover {
+       cursor: pointer;
         border: 0px;
         text-shadow: 0 1px rgba(0,0,0,0.3);
-        background-color: #357ae8;
+        background-color: #0268c7;
       }
 
       .obs {
         font-weight: bold;
       }
 
-      .password {
+      .password-code {
         font-weight: bold;
         font-style: italic;
-        color: #be6439;
+        color: #ce8551;
+        font-size: 1.25rem;
+      }
+
+      .login {
+        margin-bottom: 10px;
       }
     </style>
     <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="loginmodal-container">
           <h1>Login til CP Danmarks nye hjemmeside</h1>
-          <p><em class="obs">OBS:</em> Dette er et skole-projekt!</p>
-          <p>Password'et er <code class="password">cpdanmark2025</code></p>
+          <p class="login"><em class="obs">OBS:</em> Du skal logge ind for at se denne side.</p>
+          <p class="obs-container">Dette er et skole-projekt!</p>
+          <p class="password">Password'et er <code class="password-code">cpdanmark2025</code></p>
           <form>
             <input type="password" name="pass" placeholder="Skriv password her">
             <input type="submit" name="login" class="login loginmodal-submit" value="Login">
