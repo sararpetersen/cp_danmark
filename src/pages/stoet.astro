@@ -526,15 +526,6 @@ import Button from "../components/Button.astro";
     }
   });
 
-  const cpr = document.getElementById("cpr");
-  cpr.pattern = "\\d{6}-\\d{4}"; // F.eks. 010203-1234
-  cpr.title = "Indtast CPR i formatet 010203-1234";
-
-  Object.values(formSections).forEach((form) => {
-    form.classList.add("hidden");
-    form.querySelectorAll("input, select").forEach((input) => (input.value = ""));
-  });
-
   // inView-animations
 
   import { inView } from "motion";
