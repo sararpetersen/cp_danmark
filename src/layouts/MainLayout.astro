@@ -124,6 +124,7 @@ const schemamarkup = {
         text-align: left;
         line-height: 24px;
         font-size: 1.5em;
+        margin-bottom: 20px;
       }
       .loginmodal-container input[type=submit] {
         width: 100%;
@@ -168,15 +169,25 @@ const schemamarkup = {
         text-shadow: 0 1px rgba(0,0,0,0.3);
         background-color: #357ae8;
       }
+
+      .obs {
+        font-weight: bold;
+      }
+
+      .password {
+        font-weight: bold;
+        font-style: italic;
+        color: #be6439;
+      }
     </style>
     <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="loginmodal-container">
-          <h1>Login til CP Danmarks nye hjemmeside</h1><br>
-          <p>Dette er et skole-projekt!</p>
-          <p>Password'et er <code class="text-orange-500 font-bold">cpdanmark2025</code></p>
+          <h1>Login til CP Danmarks nye hjemmeside</h1>
+          <p><em class="obs">OBS:</em> Dette er et skole-projekt!</p>
+          <p>Password'et er <code class="password">cpdanmark2025</code></p>
           <form>
-            <input type="password" name="pass" placeholder="Password">
+            <input type="password" name="pass" placeholder="Skriv password her">
             <input type="submit" name="login" class="login loginmodal-submit" value="Login">
           </form>
         </div>
