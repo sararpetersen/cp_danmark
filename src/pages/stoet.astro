@@ -85,7 +85,7 @@ import Button from "../components/Button.astro";
               type="radio"
               name="supportType"
               value="enkelt"
-              class="form-radio focus:outline-none focus:ring-2 focus:ring-blue-400"
+              class="cursor-pointer form-radio focus:outline-none focus:ring-2 focus:ring-blue-400"
               aria-label="Enkeltbidrag"
               checked
             />
@@ -96,7 +96,7 @@ import Button from "../components/Button.astro";
               type="radio"
               name="supportType"
               value="fast"
-              class="form-radio focus:outline-none focus:ring-2 focus:ring-blue-400"
+              class="cursor-pointer form-radio focus:outline-none focus:ring-2 focus:ring-blue-400"
               aria-label="Fast bidrag"
             />
             <span class="fast ml-2">Fast bidrag</span>
@@ -456,6 +456,10 @@ import Button from "../components/Button.astro";
   option:focus {
     outline: none;
     box-shadow: 0 0 0 2px #7dc1fc;
+  }
+
+  body.dark span {
+    color: #ff4545;
   }
 
   body.dark h2,

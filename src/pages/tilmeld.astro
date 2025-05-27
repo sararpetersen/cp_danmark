@@ -82,7 +82,15 @@ import "../styles/tailwind.css";
         <div id="support-type" class="bg-dust-100 border border-dust-300 p-4 md:w-[40%] rounded-[5px] flex flex-col md:mb-16 mb-12">
           <h4 class="text-h4-mobile pb-5">Hvilket medlemskab er der tale om?</h4>
           <label class="inline-flex items-center mb-2">
-            <input type="radio" name="supportType" value="enkelt" id="radioEnkelt" class="mr-2" aria-label="Enkeltmedlemskab" checked />
+            <input
+              type="radio"
+              name="supportType"
+              value="enkelt"
+              id="radioEnkelt"
+              class="mr-2 cursor-pointer"
+              aria-label="Enkeltmedlemskab"
+              checked
+            />
             <span class="option-line">
               <span>Enkeltmedlemskab</span>
               <span class="text-gray-700 italic">(375,- om året)</span>
@@ -90,7 +98,7 @@ import "../styles/tailwind.css";
           </label>
 
           <label class="inline-flex items-center mb-2">
-            <input type="radio" name="supportType" value="fast" id="radioFast" class="mr-2" aria-label="Husstandsmedlemskab" />
+            <input type="radio" name="supportType" value="fast" id="radioFast" class="mr-2 cursor-pointer" aria-label="Husstandsmedlemskab" />
             <span class="option-line">
               <span>Husstandsmedlemskab</span>
               <span class="text-gray-700 italic">(475,- om året)</span>
@@ -98,7 +106,7 @@ import "../styles/tailwind.css";
           </label>
 
           <label class="inline-flex items-center mb-2">
-            <input type="radio" name="supportType" value="support" id="radioSupport" class="mr-2" aria-label="Støttemedlem" />
+            <input type="radio" name="supportType" value="support" id="radioSupport" class="mr-2 cursor-pointer" aria-label="Støttemedlem" />
             <span class="option-line">
               <span>Støttemedlem</span>
               <span class="text-gray-700 italic">(50,- om måneden)</span>
@@ -106,7 +114,7 @@ import "../styles/tailwind.css";
           </label>
 
           <label class="inline-flex items-center mb-2">
-            <input type="radio" name="supportType" value="life" id="radioLife" class="mr-2" aria-label="Livsvarigt medlem" />
+            <input type="radio" name="supportType" value="life" id="radioLife" class="mr-2 cursor-pointer" aria-label="Livsvarigt medlem" />
             <span class="option-line">
               <span>Livsvarigt medlem</span>
               <span class="text-gray-700 italic">(5000,- én gang)</span>
